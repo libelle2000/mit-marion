@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>die Fazien fetzen</title>
+    <link rel="stylesheet" href="css/main.css" />
 </head>
-<body>
+<body class="color-cd-dark">
 <header>
     <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
          y="0px"
@@ -219,7 +220,7 @@
         </svg>
     <div>die-fazien-fetzen</div>
 </header>
-<article class="topic">
+<article class="topic color-cd-light">
     <section class="member">
         <q class="mainquote">das müsste ich eigentlich viel häufiger machen!</q>
         <img class="mainquote" src="images/dummy.png" alt=""/>
