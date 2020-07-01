@@ -32,6 +32,7 @@ header .logo {
 
 header .burger-menu {
     grid-area: burger;
+    justify-self: end;
 }
 
 header .breadcrumb {
