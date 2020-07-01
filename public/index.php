@@ -2,14 +2,15 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>die Fazien fetzen</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body class="color-cd-dark">
-<header>
-    <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+<header class="container-content">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
          y="0px"
-         width="313.165px" height="37.535px" viewBox="54.307 176.371 313.165 37.535"
+         viewBox="54.307 176.371 313.165 37.535"
          enable-background="new 54.307 176.371 313.165 37.535" xml:space="preserve">
         <path fill="#EFFFEF" d="M77.3,203.7c0.9-0.7,1.6-1.2,2-1.5c0.5-0.3,0.8-0.6,1-0.7c0.2-0.1,0.4-0.1,0.6-0.1c0.2,0,0.4,0,0.7,0
             c0.3,0,0.6,0.1,0.9,0.1s0.5,0.1,0.8,0.1c0.2,0,0.3,0.1,0.3,0.1c0,0.1,0,0.3-0.1,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0.4,0.1,0.9,0.3,1.5
@@ -172,10 +173,10 @@
             c-3.1,0.4-6.7,0.8-10.7,1c-4,0.2-8.2,0.3-12.5,0.3c-3.4,0-6.8-0.1-10.3-0.3c-3.5-0.2-6.6-0.5-9.4-0.9c-2.8-0.4-5-0.9-6.7-1.5
             c-1.7-0.6-2.6-1.8-2.6-2.6C215.6,186.7,278.1,186.2,278.1,187.8z"/>
     </svg>
-    <svg id="burger-menue" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg class="burger-menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          x="0px"
          y="0px"
-         width="190.433px" height="132.119px" viewBox="-0.637 479.511 190.433 132.119"
+         viewBox="-0.637 479.511 190.433 132.119"
          enable-background="new -0.637 479.511 190.433 132.119" xml:space="preserve">
         <path fill="#EFFFEF" d="M189.343,491.939c0-2.7,0.2-4.5,0.398-5.5c0.2-1,0.302-1.7,0-2.2c-0.398-0.8-1.198-1.4-2.6-2
             c-0.9-0.4-3.6-1.1-3.9-1.1c-8.6,0.4-18.898,0.7-31.1,0.9c-12.101,0.2-25.399,0.3-39.899,0.3s-29.899-0.1-46.101-0.4
@@ -220,7 +221,7 @@
         </svg>
     <div>die-fazien-fetzen</div>
 </header>
-<article class="topic color-cd-light">
+<article class="container-content topic color-cd-light">
     <section class="member">
         <q class="mainquote">das müsste ich eigentlich viel häufiger machen!</q>
         <img class="mainquote" src="images/dummy.png" alt=""/>
@@ -237,7 +238,7 @@
     </section>
     <a href="#">Jetzt zur Probe mitmachen</a>
 </article>
-<nav class="pager">
+<nav class="container-content pager">
     <ul>
         <li><a href="#dem-regen-trotzen-und-noch-länger">dem-regen-trotzen-und-noch-länger</a></li>
         <li><a href="#den-rücken-verrücken">den-rücken-verrücken</a></li>
