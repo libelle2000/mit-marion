@@ -1,5 +1,10 @@
-<?php
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>mit-marion.de</title>
+</head>
+<body>
 
-declare(strict_types=1);
-
-require_once __DIR__ . '/../src/echo.php';
+</body>
+</html>
