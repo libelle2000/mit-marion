@@ -17,6 +17,26 @@
     width: 3em;
 }
 
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header .logo {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+header .burger-menu {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+header .breadcrumb {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
 .color-cd-dark {
     background-color: #336633;
 }

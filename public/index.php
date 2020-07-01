@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body class="color-cd-dark">
-<header class="container-content">
+<header class="container-content grid-2x2">
     <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
          y="0px"
          viewBox="54.307 176.371 313.165 37.535"
@@ -219,7 +219,7 @@
             c0.2,0.5,0.2,1.102,0.2,2c-0.101,0.801-0.2,1.4-0.3,1.801c-0.2,0.899-0.7,1.5-1.602,1.799
             C164.942,578.54,164.343,578.54,163.543,578.44L163.543,578.44z"/>
         </svg>
-    <div>die-fazien-fetzen</div>
+    <div class="breadcrumb">die-fazien-fetzen</div>
 </header>
 <article class="container-content topic color-cd-light">
     <section class="member">
