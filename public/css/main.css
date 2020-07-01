@@ -2,14 +2,18 @@
     font-family: Arial, sans-serif;
 }
 
+.member .mainquote {
+    font-size: 2.5em;
+}
+
 .container-content {
     margin: 0;
 }
 
 @media only screen and (min-device-width: 40em) {
     .container-content {
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-right: 20%;
+        margin-left: 20%;
     }
 }
 
@@ -19,6 +23,11 @@
 
 .burger-menu {
     height: 2em;
+}
+
+.member .mainquote {
+    width: 66%;
+    text-align: right;
 }
 
 header {
@@ -43,6 +52,23 @@ header .breadcrumb {
     grid-area: breadcrumb;
 }
 
+section.member {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "image"
+    "subquote";
+}
+
+section.member .image {
+    grid-area: image;
+}
+
+section.member .subquote {
+    grid-area: subquote;
+}
+
 .breadcrumb {
     height: 1.1em;
     background-image: url("./images/slash.svg");
@@ -50,6 +76,23 @@ header .breadcrumb {
     background-position: 2.7em 0;
     background-size: auto 1.1em;
     padding-left: 3.5em;
+}
+
+.member {
+    position: relative;
+}
+.member .mainquote {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.member .image {
+    width: 100%;
+}
+
+.member .mainquote {
+    color: #EFFFEF;
 }
 
 .color-cd-dark {
