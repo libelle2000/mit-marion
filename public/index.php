@@ -222,7 +222,7 @@
 <article class="topic">
     <section class="member">
         <q class="mainquote">das müsste ich eigentlich viel häufiger machen!</q>
-        <img class="mainquote" src="images/dummy.png"/>
+        <img class="mainquote" src="images/dummy.png" alt=""/>
         <q class="subquote">Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!</q>
     </section>
     <section class="marion">
