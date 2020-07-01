@@ -81,6 +81,7 @@ section.member .subquote {
 .member {
     position: relative;
 }
+
 .member .mainquote {
     position: absolute;
     top: 0;
@@ -91,8 +92,20 @@ section.member .subquote {
     width: 100%;
 }
 
+a:link,
+a:active,
+a:hover,
+a:visited {
+    color: inherit;
+}
+
 .member .mainquote {
     color: #EFFFEF;
+}
+
+.marion q,
+.member .subquote {
+    color: #336633;
 }
 
 .color-cd-dark {
@@ -101,4 +114,5 @@ section.member .subquote {
 
 .color-cd-light {
     background-color: #EFFFEF;
+    color: #336633;
 }
