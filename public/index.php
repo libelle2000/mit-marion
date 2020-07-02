@@ -6,13 +6,13 @@
     <title>die Fazien fetzen</title>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
-<body class="color-cd-dark">
+<body>
 <header class="container-content">
     <img class="logo" src="images/logo.svg"  alt="Logo mit-marion.de"/>
     <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
     <div class="breadcrumb">die-fazien-fetzen</div>
 </header>
-<article class="container-content color-cd-light">
+<article class="container-content">
     <section class="member">
         <q class="mainquote">das müsste ich eigentlich viel häufiger machen!</q>
         <img class="image" src="images/dummy.png" alt=""/>
@@ -27,7 +27,7 @@
         </ul>
         <p>Die Faszienübungen sind echte Allrounder!</p>
     </section>
-    <a href="#">Jetzt zur Probe mitmachen</a>
+    <a class="button" href="#">Jetzt zur Probe mitmachen</a>
 </article>
 <nav class="container-content pager">
     <ul>

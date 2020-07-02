@@ -20,11 +20,11 @@ article.container-content {
 }
 
 section.marion,
-q.subquote {
+.member .subquote {
     margin: 0.5em 0.5em 0 0.5em;
 }
 
-q.mainquote {
+.member .mainquote {
     margin-right: 0.2em;
 }
 
@@ -49,6 +49,15 @@ q.mainquote {
 .member .mainquote {
     width: 66%;
     text-align: right;
+}
+
+.button {
+    display: block;
+    height: 3em;
+    width: 80%;
+    margin: 0.5em auto 0.5em auto;
+    padding-top: 1em;
+    text-align: center;
 }
 
 header {
@@ -113,27 +122,30 @@ section.member .subquote {
     width: 100%;
 }
 
-a:link,
-a:active,
-a:hover,
-a:visited {
-    color: inherit;
-}
-
 .member .mainquote {
     color: #EFFFEF;
 }
 
-.marion q,
-.member .subquote {
+.marion,
+.member {
     color: #336633;
 }
 
-.color-cd-dark {
+.button,
+.button:link,
+.button:active,
+.button:hover,
+.button:visited
+{
+    color: #EFFFEF;
+    text-decoration: none;
+}
+
+body,
+.button {
     background-color: #336633;
 }
 
-.color-cd-light {
+article {
     background-color: #EFFFEF;
-    color: #336633;
 }
