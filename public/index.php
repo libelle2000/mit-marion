@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body class="color-cd-dark">
-<header class="container-content grid-2x2">
+<header class="container-content">
     <img class="logo" src="images/logo.svg"  alt="Logo mit-marion.de"/>
     <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
     <div class="breadcrumb">die-fazien-fetzen</div>
 </header>
-<article class="container-content topic color-cd-light">
+<article class="container-content color-cd-light">
     <section class="member">
         <q class="mainquote">das müsste ich eigentlich viel häufiger machen!</q>
         <img class="image" src="images/dummy.png" alt=""/>
