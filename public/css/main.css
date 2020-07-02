@@ -7,6 +7,7 @@
 }
 
 body,
+blockquote,
 .container-content {
     margin: 0;
 }
@@ -23,10 +24,6 @@ article.container-content {
 section.marion,
 .member .subquote {
     margin: 0.5em 0.5em 0 0.5em;
-}
-
-.member .mainquote {
-    margin-right: 0.2em;
 }
 
 @media only screen and (min-device-width: 40em) {
@@ -47,8 +44,11 @@ section.marion,
 }
 
 .member .mainquote {
-    width: 66%;
+    min-height: 5em;
+    padding: 0.2em 0.1em 3em 33%;
     text-align: right;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .button {
@@ -107,19 +107,6 @@ header .breadcrumb {
     grid-area: breadcrumb;
 }
 
-section.member {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "image"
-    "subquote";
-}
-
-section.member .image {
-    grid-area: image;
-}
-
 section.member .subquote {
     grid-area: subquote;
 }
@@ -151,19 +138,8 @@ section.member .subquote {
     padding-left: 3.5em;
 }
 
-body,
-.member {
+body {
     position: relative;
-}
-
-.member .mainquote {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.member .image {
-    width: 100%;
 }
 
 .breadcrumb,

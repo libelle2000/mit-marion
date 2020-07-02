@@ -14,12 +14,11 @@
 </header>
 <article class="container-content">
     <section class="member">
-        <q class="mainquote">das müsste ich eigentlich viel häufiger machen!</q>
-        <img class="image" src="images/dummy.png" alt=""/>
-        <q class="subquote">Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!</q>
+        <blockquote class="mainquote" style="background-image: url('images/dummy.png')">"das müsste ich eigentlich viel häufiger machen!"</blockquote>
+        <blockquote class="subquote">"Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!"</blockquote>
     </section>
     <section class="marion">
-        <q>Sowas höre ich nicht selten! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt.</q>
+        <blockquote>"Sowas höre ich nicht selten! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt."</blockquote>
         <ul>
             <li>die Beine erholen sich viel schneller,</li>
             <li>der Bewegungsumfang der Arme ist plötzlich viel größer</li>
