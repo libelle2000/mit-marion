@@ -12,6 +12,11 @@ blockquote,
     margin: 0;
 }
 
+ul.flyout {
+    margin: 0;
+    padding: 0;
+}
+
 header.container-content {
     margin: 0.5em 0.5em 0 0.5em;
 }
@@ -28,11 +33,31 @@ section.marion,
 
 @media only screen and (min-device-width: 40em) {
     header.container-content,
-    article.container-content
-    {
+    article.container-content {
         margin-right: 20%;
         margin-left: 20%;
     }
+}
+
+.stories {
+    display: block;
+    position: relative;
+}
+
+.stories .flyout {
+    position: absolute;
+    top: 3em;
+    left: 4em;
+    background-color: red;
+    list-style: url("images/slash.svg");
+}
+
+.stories.closed .flyout {
+    display: none;
+}
+
+.stories.open .flyout {
+    display: block;
 }
 
 .logo {
@@ -64,21 +89,25 @@ section.marion,
     position: relative;
     display: block;
     padding: 1em;
-    box-shadow: 0 0 22px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.75);
 }
+
 .zap.previous {
     text-align: left;
 }
+
 .zap.next {
     text-align: right;
 }
-.zap.previous::before{
+
+.zap.previous::before {
     position: absolute;
     left: 0;
     top: 1em;
     content: "<";
 }
-.zap.next::after{
+
+.zap.next::after {
     position: absolute;
     right: 0;
     top: 1em;
@@ -91,7 +120,7 @@ header {
     grid-template-rows: auto;
     grid-template-areas:
     "logo burger"
-    "breadcrumb breadcrumb";
+    "stories stories";
 }
 
 header .logo {
@@ -103,8 +132,8 @@ header .burger-menu {
     justify-self: end;
 }
 
-header .breadcrumb {
-    grid-area: breadcrumb;
+header .stories {
+    grid-area: stories;
 }
 
 section.member .subquote {
@@ -125,6 +154,7 @@ section.member .subquote {
 .zapper .previous {
     grid-area: previous;
 }
+
 .zapper .next {
     grid-area: next;
 }
@@ -161,8 +191,7 @@ body {
 .zap:link,
 .zap:active,
 .zap:hover,
-.zap:visited
-{
+.zap:visited {
     color: #EFFFEF;
     text-decoration: none;
 }

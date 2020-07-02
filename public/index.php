@@ -8,9 +8,16 @@
 </head>
 <body>
 <header class="container-content">
-    <img class="logo" src="images/logo.svg"  alt="Logo mit-marion.de"/>
+    <img class="logo" src="images/logo.svg"  alt="Logo mit-marion.de" />
     <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
-    <div class="breadcrumb">die-fazien-fetzen</div>
+    <nav class="stories closed" id="js_stories">
+        <div class="breadcrumb">die-fazien-fetzen</div>
+        <ul class="flyout">
+            <li><a class="story" href="#foo">foo</a></li>
+            <li><a class="story" href="#bar">bar</a></li>
+        </ul>
+    </nav>
+
 </header>
 <article class="container-content">
     <section class="member">
@@ -32,5 +39,6 @@
     <a class="zap previous" href="#dem-regen-trotzen-und-noch-länger">dem-regen-trotzen-und-noch-länger</a>
     <a class="zap next" href="#den-rücken-verrücken">den-rücken-verrücken</a>
 </nav>
+<script src='js/main.js'></script>
 </body>
 </html>
