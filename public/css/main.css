@@ -57,14 +57,14 @@ section.marion,
     margin: 0.5em auto 0.5em auto;
     padding: 1em;
     text-align: center;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .zap {
     position: relative;
     display: block;
-    height: 3em;
     padding: 1em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 0 22px 0 rgba(0,0,0,0.75);
 }
 .zap.previous {
     text-align: left;
@@ -166,6 +166,7 @@ body,
     width: 100%;
 }
 
+.breadcrumb,
 .member .mainquote {
     color: #EFFFEF;
 }
@@ -198,8 +199,4 @@ body,
 
 article {
     background-color: #EFFFEF;
-}
-
-.zap {
-    border-top: 0.1em solid #EFFFEF;
 }
