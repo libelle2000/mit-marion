@@ -29,11 +29,9 @@
     </section>
     <a class="button" href="#">Jetzt zur Probe mitmachen</a>
 </article>
-<nav class="container-content pager">
-    <ul>
-        <li><a href="#dem-regen-trotzen-und-noch-länger">dem-regen-trotzen-und-noch-länger</a></li>
-        <li><a href="#den-rücken-verrücken">den-rücken-verrücken</a></li>
-    </ul>
+<nav class="zapper">
+    <a class="zap previous" href="#dem-regen-trotzen-und-noch-länger">dem-regen-trotzen-und-noch-länger</a>
+    <a class="zap next" href="#den-rücken-verrücken">den-rücken-verrücken</a>
 </nav>
 </body>
 </html>

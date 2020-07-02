@@ -17,6 +17,7 @@ header.container-content {
 
 article.container-content {
     margin: 0.5em 0 0 0;
+    padding-bottom: 6em;
 }
 
 section.marion,
@@ -30,8 +31,7 @@ section.marion,
 
 @media only screen and (min-device-width: 40em) {
     header.container-content,
-    article.container-content,
-    nav.container-content
+    article.container-content
     {
         margin-right: 20%;
         margin-left: 20%;
@@ -53,11 +53,36 @@ section.marion,
 
 .button {
     display: block;
-    height: 3em;
-    width: 80%;
+    width: 70%;
     margin: 0.5em auto 0.5em auto;
-    padding-top: 1em;
+    padding: 1em;
     text-align: center;
+}
+
+.zap {
+    position: relative;
+    display: block;
+    height: 3em;
+    padding: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.zap.previous {
+    text-align: left;
+}
+.zap.next {
+    text-align: right;
+}
+.zap.previous::before{
+    position: absolute;
+    left: 0;
+    top: 1em;
+    content: "<";
+}
+.zap.next::after{
+    position: absolute;
+    right: 0;
+    top: 1em;
+    content: ">";
 }
 
 header {
@@ -99,6 +124,24 @@ section.member .subquote {
     grid-area: subquote;
 }
 
+.zapper {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "previous next";
+}
+
+.zapper .previous {
+    grid-area: previous;
+}
+.zapper .next {
+    grid-area: next;
+}
+
 .breadcrumb {
     height: 1.1em;
     background-image: url("./images/slash.svg");
@@ -108,6 +151,7 @@ section.member .subquote {
     padding-left: 3.5em;
 }
 
+body,
 .member {
     position: relative;
 }
@@ -135,17 +179,27 @@ section.member .subquote {
 .button:link,
 .button:active,
 .button:hover,
-.button:visited
+.button:visited,
+.zap,
+.zap:link,
+.zap:active,
+.zap:hover,
+.zap:visited
 {
     color: #EFFFEF;
     text-decoration: none;
 }
 
 body,
-.button {
+.button,
+.zap {
     background-color: #336633;
 }
 
 article {
     background-color: #EFFFEF;
+}
+
+.zap {
+    border-top: 0.1em solid #EFFFEF;
 }
