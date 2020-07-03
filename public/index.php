@@ -11,7 +11,7 @@
 <header class="container-content">
     <img class="logo" src="images/logo.svg" alt="Logo mit-marion.de"/>
     <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
-    <nav class="stories closed" id="js_stories">
+    <nav class="stories closed jsFlyoutToggle">
         <div class="breadcrumb">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
         <ul class="flyout">
             <li class="current">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</li>

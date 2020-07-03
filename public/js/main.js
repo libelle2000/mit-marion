@@ -29,12 +29,15 @@ ready(function () {
 
     const openFlyout = function(e) {
         e.currentTarget.classList.replace('closed', 'open');
-    }
+        e.preventDefault();
+    };
 
     const closeFlyout = function(e) {
         e.currentTarget.classList.replace('open', 'closed');
-    }
+        e.preventDefault();
+    };
 
-    const stories = document.getElementById('js_stories');
-    stories.addEventListener("click", toggleFlyout);
+    [].forEach.call(document.querySelectorAll('.jsFlyoutToggle'), function (el) {
+        el.addEventListener('click', toggleFlyout)
+    });
 });
