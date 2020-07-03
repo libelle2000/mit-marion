@@ -94,6 +94,7 @@ nav.open .flyout,
 nav:hover .flyout,
 nav .flyout:hover {
     display: block;
+    z-index: 1;
 }
 
 .logo {
