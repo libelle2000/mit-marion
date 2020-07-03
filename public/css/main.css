@@ -201,7 +201,8 @@ body {
 }
 
 body,
-.stories .flyout .current,
+.stories .flyout li.current,
+.stories .flyout li:hover,
 .button,
 .zap {
     background-color: #336633;
