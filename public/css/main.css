@@ -39,13 +39,13 @@ section.marion,
     }
 }
 
-.stories {
+nav.stories {
     display: block;
     position: relative;
     max-width: 80%;
 }
 
-.stories .flyout {
+nav.stories .flyout {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,22 +53,46 @@ section.marion,
 }
 
 .breadcrumb,
-.stories .flyout li {
+nav .flyout li {
     min-height: 1.1em;
     background-image: url("/css/images/slash.svg");
     background-repeat: no-repeat;
-    background-position: 2.7em 0.5em;
+    background-position: 0.5em 0.5em;
     background-size: auto 1.1em;
-    padding: 0.5em 0.5em 0.5em 3.5em;
+    padding: 0.5em 0.5em 0.5em 1.5em;
 }
 
-.stories.closed .flyout {
+.breadcrumb,
+nav.stories .flyout li {
+    padding-left: 3.5em;
+    background-position-x: 2.7em;
+}
+
+nav.corporate {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+nav.corporate .burger {
+    display: block;
+    margin: 0 0 0 auto;
+}
+
+nav.corporate .flyout {
+    position: absolute;
+    top: 2em;
+    right: 0;
+    list-style: none;
+}
+
+nav.closed .flyout {
     display: none;
 }
 
-.stories.open .flyout,
-.stories:hover .flyout,
-.stories .flyout:hover {
+nav.open .flyout,
+nav:hover .flyout,
+nav .flyout:hover {
     display: block;
 }
 
@@ -76,7 +100,7 @@ section.marion,
     height: 1.5em;
 }
 
-.burger-menu {
+.burger {
     height: 2em;
 }
 
@@ -131,7 +155,7 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "logo burger"
+    "logo corporate"
     "stories stories";
 }
 
@@ -139,12 +163,12 @@ header .logo {
     grid-area: logo;
 }
 
-header .burger-menu {
-    grid-area: burger;
+header nav.corporate {
+    grid-area: corporate;
     justify-self: end;
 }
 
-header .stories {
+header nav.stories {
     grid-area: stories;
 }
 
@@ -185,9 +209,9 @@ body {
     color: #336633;
 }
 
-.stories .flyout,
-.stories .flyout a,
-.stories .flyout a:link:visited:hover:active,
+nav .flyout,
+nav .flyout a,
+nav .flyout a:link:visited:hover:active,
 .button,
 .button:link:visited:hover:active,
 .zap,
@@ -197,14 +221,14 @@ body {
 }
 
 body,
-.stories .flyout li.current,
-.stories .flyout li:hover,
+nav .flyout li.current,
+nav .flyout li:hover,
 .button,
 .zap {
     background-color: #336633;
 }
 
-.stories .flyout {
+nav .flyout {
     background-color: rgba(51, 102, 51, 0.7);
 }
 
