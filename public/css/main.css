@@ -57,14 +57,9 @@ section.marion,
     min-height: 1.1em;
     background-image: url("./images/slash.svg");
     background-repeat: no-repeat;
-    background-position: 2.7em 0;
+    background-position: 2.7em 0.5em;
     background-size: auto 1.1em;
-    padding-left: 3.5em;
-    padding-right: 0.5em;
-}
-
-.stories .flyout li {
-    padding-bottom: 0.5em;
+    padding: 0.5em 0.5em 0.5em 3.5em;
 }
 
 .stories.closed .flyout {
