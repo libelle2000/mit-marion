@@ -224,6 +224,7 @@ nav .flyout a:link:visited:hover:active,
 body,
 nav .flyout li.current,
 nav .flyout li:hover,
+nav.corporate .flyout li:first-child,
 .button,
 .zap {
     background-color: #336633;
