@@ -16,37 +16,27 @@ function ready(callbackFunc) {
 }
 
 ready(function () {
-
     const toggleFlyout = function (e) {
-        if (e.currentTarget.classList.contains('open')) {
-            closeFlyout(e);
+        const flyoutWrapper = e.currentTarget.closest('.jsFlyoutWrapper');
+        if (flyoutWrapper.classList.contains('open')) {
+            closeFlyout(flyoutWrapper);
         } else {
-            openFlyout(e);
+            openFlyout(flyoutWrapper);
         }
 
         e.preventDefault();
         e.stopPropagation();
     };
 
-    const openFlyout = function(e) {
-        e.currentTarget.classList.replace('closed', 'open');
+    const openFlyout = function (el) {
+        el.classList.replace('closed', 'open');
     };
 
-    const closeFlyout = function(e) {
-        e.currentTarget.classList.replace('open', 'closed');
-    };
-
-    const toggleFlyoutDelegate = function(e) {
-        e.currentTarget.closest('.jsFlyoutToggle').click()
-        e.preventDefault();
-        e.stopPropagation();
+    const closeFlyout = function (el) {
+        el.classList.replace('open', 'closed');
     };
 
     [].forEach.call(document.querySelectorAll('.jsFlyoutToggle'), function (el) {
         el.addEventListener('click', toggleFlyout)
-    });
-
-    [].forEach.call(document.querySelectorAll('.jsFlyoutToggleDelegate'), function (el) {
-        el.addEventListener('click', toggleFlyoutDelegate)
     });
 });

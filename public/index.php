@@ -11,10 +11,10 @@
 <header class="container-content">
     <img class="logo" src="images/logo.svg" alt="Logo mit-marion.de"/>
     <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
-    <nav class="stories closed jsFlyoutToggle">
-        <div class="breadcrumb">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
+    <nav class="stories closed jsFlyoutWrapper">
+        <div class="breadcrumb jsFlyoutToggle">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
         <ul class="flyout">
-            <li class="current jsFlyoutToggleDelegate">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</a></li>
+            <li class="current jsFlyoutToggle">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</li>
             <li><a href="#bar">bar</a></li>
             <li class="current"><a href="#foo">die-fazien-fetzen</a></li>
             <li><a href="#bar">bar</a></li>
