@@ -231,7 +231,8 @@ nav.corporate .flyout li:first-child,
 }
 
 nav .flyout {
-    background-color: rgba(51, 102, 51, 0.7);
+    background-color: rgba(51, 102, 51, 0.9);
+    box-shadow: 0 10px 2px 0 rgba(0,0,0,0.75);
 }
 
 article {
