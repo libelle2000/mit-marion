@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>die Fazien fetzen</title>
     <link rel="stylesheet" href="css/main.css"/>
+    <script async="async" src='js/main.js'></script>
 </head>
 <body>
 <header class="container-content">
@@ -39,6 +40,5 @@
     <a class="zap previous" href="#dem-regen-trotzen-und-noch-länger">dem-regen-trotzen-und-noch-länger</a>
     <a class="zap next" href="#den-rücken-verrücken">den-rücken-verrücken</a>
 </nav>
-<script src='js/main.js'></script>
 </body>
 </html>
