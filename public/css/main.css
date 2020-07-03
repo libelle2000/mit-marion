@@ -46,17 +46,30 @@ section.marion,
 
 .stories .flyout {
     position: absolute;
-    top: 3em;
-    left: 4em;
-    background-color: red;
-    list-style: url("images/slash.svg");
+    top: 0;
+    left: 0;
+    background-color: red; /*todo remove*/
+    list-style: none;
+}
+
+.breadcrumb,
+.stories .flyout li {
+    height: 1.1em;
+    background-image: url("./images/slash.svg");
+    background-repeat: no-repeat;
+    background-position: 2.7em 0;
+    background-size: auto 1.1em;
+    padding-left: 3.5em;
 }
 
 .stories.closed .flyout {
     display: none;
 }
 
-.stories.open .flyout {
+.stories.open .flyout,
+.stories:hover .flyout,
+.stories .flyout:hover
+{
     display: block;
 }
 
@@ -159,15 +172,6 @@ section.member .subquote {
     grid-area: next;
 }
 
-.breadcrumb {
-    height: 1.1em;
-    background-image: url("./images/slash.svg");
-    background-repeat: no-repeat;
-    background-position: 2.7em 0;
-    background-size: auto 1.1em;
-    padding-left: 3.5em;
-}
-
 body {
     position: relative;
 }
@@ -183,15 +187,9 @@ body {
 }
 
 .button,
-.button:link,
-.button:active,
-.button:hover,
-.button:visited,
+.button:link:visited:hover:active,
 .zap,
-.zap:link,
-.zap:active,
-.zap:hover,
-.zap:visited {
+.zap:link:visited:hover:active {
     color: #EFFFEF;
     text-decoration: none;
 }

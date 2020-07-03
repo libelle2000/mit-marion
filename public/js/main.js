@@ -37,6 +37,4 @@ ready(function () {
 
     const stories = document.getElementById('js_stories');
     stories.addEventListener("click", toggleFlyout);
-    // stories.addEventListener("mouseenter", openFlyout);
-    // stories.addEventListener("mouseleave", closeFlyout);
 });
