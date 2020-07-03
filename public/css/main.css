@@ -42,6 +42,7 @@ section.marion,
 .stories {
     display: block;
     position: relative;
+    max-width: 80%;
 }
 
 .stories .flyout {
@@ -53,7 +54,7 @@ section.marion,
 
 .breadcrumb,
 .stories .flyout li {
-    height: 1.1em;
+    min-height: 1.1em;
     background-image: url("./images/slash.svg");
     background-repeat: no-repeat;
     background-position: 2.7em 0;
