@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>die Fazien fetzen</title>
     <link rel="stylesheet" href="css/main.css"/>
-    <script async="async" src='js/main.js'></script>
+    <script async="async" src='/js/main.js'></script>
 </head>
 <body>
 <header class="container-content">
-    <img class="logo" src="images/logo.svg" alt="Logo mit-marion.de"/>
-    <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
+    <img class="logo" src="/images/logo.svg" alt="Logo mit-marion.de"/>
+    <img class="burger-menu" src="/images/burger-menu.svg" alt="Menü Icon"/>
     <nav class="stories closed jsFlyoutWrapper">
         <div class="breadcrumb jsFlyoutToggle">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
         <ul class="flyout">

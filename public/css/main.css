@@ -55,7 +55,7 @@ section.marion,
 .breadcrumb,
 .stories .flyout li {
     min-height: 1.1em;
-    background-image: url("./images/slash.svg");
+    background-image: url("/css/images/slash.svg");
     background-repeat: no-repeat;
     background-position: 2.7em 0.5em;
     background-size: auto 1.1em;
