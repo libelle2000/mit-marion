@@ -25,19 +25,28 @@ ready(function () {
         }
 
         e.preventDefault();
+        e.stopPropagation();
     };
 
     const openFlyout = function(e) {
         e.currentTarget.classList.replace('closed', 'open');
-        e.preventDefault();
     };
 
     const closeFlyout = function(e) {
         e.currentTarget.classList.replace('open', 'closed');
+    };
+
+    const toggleFlyoutDelegate = function(e) {
+        e.currentTarget.closest('.jsFlyoutToggle').click()
         e.preventDefault();
+        e.stopPropagation();
     };
 
     [].forEach.call(document.querySelectorAll('.jsFlyoutToggle'), function (el) {
         el.addEventListener('click', toggleFlyout)
+    });
+
+    [].forEach.call(document.querySelectorAll('.jsFlyoutToggleDelegate'), function (el) {
+        el.addEventListener('click', toggleFlyoutDelegate)
     });
 });
