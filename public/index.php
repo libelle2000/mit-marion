@@ -12,9 +12,15 @@
     <img class="logo" src="images/logo.svg"  alt="Logo mit-marion.de" />
     <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
     <nav class="stories closed" id="js_stories">
-        <div class="breadcrumb">die-fazien-fetzen</div>
+        <div class="breadcrumb">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
         <ul class="flyout">
-            <li><a class="story" href="#foo">foo</a></li>
+            <li class="current">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</li>
+            <li><a class="story" href="#bar">bar</a></li>
+            <li class="current"><a class="story" href="#foo">die-fazien-fetzen</a></li>
+            <li><a class="story" href="#bar">bar</a></li>
+            <li><a class="story" href="#bar">bar</a></li>
+            <li><a class="story" href="#bar">bar und noch viel viel mehr und noch viel viel mehr</a></li>
+            <li><a class="story" href="#bar">bar</a></li>
             <li><a class="story" href="#bar">bar</a></li>
         </ul>
     </nav>

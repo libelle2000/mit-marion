@@ -48,7 +48,6 @@ section.marion,
     position: absolute;
     top: 0;
     left: 0;
-    background-color: red; /*todo remove*/
     list-style: none;
 }
 
@@ -60,6 +59,11 @@ section.marion,
     background-position: 2.7em 0;
     background-size: auto 1.1em;
     padding-left: 3.5em;
+    padding-right: 0.5em;
+}
+
+.stories .flyout li {
+    padding-bottom: 0.5em;
 }
 
 .stories.closed .flyout {
@@ -68,8 +72,7 @@ section.marion,
 
 .stories.open .flyout,
 .stories:hover .flyout,
-.stories .flyout:hover
-{
+.stories .flyout:hover {
     display: block;
 }
 
@@ -186,6 +189,9 @@ body {
     color: #336633;
 }
 
+.stories .flyout,
+.stories .flyout a,
+.stories .flyout a:link:visited:hover:active,
 .button,
 .button:link:visited:hover:active,
 .zap,
@@ -195,9 +201,14 @@ body {
 }
 
 body,
+.stories .flyout .current,
 .button,
 .zap {
     background-color: #336633;
+}
+
+.stories .flyout {
+    background-color: rgba(51, 102, 51, 0.7);
 }
 
 article {
