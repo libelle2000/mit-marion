@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="container-content">
-    <img class="logo" src="images/logo.svg"  alt="Logo mit-marion.de" />
+    <img class="logo" src="images/logo.svg" alt="Logo mit-marion.de"/>
     <img class="burger-menu" src="images/burger-menu.svg" alt="Menü Icon"/>
     <nav class="stories closed" id="js_stories">
         <div class="breadcrumb">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
@@ -28,11 +28,17 @@
 </header>
 <article class="container-content">
     <section class="member">
-        <blockquote class="mainquote" style="background-image: url('images/dummy.png')">"das müsste ich eigentlich viel häufiger machen!"</blockquote>
-        <blockquote class="subquote">"Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!"</blockquote>
+        <blockquote class="mainquote" style="background-image: url('images/dummy.png')">
+            "das müsste ich eigentlich viel häufiger machen!"
+        </blockquote>
+        <blockquote class="subquote">
+            "Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!"
+        </blockquote>
     </section>
     <section class="marion">
-        <blockquote>"Sowas höre ich nicht selten! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt."</blockquote>
+        <blockquote>
+            "Sowas höre ich nicht selten! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt."
+        </blockquote>
         <ul>
             <li>die Beine erholen sich viel schneller,</li>
             <li>der Bewegungsumfang der Arme ist plötzlich viel größer</li>
