@@ -54,8 +54,8 @@ ready(function () {
         return e.currentTarget.closest('.jsFlyoutWrapper');
     };
 
-    [].forEach.call(document.querySelectorAll('.jsFlyoutClickToggle'), function (el) {
-        el.addEventListener('click', toggleFlyout);
+    [].forEach.call(document.querySelectorAll('.jsFlyoutTouchToggle'), function (el) {
+        el.addEventListener('touchstart', toggleFlyout);
     });
 
     [].forEach.call(document.querySelectorAll('.jsFlyoutHoverToggle'), function (el) {
