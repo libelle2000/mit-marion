@@ -28,19 +28,19 @@ ready(function () {
         e.stopPropagation();
     };
 
-    // const openFlyout = function (e) {
-    //     const flyoutWrapper = _getFlyoutWrapper(e);
-    //     _setOpen(flyoutWrapper);
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    // };
-    //
-    // const closeFlyout = function (e) {
-    //     const flyoutWrapper = _getFlyoutWrapper(e);
-    //     _setClosed(flyoutWrapper);
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    // };
+    const openFlyout = function (e) {
+        const flyoutWrapper = _getFlyoutWrapper(e);
+        _setOpen(flyoutWrapper);
+        e.preventDefault();
+        e.stopPropagation();
+    };
+
+    const closeFlyout = function (e) {
+        const flyoutWrapper = _getFlyoutWrapper(e);
+        _setClosed(flyoutWrapper);
+        e.preventDefault();
+        e.stopPropagation();
+    };
 
     const _setOpen = function (el) {
         el.classList.replace('closed', 'open');
@@ -54,9 +54,12 @@ ready(function () {
         return e.currentTarget.closest('.jsFlyoutWrapper');
     };
 
-    [].forEach.call(document.querySelectorAll('.jsFlyoutToggle'), function (el) {
+    [].forEach.call(document.querySelectorAll('.jsFlyoutClickToggle'), function (el) {
         el.addEventListener('click', toggleFlyout);
-        // el.addEventListener('mouseenter', openFlyout);
-        // el.addEventListener('mouseleave', closeFlyout);
+    });
+
+    [].forEach.call(document.querySelectorAll('.jsFlyoutHoverToggle'), function (el) {
+        el.addEventListener('mouseenter', openFlyout);
+        el.addEventListener('mouseleave', closeFlyout);
     });
 });

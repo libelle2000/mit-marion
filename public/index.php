@@ -10,9 +10,9 @@
 <body>
 <header class="container-content">
     <img class="logo" src="/images/logo.svg" alt="Logo mit-marion.de"/>
-    <nav class="corporate closed jsFlyoutWrapper">
-        <img class="burger jsFlyoutToggle" src="/images/burger-menu.svg" alt="Menü Icon"/>
-        <ul class="flyout">
+    <nav class="corporate closed jsFlyoutWrapper jsFlyoutHoverToggle">
+        <img class="burger jsFlyoutClickToggle jsFlyoutHoverToggle" src="/images/burger-menu.svg" alt="Menü Icon"/>
+        <ul class="flyout jsFlyoutHoverToggle">
             <li><a href="#bar">meine Qualifikationen</a></li>
             <li class="current"><a href="#bar">meine Qualifikationen</a></li>
             <li><a href="#bar">über mich</a></li>
@@ -22,10 +22,10 @@
             <li><a href="#bar">bar</a></li>
         </ul>
     </nav>
-    <nav class="stories closed jsFlyoutWrapper">
-        <div class="breadcrumb jsFlyoutToggle">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
-        <ul class="flyout">
-            <li class="current jsFlyoutToggle"><a href="#boo">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</a></li>
+    <nav class="stories closed jsFlyoutWrapper jsFlyoutHoverToggle">
+        <div class="breadcrumb jsFlyoutClickToggle jsFlyoutHoverToggle">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
+        <ul class="flyout jsFlyoutHoverToggle">
+            <li class="current jsFlyoutClickToggle"><a href="#boo">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</a></li>
             <li><a href="#foo">die-fazien-fetzen</a></li>
             <li><a href="#bar">bar</a></li>
             <li><a href="#bar">bar</a></li>
