@@ -24,9 +24,9 @@
             </ul>
         </nav>
         <nav class="stories closed jsFlyoutWrapper jsFlyoutHoverToggle">
-            <div class="breadcrumb jsFlyoutTouchToggle jsFlyoutHoverToggle">den-rücken-verrücken</div>
+            <div class="breadcrumb jsFlyoutTouchToggle jsFlyoutHoverToggle">den Rücken verrücken</div>
             <ul class="flyout jsFlyoutHoverToggle">
-                <li class="breadcrumb current jsFlyoutTouchToggle">den-rücken-verrücken</li>
+                <li class="breadcrumb current jsFlyoutTouchToggle">den Rücken verrücken</li>
                 <li><a href="/die-fazien-fetzen/">die Faszien fetzen</a></li>
                 <li><a href="/dem-regen-trotzen/">dem-regen-trotzen</a></li>
             </ul>
