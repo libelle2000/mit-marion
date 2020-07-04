@@ -83,7 +83,7 @@ nav.stories .flyout {
     width: 0.7em;
     margin-left: 0.5em;
     background-size: 100%;
-    background-image: url("/css/images/arrow-border.svg");
+    background-image: url("/_assets/css/images/arrow-border.svg");
     background-repeat: no-repeat;
     transform: rotate(180deg);
     background-position-y: top;
@@ -97,7 +97,7 @@ li.breadcrumb:after {
 .breadcrumb,
 nav .flyout li {
     min-height: 1.1em;
-    background-image: url("/css/images/slash.svg");
+    background-image: url("/_assets/css/images/slash.svg");
     background-repeat: no-repeat;
     background-position: 0.5em 0.5em;
     background-size: auto 1.1em;
@@ -187,7 +187,7 @@ nav.open .flyout {
     width: 1em;
     background-size: 100%;
     transform: rotate(270deg);
-    background-image: url("/css/images/arrow-border.svg");
+    background-image: url("/_assets/css/images/arrow-border.svg");
     background-repeat: no-repeat;
 }
 
@@ -200,7 +200,7 @@ nav.open .flyout {
     width: 1em;
     background-size: 100%;
     transform: rotate(90deg);
-    background-image: url("/css/images/arrow-border.svg");
+    background-image: url("/_assets/css/images/arrow-border.svg");
     background-repeat: no-repeat;
 }
 

@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>die Fazien fetzen</title>
-    <link rel="stylesheet" href="css/main.css"/>
-    <script async="async" src='/js/main.js'></script>
+    <link rel="stylesheet" href="_assets/css/main.css"/>
+    <script async="async" src='/_assets/js/main.js'></script>
 </head>
 <body>
 <div class="content">
     <header class="container-content">
-        <img class="logo" src="/images/logo.svg" alt="Logo mit-marion.de"/>
+        <img class="logo" src="/_assets/images/logo.svg" alt="Logo mit-marion.de"/>
         <nav class="corporate closed jsFlyoutWrapper jsFlyoutHoverToggle">
-            <img class="burger jsFlyoutTouchToggle jsFlyoutHoverToggle" src="/images/burger-menu.svg" alt="Menü Icon"/>
+            <img class="burger jsFlyoutTouchToggle jsFlyoutHoverToggle" src="/_assets/images/burger-menu.svg" alt="Menü Icon"/>
             <ul class="flyout jsFlyoutHoverToggle">
                 <li><a href="#bar">meine Qualifikationen</a></li>
                 <li class="current"><a href="#bar">meine Qualifikationen</a></li>
@@ -45,7 +45,7 @@
     <article class="container-content">
         <section class="member">
             <blockquote class="mainquote"
-                        style="background-image: url('/images/faszien-rolle.jpg'); background-position: right, bottom;">
+                        style="background-image: url('/_assets/images/faszien-rolle.jpg'); background-position: right, bottom;">
                 <span>
                     "das müsste ich eigentlich viel häufiger machen!"
                 </span>
@@ -56,7 +56,7 @@
         </section>
         <section class="marion">
             <blockquote class="floatedGroup">
-                <img class="photo floatLeft" src="/images/marion.jpg" alt="Trainerin Marion"/>
+                <img class="photo floatLeft" src="/_assets/images/marion.jpg" alt="Trainerin Marion"/>
                 "Sowas höre ich öfter! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt."
             </blockquote>
             <ul>
