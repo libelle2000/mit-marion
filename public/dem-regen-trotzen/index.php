@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>die Fazien fetzen</title>
+    <title>dem Regen trotzen</title>
     <link rel="stylesheet" href="/_assets/css/main.css"/>
     <script async="async" src='/_assets/js/main.js'></script>
 </head>
@@ -24,10 +24,10 @@
             </ul>
         </nav>
         <nav class="stories closed jsFlyoutWrapper jsFlyoutHoverToggle">
-            <div class="breadcrumb jsFlyoutTouchToggle jsFlyoutHoverToggle">die-fazien-fetzen</div>
+            <div class="breadcrumb jsFlyoutTouchToggle jsFlyoutHoverToggle">dem-regen-trotzen</div>
             <ul class="flyout jsFlyoutHoverToggle">
-                <li class="breadcrumb current jsFlyoutTouchToggle">die-fazien-fetzen</li>
-                <li><a href="/dem-regen-trotzen/">dem-regen-trotzen</a></li>
+                <li class="breadcrumb current jsFlyoutTouchToggle">dem-regen-trotzen</li>
+                <li><a href="/die-fazien-fetzen/">die-fazien-fetzen</a></li>
                 <li><a href="/den-rücken-verrücken/">den-rücken-verrücken</a></li>
             </ul>
         </nav>
@@ -60,7 +60,7 @@
         <a class="button" href="#">Jetzt zur Probe mitmachen</a>
     </article>
     <nav class="zapper">
-        <a class="zap previous" href="/dem-regen-trotzen/">dem-regen-trotzen</a>
+        <a class="zap previous" href="/die-fazien-fetzen/">die-fazien-fetzen</a>
         <a class="zap next" href="/den-rücken-verrücken/">den-rücken-verrücken</a>
     </nav>
 </div>

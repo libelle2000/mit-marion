@@ -60,8 +60,8 @@
         <a class="button" href="#">Jetzt zur Probe mitmachen</a>
     </article>
     <nav class="zapper">
-        <a class="zap previous" href="/dem-regen-trotzen/">dem-regen-trotzen</a>
-        <a class="zap next" href="/den-rücken-verrücken/">den-rücken-verrücken</a>
+        <a class="zap previous" href="/den-rücken-verrücken/">den-rücken-verrücken</a>
+        <a class="zap next" href="/dem-regen-trotzen/">dem-regen-trotzen</a>
     </nav>
 </div>
 </body>
