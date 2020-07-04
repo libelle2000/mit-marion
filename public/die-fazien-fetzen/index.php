@@ -27,7 +27,7 @@
             <div class="breadcrumb jsFlyoutTouchToggle jsFlyoutHoverToggle">die Faszien fetzen</div>
             <ul class="flyout jsFlyoutHoverToggle">
                 <li class="breadcrumb current jsFlyoutTouchToggle">die Faszien fetzen</li>
-                <li><a href="/dem-regen-trotzen/">dem-regen-trotzen</a></li>
+                <li><a href="/dem-regen-trotzen/">dem Regen trotzen</a></li>
                 <li><a href="/den-rücken-verrücken/">den Rücken verrücken</a></li>
             </ul>
         </nav>
@@ -61,7 +61,7 @@
     </article>
     <nav class="zapper">
         <a class="zap previous" href="/den-rücken-verrücken/">den Rücken verrücken</a>
-        <a class="zap next" href="/dem-regen-trotzen/">dem-regen-trotzen</a>
+        <a class="zap next" href="/dem-regen-trotzen/">dem Regen trotzen</a>
     </nav>
 </div>
 </body>
