@@ -309,17 +309,21 @@ article {
         height: 10em;
     }
 
-    .logo,
-    nav.corporate .burger {
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
     .logo {
         height: 2.5em;
     }
 
     .burger {
         height: 2em;
+    }
+
+    .logo,
+    nav.corporate .burger {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    nav.corporate .flyout {
+        top: 3em;
     }
 }
