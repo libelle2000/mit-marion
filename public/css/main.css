@@ -223,6 +223,7 @@ body,
 nav .flyout li.current,
 nav .flyout li:hover,
 nav.corporate .flyout li:first-child,
+.mainquote span,
 .button,
 .zap {
     background-color: #336633;

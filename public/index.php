@@ -39,8 +39,10 @@
 </header>
 <article class="container-content">
     <section class="member">
-        <blockquote class="mainquote" style="background-image: url('images/dummy.png')">
-            "das müsste ich eigentlich viel häufiger machen!"
+        <blockquote class="mainquote" style="background-image: url('/images/faszien-rolle.jpg'); background-position: right, bottom;">
+            <span>
+                "das müsste ich eigentlich viel häufiger machen!"
+            </span>
         </blockquote>
         <blockquote class="subquote">
             "Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!"
