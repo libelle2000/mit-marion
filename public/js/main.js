@@ -21,6 +21,7 @@ ready(function () {
         if (flyoutWrapper.classList.contains('open')) {
             _setClosed(flyoutWrapper);
         } else {
+            _setClosedToAll();
             _setOpen(flyoutWrapper);
         }
 
@@ -48,6 +49,12 @@ ready(function () {
 
     const _setClosed = function (el) {
         el.classList.replace('open', 'closed');
+    };
+
+    const _setClosedToAll = function (el) {
+        [].forEach.call(document.querySelectorAll('.open'), function (el) {
+            _setClosed(el);
+        });
     };
 
     const _getFlyoutWrapper = function(e) {
