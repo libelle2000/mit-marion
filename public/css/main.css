@@ -107,6 +107,7 @@ nav .flyout li {
 .breadcrumb,
 nav.stories .flyout li {
     padding-left: 3.5em;
+    padding-right: 1.7em;
     background-position-x: 2.7em;
 }
 
