@@ -50,21 +50,13 @@ section.marion .photo{
     height: 5em;
 }
 
-@media only screen and (min-device-width: 40em) {
-    header.container-content,
-    article.container-content {
-        margin-right: 20%;
-        margin-left: 20%;
-    }
 
-    section.marion blockquote{
-        width: 50%;
-    }
+.logo {
+    height: 1.5em;
+}
 
-    section.marion .photo{
-        width: 10em;
-        height: 10em;
-    }
+.burger {
+    height: 2em;
 }
 
 nav.stories {
@@ -143,14 +135,6 @@ nav.closed .flyout {
 nav.open .flyout {
     display: block;
     z-index: 1;
-}
-
-.logo {
-    height: 1.5em;
-}
-
-.burger {
-    height: 2em;
 }
 
 .photo {
@@ -306,4 +290,35 @@ nav .flyout {
 
 article {
     background-color: #EFFFEF;
+}
+
+@media only screen and (min-device-width : 800px) {
+    .content {
+        margin-right: 20%;
+        margin-left: 20%;
+        box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.75);
+    }
+
+    section.marion blockquote{
+        width: 50%;
+    }
+
+    section.marion .photo{
+        width: 10em;
+        height: 10em;
+    }
+
+    .logo,
+    nav.corporate .burger {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .logo {
+        height: 2.5em;
+    }
+
+    .burger {
+        height: 2em;
+    }
 }
