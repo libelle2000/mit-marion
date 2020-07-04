@@ -249,7 +249,7 @@ section.member .subquote {
     grid-area: next;
 }
 
-body {
+.content {
     position: relative;
 }
 
@@ -325,5 +325,9 @@ article {
 
     nav.corporate .flyout {
         top: 3em;
+    }
+
+    .zapper {
+        width: 60%;
     }
 }
