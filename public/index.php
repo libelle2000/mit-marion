@@ -12,7 +12,7 @@
     <img class="logo" src="/_assets/images/logo.svg" alt="Logo mit-marion.de"/>
     <p style="color: #EFFFEF;">Die Seite befindet sich noch im Aufbau!</p>
     <br /><br /><br /><br /><br /><br />
-    <a href="/die-fazien-fetzen/" style="color: #306030">die-fazien-fetzen</a>
+    <a href="/die-fazien-fetzen/" style="color: #306030">die Faszien fetzen</a>
 </section>
 </body>
 </html>
