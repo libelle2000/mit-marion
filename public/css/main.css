@@ -2,6 +2,16 @@
     font-family: Arial, sans-serif;
 }
 
+.floatLeft {
+    float: left;
+}
+
+.floatedGroup:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .member .mainquote {
     font-size: 2.5em;
 }
@@ -28,7 +38,16 @@ article.container-content {
 
 section.marion,
 .member .subquote {
-    margin: 0.5em 0.5em 0 0.5em;
+    margin: 1.5em 0.5em 0 0.5em;
+}
+
+section.marion blockquote{
+    width: 100%;
+}
+
+section.marion .photo{
+    width: 5em;
+    height: 5em;
 }
 
 @media only screen and (min-device-width: 40em) {
@@ -36,6 +55,15 @@ section.marion,
     article.container-content {
         margin-right: 20%;
         margin-left: 20%;
+    }
+
+    section.marion blockquote{
+        width: 50%;
+    }
+
+    section.marion .photo{
+        width: 10em;
+        height: 10em;
     }
 }
 
@@ -55,6 +83,7 @@ nav.stories .flyout {
 .breadcrumb:after {
     position: relative;
 }
+
 .breadcrumb:after {
     position: absolute;
     content: "";
@@ -67,6 +96,7 @@ nav.stories .flyout {
     transform: rotate(180deg);
     background-position-y: top;
 }
+
 li.breadcrumb:after {
     background-position-y: bottom;
     transform: rotate(0deg);
@@ -121,6 +151,12 @@ nav.open .flyout {
 
 .burger {
     height: 2em;
+}
+
+.photo {
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1em;
 }
 
 .member .mainquote {

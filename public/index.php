@@ -49,8 +49,9 @@
         </blockquote>
     </section>
     <section class="marion">
-        <blockquote>
-            "Sowas höre ich nicht selten! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt."
+        <blockquote class="floatedGroup">
+            <img class="photo floatLeft" src="/images/marion.jpg" alt="Trainerin Marion" />
+            "Sowas höre ich öfter! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt."
         </blockquote>
         <ul>
             <li>die Beine erholen sich viel schneller,</li>
