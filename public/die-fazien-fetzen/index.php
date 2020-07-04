@@ -10,7 +10,7 @@
 <body>
 <div class="content">
     <header class="container-content">
-        <img class="logo" src="/_assets/images/logo.svg" alt="Logo mit-marion.de"/>
+        <a href="/"><img class="logo" src="/_assets/images/logo.svg" alt="Logo mit-marion.de"/></a>
         <nav class="corporate closed jsFlyoutWrapper jsFlyoutHoverToggle">
             <img class="burger jsFlyoutTouchToggle jsFlyoutHoverToggle" src="/_assets/images/burger-menu.svg" alt="Menü Icon"/>
             <ul class="flyout jsFlyoutHoverToggle">
