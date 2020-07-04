@@ -25,9 +25,9 @@
     <nav class="stories closed jsFlyoutWrapper">
         <div class="breadcrumb jsFlyoutToggle">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</div>
         <ul class="flyout">
-            <li class="current jsFlyoutToggle">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</li>
+            <li><a href="#foo">die-fazien-fetzen</a></li>
             <li><a href="#bar">bar</a></li>
-            <li class="current"><a href="#foo">die-fazien-fetzen</a></li>
+            <li class="current jsFlyoutToggle"><a href="#boo">die-fazien-fetzen und noch viel viel mehr und noch viel viel mehr</a></li>
             <li><a href="#bar">bar</a></li>
             <li><a href="#bar">bar</a></li>
             <li><a href="#bar">bar und noch viel viel mehr und noch viel viel mehr</a></li>
