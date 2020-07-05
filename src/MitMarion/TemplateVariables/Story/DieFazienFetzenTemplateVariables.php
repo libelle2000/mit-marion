@@ -7,11 +7,11 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
 {
     public function asAssocArray(): array
     {
-        $currentTitle = 'die Faszien fetzen';
+        $currentTitle = self::STORY_MAP[self::DIE_FAZIEN_FETZEN][self::CAPTION];
 
         return [
             'htmlHead' => [
-                'title' => 'die Fazien fetzen',
+                'title' => $currentTitle,
             ],
             'storyNav' => [
                 'currentTitle' => $currentTitle,
