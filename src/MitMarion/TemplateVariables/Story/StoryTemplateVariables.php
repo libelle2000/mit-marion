@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Story;
 
+use RuntimeException;
 use Shared\TemplateVariables\TemplateVariables;
 
 abstract class StoryTemplateVariables implements TemplateVariables
@@ -32,12 +33,34 @@ abstract class StoryTemplateVariables implements TemplateVariables
 
     protected function getOtherStoriesByCurrentTitle(string $currentTitle): array
     {
-        return array_filter(
+        $filteredStoryMap = array_filter(
             self::STORY_MAP,
             static function (array $story) use ($currentTitle) {
                 return $story['caption'] !== $currentTitle;
             },
             self::ARRAY_FILTER_USE_VALUE
         );
+        $this->ensureTitleWasFoundInMap($filteredStoryMap, $currentTitle);
+        $this->ensureAtLeastOneItem($filteredStoryMap, $currentTitle);
+
+        return $filteredStoryMap;
+    }
+
+    private function ensureTitleWasFoundInMap(array $filteredStoryMap, string $currentTitle): void
+    {
+        if ($filteredStoryMap === self::STORY_MAP) {
+            throw new RuntimeException(
+                sprintf('Given Title was not found in map. [%s]', $currentTitle)
+            );
+        }
+    }
+
+    private function ensureAtLeastOneItem(array $filteredStoryMap, string $currentTitle): void
+    {
+        if (count($filteredStoryMap) === 0) {
+            throw new RuntimeException(
+                sprintf('Expected at least one item. [%s]', $currentTitle)
+            );
+        }
     }
 }
