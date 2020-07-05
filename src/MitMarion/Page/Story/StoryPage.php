@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\Page\Story;
 
+use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
 use Shared\Page\Page;
 use Shared\Renderer\Renderer;
 use Shared\TemplateVariables\TemplateVariables;
@@ -19,7 +20,7 @@ class StoryPage implements Page
      */
     private $templateVariables;
 
-    public function __construct(Renderer $renderer, TemplateVariables $templateVariables)
+    public function __construct(Renderer $renderer, StoryTemplateVariables $templateVariables)
     {
         $this->renderer = $renderer;
         $this->templateVariables = $templateVariables;

@@ -7,7 +7,7 @@ use MitMarion\Page\HomePage;
 use MitMarion\Page\Story\StoryPage;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\Story\DenRueckenVerrueckenRenderer;
-use MitMarion\TemplateVariables\Story\DieFazienFetzenTemplateVariables;
+use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
 
@@ -24,7 +24,7 @@ class Factory
     }
 
     public function createStoryPage(
-        DieFazienFetzenTemplateVariables $storyTemplateVariables
+        StoryTemplateVariables $storyTemplateVariables
     ): StoryPage {
         return new StoryPage(
             $this->createDenRueckenVerrueckenRenderer(),
