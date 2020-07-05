@@ -7,7 +7,7 @@ use Shared\Renderer\Renderer;
 
 class DenRueckenVerrueckenRenderer extends Renderer
 {
-    private const TEMPLATE_ID = 'Story/denRueckenVerruecken.html';
+    private const TEMPLATE_ID = 'Story/denRueckenVerruecken.twig';
 
     protected function getTemplateId(): string
     {
