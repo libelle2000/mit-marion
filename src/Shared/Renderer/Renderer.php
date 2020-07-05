@@ -17,11 +17,14 @@ abstract class Renderer
         $this->twig = $twig;
     }
 
-    public function render(TemplateVariables $vars): string
+    public function renderWithTemplateVariables(TemplateVariables $vars): string
     {
-        return $this->twig->render(
-            $this->getTemplateId(), $vars->asAssocArray()
-        );
+        return $this->twig->render($this->getTemplateId(), $vars->asAssocArray());
+    }
+
+    public function render(): string
+    {
+        return $this->twig->render($this->getTemplateId());
     }
 
     abstract protected function getTemplateId(): string;

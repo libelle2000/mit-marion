@@ -2,7 +2,7 @@
 declare(strict_types=1);
 namespace Shared\Page;
 
-abstract class Page
+interface Page
 {
-    abstract public function asString(): string;
+    public function asString(): string;
 }

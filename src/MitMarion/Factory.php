@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace MitMarion;
 
+use MitMarion\Page\HomePage;
 use MitMarion\Page\Story\DenRueckenVerrueckenPage;
+use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\Story\DenRueckenVerrueckenRenderer;
 use MitMarion\TemplateVariables\Story\DenRueckenVerrueckenTemplateVariables;
 use Shared\Factory as SharedFactory;
@@ -30,6 +32,20 @@ class Factory
         );
     }
 
+    public function createHomePage(): HomePage
+    {
+        return new HomePage(
+            $this->createHomeRenderer(),
+        );
+    }
+
+    private function createHomeRenderer(): HomeRenderer
+    {
+        return new HomeRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
     private function createDenRueckenVerrueckenRenderer(): DenRueckenVerrueckenRenderer
     {
         return new DenRueckenVerrueckenRenderer(
@@ -37,9 +53,6 @@ class Factory
         );
     }
 
-    /**
-     * @return Environment
-     */
     private function createTwigEnvironmentForNamespace(): Environment
     {
         return $this->sharedFactory->createTwigEnvironment(

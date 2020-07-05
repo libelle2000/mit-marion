@@ -7,7 +7,7 @@ use Shared\Page\Page;
 use Shared\Renderer\Renderer;
 use Shared\TemplateVariables\TemplateVariables;
 
-abstract class StoryPage extends Page
+abstract class StoryPage implements Page
 {
     /**
      * @var Renderer
@@ -27,6 +27,6 @@ abstract class StoryPage extends Page
 
     public function asString(): string
     {
-        return $this->renderer->render($this->templateVariables);
+        return $this->renderer->renderWithTemplateVariables($this->templateVariables);
     }
 }
