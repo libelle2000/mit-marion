@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MitMarion;
 
 use MitMarion\Page\HomePage;
-use MitMarion\Page\Story\DenRueckenVerrueckenPage;
+use MitMarion\Page\Story\StoryPage;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\Story\DenRueckenVerrueckenRenderer;
 use MitMarion\TemplateVariables\Story\DieFazienFetzenTemplateVariables;
@@ -23,10 +23,10 @@ class Factory
         $this->sharedFactory = $sharedFactory;
     }
 
-    public function createDenRueckenVerrueckenPage(
+    public function createStoryPage(
         DieFazienFetzenTemplateVariables $storyTemplateVariables
-    ): DenRueckenVerrueckenPage {
-        return new DenRueckenVerrueckenPage(
+    ): StoryPage {
+        return new StoryPage(
             $this->createDenRueckenVerrueckenRenderer(),
             $storyTemplateVariables
         );

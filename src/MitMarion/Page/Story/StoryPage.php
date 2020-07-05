@@ -7,7 +7,7 @@ use Shared\Page\Page;
 use Shared\Renderer\Renderer;
 use Shared\TemplateVariables\TemplateVariables;
 
-abstract class StoryPage implements Page
+class StoryPage implements Page
 {
     /**
      * @var Renderer

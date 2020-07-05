@@ -7,4 +7,4 @@ use MitMarion\TemplateVariables\Story\DieFazienFetzenTemplateVariables;
 require_once __DIR__ . '/../../bootstrap.php';
 
 $test = new DieFazienFetzenTemplateVariables();
-echo $factory->createDenRueckenVerrueckenPage($test)->asString();
+echo $factory->createStoryPage($test)->asString();
