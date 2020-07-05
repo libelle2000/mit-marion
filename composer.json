@@ -1,0 +1,16 @@
+{
+    "name": "libelle2000/mit-marion",
+    "type": "project",
+    "require": {
+        "php": ">=7.3"
+    },
+    "require-dev": {
+    },
+    "config": {
+        "bin-dir": "bin",
+        "cache-dir": "~/.composer/cache",
+        "platform": {
+          "php": "7.3"
+        }
+    }
+}
