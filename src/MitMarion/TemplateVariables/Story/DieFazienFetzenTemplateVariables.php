@@ -5,7 +5,7 @@ namespace MitMarion\TemplateVariables\Story;
 
 use Shared\TemplateVariables\TemplateVariables;
 
-class DenRueckenVerrueckenTemplateVariables implements TemplateVariables
+class DieFazienFetzenTemplateVariables implements TemplateVariables
 {
     public function asAssocArray(): array
     {

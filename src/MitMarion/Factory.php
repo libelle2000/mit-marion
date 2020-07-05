@@ -7,7 +7,7 @@ use MitMarion\Page\HomePage;
 use MitMarion\Page\Story\DenRueckenVerrueckenPage;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\Story\DenRueckenVerrueckenRenderer;
-use MitMarion\TemplateVariables\Story\DenRueckenVerrueckenTemplateVariables;
+use MitMarion\TemplateVariables\Story\DieFazienFetzenTemplateVariables;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
 
@@ -24,11 +24,11 @@ class Factory
     }
 
     public function createDenRueckenVerrueckenPage(
-        DenRueckenVerrueckenTemplateVariables $denRueckenVerrueckenTemplateVariables
+        DieFazienFetzenTemplateVariables $storyTemplateVariables
     ): DenRueckenVerrueckenPage {
         return new DenRueckenVerrueckenPage(
             $this->createDenRueckenVerrueckenRenderer(),
-            $denRueckenVerrueckenTemplateVariables
+            $storyTemplateVariables
         );
     }
 
