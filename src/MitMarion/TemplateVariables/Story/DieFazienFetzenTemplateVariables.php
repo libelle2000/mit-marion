@@ -7,7 +7,7 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
 {
     public function asAssocArray(): array
     {
-        $currentTitle = self::STORY_MAP[self::DIE_FAZIEN_FETZEN][self::CAPTION];
+        $currentTitle = self::STORY_MAP[self::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN][self::CAPTION];
 
         return [
             'htmlHead' => [
@@ -42,14 +42,8 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
                 'caption' => 'Jetzt zur Probe mitmachen',
             ],
             'zapper' => [
-                'previous' => [
-                    'href' => '/den-rücken-verrücken/',
-                    'caption' => 'den Rücken verrücken',
-                ],
-                'next' => [
-                    'href' => '/dem-regen-trotzen/',
-                    'caption' => 'dem Regen trotzen',
-                ],
+                'previous' => $this->getPreviousByCurrentTitle($currentTitle),
+                'next' => $this->getNextByCurrentTitle($currentTitle),
             ],
         ];
     }
