@@ -16,7 +16,8 @@
     },
     "autoload": {
         "psr-4": {
-            "MitMarion\\": "src/MitMarion"
+            "MitMarion\\": "src/MitMarion",
+            "Shared\\": "src/Shared"
         }
     }
 }
