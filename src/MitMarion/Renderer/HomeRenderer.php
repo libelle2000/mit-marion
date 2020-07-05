@@ -7,7 +7,7 @@ use Shared\Renderer\Renderer;
 
 class HomeRenderer extends Renderer
 {
-    private const TEMPLATE_ID = 'home.html';
+    private const TEMPLATE_ID = 'home.twig';
 
     protected function getTemplateId(): string
     {
