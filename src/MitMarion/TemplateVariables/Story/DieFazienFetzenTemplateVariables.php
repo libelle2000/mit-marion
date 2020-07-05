@@ -3,28 +3,19 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Story;
 
-use Shared\TemplateVariables\TemplateVariables;
-
-class DieFazienFetzenTemplateVariables implements TemplateVariables
+final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
 {
     public function asAssocArray(): array
     {
+        $currentTitle = 'die Faszien fetzen';
+
         return [
             'htmlHead' => [
                 'title' => 'die Fazien fetzen',
             ],
             'storyNav' => [
-                'currentTitle' => 'die Faszien fetzen',
-                'stories' => [
-                    [
-                        'href' => '/dem-regen-trotzen/',
-                        'caption' => 'dem Regen trotzen',
-                    ],
-                    [
-                        'href' => '/den-rücken-verrücken/',
-                        'caption' => 'den Rücken verrücken',
-                    ],
-                ],
+                'currentTitle' => $currentTitle,
+                'stories' => $this->getOtherStoriesByCurrentTitle($currentTitle),
             ],
             'member' => [
                 'mainQuote' => [
