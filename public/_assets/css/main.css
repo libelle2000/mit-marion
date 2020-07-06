@@ -22,7 +22,7 @@ blockquote,
     margin: 0;
 }
 
-ul.flyout {
+ul {
     margin: 0;
     padding: 0;
 }
@@ -50,6 +50,16 @@ section.marion .photo {
     height: 5em;
 }
 
+section.marion li {
+    list-style: none;
+    background-image: url("/_assets/css/images/bulletpoint.svg");
+    background-repeat: no-repeat;
+    background-size: 0.5em;
+    background-position-x: left;
+    background-position-y: 0.5em;
+    padding-left: 1em;
+    margin-left: 1em;
+}
 
 .logo {
     height: 1.5em;
@@ -142,6 +152,7 @@ nav.open .flyout {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 1em;
+    margin-bottom: 1em;
 }
 
 .member .mainquote {
