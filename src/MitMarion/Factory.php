@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MitMarion;
 
 use MitMarion\Page\HomePage;
-use MitMarion\Page\Story\StoryPage;
+use MitMarion\Page\StoryPage;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\Story\StoryRenderer;
 use MitMarion\TemplateVariables\Story\StoryTemplateVariables;

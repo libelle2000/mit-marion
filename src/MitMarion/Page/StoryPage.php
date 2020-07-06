@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\Page\Story;
+namespace MitMarion\Page;
 
 use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
 use Shared\Page\Page;
