@@ -34,7 +34,7 @@ ul {
 }
 
 header.container-content {
-    margin: 0.5em 0.5em 0 0.5rem;
+    padding: 0.5em 0.5em 0 0.5rem;
 }
 
 article.container-content {
@@ -292,7 +292,7 @@ nav .flyout a:link:visited:hover:active,
     text-decoration: none;
 }
 
-body,
+.content,
 nav .flyout li.current,
 nav .flyout li:hover,
 nav.corporate .flyout li:first-child,
@@ -307,6 +307,7 @@ nav .flyout {
     box-shadow: 0 10px 2px 0 rgba(0, 0, 0, 0.75);
 }
 
+body,
 article {
     background-color: #EFFFEF;
 }
