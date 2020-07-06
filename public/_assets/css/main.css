@@ -34,17 +34,17 @@ ul {
 }
 
 header.container-content {
-    padding: 0.5em 0.5em 0 0.5rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
 article.container-content {
-    margin: 0.5em 0 0 0;
+    margin: 0.5rem 0 0 0;
     padding-bottom: 6rem;
 }
 
 section.marion,
 .member .subquote {
-    margin: 1.5em 0.5em 0 0.5rem;
+    margin: 1.5rem 0.5rem 0 0.5rem;
 }
 
 section.marion blockquote {
@@ -65,7 +65,7 @@ section.marion li {
     background-position-y: 0.4rem;
     padding-left: 1rem;
     margin-left: 2.1rem;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .logo {
@@ -116,9 +116,9 @@ nav .flyout li {
     min-height: 1.1rem;
     background-image: url("/_assets/css/images/slash.svg");
     background-repeat: no-repeat;
-    background-position: 0.5em 0.5rem;
+    background-position: 0.5rem 0.5rem;
     background-size: auto 1.1rem;
-    padding: 0.5em 0.5em 0.5em 1.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 
 .breadcrumb,
@@ -164,7 +164,7 @@ nav.open .flyout {
 
 .member .mainquote {
     min-height: 5rem;
-    padding: 0.2em 0.1em 3em 33%;
+    padding: 0.2rem 0.1rem 3rem 33%;
     text-align: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -173,7 +173,7 @@ nav.open .flyout {
 .button {
     display: block;
     width: 70%;
-    margin: 0.5em auto 0.5em auto;
+    margin: 0.5rem auto 0.5rem auto;
     padding: 1rem;
     text-align: center;
     border-radius: 5px 5px 5px 5px;
