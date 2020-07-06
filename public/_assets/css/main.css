@@ -191,11 +191,11 @@ nav.open .flyout {
 
 .zap.previous::before {
     position: absolute;
-    left: 0.2em;
+    left: 0.4em;
     top: 1.2em;
     content: "";
-    height: 1em;
-    width: 1em;
+    height: 0.8em;
+    width: 0.8em;
     background-size: 100%;
     transform: rotate(270deg);
     background-image: url("/_assets/css/images/arrow-border.svg");
@@ -204,11 +204,11 @@ nav.open .flyout {
 
 .zap.next::after {
     position: absolute;
-    right: 0.2em;
+    right: 0.4em;
     top: 1.2em;
     content: "";
-    height: 1em;
-    width: 1em;
+    height: 0.8em;
+    width: 0.8em;
     background-size: 100%;
     transform: rotate(90deg);
     background-image: url("/_assets/css/images/arrow-border.svg");
