@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use MitMarion\TemplateVariables\Story\DieFazienFetzenTemplateVariables;
+use MitMarion\TemplateVariables\DieFazienFetzenTemplateVariables;
 
 require_once __DIR__ . '/../../bootstrap.php';
 

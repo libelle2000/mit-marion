@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\TemplateVariables\Story;
+namespace MitMarion\TemplateVariables;
 
 final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
 {

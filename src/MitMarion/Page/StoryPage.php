@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\Page;
 
-use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
+use MitMarion\TemplateVariables\StoryTemplateVariables;
 use Shared\Page\Page;
 use Shared\Renderer\Renderer;
 use Shared\TemplateVariables\TemplateVariables;

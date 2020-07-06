@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\TemplateVariables\Story;
+namespace MitMarion\TemplateVariables;
 
 use RuntimeException;
 use Shared\TemplateVariables\TemplateVariables;
