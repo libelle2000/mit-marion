@@ -5,9 +5,9 @@ namespace MitMarion\Renderer\Story;
 
 use Shared\Renderer\Renderer;
 
-class DenRueckenVerrueckenRenderer extends Renderer
+class StoryRenderer extends Renderer
 {
-    private const TEMPLATE_ID = 'Story/denRueckenVerruecken.twig';
+    private const TEMPLATE_ID = 'Story/story.twig';
 
     protected function getTemplateId(): string
     {

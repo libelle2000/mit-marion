@@ -6,7 +6,7 @@ namespace MitMarion;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\Story\StoryPage;
 use MitMarion\Renderer\HomeRenderer;
-use MitMarion\Renderer\Story\DenRueckenVerrueckenRenderer;
+use MitMarion\Renderer\Story\StoryRenderer;
 use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
@@ -27,7 +27,7 @@ class Factory
         StoryTemplateVariables $storyTemplateVariables
     ): StoryPage {
         return new StoryPage(
-            $this->createDenRueckenVerrueckenRenderer(),
+            $this->createStoryRenderer(),
             $storyTemplateVariables
         );
     }
@@ -46,9 +46,9 @@ class Factory
         );
     }
 
-    private function createDenRueckenVerrueckenRenderer(): DenRueckenVerrueckenRenderer
+    private function createStoryRenderer(): StoryRenderer
     {
-        return new DenRueckenVerrueckenRenderer(
+        return new StoryRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }
