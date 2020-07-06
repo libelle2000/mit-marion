@@ -6,7 +6,7 @@ namespace MitMarion;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\StoryPage;
 use MitMarion\Renderer\HomeRenderer;
-use MitMarion\Renderer\Story\StoryRenderer;
+use MitMarion\Renderer\StoryRenderer;
 use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;

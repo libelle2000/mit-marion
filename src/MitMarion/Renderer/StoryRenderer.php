@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\Renderer\Story;
+namespace MitMarion\Renderer;
 
 use Shared\Renderer\Renderer;
 
