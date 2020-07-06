@@ -13,7 +13,7 @@
 }
 
 .member .mainquote {
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 body,
@@ -28,17 +28,17 @@ ul {
 }
 
 header.container-content {
-    margin: 0.5em 0.5em 0 0.5em;
+    margin: 0.5em 0.5em 0 0.5rem;
 }
 
 article.container-content {
     margin: 0.5em 0 0 0;
-    padding-bottom: 6em;
+    padding-bottom: 6rem;
 }
 
 section.marion,
 .member .subquote {
-    margin: 1.5em 0.5em 0 0.5em;
+    margin: 1.5em 0.5em 0 0.5rem;
 }
 
 section.marion blockquote {
@@ -46,27 +46,27 @@ section.marion blockquote {
 }
 
 section.marion .photo {
-    width: 5em;
-    height: 5em;
+    width: 5rem;
+    height: 5rem;
 }
 
 section.marion li {
     list-style: none;
     background-image: url("/_assets/css/images/bulletpoint.svg");
     background-repeat: no-repeat;
-    background-size: 0.5em;
+    background-size: 0.5rem;
     background-position-x: left;
-    background-position-y: 0.5em;
-    padding-left: 1em;
-    margin-left: 1em;
+    background-position-y: 0.5rem;
+    padding-left: 1rem;
+    margin-left: 1rem;
 }
 
 .logo {
-    height: 1.7em;
+    height: 1.7rem;
 }
 
 .burger {
-    height: 2em;
+    height: 2rem;
 }
 
 nav.stories {
@@ -89,9 +89,9 @@ nav.stories .flyout {
 .breadcrumb:after {
     position: absolute;
     content: "";
-    height: 1em;
-    width: 0.7em;
-    margin-left: 0.5em;
+    height: 1rem;
+    width: 0.7rem;
+    margin-left: 0.5rem;
     background-size: 100%;
     background-image: url("/_assets/css/images/arrow-border.svg");
     background-repeat: no-repeat;
@@ -106,19 +106,19 @@ li.breadcrumb:after {
 
 .breadcrumb,
 nav .flyout li {
-    min-height: 1.1em;
+    min-height: 1.1rem;
     background-image: url("/_assets/css/images/slash.svg");
     background-repeat: no-repeat;
-    background-position: 0.5em 0.5em;
-    background-size: auto 1.1em;
-    padding: 0.5em 0.5em 0.5em 1.5em;
+    background-position: 0.5em 0.5rem;
+    background-size: auto 1.1rem;
+    padding: 0.5em 0.5em 0.5em 1.5rem;
 }
 
 .breadcrumb,
 nav.stories .flyout li {
-    padding-left: 4.1em;
-    padding-right: 1.7em;
-    background-position-x: 3.4em;
+    padding-left: 4.1rem;
+    padding-right: 1.7rem;
+    background-position-x: 3.4rem;
 }
 
 nav.corporate {
@@ -134,7 +134,7 @@ nav.corporate .burger {
 
 nav.corporate .flyout {
     position: absolute;
-    top: 2em;
+    top: 2rem;
     right: 0;
     list-style: none;
 }
@@ -151,12 +151,12 @@ nav.open .flyout {
 .photo {
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 1em;
-    margin-bottom: 1em;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .member .mainquote {
-    min-height: 5em;
+    min-height: 5rem;
     padding: 0.2em 0.1em 3em 33%;
     text-align: right;
     background-repeat: no-repeat;
@@ -167,7 +167,7 @@ nav.open .flyout {
     display: block;
     width: 70%;
     margin: 0.5em auto 0.5em auto;
-    padding: 1em;
+    padding: 1rem;
     text-align: center;
     border-radius: 5px 5px 5px 5px;
 }
@@ -175,27 +175,27 @@ nav.open .flyout {
 .zap {
     position: relative;
     display: block;
-    padding: 1em;
+    padding: 1rem;
     box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.75);
 }
 
 .zap.previous {
     text-align: left;
-    padding-left: 1.5em;
+    padding-left: 1.5rem;
 }
 
 .zap.next {
     text-align: right;
-    padding-right: 1.5em;
+    padding-right: 1.5rem;
 }
 
 .zap.previous::before {
     position: absolute;
-    left: 0.4em;
-    top: 1.2em;
+    left: 0.4rem;
+    top: 1.2rem;
     content: "";
-    height: 0.8em;
-    width: 0.8em;
+    height: 0.8rem;
+    width: 0.8rem;
     background-size: 100%;
     transform: rotate(270deg);
     background-image: url("/_assets/css/images/arrow-border.svg");
@@ -204,11 +204,11 @@ nav.open .flyout {
 
 .zap.next::after {
     position: absolute;
-    right: 0.4em;
-    top: 1.2em;
+    right: 0.4rem;
+    top: 1.2rem;
     content: "";
-    height: 0.8em;
-    width: 0.8em;
+    height: 0.8rem;
+    width: 0.8rem;
     background-size: 100%;
     transform: rotate(90deg);
     background-image: url("/_assets/css/images/arrow-border.svg");
@@ -316,32 +316,32 @@ article {
     }
 
     section.marion .photo {
-        width: 10em;
-        height: 10em;
+        width: 10rem;
+        height: 10rem;
     }
 
     .logo {
-        height: 3em;
+        height: 3rem;
     }
 
     .breadcrumb,
     nav.stories .flyout li {
-        padding-left: 6.8em;
-        background-position-x: 6em;
+        padding-left: 6.8rem;
+        background-position-x: 6rem;
     }
 
     .burger {
-        height: 2em;
+        height: 2rem;
     }
 
     .logo,
     nav.corporate .burger {
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     nav.corporate .flyout {
-        top: 3em;
+        top: 3rem;
     }
 
     .zapper {
