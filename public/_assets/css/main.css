@@ -321,7 +321,13 @@ article {
     }
 
     .logo {
-        height: 2.5em;
+        height: 3em;
+    }
+
+    .breadcrumb,
+    nav.stories .flyout li {
+        padding-left: 6.8em;
+        background-position-x: 6em;
     }
 
     .burger {
