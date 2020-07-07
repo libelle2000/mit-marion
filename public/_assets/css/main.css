@@ -170,6 +170,30 @@ nav.open .flyout {
     background-size: cover;
 }
 
+.member .subquote .bubble {
+    position: relative;
+    /*debug*/
+    height: 14em;
+    padding-top: 14em;
+}
+
+.member .subquote .bubble::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: url("/_assets/css/images/bubbleToTheTop.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    top: 8em;
+    left: -1em;
+
+    /*min-height: 5rem;*/
+    /*padding: 0.2rem 0.1rem 3rem 33%;*/
+    /*text-align: right;*/
+}
+
 .button {
     display: block;
     width: 70%;
