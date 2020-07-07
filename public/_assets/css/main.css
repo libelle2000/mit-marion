@@ -42,7 +42,9 @@ article.container-content {
     padding-bottom: 6rem;
 }
 
-section.marion,
+.marion blockquote,
+.marion ul,
+.marion p,
 .member .subquote {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
