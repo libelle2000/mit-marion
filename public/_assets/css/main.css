@@ -12,10 +12,10 @@ html {
     font-size: 2.5rem;
 }
 
-/*.member .mainquote {*/
-/*    font-size: 2.5rem;*/
-/*    line-height: 2.5rem;*/
-/*}*/
+.marion .mainquote,
+.marion .advantages {
+    line-height: 1.5rem;
+}
 
 .floatLeft {
     float: left;

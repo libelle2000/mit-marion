@@ -48,7 +48,7 @@
                 "{{ marion.quoteText }}"
             </blockquote>
             {% if marion.advantages|length > 0 %}
-                <ul>
+                <ul class="advantages">
                     {% for fact in marion.advantages %}
                         <li>{{ fact }}</li>
                     {% endfor %}
