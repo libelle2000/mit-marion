@@ -8,6 +8,15 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+.member .mainquote {
+    font-size: 2.5rem;
+}
+
+/*.member .mainquote {*/
+/*    font-size: 2.5rem;*/
+/*    line-height: 2.5rem;*/
+/*}*/
+
 .floatLeft {
     float: left;
 }
@@ -16,10 +25,6 @@ html {
     content: "";
     display: table;
     clear: both;
-}
-
-.member .mainquote {
-    font-size: 2.5rem;
 }
 
 body,
