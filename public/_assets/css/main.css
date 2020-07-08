@@ -6,7 +6,7 @@
 }
 
 * {
-    font-family: Arial, sans-serif;
+    font-family: MitMarionFont, Arial, sans-serif;
 }
 
 html {
@@ -17,6 +17,7 @@ html {
 
 .member .mainquote {
     font-size: 2.5rem;
+    line-height: 3.4rem;
 }
 
 .marion .mainquote,
