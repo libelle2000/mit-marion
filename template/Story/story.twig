@@ -43,8 +43,8 @@
             <blockquote class="subquote">"{{ member.subQuote.text }}"</blockquote>
         </section>
         <section class="marion">
-            <blockquote class="mainquote floatedGroup">
-                <img class="photo floatLeft" src="/_assets/images/marion.jpg" alt="Trainerin Marion"/>
+            <img class="photo floatLeft" src="/_assets/images/marion.jpg" alt="Trainerin Marion"/>
+            <blockquote class="mainquote">
                 "{{ marion.quoteText }}"
             </blockquote>
             {% if marion.advantages|length > 0 %}
@@ -54,7 +54,7 @@
                     {% endfor %}
                 </ul>
             {% endif %}
-            <p>{{ marion.closingText }}</p>
+            <p class="closingText">{{ marion.closingText }}</p>
         </section>
         <a class="button" href="#">{{ callToAction.caption }}</a>
     </article>

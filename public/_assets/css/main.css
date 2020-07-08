@@ -25,16 +25,6 @@ html {
     line-height: 1.5rem;
 }
 
-.floatLeft {
-    float: left;
-}
-
-.floatedGroup:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 body,
 blockquote,
 .container-content {
@@ -55,14 +45,6 @@ article.container-content {
     padding-bottom: 6rem;
 }
 
-.marion .mainquote,
-.marion ul,
-.marion p,
-.member .subquote {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-}
-
 .marion .mainquote {
     margin-left: 0.5rem;
 }
@@ -81,7 +63,6 @@ section.marion .photo {
 section.marion li {
     list-style: square;
     padding-left: 0.4rem;
-    margin-left: 2.1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -175,8 +156,6 @@ nav.open .flyout {
 .photo {
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
 }
 
 .member,
@@ -283,6 +262,32 @@ header nav.stories {
 
 section.member .subquote {
     grid-area: subquote;
+}
+
+section.marion {
+    display: grid;
+    margin: 0 2.5rem 4rem 2.5rem;
+    row-gap: 1.0rem;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "photo mainquote mainquote"
+    ". advantages advantages"
+    "closingText closingText closingText";
+}
+
+section.marion .photo {
+    grid-area: photo;
+    justify-self: end;
+}
+section.marion .mainquote {
+    grid-area: mainquote
+}
+section.marion .advantages {
+    grid-area: advantages
+}
+section.marion .closingText {
+    grid-area: closingText
 }
 
 .zapper {
