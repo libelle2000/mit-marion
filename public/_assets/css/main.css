@@ -59,17 +59,17 @@ article.container-content {
 .marion ul,
 .marion p,
 .member .subquote {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.marion .mainquote {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
 }
 
 .member .subquote {
     margin-top: 1rem;
     margin-bottom: 0;
-}
-
-section.marion .mainquote {
-    width: 100%;
 }
 
 section.marion .photo {
@@ -79,7 +79,7 @@ section.marion .photo {
 
 section.marion li {
     list-style: square;
-    padding-left: 1rem;
+    padding-left: 0.4rem;
     margin-left: 2.1rem;
     margin-bottom: 0.5rem;
 }
