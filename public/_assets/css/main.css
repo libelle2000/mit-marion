@@ -328,6 +328,7 @@ nav .flyout a:link:visited:hover:active,
     text-decoration: none;
 }
 
+body,
 .content,
 nav .flyout li.current,
 nav .flyout li:hover,
@@ -343,7 +344,6 @@ nav .flyout {
     box-shadow: 0 10px 2px 0 rgba(0, 0, 0, 0.75);
 }
 
-body,
 article {
     background-color: #EFFFEF;
 }
