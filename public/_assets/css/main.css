@@ -27,6 +27,7 @@ html {
 
 body,
 blockquote,
+p,
 .container-content {
     margin: 0;
 }
@@ -251,10 +252,14 @@ header nav.stories {
 section.member .subquote {
     grid-area: subquote;
 }
-
+.member .subquote,
+section.marion {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
 section.marion {
     display: grid;
-    margin: 0 2.5rem 4rem 2.5rem;
+    margin-bottom: 4rem;
     row-gap: 1.0rem;
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-rows: auto;
@@ -270,15 +275,15 @@ section.marion .photo {
 }
 
 section.marion .mainquote {
-    grid-area: mainquote
+    grid-area: mainquote;
 }
 
 section.marion .advantages {
-    grid-area: advantages
+    grid-area: advantages;
 }
 
 section.marion .closingText {
-    grid-area: closingText
+    grid-area: closingText;
 }
 
 .zapper {
