@@ -70,12 +70,7 @@ section.marion .photo {
 }
 
 section.marion li {
-    list-style: none;
-    background-image: url("/_assets/css/images/bulletpoint.svg");
-    background-repeat: no-repeat;
-    background-size: 0.5rem;
-    background-position-x: left;
-    background-position-y: 0.4rem;
+    list-style: square;
     padding-left: 1rem;
     margin-left: 2.1rem;
     margin-bottom: 0.5rem;
