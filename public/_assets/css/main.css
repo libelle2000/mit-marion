@@ -280,12 +280,15 @@ section.marion .photo {
     grid-area: photo;
     justify-self: end;
 }
+
 section.marion .mainquote {
     grid-area: mainquote
 }
+
 section.marion .advantages {
     grid-area: advantages
 }
+
 section.marion .closingText {
     grid-area: closingText
 }
@@ -366,8 +369,20 @@ article {
         height: 0.4rem;
     }
 
+    section.member .mainquote {
+        min-height: 20rem;
+        padding-top: 5rem;
+        padding-left: 40%;
+    }
+    section.marion {
+        grid-template-areas:
+            "photo mainquote advantages"
+            "photo mainquote advantages"
+            "closingText closingText closingText";
+    }
+
     section.marion .mainquote {
-        width: 50%;
+        width: 80%;
     }
 
     section.marion .photo {
