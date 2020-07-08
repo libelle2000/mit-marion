@@ -47,7 +47,7 @@ article.container-content {
     padding-bottom: 6rem;
 }
 
-.marion blockquote,
+.marion .mainquote,
 .marion ul,
 .marion p,
 .member .subquote {
@@ -60,7 +60,7 @@ article.container-content {
     margin-bottom: 0;
 }
 
-section.marion blockquote {
+section.marion .mainquote {
     width: 100%;
 }
 
@@ -357,7 +357,7 @@ article {
         height: 0.4rem;
     }
 
-    section.marion blockquote {
+    section.marion .mainquote {
         width: 50%;
     }
 
