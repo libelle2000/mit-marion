@@ -211,7 +211,7 @@ nav.open .flyout {
     padding-left: 2.5rem;
     margin-left: 1rem;
     background-size: 0.8rem;
-    background-image: url("/_assets/css/images/arrow-border.svg");
+    background-image: url("/_assets/css/images/arrow-border-left.svg");
     background-repeat: no-repeat;
     background-position: left center;
 }
@@ -221,7 +221,7 @@ nav.open .flyout {
     padding-right: 2.5rem;
     margin-right: 1rem;
     background-size: 0.8rem;
-    background-image: url("/_assets/css/images/arrow-border.svg");
+    background-image: url("/_assets/css/images/arrow-border-right.svg");
     background-repeat: no-repeat;
     background-position: right center;
 }
