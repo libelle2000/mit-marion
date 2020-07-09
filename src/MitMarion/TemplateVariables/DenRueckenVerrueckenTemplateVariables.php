@@ -40,7 +40,9 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
                 'closingText' => 'Neugierig geworden?',
             ],
             'callToAction' => [
-                'caption' => 'Mach mit! Komm dazu!',
+                'caption' => [
+                    'Mach mit! Komm dazu!',
+                ],
             ],
             'zapper' => [
                 'previous' => $this->getPreviousByCurrentTitle($currentTitle),

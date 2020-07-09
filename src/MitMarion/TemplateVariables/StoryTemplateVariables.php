@@ -29,7 +29,7 @@ abstract class StoryTemplateVariables implements TemplateVariables
             self::CAPTION => 'die Faszien fetzen',
         ],
         self::ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN => [
-            self::HREF => '/den-alltag-für-eine-Stunde-vergessen/',
+            self::HREF => '/den-alltag-für-eine-stunde-vergessen/',
             self::CAPTION => 'den Alltag für eine Stunde vergessen',
         ],
     ];

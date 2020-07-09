@@ -39,7 +39,9 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
                 'closingText' => 'Die Faszienübungen sind echte Allrounder!',
             ],
             'callToAction' => [
-                'caption' => 'Jetzt zur Probe mitmachen',
+                'caption' => [
+                    'Jetzt zur Probe mitmachen',
+                ],
             ],
             'zapper' => [
                 'previous' => $this->getPreviousByCurrentTitle($currentTitle),

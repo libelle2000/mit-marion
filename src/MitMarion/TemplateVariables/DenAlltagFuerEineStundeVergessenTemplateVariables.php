@@ -39,7 +39,10 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryTempl
                 'closingText' => 'Probier es einfach aus!',
             ],
             'callToAction' => [
-                'caption' => 'Komm dazu!<br />Trainiere zur Probe mit',
+                'caption' => [
+                    'Komm dazu!',
+                    'Trainiere zur Probe mit!',
+                ],
             ],
             'zapper' => [
                 'previous' => $this->getPreviousByCurrentTitle($currentTitle),

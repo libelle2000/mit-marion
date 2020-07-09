@@ -36,7 +36,9 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
                 'closingText' => 'Wir verpassen dem Regen gute Laune ;-)',
             ],
             'callToAction' => [
-                'caption' => 'Komm dazu!',
+                'caption' => [
+                    'Komm dazu!',
+                ],
             ],
             'zapper' => [
                 'previous' => $this->getPreviousByCurrentTitle($currentTitle),

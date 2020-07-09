@@ -56,7 +56,7 @@
             {% endif %}
             <p class="closingText">{{ marion.closingText }}</p>
         </section>
-        <a class="button" href="#">{{ callToAction.caption }}</a>
+        <a class="button" href="#">{{ callToAction.caption|join('<br />')|raw }}</a>
     </article>
     <nav class="zapper">
         <a class="zap previous" href="{{zapper.previous.href}}">{{zapper.previous.caption}}</a>
