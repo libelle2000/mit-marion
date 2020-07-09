@@ -8,16 +8,16 @@ use Shared\TemplateVariables\TemplateVariables;
 
 abstract class StoryTemplateVariables implements TemplateVariables
 {
-    protected const ZERO_BASED_INDEX_DEM_REGEN_TROTZEN = 0;
+    protected const ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN = 0;
     protected const ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN = 1;
     protected const ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN = 2;
     protected const HREF = 'href';
     protected const CAPTION = 'caption';
 
     protected const STORY_MAP = [
-        self::ZERO_BASED_INDEX_DEM_REGEN_TROTZEN => [
-            self::HREF => '/dem-regen-trotzen/',
-            self::CAPTION => 'dem Regen trotzen',
+        self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN => [
+            self::HREF => '/vom-regen-erfrischen-lassen/',
+            self::CAPTION => 'vom Regen erfrischen lassen',
         ],
         self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN => [
             self::HREF => '/den-rücken-verrücken/',
