@@ -6,5 +6,5 @@ use MitMarion\TemplateVariables\DenRueckenVerrueckenTemplateVariables;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
-$test = new DenRueckenVerrueckenTemplateVariables();
-echo $factory->createStoryPage($test)->asString();
+$templateVariables = new DenRueckenVerrueckenTemplateVariables();
+echo $factory->createStoryPage($templateVariables)->asString();
