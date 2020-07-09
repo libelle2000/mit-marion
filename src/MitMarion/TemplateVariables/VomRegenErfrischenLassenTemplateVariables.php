@@ -7,7 +7,7 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
 {
     public function asAssocArray(): array
     {
-        $currentTitle = self::STORY_MAP[self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN][self::CAPTION];
+        $currentTitle = self::STORY_MAP[self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN][self::CAPTION];
 
         return [
             'htmlHead' => [
