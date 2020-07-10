@@ -35,7 +35,7 @@ class StoriesTemplateVariables implements TemplateVariables
     {
         return [
             'storyNav' => [
-//                'currentTitle' => $currentTitle,
+                'currentTitle' => 'Entdecke die Stories',
                 'stories' => self::STORY_MAP,
             ],
         ];
