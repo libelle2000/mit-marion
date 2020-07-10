@@ -3,10 +3,13 @@ declare(strict_types=1);
 
 namespace MitMarion;
 
+use MitMarion\Page\ContactFormPage;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\StoryPage;
+use MitMarion\Renderer\ContactFormRenderer;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\StoryRenderer;
+use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\StoryTemplateVariables;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
@@ -14,7 +17,7 @@ use Twig\Environment;
 class Factory
 {
     /**
-     * @var \Shared\Factory
+     * @var SharedFactory
      */
     private $sharedFactory;
 
@@ -42,6 +45,23 @@ class Factory
     private function createHomeRenderer(): HomeRenderer
     {
         return new HomeRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
+    public function createContactFormPage(
+        ContactFormTemplateVariables $contactFormTemplateVariables
+    ): ContactFormPage
+    {
+        return new ContactFormPage(
+            $this->createContactFormRenderer(),
+            $contactFormTemplateVariables
+        );
+    }
+
+    private function createContactFormRenderer(): ContactFormRenderer
+    {
+        return new ContactFormRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }

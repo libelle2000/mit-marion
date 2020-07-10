@@ -4,9 +4,8 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables;
 
 use RuntimeException;
-use Shared\TemplateVariables\TemplateVariables;
 
-abstract class StoryTemplateVariables implements TemplateVariables
+abstract class StoryTemplateVariables extends PageTemplateVariables
 {
     protected const ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN = 0;
     protected const ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN = 1;

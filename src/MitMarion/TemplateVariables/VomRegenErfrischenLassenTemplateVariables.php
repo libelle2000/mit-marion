@@ -10,8 +10,8 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
         $currentTitle = self::STORY_MAP[self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN][self::CAPTION];
 
         return [
-            'htmlHead' => [
-                'title' => $this->buildTitle($currentTitle),
+            self::TEMPLATE_KEY_HTML_HEAD => [
+                self::TEMPLATE_KEY_TITLE => $this->buildTitle($currentTitle),
             ],
             'storyNav' => [
                 'currentTitle' => $currentTitle,

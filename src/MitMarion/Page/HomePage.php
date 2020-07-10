@@ -2,23 +2,6 @@
 declare(strict_types=1);
 namespace MitMarion\Page;
 
-use Shared\Page\Page;
-use Shared\Renderer\Renderer;
-
-class HomePage implements Page
+class HomePage extends StaticTemplatePage
 {
-    /**
-     * @var Renderer
-     */
-    private $renderer;
-
-    public function __construct(Renderer $renderer)
-    {
-        $this->renderer = $renderer;
-    }
-
-    public function asString(): string
-    {
-        return $this->renderer->render();
-    }
 }
