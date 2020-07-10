@@ -7,43 +7,45 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
 {
     public function asAssocArray(): array
     {
-        $currentTitle = self::STORY_MAP[self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN][self::CAPTION];
+        $currentTitle = $this->getTitleValue();
 
-        return [
-            self::TEMPLATE_KEY_HTML_HEAD => [
-                self::TEMPLATE_KEY_TITLE => $this->buildTitle($currentTitle),
-            ],
-            'storyNav' => [
-                'currentTitle' => $currentTitle,
-                'stories' => $this->getOtherStoriesByCurrentTitle($currentTitle),
-            ],
-            'member' => [
-                'mainQuote' => [
-                    'backgroundImage' => [
-                        'url' => '/_assets/images/dummy.jpg',
-                        'position' => 'right, bottom',
+        return array_merge(
+            $this->buildBaseTemplateVariables(),
+            $this->buildStoryNav(),
+            [
+                'member' => [
+                    'mainQuote' => [
+                        'backgroundImage' => [
+                            'url' => '/_assets/images/dummy.jpg',
+                            'position' => 'right, bottom',
+                        ],
+                        'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
                     ],
-                    'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
+                    'subQuote' => [
+                        'text' => 'Ich beneide all diejenigen, die bei Wind und Wetter unterwegs sind! Wie geht das?',
+                    ],
                 ],
-                'subQuote' => [
-                    'text' => 'Ich beneide all diejenigen, die bei Wind und Wetter unterwegs sind! Wie geht das?',
+                'marion' => [
+                    'quoteText' => 'Gemeinsam! Und ich zeige dir wie! Spaß ist garantiert... :-)',
+                    'advantages' => [
+                    ],
+                    'closingText' => 'Wir verpassen dem Regen gute Laune ;-)',
                 ],
-            ],
-            'marion' => [
-                'quoteText' => 'Gemeinsam! Und ich zeige dir wie! Spaß ist garantiert... :-)',
-                'advantages' => [
+                'callToAction' => [
+                    'caption' => [
+                        'Komm dazu!',
+                    ],
                 ],
-                'closingText' => 'Wir verpassen dem Regen gute Laune ;-)',
-            ],
-            'callToAction' => [
-                'caption' => [
-                    'Komm dazu!',
+                'zapper' => [
+                    'previous' => $this->getPreviousByCurrentTitle($currentTitle),
+                    'next' => $this->getNextByCurrentTitle($currentTitle),
                 ],
-            ],
-            'zapper' => [
-                'previous' => $this->getPreviousByCurrentTitle($currentTitle),
-                'next' => $this->getNextByCurrentTitle($currentTitle),
-            ],
-        ];
+            ]
+        );
+    }
+
+    protected function getTitleValue(): string
+    {
+        return self::STORY_MAP[self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN][self::CAPTION];
     }
 }

@@ -7,10 +7,15 @@ final class ContactFormTemplateVariables extends PageTemplateVariables
 {
     public function asAssocArray(): array
     {
-        return [
-            self::TEMPLATE_KEY_HTML_HEAD => [
-                self::TEMPLATE_KEY_TITLE => $this->buildTitle('Kontakt'),
-            ],
-        ];
+        return array_merge(
+            $this->buildBaseTemplateVariables(),
+            [
+            ]
+        );
+    }
+
+    protected function getTitleValue(): string
+    {
+        return 'Kontakt';
     }
 }

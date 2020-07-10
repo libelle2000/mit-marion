@@ -11,8 +11,6 @@ abstract class StoryTemplateVariables extends PageTemplateVariables
     protected const ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN = 1;
     protected const ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN = 2;
     protected const ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN = 3;
-    protected const HREF = 'href';
-    protected const CAPTION = 'caption';
 
     protected const STORY_MAP = [
         self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN => [
@@ -40,9 +38,16 @@ abstract class StoryTemplateVariables extends PageTemplateVariables
      */
     private $zeroBasedIndexByTitleCache;
 
-    protected function buildTitle(string $currentTitle): string
+    protected function buildStoryNav(): array
     {
-        return $currentTitle . ' - mit Marion';
+        $currentTitle = $this->getTitleValue();
+
+        return [
+            'storyNav' => [
+                'currentTitle' => $currentTitle,
+                'stories' => $this->getOtherStoriesByCurrentTitle($currentTitle),
+            ],
+        ];
     }
 
     protected function getOtherStoriesByCurrentTitle(string $currentTitle): array

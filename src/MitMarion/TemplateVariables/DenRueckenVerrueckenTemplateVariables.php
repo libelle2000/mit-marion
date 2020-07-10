@@ -7,47 +7,49 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
 {
     public function asAssocArray(): array
     {
-        $currentTitle = self::STORY_MAP[self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN][self::CAPTION];
+        $currentTitle = $this->getTitleValue();
 
-        return [
-            self::TEMPLATE_KEY_HTML_HEAD => [
-                self::TEMPLATE_KEY_TITLE => $this->buildTitle($currentTitle),
-            ],
-            'storyNav' => [
-                'currentTitle' => $currentTitle,
-                'stories' => $this->getOtherStoriesByCurrentTitle($currentTitle),
-            ],
-            'member' => [
-                'mainQuote' => [
-                    'backgroundImage' => [
-                        'url' => '/_assets/images/dummy.jpg',
-                        'position' => 'right, bottom',
+        return array_merge(
+            $this->buildBaseTemplateVariables(),
+            $this->buildStoryNav(),
+            [
+                'member' => [
+                    'mainQuote' => [
+                        'backgroundImage' => [
+                            'url' => '/_assets/images/dummy.jpg',
+                            'position' => 'right, bottom',
+                        ],
+                        'text' => 'dass ich da nicht eher drauf gekommen bin!',
                     ],
-                    'text' => 'dass ich da nicht eher drauf gekommen bin!',
+                    'subQuote' => [
+                        'text' => 'Ich habe einige Rückenkurse hinter mir, aber das Training mit dem eigenen Körpergewicht bringt mir wirklich was!',
+                    ],
                 ],
-                'subQuote' => [
-                    'text' => 'Ich habe einige Rückenkurse hinter mir, aber das Training mit dem eigenen Körpergewicht bringt mir wirklich was!',
+                'marion' => [
+                    'quoteText' => 'Ja, Sport ohne Hilfsmittel ist ein Allrounder, das freut den Rücken, denn...',
+                    'advantages' => [
+                        'wir kräftigen ',
+                        'wir mobilisieren',
+                        'wir stabilisieren',
+                        'wir dehnen',
+                    ],
+                    'closingText' => 'Neugierig geworden?',
                 ],
-            ],
-            'marion' => [
-                'quoteText' => 'Ja, Sport ohne Hilfsmittel ist ein Allrounder, das freut den Rücken, denn...',
-                'advantages' => [
-                    'wir kräftigen ',
-                    'wir mobilisieren',
-                    'wir stabilisieren',
-                    'wir dehnen',
+                'callToAction' => [
+                    'caption' => [
+                        'Mach mit! Komm dazu!',
+                    ],
                 ],
-                'closingText' => 'Neugierig geworden?',
-            ],
-            'callToAction' => [
-                'caption' => [
-                    'Mach mit! Komm dazu!',
+                'zapper' => [
+                    'previous' => $this->getPreviousByCurrentTitle($currentTitle),
+                    'next' => $this->getNextByCurrentTitle($currentTitle),
                 ],
-            ],
-            'zapper' => [
-                'previous' => $this->getPreviousByCurrentTitle($currentTitle),
-                'next' => $this->getNextByCurrentTitle($currentTitle),
-            ],
-        ];
+            ]
+        );
+    }
+
+    protected function getTitleValue(): string
+    {
+        return self::STORY_MAP[self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN][self::CAPTION];
     }
 }
