@@ -40,16 +40,7 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
                         'Mach mit! Komm dazu!',
                     ],
                 ],
-                'zapper' => [
-                    'previous' => $this->getPreviousByCurrentTitle($currentTitle),
-                    'next' => $this->getNextByCurrentTitle($currentTitle),
-                ],
             ]
         );
-    }
-
-    protected function getTitleValue(): string
-    {
-        return self::STORY_MAP[self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN][self::CAPTION];
     }
 }

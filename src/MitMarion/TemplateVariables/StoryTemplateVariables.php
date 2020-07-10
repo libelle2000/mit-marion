@@ -23,13 +23,16 @@ abstract class StoryTemplateVariables extends PageTemplateVariables
 
     protected function buildZapperTemplateVariables(): array
     {
-        $currentTitle = $this->getTitleValue();
-
         return [
             'zapper' => [
-                'previous' => $this->stories->getPreviousByCurrentTitle($currentTitle),
-                'next' => $this->stories->getNextByCurrentTitle($currentTitle),
+                'previous' => $this->stories->getPrevious(),
+                'next' => $this->stories->getNext(),
             ],
         ];
+    }
+
+    protected function getTitleValue(): string
+    {
+        return $this->stories->getCurrentTitle();
     }
 }

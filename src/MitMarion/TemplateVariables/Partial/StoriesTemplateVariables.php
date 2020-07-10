@@ -7,12 +7,7 @@ use MitMarion\TemplateVariables\TemplateVariables;
 
 class StoriesTemplateVariables implements TemplateVariables
 {
-    public const ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN = 0;
-    public const ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN = 1;
-    public const ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN = 2;
-    public const ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN = 3;
-
-    public const STORY_MAP = [
+    protected const STORY_MAP = [
         self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN => [
             self::HREF => '/vom-regen-erfrischen-lassen/',
             self::CAPTION => 'vom Regen erfrischen lassen',
@@ -30,6 +25,11 @@ class StoriesTemplateVariables implements TemplateVariables
             self::CAPTION => 'den Alltag für eine Stunde vergessen',
         ],
     ];
+
+    private const ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN = 0;
+    private const ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN = 1;
+    private const ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN = 2;
+    private const ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN = 3;
 
     public function asAssocArray(): array
     {

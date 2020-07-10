@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Partial;
 
-use MitMarion\TemplateVariables\ValueObject\CurrentTitle;
+use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 use RuntimeException;
 
 class StoriesTemplateVariablesWithActiveMarker extends StoriesTemplateVariables
@@ -13,94 +13,116 @@ class StoriesTemplateVariablesWithActiveMarker extends StoriesTemplateVariables
     /**
      * @var array
      */
-    private $zeroBasedIndexByTitleCache;
+    private $zeroBasedIndexByPathCache;
 
     /**
-     * @var CurrentTitle
+     * @var CurrentPath
      */
-    private $currentTitle;
+    private $currentPath;
 
-    public function __construct(CurrentTitle $currentTitle)
+    public function __construct(CurrentPath $currentPath)
     {
-        $this->currentTitle = $currentTitle;
+        $this->currentPath = $currentPath;
     }
 
     public function asAssocArray(): array
     {
-        $currentTitle = $this->currentTitle->getValue();
+        $currentCaption = $this->getCurrentCaption();
 
         return [
             'storyNav' => [
-                'currentTitle' => $currentTitle,
-                'stories' => $this->getOtherStoriesByCurrentTitle($currentTitle),
+                'currentTitle' => $currentCaption,
+                'stories' => $this->getOtherStoriesByPath($this->currentPath),
             ],
         ];
     }
 
-    public function getPreviousByCurrentTitle(string $currentTitle): array
+    public function getPrevious(): array
     {
-        $indexOfMatch = $this->getZeroBasedIndexByTitle($currentTitle);
-        $previousItemIndex = $indexOfMatch === 0 ? count(self::STORY_MAP) -1 : $indexOfMatch -1;
+        $index = $this->getZeroBasedIndexByPath($this->currentPath);
+        $previousItemIndex = $index === 0 ? count(self::STORY_MAP) - 1 : $index - 1;
 
         return self::STORY_MAP[$previousItemIndex];
     }
 
-    public function getNextByCurrentTitle(string $currentTitle): array
+    public function getNext(): array
     {
-        $indexOfMatch = $this->getZeroBasedIndexByTitle($currentTitle);
-        $nextItemIndex = $indexOfMatch === (count(self::STORY_MAP) - 1) ? 0 : ($indexOfMatch + 1);
+        $index = $this->getZeroBasedIndexByPath($this->currentPath);
+        $nextItemIndex = $index === (count(self::STORY_MAP) - 1) ? 0 : ($index + 1);
 
         return self::STORY_MAP[$nextItemIndex];
     }
 
-    private function getZeroBasedIndexByTitle(string $currentTitle): int
+    public function getCurrentTitle(): string
     {
-        if (isset($this->zeroBasedIndexByTitleCache[$currentTitle])) {
-            return $this->zeroBasedIndexByTitleCache[$currentTitle];
+        return $this->getCurrentCaption();
+    }
+
+    protected function getCurrentCaption(): string
+    {
+        $index = $this->getZeroBasedIndexByPath($this->currentPath);
+
+        return $this->getCaptionByZeroBasedIndex($index);
+    }
+
+    private function getZeroBasedIndexByPath(CurrentPath $currentPath): int
+    {
+        $currentPathValue = $currentPath->getValue();
+        if (isset($this->zeroBasedIndexByPathCache[$currentPathValue])) {
+            return $this->zeroBasedIndexByPathCache[$currentPathValue];
         }
 
         foreach (self::STORY_MAP as $zeroBasedIndex => $story) {
-            if ($story[self::CAPTION] === $currentTitle) {
-                $this->zeroBasedIndexByTitleCache[$currentTitle] = $zeroBasedIndex;
-                return $this->zeroBasedIndexByTitleCache[$currentTitle];
+            if ($currentPath->isEqualToValue(trim($story[self::HREF], '/'))) {
+                $this->zeroBasedIndexByPathCache[$currentPathValue] = $zeroBasedIndex;
+
+                return $this->zeroBasedIndexByPathCache[$currentPathValue];
             }
         }
 
         throw new RuntimeException(
-            sprintf('Given Title was not found in map. [%s]', $currentTitle)
+            sprintf('Given path was not found in map. [%s]', $currentPath)
         );
     }
 
-    private function getOtherStoriesByCurrentTitle(string $currentTitle): array
+    private function getOtherStoriesByPath(CurrentPath $currentPath): array
     {
+        $hrefToSearchFor = sprintf(
+            '%s%s%s', DIRECTORY_SEPARATOR, $currentPath->getValue(), DIRECTORY_SEPARATOR
+        );
         $filteredStoryMap = array_filter(
             self::STORY_MAP,
-            static function (array $story) use ($currentTitle) {
-                return $story['caption'] !== $currentTitle;
+            static function (array $story) use ($hrefToSearchFor) {
+                return $story[self::HREF] !== $hrefToSearchFor;
             },
             self::ARRAY_FILTER_USE_VALUE
         );
-        $this->ensureTitleWasFoundInMap($filteredStoryMap, $currentTitle);
-        $this->ensureAtLeastOneItem($filteredStoryMap, $currentTitle);
+        $this->ensurePathWasFoundInMap($filteredStoryMap, $currentPath);
+        $this->ensureAtLeastOneItem($filteredStoryMap, $currentPath);
 
         return $filteredStoryMap;
     }
 
-    private function ensureTitleWasFoundInMap(array $filteredStoryMap, string $currentTitle): void
+    private function ensurePathWasFoundInMap(array $filteredStoryMap, CurrentPath $currentPath): void
     {
         if ($filteredStoryMap === self::STORY_MAP) {
             throw new RuntimeException(
-                sprintf('Given Title was not found in map. [%s]', $currentTitle)
+                sprintf('Given path was not found in map. [%s]', $currentPath->getValue())
             );
         }
     }
 
-    private function ensureAtLeastOneItem(array $filteredStoryMap, string $currentTitle): void
+    private function ensureAtLeastOneItem(array $filteredStoryMap, CurrentPath $currentPath): void
     {
         if (count($filteredStoryMap) === 0) {
             throw new RuntimeException(
-                sprintf('Expected at least one item. [%s]', $currentTitle)
+                sprintf('Expected at least one item. [%s]', $currentPath->getValue())
             );
         }
+    }
+
+    private function getCaptionByZeroBasedIndex(int $index): string
+    {
+        return self::STORY_MAP[$index][self::CAPTION];
     }
 }

@@ -42,9 +42,4 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
             ]
         );
     }
-
-    protected function getTitleValue(): string
-    {
-        return StoriesTemplateVariables::STORY_MAP[StoriesTemplateVariables::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN][StoriesTemplateVariables::CAPTION];
-    }
 }
