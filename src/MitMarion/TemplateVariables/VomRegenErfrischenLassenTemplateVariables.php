@@ -11,7 +11,7 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
 
         return [
             'htmlHead' => [
-                'title' => $currentTitle,
+                'title' => $this->buildTitle($currentTitle),
             ],
             'storyNav' => [
                 'currentTitle' => $currentTitle,

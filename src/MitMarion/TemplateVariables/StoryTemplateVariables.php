@@ -41,6 +41,11 @@ abstract class StoryTemplateVariables implements TemplateVariables
      */
     private $zeroBasedIndexByTitleCache;
 
+    protected function buildTitle(string $currentTitle): string
+    {
+        return $currentTitle . ' - mit Marion';
+    }
+
     protected function getOtherStoriesByCurrentTitle(string $currentTitle): array
     {
         $filteredStoryMap = array_filter(

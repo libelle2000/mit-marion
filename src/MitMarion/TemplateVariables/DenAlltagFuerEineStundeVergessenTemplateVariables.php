@@ -11,7 +11,7 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryTempl
 
         return [
             'htmlHead' => [
-                'title' => $currentTitle,
+                'title' => $this->buildTitle($currentTitle),
             ],
             'storyNav' => [
                 'currentTitle' => $currentTitle,

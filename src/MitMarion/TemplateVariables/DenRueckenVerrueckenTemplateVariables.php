@@ -11,7 +11,7 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
 
         return [
             'htmlHead' => [
-                'title' => $currentTitle,
+                'title' => $this->buildTitle($currentTitle),
             ],
             'storyNav' => [
                 'currentTitle' => $currentTitle,
