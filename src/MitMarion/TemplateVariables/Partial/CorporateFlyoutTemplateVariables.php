@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Partial;
 
-use Shared\TemplateVariables\TemplateVariables;
+use MitMarion\TemplateVariables\TemplateVariables;
 
 class CorporateFlyoutTemplateVariables implements TemplateVariables
 {

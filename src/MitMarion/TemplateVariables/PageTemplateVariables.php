@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables;
 
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariables;
-use Shared\TemplateVariables\TemplateVariables;
 
 abstract class PageTemplateVariables implements TemplateVariables
 {
