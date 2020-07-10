@@ -1,0 +1,12 @@
+{% extends "include/header.incl.twig" %}
+{% block storyFlyout %}
+    <nav class="stories closed jsFlyoutWrapper jsFlyoutHoverToggle">
+        <div class="breadcrumb jsFlyoutTouchToggle jsFlyoutHoverToggle">{{ storyNav.currentTitle }}</div>
+        <ul class="flyout jsFlyoutHoverToggle">
+            <li class="breadcrumb current jsFlyoutTouchToggle">{{ storyNav.currentTitle }}</li>
+            {% for story in storyNav.stories %}
+                <li><a href="{{ story.href }}">{{ story.caption }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endblock %}
