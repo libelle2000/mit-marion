@@ -9,5 +9,5 @@ interface TemplateVariables extends SharedTemplateVariables
 {
     public const HREF = 'href';
     public const CAPTION = 'caption';
-    public const IS_ACTIVE = 'isActive';
+    public const IS_CURRENT = 'isCurrent';
 }

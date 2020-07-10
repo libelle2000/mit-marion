@@ -5,7 +5,7 @@
              alt="Menü Icon"/>
         <ul class="flyout jsFlyoutHoverToggle">
             {% for corporateLink in corporateFlyout %}
-                <li class="current"><a href="{{ corporateLink.href }}">{{ corporateLink.caption }}</a></li>
+                <li{{ corporateLink.isCurrent ? ' class="current"' }}><a href="{{ corporateLink.href }}">{{ corporateLink.caption }}</a></li>
             {% endfor %}
         </ul>
     </nav>
