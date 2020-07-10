@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>{{ htmlHead.title }}</title>
-    <link rel="stylesheet" href="/_assets/css/main.css"/>
-    <script async="async" src='/_assets/js/main.js'></script>
-</head>
-<body>
-<div class="content">
+{% extends "pageBase.twig" %}
+{% block title %}{{ htmlHead.title }}{% endblock %}
+{% block content %}
     <header class="container-content">
         <a href="/"><img class="logo" src="/_assets/images/logo.svg" alt="Logo mit-marion.de"/></a>
         <nav class="corporate closed jsFlyoutWrapper jsFlyoutHoverToggle">
@@ -62,6 +54,4 @@
         <a class="zap previous" href="{{zapper.previous.href}}">{{zapper.previous.caption}}</a>
         <a class="zap next" href="{{zapper.next.href}}">{{zapper.next.caption}}</a>
     </nav>
-</div>
-</body>
-</html>
+{% endblock %}
