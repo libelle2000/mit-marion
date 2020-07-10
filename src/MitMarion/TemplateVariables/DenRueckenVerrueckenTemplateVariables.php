@@ -11,7 +11,7 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
 
         return array_merge(
             $this->buildBaseTemplateVariables(),
-            $this->buildStoryNav(),
+            $this->buildZapperTemplateVariables(),
             [
                 'member' => [
                     'mainQuote' => [

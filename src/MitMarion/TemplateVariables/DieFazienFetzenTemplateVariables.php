@@ -3,15 +3,15 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables;
 
+use MitMarion\TemplateVariables\Partial\StoriesTemplateVariables;
+
 final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
 {
     public function asAssocArray(): array
     {
-        $currentTitle = $this->getTitleValue();
-
         return array_merge(
             $this->buildBaseTemplateVariables(),
-            $this->buildStoryNav(),
+            $this->buildZapperTemplateVariables(),
             [
                 'member' => [
                     'mainQuote' => [
@@ -39,16 +39,12 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
                         'Jetzt zur Probe mitmachen',
                     ],
                 ],
-                'zapper' => [
-                    'previous' => $this->getPreviousByCurrentTitle($currentTitle),
-                    'next' => $this->getNextByCurrentTitle($currentTitle),
-                ],
             ]
         );
     }
 
     protected function getTitleValue(): string
     {
-        return self::STORY_MAP[self::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN][self::CAPTION];
+        return StoriesTemplateVariables::STORY_MAP[StoriesTemplateVariables::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN][StoriesTemplateVariables::CAPTION];
     }
 }

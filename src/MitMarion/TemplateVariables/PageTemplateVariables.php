@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables;
 
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariables;
+use MitMarion\TemplateVariables\Partial\StoriesTemplateVariables;
 
 abstract class PageTemplateVariables implements TemplateVariables
 {
@@ -15,9 +16,15 @@ abstract class PageTemplateVariables implements TemplateVariables
      */
     private $corporateFlyout;
 
-    public function __construct(CorporateFlyoutTemplateVariables $corporateFlyout)
+    /**
+     * @var StoriesTemplateVariables
+     */
+    private $stories;
+
+    public function __construct(CorporateFlyoutTemplateVariables $corporateFlyout, StoriesTemplateVariables $stories)
     {
         $this->corporateFlyout = $corporateFlyout;
+        $this->stories = $stories;
     }
 
     protected function buildBaseTemplateVariables(): array
@@ -25,10 +32,16 @@ abstract class PageTemplateVariables implements TemplateVariables
         return array_merge(
             $this->buildHtmlHead(),
             $this->corporateFlyout->asAssocArray(),
+            $this->buildStoryFlyout(),
         );
     }
 
     abstract protected function getTitleValue(): string;
+
+    protected function buildStoryFlyout(): array
+    {
+        return $this->stories->asAssocArray();
+    }
 
     private function buildHtmlHead(): array
     {

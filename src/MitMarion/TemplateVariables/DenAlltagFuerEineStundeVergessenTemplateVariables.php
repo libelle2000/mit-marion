@@ -11,7 +11,7 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryTempl
 
         return array_merge(
             $this->buildBaseTemplateVariables(),
-            $this->buildStoryNav(),
+            $this->buildZapperTemplateVariables(),
             [
                 'member' => [
                     'mainQuote' => [

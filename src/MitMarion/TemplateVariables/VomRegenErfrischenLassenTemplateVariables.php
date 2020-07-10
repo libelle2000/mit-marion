@@ -11,7 +11,7 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
 
         return array_merge(
             $this->buildBaseTemplateVariables(),
-            $this->buildStoryNav(),
+            $this->buildZapperTemplateVariables(),
             [
                 'member' => [
                     'mainQuote' => [
