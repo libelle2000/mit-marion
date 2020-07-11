@@ -7,8 +7,8 @@ use Shared\BaseValueObject\BaseString;
 
 final class CurrentPath extends BaseString
 {
-    public static function fromDirectory(string $magicDir): CurrentPath
+    public static function fromDirectory(string $dir): CurrentPath
     {
-        return new static(basename($magicDir));
+        return new static(basename($dir));
     }
 }
