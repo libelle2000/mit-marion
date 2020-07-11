@@ -11,6 +11,7 @@ use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\StoryTemplateVariables;
+use MitMarion\Validator\ContactFormValidator;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
 
@@ -40,6 +41,11 @@ class Factory
         return new HomePage(
             $this->createHomeRenderer(),
         );
+    }
+
+    public function createContactFormValidator(): ContactFormValidator
+    {
+        return new ContactFormValidator();
     }
 
     private function createHomeRenderer(): HomeRenderer

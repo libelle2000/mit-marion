@@ -9,10 +9,14 @@ use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
+$validator = $factory->createContactFormValidator();
+$result = $validator->validate();
+
 $templateVariables = new ContactFormTemplateVariables(
     new CorporateFlyoutTemplateVariablesWithActiveMarker(
         CurrentPath::fromDirectory(__DIR__)
     ),
-    new StoriesTemplateVariables()
+    new StoriesTemplateVariables(),
+    $result->getTemplateVariables()
 );
 echo $factory->createContactFormPage($templateVariables)->asString();
