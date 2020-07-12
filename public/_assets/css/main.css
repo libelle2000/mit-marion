@@ -253,7 +253,8 @@ section.member .subquote {
     grid-area: subquote;
 }
 .member .subquote,
-section.marion {
+section.marion,
+.contactForm {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
