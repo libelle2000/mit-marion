@@ -70,7 +70,8 @@ input {
 }
 
 textarea,
-input:not([type="checkbox"]) {
+input[type="text"],
+input[type="email"] {
     width: 100%;
 }
 
