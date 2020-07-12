@@ -67,6 +67,10 @@ input {
     margin: 0;
     border: none;
     font-size: 1rem;
+}
+
+textarea,
+input:not([type="checkbox"]) {
     width: 100%;
 }
 
