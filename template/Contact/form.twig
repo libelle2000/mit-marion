@@ -2,6 +2,9 @@
 {% block title %}mit-marion-de{% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
+    <form action="{{ form.action }}" method="{{ form.method }}">
+
+    </form>
     <pre>
         {{ dump() }}
     </pre>

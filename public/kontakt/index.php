@@ -12,11 +12,13 @@ require_once __DIR__ . '/../../bootstrap.php';
 $validator = $factory->createContactFormValidator();
 $result = $validator->validate();
 
+$currentPath = CurrentPath::fromDirectory(__DIR__);
 $templateVariables = new ContactFormTemplateVariables(
     new CorporateFlyoutTemplateVariablesWithActiveMarker(
-        CurrentPath::fromDirectory(__DIR__)
+        $currentPath
     ),
     new StoriesTemplateVariables(),
+    $currentPath,
     $result->getTemplateVariables()
 );
 echo $factory->createContactFormPage($templateVariables)->asString();

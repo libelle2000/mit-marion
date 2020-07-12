@@ -87,9 +87,7 @@ class StoriesTemplateVariablesWithActiveMarker extends StoriesTemplateVariables
 
     private function getOtherStoriesByPath(CurrentPath $currentPath): array
     {
-        $hrefToSearchFor = sprintf(
-            '%s%s%s', DIRECTORY_SEPARATOR, $currentPath->getValue(), DIRECTORY_SEPARATOR
-        );
+        $hrefToSearchFor = $currentPath->asUrlPath();
         $filteredStoryMap = array_filter(
             self::STORY_MAP,
             static function (array $story) use ($hrefToSearchFor) {

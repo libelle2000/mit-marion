@@ -11,4 +11,11 @@ final class CurrentPath extends BaseString
     {
         return new static(basename($dir));
     }
+
+    public function asUrlPath(): string
+    {
+        return sprintf(
+            '%s%s%s', DIRECTORY_SEPARATOR, $this->getValue(), DIRECTORY_SEPARATOR
+        );
+    }
 }
