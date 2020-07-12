@@ -50,7 +50,7 @@ class ContactFormValidator implements Validator
 
                 new SurNameWithCustomerDataAndErrors(
                     new Label('surName'),
-                    new Placeholder('dein $surName'),
+                    new Placeholder('dein Nachname'),
                     new ValidationRegexPattern(''),
                     new CustomerInput('falscher input in $surName'),
                     $surNameErrorMessages
@@ -58,7 +58,7 @@ class ContactFormValidator implements Validator
 
                 new EMailWithCustomerDataAndErrors(
                     new Label('eMail'),
-                    new Placeholder('dein $eMail'),
+                    new Placeholder('dein E-Mail Adresse'),
                     new ValidationRegexPattern(''),
                     new CustomerInput('falscher input in $eMail'),
                     $eMailErrorMessages
@@ -66,7 +66,7 @@ class ContactFormValidator implements Validator
 
                 new CustomerMessageWithCustomerDataAndErrors(
                     new Label('message'),
-                    new Placeholder('dein $message'),
+                    new Placeholder('Meine Nachricht an dich, Marion'),
                     new ValidationRegexPattern(''),
                     new CustomerInput('falscher input in $message'),
                     $messageErrorMessages
@@ -74,7 +74,7 @@ class ContactFormValidator implements Validator
 
                 new DataPrivacyWithCustomerDataAndErrors(
                     new Label('dataPrivacy'),
-                    new Placeholder('dein $dataPrivacy'),
+                    new Placeholder('Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.'),
                     new ValidationRegexPattern(''),
                     new CustomerInput('falscher input in $dataPrivacy'),
                     $dataPrivacyErrorMessages
