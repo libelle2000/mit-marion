@@ -1,35 +1,41 @@
 form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "preName customerMessage"
-    "surName customerMessage"
-    "eMail customerMessage"
-    "dataPrivacy dataPrivacy"
-    "captcha captcha"
-    "submit submit";
+    "preName"
+    "surName"
+    "eMail"
+    "customerMessage"
+    "dataPrivacy"
+    "captcha"
+    "submit";
 }
-
 
 .preName {
     grid-area: preName;
 }
+
 .surName {
     grid-area: surName;
 }
+
 .eMail {
     grid-area: eMail;
 }
+
 .customerMessage {
     grid-area: customerMessage;
 }
+
 .dataPrivacy {
     grid-area: dataPrivacy;
 }
+
 .captcha {
     grid-area: captcha;
 }
+
 .submit {
     grid-area: submit;
 }
@@ -40,6 +46,19 @@ form {
 .customerMessage,
 .dataPrivacy,
 .captcha,
-.submit{
+.submit {
     display: block;
+}
+
+@media only screen and (min-device-width: 800px) {
+    form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "preName customerMessage"
+        "surName customerMessage"
+        "eMail customerMessage"
+        "dataPrivacy dataPrivacy"
+        "captcha captcha"
+        "submit submit";
+    }
 }
