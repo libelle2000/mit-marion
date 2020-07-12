@@ -50,6 +50,10 @@ form {
     display: block;
 }
 
+input {
+    font-size: 1rem;
+}
+
 @media only screen and (min-device-width: 800px) {
     form {
         grid-template-columns: 1fr 1fr;
