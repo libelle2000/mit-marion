@@ -20,6 +20,8 @@ html {
     line-height: 3.4rem;
 }
 
+.contactIntro,
+.member .subquote,
 .marion .mainquote,
 .marion .advantages {
     line-height: 1.5rem;
@@ -256,7 +258,8 @@ section.member .subquote {
 }
 .member .subquote,
 section.marion,
-.contactForm {
+.contactForm,
+.contactIntro {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }

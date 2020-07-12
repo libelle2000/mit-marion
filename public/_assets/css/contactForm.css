@@ -50,6 +50,13 @@ form {
     display: block;
 }
 
+.contactIntro {
+    padding-top: 2rem;
+}
+.contactIntro p {
+    margin-bottom: 1rem;
+}
+
 input {
     font-size: 1rem;
 }
