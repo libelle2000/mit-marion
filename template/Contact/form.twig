@@ -1,39 +1,42 @@
 {% extends "pageBase.twig" %}
 {% block title %}mit-marion-de{% endblock %}
+{% block additionalStyleSheets %}
+    <link rel="stylesheet" href="/_assets/css/contactForm.css"/>
+{% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
     <form action="{{ form.action }}" method="{{ form.method }}">
-        <div class="{{ preName.identifier }}">
-            <label for="{{ preName.identifier }}">dein Vorname</label>
-            <input id="{{ preName.identifier }}" name="{{ preName.identifier }}" type="text" placeholder="{{ preName.placeholder }}" value="{{ preName.customerInput }}" />
+        <div class="{{ contactFormElements.preName.identifier }}">
+            <label for="{{ contactFormElements.preName.identifier }}">dein Vorname</label>
+            <input id="{{ contactFormElements.preName.identifier }}" name="{{ contactFormElements.preName.identifier }}" type="text" placeholder="{{ contactFormElements.preName.placeholder }}" value="{{ contactFormElements.preName.customerInput }}" />
             <ul class="errorList">
                 <li>ein error</li>
             </ul>
         </div>
-        <div class="{{ surName.identifier }}">
-            <label for="{{ surName.identifier }}">dein Nachname</label>
-            <input id="{{ surName.identifier }}" name="{{ surName.identifier }}" type="text" placeholder="{{ surName.placeholder }}" value="{{ surName.customerInput }}" />
+        <div class="{{ contactFormElements.surName.identifier }}">
+            <label for="{{ contactFormElements.surName.identifier }}">dein Nachname</label>
+            <input id="{{ contactFormElements.surName.identifier }}" name="{{ contactFormElements.surName.identifier }}" type="text" placeholder="{{ contactFormElements.surName.placeholder }}" value="{{ contactFormElements.surName.customerInput }}" />
             <ul class="errorList">
                 <li>ein error</li>
             </ul>
         </div>
-        <div class="{{ eMail.identifier }}">
-            <label for="{{ eMail.identifier }}">deine E-Mail</label>
-            <input id="{{ eMail.identifier }}" name="{{ eMail.identifier }}" type="email" placeholder="{{ eMail.placeholder }}-Mail" value="{{ eMail.customerInput }}" />
+        <div class="{{ contactFormElements.eMail.identifier }}">
+            <label for="{{ contactFormElements.eMail.identifier }}">deine E-Mail</label>
+            <input id="{{ contactFormElements.eMail.identifier }}" name="{{ contactFormElements.eMail.identifier }}" type="email" placeholder="{{ contactFormElements.eMail.placeholder }}-Mail" value="{{ contactFormElements.eMail.customerInput }}" />
             <ul class="errorList">
                 <li>ein error</li>
             </ul>
         </div>
-        <div class="{{ message.identifier }}">
-            <label for="{{ message.identifier }}">Meine Nachricht an dich, Marion</label>
-            <textarea name="{{ message.identifier }}" placeholder="{{ message.placeholder }}">{{ customerMessage.customerInput }}</textarea>
+        <div class="{{ contactFormElements.customerMessage.identifier }}">
+            <label for="{{ contactFormElements.customerMessage.identifier }}">Meine Nachricht an dich, Marion</label>
+            <textarea name="{{ contactFormElements.customerMessage.identifier }}" placeholder="{{ contactFormElements.customerMessage.placeholder }}">{{ contactFormElements.customerMessage.customerInput }}</textarea>
             <ul class="errorList">
                 <li>ein error</li>
             </ul>
         </div>
-        <div class="{{ dataPrivacy.identifier }}">
-            <label for="{{ dataPrivacy.identifier }}">
-                <input id="{{ dataPrivacy.identifier }}" name="{{ dataPrivacy.identifier }}" type="checkbox" placeholder="{{ dataPrivacy.placeholder }}" />
+        <div class="{{ contactFormElements.dataPrivacy.identifier }}">
+            <label for="{{ contactFormElements.dataPrivacy.identifier }}">
+                <input id="{{ contactFormElements.dataPrivacy.identifier }}" name="{{ contactFormElements.dataPrivacy.identifier }}" type="checkbox" placeholder="{{ contactFormElements.dataPrivacy.placeholder }}" />
                 Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.
             </label>
             <ul class="errorList">
@@ -41,9 +44,10 @@
             </ul>
         </div>
         <div class="captcha">captcha</div>
-        <input type="submit" value="abschicken" />
+        <input class="submit" type="submit" value="abschicken" />
     </form>
-{#    <pre>#}
+    <pre>
+        {{ dump() }}
 {#        {{ dump(contactFormElements) }}#}
-{#    </pre>#}
+    </pre>
 {% endblock %}
