@@ -322,7 +322,8 @@ section.marion .closingText {
 }
 
 .marion,
-.member {
+.member,
+.contact * {
     color: #336633;
 }
 
