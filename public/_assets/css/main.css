@@ -63,6 +63,7 @@ section.marion .photo {
     height: 5rem;
 }
 
+.contactForm li,
 section.marion li {
     list-style: square;
     padding-left: 0.4rem;
