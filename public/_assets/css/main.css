@@ -195,6 +195,8 @@ nav.open .flyout {
     margin: 0.5rem auto 0.5rem auto;
     padding: 1rem;
     text-align: center;
+    font-size: 1rem;
+    border: none;
     border-radius: 5px 5px 5px 5px;
 }
 
