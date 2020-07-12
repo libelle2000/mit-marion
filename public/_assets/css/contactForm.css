@@ -40,14 +40,13 @@ form {
     grid-area: submit;
 }
 
-.preName,
-.surName,
-.eMail,
-.customerMessage,
-.dataPrivacy,
-.captcha,
-.submit {
+.formElementGroup {
+    padding: 1rem;
+}
+
+.formElementGroup > * {
     display: block;
+    margin-bottom: 0.5rem;
 }
 
 .contactIntro {
@@ -57,9 +56,6 @@ form {
 .contactIntro p,
 .formElementGroup {
     margin-bottom: 1rem;
-}
-.formElementGroup {
-    padding: 1rem;
 }
 
 .errorList {
