@@ -51,6 +51,9 @@ form {
 
 .formElementGroup > * {
     display: block;
+}
+
+.formElementGroup > *:not(:last-child) {
     margin-bottom: 0.5rem;
 }
 
@@ -80,6 +83,10 @@ input[type="email"] {
     width: 100%;
 }
 
+textarea {
+    min-height: 10rem;
+}
+
 .errorIntro,
 .errorList li{
     color: #BB0000;
@@ -102,5 +109,28 @@ input[type="email"] {
 
     .formElementGroup {
         margin-bottom: 0;
+    }
+
+    .customerMessage{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content auto min-content;
+        grid-template-areas:
+        "customerMessageLabel"
+        "customerMessageTextarea"
+        "customerMessageErrorList";
+    }
+
+    .customerMessage .customerMessageLabel{
+        grid-area: customerMessageLabel;
+    }
+    .customerMessage .customerMessageTextarea{
+        grid-area: customerMessageTextarea;
+    }
+    .customerMessage .customerMessageErrorList{
+        grid-area: customerMessageErrorList;
+    }
+    .customerMessage .customerMessageTextarea textarea{
+        height: 100%;
     }
 }
