@@ -41,6 +41,9 @@ abstract class Element implements TemplateVariables
     {
         return [
             $this->getTemplateIdentifier() => array_merge(
+                [
+                    'identifier' => $this->getTemplateIdentifier(),
+                ],
                 $this->label->asAssocArray(),
                 $this->placeholder->asAssocArray(),
                 $this->validationRegexPattern->asAssocArray(),
