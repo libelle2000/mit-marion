@@ -11,6 +11,7 @@
             <p>Hier bist du richtig. Ich werde mich so schnell wie möglich bei dir melden.</p>
         </section>
         <form class="contactForm" action="{{ form.action }}" method="{{ form.method }}">
+            <p class="errorIntro">Uups... deine Angaben benötigen noch etwas Augenmerk.</p>
             <div class="formElementGroup preName">
                 <label for="preName">{{ contactFormElements.preName.placeholder }}:</label>
                 <input id="preName"
