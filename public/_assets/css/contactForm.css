@@ -53,8 +53,16 @@ form {
 .contactIntro {
     padding-top: 2rem;
 }
-.contactIntro p {
+.contactIntro p,
+.formElementGroup {
     margin-bottom: 1rem;
+}
+.formElementGroup {
+    padding-left: 1rem;
+}
+
+.errorList {
+    margin-left: 1rem;
 }
 
 input {

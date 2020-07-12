@@ -11,7 +11,7 @@
             <p>Hier bist du richtig. Ich werde mich so schnell wie möglich bei dir melden.</p>
         </section>
         <form class="contactForm" action="{{ form.action }}" method="{{ form.method }}">
-            <div class="{{ contactFormElements.preName.identifier }}">
+            <div class="formElementGroup {{ contactFormElements.preName.identifier }}">
                 <label for="{{ contactFormElements.preName.identifier }}">{{ contactFormElements.preName.placeholder }}:</label>
                 <input id="{{ contactFormElements.preName.identifier }}"
                        name="{{ contactFormElements.preName.identifier }}" type="text"
@@ -21,7 +21,7 @@
                     <li>ein error</li>
                 </ul>
             </div>
-            <div class="{{ contactFormElements.surName.identifier }}">
+            <div class="formElementGroup {{ contactFormElements.surName.identifier }}">
                 <label for="{{ contactFormElements.surName.identifier }}">{{ contactFormElements.surName.placeholder }}:</label>
                 <input id="{{ contactFormElements.surName.identifier }}"
                        name="{{ contactFormElements.surName.identifier }}" type="text"
@@ -31,7 +31,7 @@
                     <li>ein error</li>
                 </ul>
             </div>
-            <div class="{{ contactFormElements.eMail.identifier }}">
+            <div class="formElementGroup {{ contactFormElements.eMail.identifier }}">
                 <label for="{{ contactFormElements.eMail.identifier }}">{{ contactFormElements.eMail.placeholder }}:</label>
                 <input id="{{ contactFormElements.eMail.identifier }}" name="{{ contactFormElements.eMail.identifier }}"
                        type="email" placeholder="{{ contactFormElements.eMail.placeholder }}"
@@ -40,7 +40,7 @@
                     <li>ein error</li>
                 </ul>
             </div>
-            <div class="{{ contactFormElements.customerMessage.identifier }}">
+            <div class="formElementGroup {{ contactFormElements.customerMessage.identifier }}">
                 <label for="{{ contactFormElements.customerMessage.identifier }}">
                     {{ contactFormElements.customerMessage.placeholder }}:
                 </label>
@@ -50,7 +50,7 @@
                     <li>ein error</li>
                 </ul>
             </div>
-            <div class="{{ contactFormElements.dataPrivacy.identifier }}">
+            <div class="formElementGroup {{ contactFormElements.dataPrivacy.identifier }}">
                 <label for="{{ contactFormElements.dataPrivacy.identifier }}">
                     <input id="{{ contactFormElements.dataPrivacy.identifier }}"
                            name="{{ contactFormElements.dataPrivacy.identifier }}" type="checkbox"
@@ -61,8 +61,10 @@
                     <li>ein error</li>
                 </ul>
             </div>
-            <div class="captcha">captcha</div>
-            <input class="submit button" type="submit" value="abschicken"/>
+            <div class="formElementGroup captcha">captcha</div>
+            <div class="formElementGroup submit">
+                <input class="submit button" type="submit" value="abschicken"/>
+            </div>
         </form>
     </article>
     {#    <pre>#}
