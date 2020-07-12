@@ -8,7 +8,8 @@
     <article class="contact">
         <section class="contactIntro">
             <p>
-                Du hättest gerne mehr Infos zu meinen Kursen? Du möchtest dich anmelden oder hast einfach nur eine Frage?
+                Du hättest gerne mehr Infos zu meinen Kursen? Du möchtest dich anmelden oder hast einfach nur eine
+                Frage?
             </p>
             <p>Hier bist du richtig. Ich werde mich so schnell wie möglich bei dir melden.</p>
         </section>
@@ -47,22 +48,16 @@
                 </ul>
             </div>
             <div class="formElementGroup customerMessage">
-                <div class="customerMessageLabel">
-                    <label for="customerMessage">
-                        {{ contactFormElements.customerMessage.placeholder }}:
-                    </label>
-                </div>
-                <div class="customerMessageTextarea">
-                    <textarea id="customerMessage"
-                               name="{{ contactFormElements.customerMessage.identifier }}"
-                               placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput }}</textarea>
+                <label for="customerMessage">
+                    {{ contactFormElements.customerMessage.placeholder }}:
+                </label>
+                <textarea id="customerMessage"
+                          name="{{ contactFormElements.customerMessage.identifier }}"
+                          placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput }}</textarea>
 
-                </div>
-                <div class="customerMessageErrorList">
-                    <ul class="errorList">
-                        <li>ein error</li>
-                    </ul>
-                </div>
+                <ul class="errorList">
+                    <li>ein error</li>
+                </ul>
             </div>
             <div class="formElementGroup dataPrivacy">
                 <label for="dataPrivacy">

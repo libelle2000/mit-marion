@@ -121,16 +121,14 @@ textarea {
         "customerMessageErrorList";
     }
 
-    .customerMessage .customerMessageLabel{
+    .customerMessage label{
         grid-area: customerMessageLabel;
     }
-    .customerMessage .customerMessageTextarea{
+    .customerMessage textarea{
         grid-area: customerMessageTextarea;
-    }
-    .customerMessage .customerMessageErrorList{
-        grid-area: customerMessageErrorList;
-    }
-    .customerMessage .customerMessageTextarea textarea{
         height: 100%;
+    }
+    .customerMessage .errorList{
+        grid-area: customerMessageErrorList;
     }
 }
