@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace Shared\BaseValueObject;
 
 use ArrayIterator;
+use Countable;
 use IteratorAggregate;
 use RuntimeException;
 
-abstract class BaseUniqueCollection implements IteratorAggregate
+abstract class BaseUniqueCollection implements IteratorAggregate, Countable
 {
     /**
      * @var array
@@ -18,6 +19,16 @@ abstract class BaseUniqueCollection implements IteratorAggregate
     public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->elements);
+    }
+
+    public function isEmpty(): bool
+    {
+        return $this->count() === 0;
+    }
+
+    public function count(): int
+    {
+        return count($this->elements);
     }
 
     protected function addUniqueElement($element, Identifier $key): void

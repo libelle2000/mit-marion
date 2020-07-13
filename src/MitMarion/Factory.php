@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion;
 
+use MitMarion\Http\Request;
 use MitMarion\Page\ContactFormPage;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\StoryPage;
@@ -12,7 +13,13 @@ use MitMarion\Renderer\StoryRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\StoryTemplateVariables;
 use MitMarion\Validator\ContactFormValidator;
+use MitMarion\Validator\Item\CustomerMessageValidator;
+use MitMarion\Validator\Item\DataPrivacyValidator;
+use MitMarion\Validator\Item\EMailValidator;
+use MitMarion\Validator\Item\PreNameValidator;
+use MitMarion\Validator\Item\SurNameValidator;
 use Shared\Factory as SharedFactory;
+use Shared\TemplateVariables\Form\FormElementBuilder;
 use Twig\Environment;
 
 class Factory
@@ -43,9 +50,16 @@ class Factory
         );
     }
 
-    public function createContactFormValidator(): ContactFormValidator
+    public function createContactFormValidator(Request $request): ContactFormValidator
     {
-        return new ContactFormValidator();
+        return new ContactFormValidator(
+            $this->createFormElementBuilder(),
+            new PreNameValidator($request),
+            new SurNameValidator($request),
+            new EMailValidator($request),
+            new CustomerMessageValidator($request),
+            new DataPrivacyValidator($request)
+        );
     }
 
     private function createHomeRenderer(): HomeRenderer
@@ -57,12 +71,16 @@ class Factory
 
     public function createContactFormPage(
         ContactFormTemplateVariables $contactFormTemplateVariables
-    ): ContactFormPage
-    {
+    ): ContactFormPage {
         return new ContactFormPage(
             $this->createContactFormRenderer(),
             $contactFormTemplateVariables
         );
+    }
+
+    public function createFormElementBuilder(): FormElementBuilder
+    {
+        return new FormElementBuilder();
     }
 
     private function createContactFormRenderer(): ContactFormRenderer

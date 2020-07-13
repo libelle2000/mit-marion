@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Partial\ContactFormElement;
 
-use Shared\TemplateVariables\Form\ElementWithCustomerDataAndErrors;
+use Shared\TemplateVariables\Form\Element;
 
-class PreNameWithCustomerDataAndErrors  extends ElementWithCustomerDataAndErrors implements TemplateIdentifier
+class PreName extends Element implements TemplateIdentifier
 {
     protected function getTemplateIdentifier(): string
     {

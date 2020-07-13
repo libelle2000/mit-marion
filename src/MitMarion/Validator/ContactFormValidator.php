@@ -9,36 +9,83 @@ use MitMarion\TemplateVariables\Partial\ContactFormElement\EMailWithCustomerData
 use MitMarion\TemplateVariables\Partial\ContactFormElement\PreNameWithCustomerDataAndErrors;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\SurNameWithCustomerDataAndErrors;
 use MitMarion\TemplateVariables\Partial\ContactFormElementsWithCustomerDataAndErrorsTemplateVariables;
+use MitMarion\Validator\Item\CustomerMessageValidator;
+use MitMarion\Validator\Item\DataPrivacyValidator;
+use MitMarion\Validator\Item\EMailValidator;
+use MitMarion\Validator\Item\PreNameValidator;
+use MitMarion\Validator\Item\SurNameValidator;
 use Shared\TemplateVariables\Form\Element\CustomerInput;
-use Shared\TemplateVariables\Form\Element\ErrorMessage;
 use Shared\TemplateVariables\Form\Element\ErrorMessages;
 use Shared\TemplateVariables\Form\Element\Label;
 use Shared\TemplateVariables\Form\Element\Placeholder;
 use Shared\TemplateVariables\Form\Element\ValidationRegexPattern;
+use Shared\TemplateVariables\Form\FormElementBuilder;
+use Shared\Validator\SuccessResult;
 use Shared\Validator\Validator;
 use Shared\Validator\Result;
 
 class ContactFormValidator implements Validator
 {
+    /**
+     * @var FormElementBuilder
+     */
+    private $formElementBuilder;
+    /**
+     * @var PreNameValidator
+     */
+    private $preNameValidator;
+    /**
+     * @var SurNameValidator
+     */
+    private $surNameValidator;
+    /**
+     * @var EMailValidator
+     */
+    private $eMailValidator;
+    /**
+     * @var CustomerMessageValidator
+     */
+    private $customerMessageValidator;
+    /**
+     * @var DataPrivacyValidator
+     */
+    private $dataPrivacyValidator;
+
+    public function __construct(
+        FormElementBuilder $formElementBuilder,
+        PreNameValidator $preNameValidator,
+        SurNameValidator $surNameValidator,
+        EMailValidator $eMailValidator,
+        CustomerMessageValidator $customerMessageValidator,
+        DataPrivacyValidator $dataPrivacyValidator
+    ) {
+        $this->formElementBuilder = $formElementBuilder;
+        $this->preNameValidator = $preNameValidator;
+        $this->surNameValidator = $surNameValidator;
+        $this->eMailValidator = $eMailValidator;
+        $this->customerMessageValidator = $customerMessageValidator;
+        $this->dataPrivacyValidator = $dataPrivacyValidator;
+    }
+
     public function validate(): Result
     {
-        //todo do validation
-        $preNameErrorMessages = new ErrorMessages();
-        $preNameErrorMessages->addErrorMessage(new ErrorMessage('ein error'));
+        $preNameErrorMessages = $this->preNameValidator->validate();
+        $surNameErrorMessages = $this->surNameValidator->validate();
+        $eMailErrorMessages = $this->eMailValidator->validate();
+        $customerMessageErrorMessages = $this->customerMessageValidator->validate();
+        $dataPrivacyErrorMessages = $this->dataPrivacyValidator->validate();
 
-        $surNameErrorMessages = new ErrorMessages();
-        $surNameErrorMessages->addErrorMessage(new ErrorMessage('ein error in $surName'));
+        if ($this->noErrors(
+            $preNameErrorMessages,
+            $surNameErrorMessages,
+            $eMailErrorMessages,
+            $customerMessageErrorMessages,
+            $dataPrivacyErrorMessages
+        )) {
+            return new SuccessResult();
+        }
 
-        $eMailErrorMessages = new ErrorMessages();
-        $eMailErrorMessages->addErrorMessage(new ErrorMessage('ein error in $eMail'));
-
-        $messageErrorMessages = new ErrorMessages();
-        $messageErrorMessages->addErrorMessage(new ErrorMessage('ein error in $message'));
-
-        $dataPrivacyErrorMessages = new ErrorMessages();
-        $dataPrivacyErrorMessages->addErrorMessage(new ErrorMessage('ein error in $dataPrivacy'));
-
-        return new ContactFormResult(
+        return new ContactFormWithCustomerDataAndErrorsResult(
             new ContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
                 new PreNameWithCustomerDataAndErrors(
                     new Label('Vorname'),
@@ -49,7 +96,7 @@ class ContactFormValidator implements Validator
                 ),
 
                 new SurNameWithCustomerDataAndErrors(
-                    new Label('surName'),
+                    new Label('Nachname'),
                     new Placeholder('dein Nachname'),
                     new ValidationRegexPattern(''),
                     new CustomerInput('falscher input in $surName'),
@@ -57,19 +104,19 @@ class ContactFormValidator implements Validator
                 ),
 
                 new EMailWithCustomerDataAndErrors(
-                    new Label('eMail'),
-                    new Placeholder('dein E-Mail Adresse'),
+                    new Label('E-Mail'),
+                    new Placeholder('deine E-Mail Adresse'),
                     new ValidationRegexPattern(''),
                     new CustomerInput('falscher input in $eMail'),
                     $eMailErrorMessages
                 ),
 
                 new CustomerMessageWithCustomerDataAndErrors(
-                    new Label('message'),
+                    new Label('Nachricht'),
                     new Placeholder('Meine Nachricht an dich, Marion'),
                     new ValidationRegexPattern(''),
                     new CustomerInput('falscher input in $message'),
-                    $messageErrorMessages
+                    $customerMessageErrorMessages
                 ),
 
                 new DataPrivacyWithCustomerDataAndErrors(
@@ -81,5 +128,19 @@ class ContactFormValidator implements Validator
                 ),
             )
         );
+    }
+
+    private function noErrors(
+        ErrorMessages $preNameErrorMessages,
+        ErrorMessages $surNameErrorMessages,
+        ErrorMessages $eMailErrorMessages,
+        ErrorMessages $customerMessageErrorMessages,
+        ErrorMessages $dataPrivacyErrorMessages
+    ): bool {
+        return $preNameErrorMessages->isEmpty()
+            && $surNameErrorMessages->isEmpty()
+            && $eMailErrorMessages->isEmpty()
+            && $customerMessageErrorMessages->isEmpty()
+            && $dataPrivacyErrorMessages->isEmpty();
     }
 }
