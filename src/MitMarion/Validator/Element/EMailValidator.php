@@ -10,9 +10,9 @@ use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessage;
 use Shared\Validator\Element\ErrorElementResult;
 use Shared\Validator\Element\ElementResult;
-use Shared\Validator\Element\ItemValidator;
+use Shared\Validator\Element\ElementValidator;
 
-class EMailValidator extends ItemValidator
+class EMailValidator extends ElementValidator
 {
     private const PARAMETER_NAME = 'eMail';
 

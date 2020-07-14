@@ -8,7 +8,7 @@ use Shared\Http\ParameterizedRequest;
 use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessages;
 
-abstract class ItemValidator
+abstract class ElementValidator
 {
     /**
      * @var ParameterizedRequest
