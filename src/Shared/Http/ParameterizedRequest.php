@@ -10,5 +10,5 @@ interface ParameterizedRequest
 {
     public function hasParameterWithValue(Identifier $key): bool;
 
-    public function getParameter(Identifier $key): string;
+    public function getParameter(Identifier $key): ParameterValue;
 }

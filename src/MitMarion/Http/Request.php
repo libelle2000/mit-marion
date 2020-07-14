@@ -6,6 +6,7 @@ namespace MitMarion\Http;
 use RuntimeException;
 use Shared\BaseValueObject\Identifier;
 use Shared\Http\ParameterizedRequest;
+use Shared\Http\ParameterValue;
 
 class Request implements ParameterizedRequest
 {
@@ -31,10 +32,10 @@ class Request implements ParameterizedRequest
         return new static(strtoupper($_SERVER['REQUEST_METHOD']), $_POST);
     }
 
-    public function getParameter(Identifier $key): string
+    public function getParameter(Identifier $key): ParameterValue
     {
         if ($this->hasParameter($key)) {
-            return trim($this->parameter[$key->getValue()]);
+            return new ParameterValue(trim($this->parameter[$key->getValue()]));
         }
 
         throw new RuntimeException(

@@ -37,7 +37,7 @@ abstract class ItemValidator
     protected function createSuccessResult(): SuccessElementResult
     {
         return new SuccessElementResult(
-            new CustomerInput($this->request->getParameter($this->getParameterIdentifier()))
+            new CustomerInput($this->request->getParameter($this->getParameterIdentifier())->getValue())
         );
     }
 
