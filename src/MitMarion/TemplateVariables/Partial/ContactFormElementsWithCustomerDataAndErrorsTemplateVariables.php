@@ -8,31 +8,9 @@ use MitMarion\TemplateVariables\Partial\ContactFormElement\DataPrivacyWithCustom
 use MitMarion\TemplateVariables\Partial\ContactFormElement\EMailWithCustomerDataAndErrors;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\PreNameWithCustomerDataAndErrors;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\SurNameWithCustomerDataAndErrors;
-use MitMarion\TemplateVariables\TemplateVariables;
 
-class ContactFormElementsWithCustomerDataAndErrorsTemplateVariables implements TemplateVariables, ErrorFlag
+class ContactFormElementsWithCustomerDataAndErrorsTemplateVariables extends ContactFormElementsTemplateVariables
 {
-    /**
-     * @var PreNameWithCustomerDataAndErrors
-     */
-    private $preName;
-    /**
-     * @var SurNameWithCustomerDataAndErrors
-     */
-    private $surName;
-    /**
-     * @var EMailWithCustomerDataAndErrors
-     */
-    private $eMail;
-    /**
-     * @var CustomerMessageWithCustomerDataAndErrors
-     */
-    private $message;
-    /**
-     * @var DataPrivacyWithCustomerDataAndErrors
-     */
-    private $dataPrivacy;
-
     public function __construct(
         PreNameWithCustomerDataAndErrors $preName,
         SurNameWithCustomerDataAndErrors $surName,
@@ -40,26 +18,10 @@ class ContactFormElementsWithCustomerDataAndErrorsTemplateVariables implements T
         CustomerMessageWithCustomerDataAndErrors $message,
         DataPrivacyWithCustomerDataAndErrors $dataPrivacy
     ) {
-        $this->preName = $preName;
-        $this->surName = $surName;
-        $this->eMail = $eMail;
-        $this->message = $message;
-        $this->dataPrivacy = $dataPrivacy;
+        parent::__construct($preName, $surName, $eMail, $message, $dataPrivacy);
     }
 
-    public function asAssocArray(): array
-    {
-        return array_merge_recursive(
-            ['hasErrors' => $this->hasErrors()],
-            $this->preName->asAssocArray(),
-            $this->surName->asAssocArray(),
-            $this->eMail->asAssocArray(),
-            $this->message->asAssocArray(),
-            $this->dataPrivacy->asAssocArray(),
-        );
-    }
-
-    public function hasErrors(): bool
+    protected function hasErrors(): bool
     {
         return true;
     }

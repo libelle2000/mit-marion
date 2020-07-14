@@ -8,7 +8,7 @@ use MitMarion\TemplateVariables\Partial\ContactFormElement\DataPrivacy;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\EMail;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\PreName;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\SurName;
-use MitMarion\TemplateVariables\Partial\ContactFormElementsTemplateVariables;
+use MitMarion\TemplateVariables\Partial\ContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables;
 use Shared\TemplateVariables\Form\Element\Label;
 use Shared\TemplateVariables\Form\Element\Placeholder;
 use Shared\TemplateVariables\Form\Element\ValidationRegexPattern;
@@ -18,7 +18,7 @@ class FormElementBuilder
 {
     public function createContactFormElementTemplateVariables(): TemplateVariables
     {
-        return new ContactFormElementsTemplateVariables(
+        return new ContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables(
             new PreName(
                 new Label('Vorname'),
                 new Placeholder('dein Vorname'),

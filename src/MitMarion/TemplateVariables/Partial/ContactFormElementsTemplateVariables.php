@@ -3,42 +3,38 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Partial;
 
-use MitMarion\TemplateVariables\Partial\ContactFormElement\CustomerMessage;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\DataPrivacy;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\EMail;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\PreName;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\SurName;
 use MitMarion\TemplateVariables\TemplateVariables;
+use Shared\TemplateVariables\Form\Element;
 
-class ContactFormElementsTemplateVariables implements TemplateVariables, ErrorFlag
+abstract class ContactFormElementsTemplateVariables implements TemplateVariables
 {
     /**
-     * @var PreName
+     * @var Element
      */
     private $preName;
     /**
-     * @var SurName
+     * @var Element
      */
     private $surName;
     /**
-     * @var EMail
+     * @var Element
      */
     private $eMail;
     /**
-     * @var CustomerMessage
+     * @var Element
      */
     private $message;
     /**
-     * @var DataPrivacy
+     * @var Element
      */
     private $dataPrivacy;
 
     public function __construct(
-        PreName $preName,
-        SurName $surName,
-        EMail $eMail,
-        CustomerMessage $message,
-        DataPrivacy $dataPrivacy
+        Element $preName,
+        Element $surName,
+        Element $eMail,
+        Element $message,
+        Element $dataPrivacy
     ) {
         $this->preName = $preName;
         $this->surName = $surName;
@@ -59,8 +55,5 @@ class ContactFormElementsTemplateVariables implements TemplateVariables, ErrorFl
         );
     }
 
-    public function hasErrors(): bool
-    {
-        return false;
-    }
+    abstract protected function hasErrors(): bool;
 }
