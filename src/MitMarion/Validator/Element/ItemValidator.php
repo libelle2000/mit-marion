@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\Validator\Item;
+namespace MitMarion\Validator\Element;
 
 use MitMarion\Http\Request;
 use Shared\TemplateVariables\Form\Element\CustomerInput;

@@ -4,11 +4,11 @@ declare(strict_types=1);
 namespace MitMarion\Validator;
 
 use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
-use MitMarion\Validator\Item\CustomerMessageValidator;
-use MitMarion\Validator\Item\DataPrivacyValidator;
-use MitMarion\Validator\Item\EMailValidator;
-use MitMarion\Validator\Item\PreNameValidator;
-use MitMarion\Validator\Item\SurNameValidator;
+use MitMarion\Validator\Element\CustomerMessageValidator;
+use MitMarion\Validator\Element\DataPrivacyValidator;
+use MitMarion\Validator\Element\EMailValidator;
+use MitMarion\Validator\Element\PreNameValidator;
+use MitMarion\Validator\Element\SurNameValidator;
 use Shared\Validator\Element\ElementResult;
 use Shared\Validator\SuccessResult;
 use Shared\Validator\Validator;

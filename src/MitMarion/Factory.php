@@ -14,11 +14,11 @@ use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
 use MitMarion\TemplateVariables\StoryTemplateVariables;
 use MitMarion\Validator\ContactFormValidator;
-use MitMarion\Validator\Item\CustomerMessageValidator;
-use MitMarion\Validator\Item\DataPrivacyValidator;
-use MitMarion\Validator\Item\EMailValidator;
-use MitMarion\Validator\Item\PreNameValidator;
-use MitMarion\Validator\Item\SurNameValidator;
+use MitMarion\Validator\Element\CustomerMessageValidator;
+use MitMarion\Validator\Element\DataPrivacyValidator;
+use MitMarion\Validator\Element\EMailValidator;
+use MitMarion\Validator\Element\PreNameValidator;
+use MitMarion\Validator\Element\SurNameValidator;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
 

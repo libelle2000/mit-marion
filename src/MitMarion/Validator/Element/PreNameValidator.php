@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MitMarion\Validator\Item;
+namespace MitMarion\Validator\Element;
 
 
 use Shared\TemplateVariables\Form\Element\CustomerInput;
@@ -10,15 +10,15 @@ use Shared\TemplateVariables\Form\Element\ErrorMessage;
 use Shared\Validator\Element\ErrorElementResult;
 use Shared\Validator\Element\ElementResult;
 
-class SurNameValidator extends ItemValidator
+class PreNameValidator extends ItemValidator
 {
-    private const PARAMETER_NAME = 'surName';
+    private const PARAMETER_NAME = 'preName';
 
     public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
         if (!$this->isSetRule()) {
-            $errorMessages->addErrorMessage(new ErrorMessage('Bitte gib deinen Nachnamen ein.'));
+            $errorMessages->addErrorMessage(new ErrorMessage('Bitte gib deinen Vornamen ein.'));
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);
         }
