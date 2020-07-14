@@ -4,8 +4,9 @@ declare(strict_types=1);
 namespace MitMarion\Http;
 
 use RuntimeException;
+use Shared\Http\ParameterizedRequest;
 
-class Request
+class Request implements ParameterizedRequest
 {
     private const REQUEST_METHOD_POST = 'POST';
 

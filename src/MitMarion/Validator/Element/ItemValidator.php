@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\Validator\Element;
 
-use MitMarion\Http\Request;
+use Shared\Http\ParameterizedRequest;
 use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessages;
 use Shared\Validator\Element\ElementResult;
@@ -12,11 +12,11 @@ use Shared\Validator\Element\SuccessElementResult;
 abstract class ItemValidator
 {
     /**
-     * @var Request
+     * @var ParameterizedRequest
      */
     protected $request;
 
-    public function __construct(Request $request)
+    public function __construct(ParameterizedRequest $request)
     {
         $this->request = $request;
     }
