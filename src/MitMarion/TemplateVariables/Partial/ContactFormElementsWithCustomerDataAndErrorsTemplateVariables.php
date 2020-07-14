@@ -10,7 +10,7 @@ use MitMarion\TemplateVariables\Partial\ContactFormElement\PreNameWithCustomerDa
 use MitMarion\TemplateVariables\Partial\ContactFormElement\SurNameWithCustomerDataAndErrors;
 use MitMarion\TemplateVariables\TemplateVariables;
 
-class ContactFormElementsWithCustomerDataAndErrorsTemplateVariables implements TemplateVariables
+class ContactFormElementsWithCustomerDataAndErrorsTemplateVariables implements TemplateVariables, ErrorFlag
 {
     /**
      * @var PreNameWithCustomerDataAndErrors
@@ -50,11 +50,17 @@ class ContactFormElementsWithCustomerDataAndErrorsTemplateVariables implements T
     public function asAssocArray(): array
     {
         return array_merge_recursive(
+            ['hasErrors' => $this->hasErrors()],
             $this->preName->asAssocArray(),
             $this->surName->asAssocArray(),
             $this->eMail->asAssocArray(),
             $this->message->asAssocArray(),
             $this->dataPrivacy->asAssocArray(),
         );
+    }
+
+    public function hasErrors(): bool
+    {
+        return true;
     }
 }

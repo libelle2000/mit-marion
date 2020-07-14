@@ -14,18 +14,22 @@
             <p>Hier bist du richtig. Ich werde mich so schnell wie möglich bei dir melden.</p>
         </section>
         <form class="contactForm" action="{{ form.action }}" method="{{ form.method }}">
-            <p class="errorIntro">Uups... deine Angaben benötigen noch etwas Augenmerk.</p>
+            {% if contactFormElements.hasErrors %}
+                <p class="errorIntro">Uups... deine Angaben benötigen noch etwas Augenmerk.</p>
+            {% endif %}
             <div class="formElementGroup preName">
                 <label for="preName">{{ contactFormElements.preName.placeholder }}:</label>
                 <input id="preName"
                        name="{{ contactFormElements.preName.identifier }}" type="text"
                        placeholder="{{ contactFormElements.preName.placeholder }}"
                        value="{{ contactFormElements.preName.customerInput }}"/>
-                <ul class="errorList">
-                    <li>ein error</li>
-                    <li>zwei error</li>
-                    <li>drei error</li>
-                </ul>
+                {% if contactFormElements.preName.errorMessages|length > 0 %}
+                    <ul class="errorList">
+                        {% for errorMessage in contactFormElements.preName.errorMessages %}
+                            <li>{{ errorMessage }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
             <div class="formElementGroup surName">
                 <label for="surName">{{ contactFormElements.surName.placeholder }}:</label>
@@ -33,9 +37,13 @@
                        name="{{ contactFormElements.surName.identifier }}" type="text"
                        placeholder="{{ contactFormElements.surName.placeholder }}"
                        value="{{ contactFormElements.surName.customerInput }}"/>
-                <ul class="errorList">
-                    <li>ein error</li>
-                </ul>
+                {% if contactFormElements.surName.errorMessages|length > 0 %}
+                    <ul class="errorList">
+                        {% for errorMessage in contactFormElements.surName.errorMessages %}
+                            <li>{{ errorMessage }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
             <div class="formElementGroup eMail">
                 <label for="eMail">{{ contactFormElements.eMail.placeholder }}:</label>
@@ -43,9 +51,13 @@
                        name="{{ contactFormElements.eMail.identifier }}"
                        type="email" placeholder="{{ contactFormElements.eMail.placeholder }}"
                        value="{{ contactFormElements.eMail.customerInput }}"/>
-                <ul class="errorList">
-                    <li>ein error</li>
-                </ul>
+                {% if contactFormElements.eMail.errorMessages|length > 0 %}
+                    <ul class="errorList">
+                        {% for errorMessage in contactFormElements.eMail.errorMessages %}
+                            <li>{{ errorMessage }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
             <div class="formElementGroup customerMessage">
                 <label for="customerMessage">
@@ -55,9 +67,13 @@
                           name="{{ contactFormElements.customerMessage.identifier }}"
                           placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput }}</textarea>
 
-                <ul class="errorList">
-                    <li>ein error</li>
-                </ul>
+                {% if contactFormElements.customerMessage.errorMessages|length > 0 %}
+                    <ul class="errorList">
+                        {% for errorMessage in contactFormElements.customerMessage.errorMessages %}
+                            <li>{{ errorMessage }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
             <div class="formElementGroup dataPrivacy">
                 <label for="dataPrivacy">
@@ -66,9 +82,13 @@
                            placeholder="{{ contactFormElements.dataPrivacy.placeholder }}"/>
                     {{ contactFormElements.dataPrivacy.placeholder }}
                 </label>
-                <ul class="errorList">
-                    <li>ein error</li>
-                </ul>
+                {% if contactFormElements.dataPrivacy.errorMessages|length > 0 %}
+                    <ul class="errorList">
+                        {% for errorMessage in contactFormElements.dataPrivacy.errorMessages %}
+                            <li>{{ errorMessage }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
             <div class="formElementGroup captcha">captcha</div>
             <input class="submit button" type="submit" value="abschicken"/>
