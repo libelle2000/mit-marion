@@ -17,7 +17,12 @@ class ErrorMessages extends BaseUniqueCollection implements TemplateVariables
     public function asAssocArray(): array
     {
         return [
-            'errorMessages' => array_values($this->elements),
+            'errorMessages' => array_map(
+                static function (ErrorMessage $errorMessage) {
+                    return $errorMessage->getValue();
+                },
+                array_values($this->elements)
+            ),
         ];
     }
 }
