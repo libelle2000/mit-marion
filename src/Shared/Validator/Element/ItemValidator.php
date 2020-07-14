@@ -1,14 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\Validator\Element;
+namespace Shared\Validator\Element;
 
 use Shared\BaseValueObject\Identifier;
 use Shared\Http\ParameterizedRequest;
 use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessages;
-use Shared\Validator\Element\ElementResult;
-use Shared\Validator\Element\SuccessElementResult;
 
 abstract class ItemValidator
 {
