@@ -19,7 +19,7 @@ class DataPrivacyValidator extends ElementValidator
     public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
-        if (!$this->isSetRule()) {
+        if (!$this->hasValue()) {
             $errorMessages->addErrorMessage(new ErrorMessage('Bitte akzeptiere die Datenschutzerklärung.'));
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);

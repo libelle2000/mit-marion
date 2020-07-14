@@ -22,7 +22,7 @@ abstract class ElementValidator
 
     abstract public function validate(): ElementResult;
 
-    protected function isSetRule(): bool
+    protected function hasValue(): bool
     {
         return $this->request->hasParameterWithValue($this->getParameterIdentifier());
     }

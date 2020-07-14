@@ -19,7 +19,7 @@ class CustomerMessageValidator extends ElementValidator
     public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
-        if (!$this->isSetRule()) {
+        if (!$this->hasValue()) {
             $errorMessages->addErrorMessage(new ErrorMessage('Bitte gib deine Nachricht an mich ein.'));
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);

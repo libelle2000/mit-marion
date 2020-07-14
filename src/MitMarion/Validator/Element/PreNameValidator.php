@@ -19,7 +19,7 @@ class PreNameValidator extends ElementValidator
     public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
-        if (!$this->isSetRule()) {
+        if (!$this->hasValue()) {
             $errorMessages->addErrorMessage(new ErrorMessage('Bitte gib deinen Vornamen ein.'));
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);
