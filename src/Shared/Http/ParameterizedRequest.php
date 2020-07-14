@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Shared\Http;
 
+use Shared\BaseValueObject\Identifier;
+
 interface ParameterizedRequest
 {
-    public function hasParameterWithValue(string $key): bool;
+    public function hasParameterWithValue(Identifier $key): bool;
 
-    public function getParameter(string $key): string;
+    public function getParameter(Identifier $key): string;
 }

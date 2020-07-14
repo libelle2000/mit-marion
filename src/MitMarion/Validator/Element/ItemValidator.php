@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\Validator\Element;
 
+use Shared\BaseValueObject\Identifier;
 use Shared\Http\ParameterizedRequest;
 use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessages;
@@ -40,5 +41,5 @@ abstract class ItemValidator
         );
     }
 
-    abstract protected function getParameterIdentifier(): string;
+    abstract protected function getParameterIdentifier(): Identifier;
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace MitMarion\Http;
 
 use RuntimeException;
+use Shared\BaseValueObject\Identifier;
 use Shared\Http\ParameterizedRequest;
 
 class Request implements ParameterizedRequest
@@ -30,10 +31,10 @@ class Request implements ParameterizedRequest
         return new static(strtoupper($_SERVER['REQUEST_METHOD']), $_POST);
     }
 
-    public function getParameter(string $key): string
+    public function getParameter(Identifier $key): string
     {
         if ($this->hasParameter($key)) {
-            return trim($this->parameter[$key]);
+            return trim($this->parameter[$key->getValue()]);
         }
 
         throw new RuntimeException(
@@ -41,22 +42,22 @@ class Request implements ParameterizedRequest
         );
     }
 
-    public function isEmptyParameter(string $key): bool
+    public function isEmptyParameter(Identifier $key): bool
     {
         if (!$this->hasParameter($key)) {
             throw new RuntimeException(
                 sprintf('parameter not found [%s]', $key)
             );
         }
-        return trim($this->parameter[$key]) === '';
+        return trim($this->parameter[$key->getValue()]) === '';
     }
 
-    public function hasParameter(string $key): bool
+    public function hasParameter(Identifier $key): bool
     {
-        return isset($this->parameter[$key]);
+        return isset($this->parameter[$key->getValue()]);
     }
 
-    public function hasParameterWithValue(string $key): bool
+    public function hasParameterWithValue(Identifier $key): bool
     {
         return $this->hasParameter($key) && !$this->isEmptyParameter($key);
     }
