@@ -17,7 +17,7 @@ class SurNameValidator extends ItemValidator
     public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
-        if (!$this->request->hasParameterWithValue($this->getParameterIdentifier())) {
+        if (!$this->isSetRule()) {
             $errorMessages->addErrorMessage(new ErrorMessage('Bitte gib deinen Nachnamen ein.'));
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);

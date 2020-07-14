@@ -23,6 +23,11 @@ abstract class ItemValidator
 
     abstract public function validate(): ElementResult;
 
+    protected function isSetRule(): bool
+    {
+        return $this->request->hasParameterWithValue($this->getParameterIdentifier());
+    }
+
     protected function createEmptyErrorMessages(): ErrorMessages
     {
         return new ErrorMessages();

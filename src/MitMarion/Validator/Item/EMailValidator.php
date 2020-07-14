@@ -17,7 +17,7 @@ class EMailValidator extends ItemValidator
     public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
-        if (!$this->request->hasParameterWithValue($this->getParameterIdentifier())) {
+        if (!$this->isSetRule()) {
             $errorMessages->addErrorMessage(new ErrorMessage('Bitte gib deine E-Mail Adresse ein.'));
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);
