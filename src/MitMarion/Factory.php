@@ -11,6 +11,7 @@ use MitMarion\Renderer\ContactFormRenderer;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
+use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
 use MitMarion\TemplateVariables\StoryTemplateVariables;
 use MitMarion\Validator\ContactFormValidator;
 use MitMarion\Validator\Item\CustomerMessageValidator;
@@ -19,7 +20,6 @@ use MitMarion\Validator\Item\EMailValidator;
 use MitMarion\Validator\Item\PreNameValidator;
 use MitMarion\Validator\Item\SurNameValidator;
 use Shared\Factory as SharedFactory;
-use Shared\TemplateVariables\Form\FormElementBuilder;
 use Twig\Environment;
 
 class Factory
@@ -78,9 +78,9 @@ class Factory
         );
     }
 
-    public function createFormElementBuilder(): FormElementBuilder
+    public function createFormElementBuilder(): ContactFormElementBuilder
     {
-        return new FormElementBuilder();
+        return new ContactFormElementBuilder();
     }
 
     private function createContactFormRenderer(): ContactFormRenderer

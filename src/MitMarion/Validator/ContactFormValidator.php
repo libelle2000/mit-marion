@@ -3,23 +3,13 @@ declare(strict_types=1);
 
 namespace MitMarion\Validator;
 
-use MitMarion\TemplateVariables\Partial\ContactFormElement\CustomerMessageWithCustomerDataAndErrors;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\DataPrivacyWithCustomerDataAndErrors;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\EMailWithCustomerDataAndErrors;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\PreNameWithCustomerDataAndErrors;
-use MitMarion\TemplateVariables\Partial\ContactFormElement\SurNameWithCustomerDataAndErrors;
-use MitMarion\TemplateVariables\Partial\ContactFormElementsWithCustomerDataAndErrorsTemplateVariables;
+use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
 use MitMarion\Validator\Item\CustomerMessageValidator;
 use MitMarion\Validator\Item\DataPrivacyValidator;
 use MitMarion\Validator\Item\EMailValidator;
 use MitMarion\Validator\Item\PreNameValidator;
 use MitMarion\Validator\Item\SurNameValidator;
-use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessages;
-use Shared\TemplateVariables\Form\Element\Label;
-use Shared\TemplateVariables\Form\Element\Placeholder;
-use Shared\TemplateVariables\Form\Element\ValidationRegexPattern;
-use Shared\TemplateVariables\Form\FormElementBuilder;
 use Shared\Validator\SuccessResult;
 use Shared\Validator\Validator;
 use Shared\Validator\Result;
@@ -27,7 +17,7 @@ use Shared\Validator\Result;
 class ContactFormValidator implements Validator
 {
     /**
-     * @var FormElementBuilder
+     * @var ContactFormElementBuilder
      */
     private $formElementBuilder;
     /**
@@ -52,7 +42,7 @@ class ContactFormValidator implements Validator
     private $dataPrivacyValidator;
 
     public function __construct(
-        FormElementBuilder $formElementBuilder,
+        ContactFormElementBuilder $formElementBuilder,
         PreNameValidator $preNameValidator,
         SurNameValidator $surNameValidator,
         EMailValidator $eMailValidator,
@@ -86,46 +76,12 @@ class ContactFormValidator implements Validator
         }
 
         return new ContactFormWithCustomerDataAndErrorsResult(
-            new ContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
-                new PreNameWithCustomerDataAndErrors(
-                    new Label('Vorname'),
-                    new Placeholder('dein Vorname'),
-                    new ValidationRegexPattern(''),
-                    new CustomerInput('falscher input'),
-                    $preNameErrorMessages
-                ),
-
-                new SurNameWithCustomerDataAndErrors(
-                    new Label('Nachname'),
-                    new Placeholder('dein Nachname'),
-                    new ValidationRegexPattern(''),
-                    new CustomerInput('falscher input in $surName'),
-                    $surNameErrorMessages
-                ),
-
-                new EMailWithCustomerDataAndErrors(
-                    new Label('E-Mail'),
-                    new Placeholder('deine E-Mail Adresse'),
-                    new ValidationRegexPattern(''),
-                    new CustomerInput('falscher input in $eMail'),
-                    $eMailErrorMessages
-                ),
-
-                new CustomerMessageWithCustomerDataAndErrors(
-                    new Label('Nachricht'),
-                    new Placeholder('Meine Nachricht an dich, Marion'),
-                    new ValidationRegexPattern(''),
-                    new CustomerInput('falscher input in $message'),
-                    $customerMessageErrorMessages
-                ),
-
-                new DataPrivacyWithCustomerDataAndErrors(
-                    new Label('dataPrivacy'),
-                    new Placeholder('Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.'),
-                    new ValidationRegexPattern(''),
-                    new CustomerInput('falscher input in $dataPrivacy'),
-                    $dataPrivacyErrorMessages
-                ),
+            $this->formElementBuilder->buildContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
+                $preNameErrorMessages,
+                $surNameErrorMessages,
+                $eMailErrorMessages,
+                $customerMessageErrorMessages,
+                $dataPrivacyErrorMessages
             )
         );
     }

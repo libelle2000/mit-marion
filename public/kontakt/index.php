@@ -26,7 +26,7 @@ if ($request->isPost()) {
 }
 else {
     $contactFormElementTemplateVariables = $factory->createFormElementBuilder()
-        ->createContactFormElementTemplateVariables();
+        ->buildContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables();
 }
 
 $templateVariables = new ContactFormTemplateVariables(
