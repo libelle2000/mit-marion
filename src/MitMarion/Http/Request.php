@@ -57,7 +57,7 @@ class Request
 
     public function hasParameterWithValue(string $key): bool
     {
-        return $this->hasParameter($key) && $this->isEmptyParameter($key);
+        return $this->hasParameter($key) && !$this->isEmptyParameter($key);
     }
 
     public function isPost(): bool
