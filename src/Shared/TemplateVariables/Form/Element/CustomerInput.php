@@ -14,4 +14,9 @@ class CustomerInput extends BaseString implements TemplateVariables
             'customerInput' => $this->getValue(),
         ];
     }
+
+    public static function createEmpty(): self
+    {
+        return new self('');
+    }
 }

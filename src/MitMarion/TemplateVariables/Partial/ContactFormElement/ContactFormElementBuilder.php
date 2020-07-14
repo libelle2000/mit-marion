@@ -5,12 +5,13 @@ namespace MitMarion\TemplateVariables\Partial\ContactFormElement;
 
 use MitMarion\TemplateVariables\Partial\ContactFormElementsWithCustomerDataAndErrorsTemplateVariables;
 use MitMarion\TemplateVariables\Partial\ContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables;
-use Shared\TemplateVariables\Form\Element\CustomerInput;
-use Shared\TemplateVariables\Form\Element\ErrorMessages;
 use Shared\TemplateVariables\Form\Element\Label;
 use Shared\TemplateVariables\Form\Element\Placeholder;
 use Shared\TemplateVariables\Form\Element\ValidationRegexPattern;
+use Shared\TemplateVariables\Form\ElementWithCustomerData;
 use Shared\TemplateVariables\TemplateVariables;
+use Shared\Validator\Element\ElementResult;
+use Shared\Validator\Element\ErrorElementResult;
 
 class ContactFormElementBuilder
 {
@@ -46,53 +47,19 @@ class ContactFormElementBuilder
     }
 
     public function buildContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
-        ErrorMessages $preNameErrorMessages,
-        ErrorMessages $surNameErrorMessages,
-        ErrorMessages $eMailErrorMessages,
-        ErrorMessages $customerMessageErrorMessages,
-        ErrorMessages $dataPrivacyErrorMessages
+        ElementResult $preNameResult,
+        ElementResult $surNameResult,
+        ElementResult $eMailResult,
+        ElementResult $customerMessageResult,
+        ElementResult $dataPrivacyResult
 
     ): TemplateVariables {
         return new ContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
-            new PreNameWithCustomerDataAndErrors(
-                $this->buildLabelPreName(),
-                $this->buildPlaceholderPreName(),
-                new ValidationRegexPattern(''),
-                new CustomerInput('falscher input'),
-                $preNameErrorMessages
-            ),
-
-            new SurNameWithCustomerDataAndErrors(
-                $this->buildLabelSurName(),
-                $this->buildPlaceholderSurName(),
-                new ValidationRegexPattern(''),
-                new CustomerInput('falscher input in $surName'),
-                $surNameErrorMessages
-            ),
-
-            new EMailWithCustomerDataAndErrors(
-                $this->buildLabelEMail(),
-                $this->buildPlaceholderEMail(),
-                new ValidationRegexPattern(''),
-                new CustomerInput('falscher input in $eMail'),
-                $eMailErrorMessages
-            ),
-
-            new CustomerMessageWithCustomerDataAndErrors(
-                $this->buildLabelCustomerMessage(),
-                $this->buildPlaceholderCustomerMessage(),
-                new ValidationRegexPattern(''),
-                new CustomerInput('falscher input in $message'),
-                $customerMessageErrorMessages
-            ),
-
-            new DataPrivacyWithCustomerDataAndErrors(
-                $this->buildLabelDataPrivacy(),
-                $this->buildPlaceholderDataPrivacy(),
-                new ValidationRegexPattern(''),
-                new CustomerInput('falscher input in $dataPrivacy'),
-                $dataPrivacyErrorMessages
-            ),
+            $this->buildPreNameWithCustomerData($preNameResult),
+            $this->buildSurNameWithCustomerData($surNameResult),
+            $this->buildEMailWithCustomerData($eMailResult),
+            $this->buildCustomerMessageWithCustomerData($customerMessageResult),
+            $this->buildDataPrivacyWithCustomerData($dataPrivacyResult),
         );
     }
 
@@ -144,5 +111,115 @@ class ContactFormElementBuilder
     private function buildPlaceholderDataPrivacy(): Placeholder
     {
         return new Placeholder('Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.');
+    }
+
+    /**
+     * @param ElementResult $preNameResult
+     *
+     * @return PreNameWithCustomerDataAndErrors
+     */
+    private function buildPreNameWithCustomerData(ElementResult $preNameResult): ElementWithCustomerData
+    {
+        if (!$preNameResult->hasErrors()) {
+            return new PreNameWithCustomerData(
+                $this->buildLabelPreName(),
+                $this->buildPlaceholderPreName(),
+                new ValidationRegexPattern(''),
+                $preNameResult->getCustomerInput()
+            );
+        }
+
+        /** @var ErrorElementResult $preNameResult */
+        return new PreNameWithCustomerDataAndErrors(
+            $this->buildLabelPreName(),
+            $this->buildPlaceholderPreName(),
+            new ValidationRegexPattern(''),
+            $preNameResult->getCustomerInput(),
+            $preNameResult->getErrorMessages()
+        );
+    }
+
+    private function buildSurNameWithCustomerData(ElementResult $surNameResult): ElementWithCustomerData
+    {
+        if (!$surNameResult->hasErrors()) {
+            return new SurNameWithCustomerData(
+                $this->buildLabelSurName(),
+                $this->buildPlaceholderSurName(),
+                new ValidationRegexPattern(''),
+                $surNameResult->getCustomerInput(),
+            );
+        }
+
+        /** @var ErrorElementResult $surNameResult */
+        return new SurNameWithCustomerDataAndErrors(
+            $this->buildLabelSurName(),
+            $this->buildPlaceholderSurName(),
+            new ValidationRegexPattern(''),
+            $surNameResult->getCustomerInput(),
+            $surNameResult->getErrorMessages()
+        );
+    }
+
+    private function buildEMailWithCustomerData(ElementResult $eMailResult): ElementWithCustomerData
+    {
+        if (!$eMailResult->hasErrors()) {
+            return new EMailWithCustomerData(
+                $this->buildLabelEMail(),
+                $this->buildPlaceholderEMail(),
+                new ValidationRegexPattern(''),
+                $eMailResult->getCustomerInput(),
+            );
+        }
+
+        /** @var ErrorElementResult $eMailResult */
+        return new EMailWithCustomerDataAndErrors(
+            $this->buildLabelEMail(),
+            $this->buildPlaceholderEMail(),
+            new ValidationRegexPattern(''),
+            $eMailResult->getCustomerInput(),
+            $eMailResult->getErrorMessages()
+        );
+    }
+
+    private function buildCustomerMessageWithCustomerData(ElementResult $customerMessageResult): ElementWithCustomerData
+    {
+        if (!$customerMessageResult->hasErrors()) {
+            return new CustomerMessageWithCustomerData(
+                $this->buildLabelCustomerMessage(),
+                $this->buildPlaceholderCustomerMessage(),
+                new ValidationRegexPattern(''),
+                $customerMessageResult->getCustomerInput(),
+            );
+        }
+
+        /** @var ErrorElementResult $customerMessageResult */
+        return new CustomerMessageWithCustomerDataAndErrors(
+            $this->buildLabelCustomerMessage(),
+            $this->buildPlaceholderCustomerMessage(),
+            new ValidationRegexPattern(''),
+            $customerMessageResult->getCustomerInput(),
+            $customerMessageResult->getErrorMessages()
+        );
+    }
+
+    private function buildDataPrivacyWithCustomerData(ElementResult $dataPrivacyResult): ElementWithCustomerData
+    {
+        if (!$dataPrivacyResult->hasErrors()) {
+            return new DataPrivacyWithCustomerData(
+                $this->buildLabelDataPrivacy(),
+                $this->buildPlaceholderDataPrivacy(),
+                new ValidationRegexPattern(''),
+                $dataPrivacyResult->getCustomerInput(),
+            );
+        }
+
+        /** @var ErrorElementResult $dataPrivacyResult */
+        return new DataPrivacyWithCustomerDataAndErrors(
+            $this->buildLabelDataPrivacy(),
+            $this->buildPlaceholderDataPrivacy(),
+            new ValidationRegexPattern(''),
+            $dataPrivacyResult->getCustomerInput(),
+            $dataPrivacyResult->getErrorMessages()
+        );
     }
 }

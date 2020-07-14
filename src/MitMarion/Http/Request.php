@@ -32,7 +32,7 @@ class Request
     public function getParameter(string $key): string
     {
         if ($this->hasParameter($key)) {
-            return $this->parameter[$key];
+            return trim($this->parameter[$key]);
         }
 
         throw new RuntimeException(
@@ -40,9 +40,24 @@ class Request
         );
     }
 
+    public function isEmptyParameter(string $key): bool
+    {
+        if (!$this->hasParameter($key)) {
+            throw new RuntimeException(
+                sprintf('parameter not found [%s]', $key)
+            );
+        }
+        return trim($this->parameter[$key]) === '';
+    }
+
     public function hasParameter(string $key): bool
     {
         return isset($this->parameter[$key]);
+    }
+
+    public function hasParameterWithValue(string $key): bool
+    {
+        return $this->hasParameter($key) && $this->isEmptyParameter($key);
     }
 
     public function isPost(): bool

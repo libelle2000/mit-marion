@@ -9,7 +9,7 @@ use MitMarion\Validator\Item\DataPrivacyValidator;
 use MitMarion\Validator\Item\EMailValidator;
 use MitMarion\Validator\Item\PreNameValidator;
 use MitMarion\Validator\Item\SurNameValidator;
-use Shared\TemplateVariables\Form\Element\ErrorMessages;
+use Shared\Validator\Element\ElementResult;
 use Shared\Validator\SuccessResult;
 use Shared\Validator\Validator;
 use Shared\Validator\Result;
@@ -59,44 +59,44 @@ class ContactFormValidator implements Validator
 
     public function validate(): Result
     {
-        $preNameErrorMessages = $this->preNameValidator->validate();
-        $surNameErrorMessages = $this->surNameValidator->validate();
-        $eMailErrorMessages = $this->eMailValidator->validate();
-        $customerMessageErrorMessages = $this->customerMessageValidator->validate();
-        $dataPrivacyErrorMessages = $this->dataPrivacyValidator->validate();
+        $preNameResult = $this->preNameValidator->validate();
+        $surNameResult = $this->surNameValidator->validate();
+        $eMailResult = $this->eMailValidator->validate();
+        $customerMessageResult = $this->customerMessageValidator->validate();
+        $dataPrivacyResult = $this->dataPrivacyValidator->validate();
 
-        if ($this->noErrors(
-            $preNameErrorMessages,
-            $surNameErrorMessages,
-            $eMailErrorMessages,
-            $customerMessageErrorMessages,
-            $dataPrivacyErrorMessages
+        if (!$this->hasErrors(
+            $preNameResult,
+            $surNameResult,
+            $eMailResult,
+            $customerMessageResult,
+            $dataPrivacyResult
         )) {
             return new SuccessResult();
         }
 
         return new ContactFormWithCustomerDataAndErrorsResult(
             $this->formElementBuilder->buildContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
-                $preNameErrorMessages,
-                $surNameErrorMessages,
-                $eMailErrorMessages,
-                $customerMessageErrorMessages,
-                $dataPrivacyErrorMessages
+                $preNameResult,
+                $surNameResult,
+                $eMailResult,
+                $customerMessageResult,
+                $dataPrivacyResult
             )
         );
     }
 
-    private function noErrors(
-        ErrorMessages $preNameErrorMessages,
-        ErrorMessages $surNameErrorMessages,
-        ErrorMessages $eMailErrorMessages,
-        ErrorMessages $customerMessageErrorMessages,
-        ErrorMessages $dataPrivacyErrorMessages
+    private function hasErrors(
+        ElementResult $preNameResult,
+        ElementResult $surNameResult,
+        ElementResult $eMailResult,
+        ElementResult $customerMessageResult,
+        ElementResult $dataPrivacyResult
     ): bool {
-        return $preNameErrorMessages->isEmpty()
-            && $surNameErrorMessages->isEmpty()
-            && $eMailErrorMessages->isEmpty()
-            && $customerMessageErrorMessages->isEmpty()
-            && $dataPrivacyErrorMessages->isEmpty();
+        return $preNameResult->hasErrors()
+            || $surNameResult->hasErrors()
+            || $eMailResult->hasErrors()
+            || $customerMessageResult->hasErrors()
+            || $dataPrivacyResult->hasErrors();
     }
 }

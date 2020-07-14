@@ -5,22 +5,29 @@ declare(strict_types=1);
 namespace MitMarion\Validator\Item;
 
 
+use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessage;
-use Shared\TemplateVariables\Form\Element\ErrorMessages;
+use Shared\Validator\Element\ErrorElementResult;
+use Shared\Validator\Element\ElementResult;
 
 class CustomerMessageValidator extends ItemValidator
 {
-    private const REQUIRED_PARAMETER_CUSTOMERMESSAGE = 'customerMessage';
+    private const PARAMETER_NAME = 'customerMessage';
 
-    public function validate(): ErrorMessages
+    public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
-        if (!$this->request->hasParameter(self::REQUIRED_PARAMETER_CUSTOMERMESSAGE)) {
+        if (!$this->request->hasParameterWithValue($this->getParameterIdentifier())) {
             $errorMessages->addErrorMessage(new ErrorMessage('Bitte gib deine Nachricht an mich ein.'));
 
-            return $errorMessages;
+            return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);
         }
 
-        return $errorMessages;
+        return $this->createSuccessResult();
+    }
+
+    protected function getParameterIdentifier(): string
+    {
+        return self::PARAMETER_NAME;
     }
 }
