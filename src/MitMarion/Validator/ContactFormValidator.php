@@ -72,7 +72,15 @@ class ContactFormValidator implements Validator
             $customerMessageResult,
             $dataPrivacyResult
         )) {
-            return new SuccessResult();
+            return new ContactFormWithCustomerDataSuccessResult(
+                new ValidatedContactFormData(
+                    $preNameResult->getCustomerInput(),
+                    $surNameResult->getCustomerInput(),
+                    $eMailResult->getCustomerInput(),
+                    $customerMessageResult->getCustomerInput(),
+                    $dataPrivacyResult->getCustomerInput()
+                )
+            );
         }
 
         return new ContactFormWithCustomerDataAndErrorsResult(

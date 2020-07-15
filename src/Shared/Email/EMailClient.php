@@ -4,27 +4,32 @@ declare(strict_types=1);
 
 namespace Shared\Email;
 
-class EMailClient
+abstract class EMailClient
 {
     public function __construct()
     {
         mb_internal_encoding("UTF-8");
     }
 
-    protected function send(): bool
-    {
-// Define and Base64 encode the subject line
-        $subject_text = 'Test email with German Umlauts öäüß';
-        $subject = '=?UTF-8?B?' . base64_encode($subject_text) . '?=';
+    protected function sendMail(
+        string $senderCaption,
+        string $senderEmail,
+        string $recipientCaption,
+        string $recipientEmail,
+        string $mailSubject,
+        string $mailText
+    ): bool {
+        $sender = sprintf('=?UTF-8?B?%s?= <%s>', base64_encode($senderCaption), $senderEmail);
+        $recipient = sprintf('=?UTF-8?B?%s?= <%s>', base64_encode($recipientCaption), $recipientEmail);
 
-// Add custom headers
+        $subject = sprintf('=?UTF-8?B?%s?=', base64_encode($mailSubject));
+
         $headers = 'Content-Type: text/plain; charset=utf-8' . "\r\n";
-        $headers .= 'Content-Transfer-Encoding: base64';
+        $headers .= 'Content-Transfer-Encoding: base64' . "\r\n";
+        $headers .= sprintf('From: %s', $sender);
 
-// Define and Base64 the email body text
-        $message = base64_encode('This email contains German Umlauts öäüß.');
+        $message = base64_encode($mailText);
 
-// Send mail with custom headers
-        return mail('recipient@domain.com', $subject, $message, $headers);
+        return mail($recipient, $subject, $message, $headers);
     }
 }

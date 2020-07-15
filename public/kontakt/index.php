@@ -7,6 +7,7 @@ use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariablesWithActiveMarker;
 use MitMarion\TemplateVariables\Partial\StoriesTemplateVariables;
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
+use MitMarion\Validator\ContactFormWithCustomerDataSuccessResult;
 use Shared\Validator\ErrorResult;
 
 require_once __DIR__ . '/../../bootstrap.php';
@@ -17,14 +18,22 @@ $currentPath = CurrentPath::fromDirectory(__DIR__);
 if ($request->isPost()) {
     $validator = $factory->createContactFormValidator($request);
     $result = $validator->validate();
-    if(!$result->hasErrors()) {
-        header(sprintf('Location: %s', '/kontakt/vielen-dank/'), true, 303);
+    if (!$result->hasErrors()) {
+        /** @var ContactFormWithCustomerDataSuccessResult $result */
+        $validatedCustomerInput = $result->getValidatedContactFormData();
+        $emailClient = $factory->createEMailClient($validatedCustomerInput);
+
+        if ($emailClient->send()) {
+            header(sprintf('Location: %s', '/kontakt/vielen-dank/'), true, 303);
+            exit(0);
+        }
+
+        header(sprintf('Location: %s', '/kontakt/fehler/'), true, 303);
         exit(0);
     }
     /** @var ErrorResult $result */
     $contactFormElementTemplateVariables = $result->getTemplateVariables();
-}
-else {
+} else {
     $contactFormElementTemplateVariables = $factory->createFormElementBuilder()
         ->buildContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables();
 }

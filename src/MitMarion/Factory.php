@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion;
 
+use MitMarion\Email\EMailClient;
 use MitMarion\Http\Request;
 use MitMarion\Page\ContactFormPage;
 use MitMarion\Page\HomePage;
@@ -19,6 +20,7 @@ use MitMarion\Validator\Element\DataPrivacyValidator;
 use MitMarion\Validator\Element\EMailValidator;
 use MitMarion\Validator\Element\PreNameValidator;
 use MitMarion\Validator\Element\SurNameValidator;
+use MitMarion\Validator\ValidatedContactFormData;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
 
@@ -60,6 +62,11 @@ class Factory
             new CustomerMessageValidator($request),
             new DataPrivacyValidator($request)
         );
+    }
+
+    public function createEMailClient(ValidatedContactFormData $validatedContactFormData)
+    {
+        return new EMailClient($validatedContactFormData);
     }
 
     private function createHomeRenderer(): HomeRenderer
