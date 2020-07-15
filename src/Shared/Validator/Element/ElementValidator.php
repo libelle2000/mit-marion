@@ -44,7 +44,7 @@ abstract class ElementValidator
 
     protected function hasAllowedCharacterIncludingLinefeed(): bool
     {
-        $value = $this->request->getParameter($this->getParameterIdentifier())->getValue();
+        $value = $this->getParameterValue()->getValue();
         $pattern = sprintf(
             '%s[^%s%s%s]%s%s%s',
             self::REGEX_DELIMITER,
@@ -61,7 +61,6 @@ abstract class ElementValidator
 
     protected function hasAllowedCharacterWithoutLinefeed(): bool
     {
-        $value = $this->request->getParameter($this->getParameterIdentifier())->getValue();
         $pattern = sprintf(
             '%s[^%s%s]%s%s%s',
             self::REGEX_DELIMITER,
@@ -72,7 +71,7 @@ abstract class ElementValidator
             self::REGEX_MODIFIER_CASE_INSENSITIVE
         );
 
-        return preg_match($pattern, $value) === 0;
+        return preg_match($pattern, $this->getParameterValue()->getValue()) === 0;
     }
 
     protected function createEmptyErrorMessages(): ErrorMessages
@@ -93,8 +92,13 @@ abstract class ElementValidator
         return new SuccessElementResult($this->createCustomerInput());
     }
 
+    protected function getParameterValue(): \Shared\Http\ParameterValue
+    {
+        return $this->request->getParameter($this->getParameterIdentifier());
+    }
+
     private function createCustomerInput(): CustomerInput
     {
-        return new CustomerInput($this->request->getParameter($this->getParameterIdentifier())->getValue());
+        return new CustomerInput($this->getParameterValue()->getValue());
     }
 }

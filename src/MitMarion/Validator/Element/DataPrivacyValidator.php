@@ -15,11 +15,15 @@ use Shared\Validator\Element\ElementValidator;
 class DataPrivacyValidator extends ElementValidator
 {
     private const PARAMETER_NAME = 'dataPrivacy';
+    private const PARAMETER_VALUE = 'accepted';
 
     public function validate(): ElementResult
     {
         $errorMessages = $this->createEmptyErrorMessages();
-        if (!$this->hasValue()) {
+        if (
+            (!$this->hasValue())
+            || (!$this->getParameterValue()->isEqualToValue(self::PARAMETER_VALUE))
+        ) {
             $errorMessages->addErrorMessage(new ErrorMessage('Bitte akzeptiere die Datenschutzerklärung.'));
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);
