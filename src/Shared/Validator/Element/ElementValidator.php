@@ -59,6 +59,11 @@ abstract class ElementValidator
         return preg_match($pattern, $value) === 0;
     }
 
+    protected function isEmail(): bool
+    {
+        return filter_var($this->getParameterValue()->getValue(), FILTER_VALIDATE_EMAIL) !== false;
+    }
+
     protected function hasAllowedCharacterWithoutLinefeed(): bool
     {
         $pattern = sprintf(
