@@ -23,6 +23,20 @@ class SurNameValidator extends ElementValidator
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);
         }
+        if (!$this->isValidName()) {
+            $errorMessages->addErrorMessage(
+                new ErrorMessage(
+                    sprintf(
+                        'Dein Nachname enthält unerlaubte Sonderzeichen. Erlaubt sind:%s%s',
+                        "\n",
+                        implode(' ', self::REGEX_PATTERN_NAME)
+                    )
+                )
+            );
+        }
+        if (!$errorMessages->isEmpty()) {
+            return $this->createErrorResultWithCustomerInput($errorMessages);
+        }
 
         return $this->createSuccessResult();
     }

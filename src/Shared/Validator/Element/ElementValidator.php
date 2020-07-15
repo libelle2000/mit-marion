@@ -17,10 +17,15 @@ abstract class ElementValidator
     private const REGEX_PATTERN_CHARACTER = '\w öäüßÖÄÜ';
     protected const REGEX_PATTERN_PUNCTUATION = [
         '?',
+        '-',
+        '_',
         '.',
         ':',
         ',',
         '!',
+    ];
+    protected const REGEX_PATTERN_NAME = [
+        '-',
     ];
 
     /**
@@ -42,7 +47,7 @@ abstract class ElementValidator
         return $this->request->hasParameterWithValue($this->getParameterIdentifier());
     }
 
-    protected function hasAllowedCharacterIncludingLinefeed(): bool
+    protected function isValidMultilineText(): bool
     {
         $value = $this->getParameterValue()->getValue();
         $pattern = sprintf(
@@ -59,18 +64,18 @@ abstract class ElementValidator
         return preg_match($pattern, $value) === 0;
     }
 
-    protected function isEmail(): bool
+    protected function isValidEmail(): bool
     {
         return filter_var($this->getParameterValue()->getValue(), FILTER_VALIDATE_EMAIL) !== false;
     }
 
-    protected function hasAllowedCharacterWithoutLinefeed(): bool
+    protected function isValidName(): bool
     {
         $pattern = sprintf(
             '%s[^%s%s]%s%s%s',
             self::REGEX_DELIMITER,
             self::REGEX_PATTERN_CHARACTER,
-            preg_quote(implode('', self::REGEX_PATTERN_PUNCTUATION), self::REGEX_DELIMITER),
+            preg_quote(implode('', self::REGEX_PATTERN_NAME), self::REGEX_DELIMITER),
             self::REGEX_DELIMITER,
             self::REGEX_MODIFIER_UNICODE,
             self::REGEX_MODIFIER_CASE_INSENSITIVE

@@ -24,7 +24,7 @@ class EMailValidator extends ElementValidator
 
             return new ErrorElementResult(CustomerInput::createEmpty(), $errorMessages);
         }
-        if (!$this->isEmail()) {
+        if (!$this->isValidEmail()) {
             $errorMessages->addErrorMessage(new ErrorMessage('Die E-Mail Adresse scheint fehlerhaft zu sein.'));
         }
         if (!$errorMessages->isEmpty()) {

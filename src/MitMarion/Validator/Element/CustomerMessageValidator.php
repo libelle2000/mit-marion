@@ -24,14 +24,16 @@ class CustomerMessageValidator extends ElementValidator
 
             return $this->createErrorResultWithoutCustomerInput($errorMessages);
         }
-        if (!$this->hasAllowedCharacterIncludingLinefeed()) {
-            $errorMessages->addErrorMessage(new ErrorMessage(
-                sprintf(
-                    'Deine Nachricht enthält unerlaubte Sonderzeichen. Erlaubt sind:%s%s',
-                    "\n",
-                    implode(' ', self::REGEX_PATTERN_PUNCTUATION)
+        if (!$this->isValidMultilineText()) {
+            $errorMessages->addErrorMessage(
+                new ErrorMessage(
+                    sprintf(
+                        'Deine Nachricht enthält unerlaubte Sonderzeichen. Erlaubt sind:%s%s',
+                        "\n",
+                        implode(' ', self::REGEX_PATTERN_PUNCTUATION)
+                    )
                 )
-            ));
+            );
         }
         if (!$errorMessages->isEmpty()) {
             return $this->createErrorResultWithCustomerInput($errorMessages);
