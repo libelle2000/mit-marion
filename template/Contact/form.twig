@@ -26,7 +26,7 @@
                 {% if contactFormElements.preName.errorMessages|length > 0 %}
                     <ul class="errorList">
                         {% for errorMessage in contactFormElements.preName.errorMessages %}
-                            <li>{{ errorMessage }}</li>
+                            <li>{{ errorMessage|nl2br }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -40,7 +40,7 @@
                 {% if contactFormElements.surName.errorMessages|length > 0 %}
                     <ul class="errorList">
                         {% for errorMessage in contactFormElements.surName.errorMessages %}
-                            <li>{{ errorMessage }}</li>
+                            <li>{{ errorMessage|nl2br }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -54,7 +54,7 @@
                 {% if contactFormElements.eMail.errorMessages|length > 0 %}
                     <ul class="errorList">
                         {% for errorMessage in contactFormElements.eMail.errorMessages %}
-                            <li>{{ errorMessage }}</li>
+                            <li>{{ errorMessage|nl2br }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -70,7 +70,7 @@
                 {% if contactFormElements.customerMessage.errorMessages|length > 0 %}
                     <ul class="errorList">
                         {% for errorMessage in contactFormElements.customerMessage.errorMessages %}
-                            <li>{{ errorMessage }}</li>
+                            <li>{{ errorMessage|nl2br }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
@@ -85,7 +85,7 @@
                 {% if contactFormElements.dataPrivacy.errorMessages|length > 0 %}
                     <ul class="errorList">
                         {% for errorMessage in contactFormElements.dataPrivacy.errorMessages %}
-                            <li>{{ errorMessage }}</li>
+                            <li>{{ errorMessage|nl2br }}</li>
                         {% endfor %}
                     </ul>
                 {% endif %}
