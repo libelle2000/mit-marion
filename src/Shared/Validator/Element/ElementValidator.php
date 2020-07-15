@@ -14,7 +14,7 @@ abstract class ElementValidator
     private const REGEX_PATTERN_LINEFEED = '\n\r';
     private const REGEX_MODIFIER_UNICODE = 'u';
     private const REGEX_MODIFIER_CASE_INSENSITIVE = 'i';
-    private const REGEX_PATTERN_CHARACTER = '\w öäüßÖÄÜ';
+    private const REGEX_PATTERN_CHARACTER = '\w ';
     protected const REGEX_PATTERN_PUNCTUATION = [
         '?',
         '-',
