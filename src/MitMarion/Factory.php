@@ -21,6 +21,8 @@ use MitMarion\Validator\Element\EMailValidator;
 use MitMarion\Validator\Element\PreNameValidator;
 use MitMarion\Validator\Element\SurNameValidator;
 use MitMarion\Validator\ValidatedContactFormData;
+use Shared\Email\SenderCaption;
+use Shared\Email\SenderEmail;
 use Shared\Factory as SharedFactory;
 use Twig\Environment;
 
@@ -64,9 +66,13 @@ class Factory
         );
     }
 
-    public function createEMailClient(ValidatedContactFormData $validatedContactFormData)
+    public function createEMailClient(ValidatedContactFormData $validatedContactFormData): EMailClient
     {
-        return new EMailClient($validatedContactFormData);
+        return new EMailClient(
+            new SenderCaption('Kontaktformular'),
+            new SenderEmail('raus@mit-marion.de'),
+            $validatedContactFormData
+        );
     }
 
     private function createHomeRenderer(): HomeRenderer
