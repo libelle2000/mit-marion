@@ -3,6 +3,9 @@
 {% block additionalStyleSheets %}
     <link rel="stylesheet" href="/_assets/css/contactForm.css"/>
 {% endblock %}
+{% block additionalScripts %}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
     <article class="contact">
@@ -92,7 +95,7 @@
                     </ul>
                 {% endif %}
             </div>
-            <div class="formElementGroup captcha">captcha</div>
+            <div class="formElementGroup captcha g-recaptcha" data-sitekey="6LcgH7IZAAAAAB7lGgaeGWb_Gn6lzih5NRayvrdE" data-size="compact"></div>
             <input class="submit button" type="submit" value="abschicken"/>
         </form>
     </article>
