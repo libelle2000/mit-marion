@@ -8,9 +8,9 @@ use MitMarion\Validator\Element\CustomerMessageValidator;
 use MitMarion\Validator\Element\DataPrivacyValidator;
 use MitMarion\Validator\Element\EMailValidator;
 use MitMarion\Validator\Element\PreNameValidator;
+use MitMarion\Validator\Element\ReCaptchaValidator;
 use MitMarion\Validator\Element\SurNameValidator;
 use Shared\Validator\Element\ElementResult;
-use Shared\Validator\SuccessResult;
 use Shared\Validator\Validator;
 use Shared\Validator\Result;
 
@@ -20,6 +20,10 @@ class ContactFormValidator implements Validator
      * @var ContactFormElementBuilder
      */
     private $formElementBuilder;
+    /**
+     * @var ReCaptchaValidator
+     */
+    private $reCaptchaValidator;
     /**
      * @var PreNameValidator
      */
@@ -43,6 +47,7 @@ class ContactFormValidator implements Validator
 
     public function __construct(
         ContactFormElementBuilder $formElementBuilder,
+        ReCaptchaValidator $reCaptchaValidator,
         PreNameValidator $preNameValidator,
         SurNameValidator $surNameValidator,
         EMailValidator $eMailValidator,
@@ -50,6 +55,7 @@ class ContactFormValidator implements Validator
         DataPrivacyValidator $dataPrivacyValidator
     ) {
         $this->formElementBuilder = $formElementBuilder;
+        $this->reCaptchaValidator = $reCaptchaValidator;
         $this->preNameValidator = $preNameValidator;
         $this->surNameValidator = $surNameValidator;
         $this->eMailValidator = $eMailValidator;
@@ -59,6 +65,7 @@ class ContactFormValidator implements Validator
 
     public function validate(): Result
     {
+        $reCaptchaResult = $this->reCaptchaValidator->validate();
         $preNameResult = $this->preNameValidator->validate();
         $surNameResult = $this->surNameValidator->validate();
         $eMailResult = $this->eMailValidator->validate();
@@ -66,6 +73,7 @@ class ContactFormValidator implements Validator
         $dataPrivacyResult = $this->dataPrivacyValidator->validate();
 
         if (!$this->hasErrors(
+            $reCaptchaResult,
             $preNameResult,
             $surNameResult,
             $eMailResult,
@@ -85,6 +93,7 @@ class ContactFormValidator implements Validator
 
         return new ContactFormWithCustomerDataAndErrorsResult(
             $this->formElementBuilder->buildContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
+                $reCaptchaResult,
                 $preNameResult,
                 $surNameResult,
                 $eMailResult,
@@ -95,13 +104,16 @@ class ContactFormValidator implements Validator
     }
 
     private function hasErrors(
+        ElementResult $reCaptchaResult,
         ElementResult $preNameResult,
         ElementResult $surNameResult,
         ElementResult $eMailResult,
         ElementResult $customerMessageResult,
         ElementResult $dataPrivacyResult
     ): bool {
-        return $preNameResult->hasErrors()
+        return
+            $reCaptchaResult->hasErrors()
+            || $preNameResult->hasErrors()
             || $surNameResult->hasErrors()
             || $eMailResult->hasErrors()
             || $customerMessageResult->hasErrors()

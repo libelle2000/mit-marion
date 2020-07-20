@@ -8,15 +8,23 @@ use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariablesWithActi
 use MitMarion\TemplateVariables\Partial\StoriesTemplateVariables;
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 use MitMarion\Validator\ContactFormWithCustomerDataSuccessResult;
+use Shared\Environment\Environment;
 use Shared\Validator\ErrorResult;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
+if (!file_exists(__DIR__ . '/../../.env')) {
+    throw new Exception('Environment variables not found.');
+}
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load();
+
+$environment = Environment::fromGlobals();
 $request = Request::fromGlobals();
 $currentPath = CurrentPath::fromDirectory(__DIR__);
 
 if ($request->isPost()) {
-    $validator = $factory->createContactFormValidator($request);
+    $validator = $factory->createContactFormValidator($request, $environment);
     $result = $validator->validate();
     if (!$result->hasErrors()) {
         /** @var ContactFormWithCustomerDataSuccessResult $result */

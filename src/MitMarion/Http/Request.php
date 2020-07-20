@@ -39,7 +39,7 @@ class Request implements ParameterizedRequest
         }
 
         throw new RuntimeException(
-            sprintf('parameter not found [%s]', $key)
+            sprintf('parameter not found [%s]', $key->getValue())
         );
     }
 
@@ -47,7 +47,7 @@ class Request implements ParameterizedRequest
     {
         if (!$this->hasParameter($key)) {
             throw new RuntimeException(
-                sprintf('parameter not found [%s]', $key)
+                sprintf('parameter not found [%s]', $key->getValue())
             );
         }
         return trim($this->parameter[$key->getValue()]) === '';

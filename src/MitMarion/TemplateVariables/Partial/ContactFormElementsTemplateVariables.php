@@ -11,6 +11,10 @@ abstract class ContactFormElementsTemplateVariables implements TemplateVariables
     /**
      * @var Element
      */
+    private $reCaptcha;
+    /**
+     * @var Element
+     */
     private $preName;
     /**
      * @var Element
@@ -30,12 +34,14 @@ abstract class ContactFormElementsTemplateVariables implements TemplateVariables
     private $dataPrivacy;
 
     public function __construct(
+        Element $reCaptcha,
         Element $preName,
         Element $surName,
         Element $eMail,
         Element $message,
         Element $dataPrivacy
     ) {
+        $this->reCaptcha = $reCaptcha;
         $this->preName = $preName;
         $this->surName = $surName;
         $this->eMail = $eMail;
@@ -47,6 +53,7 @@ abstract class ContactFormElementsTemplateVariables implements TemplateVariables
     {
         return array_merge_recursive(
             ['hasErrors' => $this->hasErrors()],
+            $this->reCaptcha->asAssocArray(),
             $this->preName->asAssocArray(),
             $this->surName->asAssocArray(),
             $this->eMail->asAssocArray(),

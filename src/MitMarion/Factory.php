@@ -19,12 +19,14 @@ use MitMarion\Validator\Element\CustomerMessageValidator;
 use MitMarion\Validator\Element\DataPrivacyValidator;
 use MitMarion\Validator\Element\EMailValidator;
 use MitMarion\Validator\Element\PreNameValidator;
+use MitMarion\Validator\Element\ReCaptchaValidator;
 use MitMarion\Validator\Element\SurNameValidator;
 use MitMarion\Validator\ValidatedContactFormData;
 use Shared\Email\SenderCaption;
 use Shared\Email\SenderEmail;
 use Shared\Factory as SharedFactory;
-use Twig\Environment;
+use Twig\Environment as TwigEnvironment;
+use Shared\Environment\Environment as SharedEnvironment;
 
 class Factory
 {
@@ -54,10 +56,11 @@ class Factory
         );
     }
 
-    public function createContactFormValidator(Request $request): ContactFormValidator
+    public function createContactFormValidator(Request $request, SharedEnvironment $environment): ContactFormValidator
     {
         return new ContactFormValidator(
             $this->createFormElementBuilder(),
+            new ReCaptchaValidator($request, $this->sharedFactory->createReCaptchaClient($environment)),
             new PreNameValidator($request),
             new SurNameValidator($request),
             new EMailValidator($request),
@@ -110,7 +113,7 @@ class Factory
         );
     }
 
-    private function createTwigEnvironmentForNamespace(): Environment
+    private function createTwigEnvironmentForNamespace(): TwigEnvironment
     {
         return $this->sharedFactory->createTwigEnvironment(
             __DIR__ . '/../../template',

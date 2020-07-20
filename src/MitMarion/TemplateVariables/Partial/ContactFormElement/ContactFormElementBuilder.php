@@ -18,6 +18,11 @@ class ContactFormElementBuilder
     public function buildContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables(): TemplateVariables
     {
         return new ContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables(
+            new ReCaptcha(
+                $this->buildLabelReCaptcha(),
+                $this->buildPlaceholderReCaptcha(),
+                new ValidationRegexPattern('')
+            ),
             new PreName(
                 $this->buildLabelPreName(),
                 $this->buildPlaceholderPreName(),
@@ -47,6 +52,7 @@ class ContactFormElementBuilder
     }
 
     public function buildContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
+        ElementResult $reCaptchaResult,
         ElementResult $preNameResult,
         ElementResult $surNameResult,
         ElementResult $eMailResult,
@@ -55,12 +61,18 @@ class ContactFormElementBuilder
 
     ): TemplateVariables {
         return new ContactFormElementsWithCustomerDataAndErrorsTemplateVariables(
+            $this->buildReCaptchaWithCustomerData($reCaptchaResult),
             $this->buildPreNameWithCustomerData($preNameResult),
             $this->buildSurNameWithCustomerData($surNameResult),
             $this->buildEMailWithCustomerData($eMailResult),
             $this->buildCustomerMessageWithCustomerData($customerMessageResult),
             $this->buildDataPrivacyWithCustomerData($dataPrivacyResult),
         );
+    }
+
+    private function buildLabelReCaptcha(): Label
+    {
+        return new Label('Captcha');
     }
 
     private function buildLabelPreName(): Label
@@ -86,6 +98,11 @@ class ContactFormElementBuilder
     private function buildLabelDataPrivacy(): Label
     {
         return new Label('dataPrivacy');
+    }
+
+    private function buildPlaceholderReCaptcha(): Placeholder
+    {
+        return new Placeholder('eine kleine Aufgabe');
     }
 
     private function buildPlaceholderPreName(): Placeholder
@@ -136,6 +153,32 @@ class ContactFormElementBuilder
             new ValidationRegexPattern(''),
             $preNameResult->getCustomerInput(),
             $preNameResult->getErrorMessages()
+        );
+    }
+
+    /**
+     * @param ElementResult $reCaptchaResult
+     *
+     * @return ReCaptchaWithCustomerDataAndErrors
+     */
+    private function buildReCaptchaWithCustomerData(ElementResult $reCaptchaResult): ElementWithCustomerData
+    {
+        if (!$reCaptchaResult->hasErrors()) {
+            return new ReCaptchaWithCustomerData(
+                $this->buildLabelReCaptcha(),
+                $this->buildPlaceholderReCaptcha(),
+                new ValidationRegexPattern(''),
+                $reCaptchaResult->getCustomerInput()
+            );
+        }
+
+        /** @var ErrorElementResult $reCaptchaResult */
+        return new ReCaptchaWithCustomerDataAndErrors(
+            $this->buildLabelReCaptcha(),
+            $this->buildPlaceholderReCaptcha(),
+            new ValidationRegexPattern(''),
+            $reCaptchaResult->getCustomerInput(),
+            $reCaptchaResult->getErrorMessages()
         );
     }
 

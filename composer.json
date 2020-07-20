@@ -4,7 +4,9 @@
     "require": {
         "php": ">=7.3",
         "twig/twig": "^3.0",
-        "vlucas/phpdotenv": "^5.1"
+        "vlucas/phpdotenv": "^5.1",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "require-dev": {
     },
