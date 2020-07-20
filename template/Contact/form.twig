@@ -95,7 +95,16 @@
                     </ul>
                 {% endif %}
             </div>
-            <div class="formElementGroup captcha g-recaptcha" data-sitekey="6LcgH7IZAAAAAB7lGgaeGWb_Gn6lzih5NRayvrdE" data-size="compact"></div>
+            <div class="formElementGroup captcha">
+                <div class="g-recaptcha" data-sitekey="6LcgH7IZAAAAAB7lGgaeGWb_Gn6lzih5NRayvrdE" data-size="compact"></div>
+                {% if contactFormElements.reCaptcha.errorMessages|length > 0 %}
+                    <ul class="errorList">
+                        {% for errorMessage in contactFormElements.reCaptcha.errorMessages %}
+                            <li>{{ errorMessage|nl2br }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
             <input class="submit button" type="submit" value="abschicken"/>
         </form>
     </article>
