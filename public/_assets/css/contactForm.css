@@ -87,6 +87,11 @@ textarea {
     min-height: 10rem;
 }
 
+.captcha .g-recaptcha {
+    margin: 0 auto;
+    width: max-content;
+}
+
 .errorIntro,
 .errorList li{
     color: #BB0000;
