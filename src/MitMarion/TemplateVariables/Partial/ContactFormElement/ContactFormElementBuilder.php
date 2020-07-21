@@ -102,7 +102,7 @@ class ContactFormElementBuilder
 
     private function buildPlaceholderReCaptcha(): Placeholder
     {
-        return new Placeholder('eine kleine Aufgabe');
+        return new Placeholder('Eine kleine Aufgabe, damit ich nicht so viel Spam E-Mails bekomme');
     }
 
     private function buildPlaceholderPreName(): Placeholder

@@ -96,6 +96,9 @@
                 {% endif %}
             </div>
             <div class="formElementGroup captcha">
+                <label>
+                    {{ contactFormElements.reCaptcha.placeholder }}:
+                </label>
                 <div class="g-recaptcha" data-sitekey="6LcgH7IZAAAAAB7lGgaeGWb_Gn6lzih5NRayvrdE" data-size="compact"></div>
                 {% if contactFormElements.reCaptcha.errorMessages|length > 0 %}
                     <ul class="errorList">
