@@ -102,22 +102,22 @@ class ContactFormElementBuilder
 
     private function buildPlaceholderReCaptcha(): Placeholder
     {
-        return new Placeholder('Eine kleine Aufgabe, damit ich nicht so viel Spam E-Mails bekomme');
+        return new Placeholder('Eine kleine Aufgabe gegen den Spam');
     }
 
     private function buildPlaceholderPreName(): Placeholder
     {
-        return new Placeholder('dein Vorname');
+        return new Placeholder('mein Vorname');
     }
 
     private function buildPlaceholderSurName(): Placeholder
     {
-        return new Placeholder('dein Nachname');
+        return new Placeholder('mein Nachname');
     }
 
     private function buildPlaceholderEMail(): Placeholder
     {
-        return new Placeholder('deine E-Mail Adresse');
+        return new Placeholder('meine E-Mail Adresse');
     }
 
     private function buildPlaceholderCustomerMessage(): Placeholder
