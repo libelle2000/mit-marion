@@ -6,11 +6,15 @@ namespace MitMarion;
 use MitMarion\Email\EMailClient;
 use MitMarion\Http\Request;
 use MitMarion\Page\ContactFormPage;
+use MitMarion\Page\FehlerPage;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\StoryPage;
+use MitMarion\Page\VielenDankPage;
 use MitMarion\Renderer\ContactFormRenderer;
+use MitMarion\Renderer\FehlerRenderer;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\StoryRenderer;
+use MitMarion\Renderer\VielenDankRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
 use MitMarion\TemplateVariables\StoryTemplateVariables;
@@ -56,6 +60,20 @@ class Factory
         );
     }
 
+    public function createVielenDankPage(): VielenDankPage
+    {
+        return new VielenDankPage(
+            $this->createVielenDankRenderer(),
+        );
+    }
+
+    public function createFehlerPage(): FehlerPage
+    {
+        return new FehlerPage(
+            $this->createFehlerRenderer(),
+        );
+    }
+
     public function createContactFormValidator(Request $request, SharedEnvironment $environment): ContactFormValidator
     {
         return new ContactFormValidator(
@@ -81,6 +99,20 @@ class Factory
     private function createHomeRenderer(): HomeRenderer
     {
         return new HomeRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
+    private function createVielenDankRenderer(): VielenDankRenderer
+    {
+        return new VielenDankRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
+    private function createFehlerRenderer(): FehlerRenderer
+    {
+        return new FehlerRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }

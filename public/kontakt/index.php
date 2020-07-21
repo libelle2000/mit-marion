@@ -36,7 +36,7 @@ if ($request->isPost()) {
             exit(0);
         }
 
-        header(sprintf('Location: %s', '/kontakt/fehler/'), true, 303);
+        header(sprintf('Location: %s', 'fehler/'), true, 303);
         exit(0);
     }
     /** @var ErrorResult $result */

@@ -260,7 +260,8 @@ section.member .subquote {
 .member .subquote,
 section.marion,
 .contactForm,
-.contactIntro {
+.contactIntro,
+.errorPage {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
@@ -318,7 +319,8 @@ section.marion .closingText {
 }
 
 .breadcrumb,
-.member .mainquote {
+.member .mainquote,
+.errorPage {
     color: #EFFFEF;
 }
 
@@ -334,7 +336,10 @@ nav .flyout a:link:visited:hover:active,
 .button,
 .button:link:visited:hover:active,
 .zap,
-.zap:link:visited:hover:active {
+.zap:link:visited:hover:active,
+.errorPage a,
+.errorPage a:link:visited:hover:active
+{
     color: #EFFFEF;
     text-decoration: none;
 }
