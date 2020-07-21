@@ -38,7 +38,7 @@ abstract class PageTemplateVariables implements TemplateVariables
 
     abstract protected function getTitleValue(): string;
 
-    protected function buildStoryFlyout(): array
+    private function buildStoryFlyout(): array
     {
         return $this->stories->asAssocArray();
     }

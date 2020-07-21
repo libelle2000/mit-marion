@@ -16,6 +16,7 @@ use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\Renderer\VielenDankRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
+use MitMarion\TemplateVariables\PageTemplateVariables;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
 use MitMarion\TemplateVariables\StoryTemplateVariables;
 use MitMarion\Validator\ContactFormValidator;
@@ -60,10 +61,13 @@ class Factory
         );
     }
 
-    public function createVielenDankPage(): VielenDankPage
+    public function createVielenDankPage(
+        PageTemplateVariables $pageTemplateVariables
+    ): VielenDankPage
     {
         return new VielenDankPage(
             $this->createVielenDankRenderer(),
+            $pageTemplateVariables
         );
     }
 

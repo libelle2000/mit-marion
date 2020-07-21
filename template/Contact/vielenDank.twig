@@ -1,0 +1,14 @@
+{% extends "pageBase.twig" %}
+{% block title %}mit-marion-de{% endblock %}
+{% block additionalStyleSheets %}
+    <link rel="stylesheet" href="/_assets/css/thankYou.css"/>
+{% endblock %}
+{% block content %}
+    {{ include('include/header.incl.twig') }}
+    <article class="thankYou">
+        <p>
+            Vielen Dank für die Nachricht.<br/>
+            Ich werde mich in Kürze bei dir melden.
+        </p>
+    </article>
+{% endblock %}
