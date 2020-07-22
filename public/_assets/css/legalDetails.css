@@ -8,3 +8,7 @@
     line-height: 1.5rem;
     margin-bottom: 1rem;
 }
+
+.noMarginBottom {
+    margin-bottom: 0;
+}
