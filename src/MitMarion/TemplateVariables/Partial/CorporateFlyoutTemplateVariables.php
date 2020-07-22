@@ -13,6 +13,11 @@ class CorporateFlyoutTemplateVariables implements TemplateVariables
             self::CAPTION => 'Kontakt',
             self::IS_CURRENT => false,
         ],
+        [
+            self::HREF => '/impressum/',
+            self::CAPTION => 'Impressum',
+            self::IS_CURRENT => false,
+        ],
     ];
 
     public function asAssocArray(): array

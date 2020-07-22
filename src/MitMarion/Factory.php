@@ -8,11 +8,13 @@ use MitMarion\Http\Request;
 use MitMarion\Page\ContactFormPage;
 use MitMarion\Page\FehlerPage;
 use MitMarion\Page\HomePage;
+use MitMarion\Page\ImpressumPage;
 use MitMarion\Page\StoryPage;
 use MitMarion\Page\VielenDankPage;
 use MitMarion\Renderer\ContactFormRenderer;
 use MitMarion\Renderer\FehlerRenderer;
 use MitMarion\Renderer\HomeRenderer;
+use MitMarion\Renderer\ImpressumRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\Renderer\VielenDankRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
@@ -71,6 +73,16 @@ class Factory
         );
     }
 
+    public function createImpressumPage(
+        PageTemplateVariables $pageTemplateVariables
+    ): ImpressumPage
+    {
+        return new ImpressumPage(
+            $this->createImpressumRenderer(),
+            $pageTemplateVariables
+        );
+    }
+
     public function createFehlerPage(): FehlerPage
     {
         return new FehlerPage(
@@ -110,6 +122,13 @@ class Factory
     private function createVielenDankRenderer(): VielenDankRenderer
     {
         return new VielenDankRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
+    private function createImpressumRenderer(): ImpressumRenderer
+    {
+        return new ImpressumRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }
