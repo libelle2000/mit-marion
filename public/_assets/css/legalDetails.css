@@ -1,7 +1,10 @@
 .legalDetails,
-.dataPrivacyDetails
-{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+.dataPrivacyDetails {
+    padding: 2rem;
 }
 
+.legalDetails *,
+.dataPrivacyDetails * {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
