@@ -5,7 +5,7 @@
 {% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
-    {% set emailLink = '<a href="/kontakt/">raus@mit-marion.de</a>' %}
+    {% set emailLink = '<a href="/kontakt/"><span>r</span><span>a</span><span>u</span><span>s</span></a>(at)<a href="/kontakt/"><span>m</span><span>i</span><span>t</span><span>-</span><span>m</span><span>a</span><span>r</span><span>i</span><span>o</span><span>n</span></a><a href="/kontakt/"><span>.</span><span>d</span><span>e</span></a>' %}
     {% set name = 'Marion Westermann' %}
     {% set street = 'Konrad-Martin Str. 2' %}
     {% set zipCode = '33129' %}
@@ -26,6 +26,8 @@
         <p style="background-color: red">Umsatzsteuer Id.: DE ???</p>
         <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV:</p>
         <p>{{ name }}</p>
+        <h2>Urheberrecht</h2>
+        <p>Sämtliche Daten, Texte und Bilder sind Eigentum von mit-marion.de. Die Verwendung zu gewerblichen Zwecken ist untersagt. Die private Verwendung bedarf unserer ausdrücklichen Zustimmung.</p>
         <h2>Beschwerdeverfahren</h2>
         <p>Online-Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter <a href="http://ec.europa.eu/consumers/odr">http://ec.europa.eu/consumers/odr</a> finden.</p>
         <h2>Haftungsausschluss für externe Links</h2>
