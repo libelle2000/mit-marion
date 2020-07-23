@@ -15,6 +15,23 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+.externalLink {
+    padding-right: 0.5rem;
+}
+
+.externalLink:after {
+    position: absolute;
+    content: "";
+    height: 1rem;
+    width: 0.7rem;
+    margin-left: -0.2rem;
+    background-size: 70%;
+    background-image: url("/_assets/css/images/arrow-filled.svg");
+    background-repeat: no-repeat;
+    transform: rotate(160deg);
+    background-position-y: top;
+}
+
 .member .mainquote {
     font-size: 2.5rem;
     line-height: 3.4rem;
@@ -257,6 +274,7 @@ header nav.stories {
 section.member .subquote {
     grid-area: subquote;
 }
+
 .member .subquote,
 section.marion,
 .contactForm,
@@ -265,6 +283,7 @@ section.marion,
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
+
 section.marion {
     display: grid;
     margin-bottom: 4rem;
@@ -327,7 +346,7 @@ section.marion .closingText {
 .marion,
 .member,
 .contact *,
-.thankYou *{
+.thankYou * {
     color: #336633;
 }
 
@@ -339,8 +358,7 @@ nav .flyout a:link:visited:hover:active,
 .zap,
 .zap:link:visited:hover:active,
 .errorPage a,
-.errorPage a:link:visited:hover:active
-{
+.errorPage a:link:visited:hover:active {
     color: #EFFFEF;
     text-decoration: none;
 }
