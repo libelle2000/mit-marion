@@ -346,7 +346,9 @@ section.marion .closingText {
 .marion,
 .member,
 .contact *,
-.thankYou * {
+.thankYou *  ,
+.legalDetails,
+.dataPrivacyDetails{
     color: #336633;
 }
 
@@ -360,6 +362,14 @@ nav .flyout a:link:visited:hover:active,
 .errorPage a,
 .errorPage a:link:visited:hover:active {
     color: #EFFFEF;
+    text-decoration: none;
+}
+
+.legalDetails a,
+.legalDetails a:link:visited:hover:active,
+.dataPrivacyDetails a,
+.dataPrivacyDetails a:link:visited:hover:active {
+    color: #336633;
     text-decoration: none;
 }
 
