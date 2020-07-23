@@ -13,6 +13,15 @@
 <body>
 <div class="content">
     {% block content %}{% endblock %}
+    {% block cookieMessage %}
+        <div class="cookieMessage">
+            <p>Nur noch schnell die Cookies...</p>
+            <p>Meine Website verwendet keine Cookies!</p>
+            <p>Allerdings schütze ich das Kontaktformular mit einem Captcha, das nicht ohne auskommt.</p>
+            <p>Weitere Infos findest du in der Datenschutzerkläfung unter <a href="/impressum/#cookies" target="_blank">Cookies</a> und <a href="/impressum/#captcha" target="_blank">Captcha</a>.</p>
+            <a class="closeMessage" title="verstanden"><span class="hidden">verstanden</span></a>
+        </div>
+    {% endblock %}
 </div>
 </body>
 </html>

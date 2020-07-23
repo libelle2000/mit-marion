@@ -15,6 +15,10 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+.hidden {
+    display: none;
+}
+
 a[target="_blank"] {
     padding-right: 0.5rem;
 }
@@ -32,12 +36,33 @@ a[target="_blank"]:after {
     background-position-y: top;
 }
 
+.closeMessage {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.closeMessage:after {
+    content: "x";
+    height: 1rem;
+    width: 0.7rem;
+    margin-left: -0.2rem;
+    background-size: 70%;
+    background-image: url("/_assets/css/images/arrow-filled.svg");
+    background-repeat: no-repeat;
+    transform: rotate(160deg);
+    background-position-y: top;
+}
+
 .member .mainquote {
     font-size: 2.5rem;
     line-height: 3.4rem;
 }
 
 .contactIntro,
+.cookieMessage,
 .member .subquote,
 .marion .mainquote,
 .marion .advantages {
@@ -210,6 +235,7 @@ nav.open .flyout {
 }
 
 .button {
+    cursor: pointer;
     display: block;
     width: 70%;
     margin: 0.5rem auto 0.5rem auto;
@@ -220,6 +246,7 @@ nav.open .flyout {
     border-radius: 5px 5px 5px 5px;
 }
 
+.cookieMessage,
 .zapper {
     box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.75);
 }
@@ -247,6 +274,12 @@ nav.open .flyout {
     background-image: url("/_assets/css/images/arrow-border-right.svg");
     background-repeat: no-repeat;
     background-position: right center;
+}
+
+.cookieMessage {
+    text-align: center;
+    display: block;
+    padding: 1rem 0 1rem 0;
 }
 
 header {
@@ -313,6 +346,12 @@ section.marion .closingText {
     grid-area: closingText;
 }
 
+.cookieMessage {
+    position: fixed;
+    width: 100%;
+    bottom: 6rem;
+}
+
 .zapper {
     position: fixed;
     width: 100%;
@@ -339,6 +378,7 @@ section.marion .closingText {
 
 .breadcrumb,
 .member .mainquote,
+.cookieMessage,
 .errorPage {
     color: #EFFFEF;
 }
@@ -346,9 +386,9 @@ section.marion .closingText {
 .marion,
 .member,
 .contact *,
-.thankYou *  ,
+.thankYou *,
 .legalDetails,
-.dataPrivacyDetails{
+.dataPrivacyDetails {
     color: #336633;
 }
 
@@ -357,6 +397,8 @@ nav .flyout a,
 nav .flyout a:link:visited:hover:active,
 .button,
 .button:link:visited:hover:active,
+.cookieMessage a,
+.cookieMessage a:link:visited:hover:active,
 .zap,
 .zap:link:visited:hover:active,
 .errorPage a,
@@ -380,11 +422,13 @@ nav .flyout li:hover,
 nav.corporate .flyout li:first-child,
 .mainquote span,
 .button,
+.cookieMessage,
 .zapper,
 .zap {
     background-color: #336633;
 }
 
+.cookieMessage,
 .zapper {
     background: linear-gradient(90deg, #336633 0%, #336633 40%, rgba(51, 102, 51, 0.9) 50%, #336633 60%, #336633 100%);
 }
@@ -460,6 +504,7 @@ article {
         top: 3rem;
     }
 
+    .cookieMessage,
     .zapper {
         width: 60%;
     }
