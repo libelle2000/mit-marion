@@ -12,3 +12,7 @@
 .noMarginBottom {
     margin-bottom: 0;
 }
+
+.decrypt span:nth-child(even) {
+    display: none;
+}
