@@ -83,9 +83,8 @@
                     <input id="dataPrivacy"
                            name="{{ contactFormElements.dataPrivacy.identifier }}"
                            type="checkbox"
-                           value="accepted"
-                           placeholder="{{ contactFormElements.dataPrivacy.placeholder }}"/>
-                    {{ contactFormElements.dataPrivacy.placeholder }}
+                           value="accepted"/>
+                    Ich habe die <a href="/impressum/#datenschutzerklaerung" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere sie.
                 </label>
                 {% if contactFormElements.dataPrivacy.errorMessages|length > 0 %}
                     <ul class="errorList">
@@ -111,8 +110,4 @@
             <input class="submit button" type="submit" value="abschicken"/>
         </form>
     </article>
-    {#    <pre>#}
-    {#        {{ dump() }}#}
-    {#        {{ dump(contactFormElements) }}#}
-    {#    </pre>#}
 {% endblock %}

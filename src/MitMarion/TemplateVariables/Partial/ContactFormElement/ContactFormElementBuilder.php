@@ -6,6 +6,7 @@ namespace MitMarion\TemplateVariables\Partial\ContactFormElement;
 use MitMarion\TemplateVariables\Partial\ContactFormElementsWithCustomerDataAndErrorsTemplateVariables;
 use MitMarion\TemplateVariables\Partial\ContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables;
 use Shared\TemplateVariables\Form\Element\Label;
+use Shared\TemplateVariables\Form\Element\OptionalPlaceholder;
 use Shared\TemplateVariables\Form\Element\Placeholder;
 use Shared\TemplateVariables\Form\Element\ValidationRegexPattern;
 use Shared\TemplateVariables\Form\ElementWithCustomerData;
@@ -125,9 +126,9 @@ class ContactFormElementBuilder
         return new Placeholder('Meine Nachricht an dich, Marion');
     }
 
-    private function buildPlaceholderDataPrivacy(): Placeholder
+    private function buildPlaceholderDataPrivacy(): OptionalPlaceholder
     {
-        return new Placeholder('Ich habe die Datenschutzerklärung gelesen und akzeptiere sie.');
+        return new OptionalPlaceholder();
     }
 
     /**
