@@ -15,10 +15,6 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-.hidden {
-    display: none;
-}
-
 a[target="_blank"] {
     padding-right: 0.5rem;
 }
@@ -444,6 +440,14 @@ article {
 
 .formElementGroup {
     background-color: rgba(51, 102, 51, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
 
 @media only screen and (min-device-width: 800px) {
