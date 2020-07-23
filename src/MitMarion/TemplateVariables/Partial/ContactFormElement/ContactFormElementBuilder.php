@@ -21,33 +21,27 @@ class ContactFormElementBuilder
         return new ContactFormElementsWithoutCustomerDataAndErrorsTemplateVariables(
             new ReCaptcha(
                 $this->buildLabelReCaptcha(),
-                $this->buildPlaceholderReCaptcha(),
-                new ValidationRegexPattern('')
+                $this->buildPlaceholderReCaptcha()
             ),
             new PreName(
                 $this->buildLabelPreName(),
-                $this->buildPlaceholderPreName(),
-                new ValidationRegexPattern('')
+                $this->buildPlaceholderPreName()
             ),
             new SurName(
                 $this->buildLabelSurName(),
-                $this->buildPlaceholderSurName(),
-                new ValidationRegexPattern('')
+                $this->buildPlaceholderSurName()
             ),
             new EMail(
                 $this->buildLabelEMail(),
-                $this->buildPlaceholderEMail(),
-                new ValidationRegexPattern('')
+                $this->buildPlaceholderEMail()
             ),
             new CustomerMessage(
                 $this->buildLabelCustomerMessage(),
-                $this->buildPlaceholderCustomerMessage(),
-                new ValidationRegexPattern('')
+                $this->buildPlaceholderCustomerMessage()
             ),
             new DataPrivacy(
                 $this->buildLabelDataPrivacy(),
-                $this->buildPlaceholderDataPrivacy(),
-                new ValidationRegexPattern('')
+                $this->buildPlaceholderDataPrivacy()
             ),
         );
     }
@@ -142,7 +136,6 @@ class ContactFormElementBuilder
             return new PreNameWithCustomerData(
                 $this->buildLabelPreName(),
                 $this->buildPlaceholderPreName(),
-                new ValidationRegexPattern(''),
                 $preNameResult->getCustomerInput()
             );
         }
@@ -151,7 +144,6 @@ class ContactFormElementBuilder
         return new PreNameWithCustomerDataAndErrors(
             $this->buildLabelPreName(),
             $this->buildPlaceholderPreName(),
-            new ValidationRegexPattern(''),
             $preNameResult->getCustomerInput(),
             $preNameResult->getErrorMessages()
         );
@@ -168,7 +160,6 @@ class ContactFormElementBuilder
             return new ReCaptchaWithCustomerData(
                 $this->buildLabelReCaptcha(),
                 $this->buildPlaceholderReCaptcha(),
-                new ValidationRegexPattern(''),
                 $reCaptchaResult->getCustomerInput()
             );
         }
@@ -177,7 +168,6 @@ class ContactFormElementBuilder
         return new ReCaptchaWithCustomerDataAndErrors(
             $this->buildLabelReCaptcha(),
             $this->buildPlaceholderReCaptcha(),
-            new ValidationRegexPattern(''),
             $reCaptchaResult->getCustomerInput(),
             $reCaptchaResult->getErrorMessages()
         );
@@ -189,7 +179,6 @@ class ContactFormElementBuilder
             return new SurNameWithCustomerData(
                 $this->buildLabelSurName(),
                 $this->buildPlaceholderSurName(),
-                new ValidationRegexPattern(''),
                 $surNameResult->getCustomerInput(),
             );
         }
@@ -198,7 +187,6 @@ class ContactFormElementBuilder
         return new SurNameWithCustomerDataAndErrors(
             $this->buildLabelSurName(),
             $this->buildPlaceholderSurName(),
-            new ValidationRegexPattern(''),
             $surNameResult->getCustomerInput(),
             $surNameResult->getErrorMessages()
         );
@@ -210,7 +198,6 @@ class ContactFormElementBuilder
             return new EMailWithCustomerData(
                 $this->buildLabelEMail(),
                 $this->buildPlaceholderEMail(),
-                new ValidationRegexPattern(''),
                 $eMailResult->getCustomerInput(),
             );
         }
@@ -219,7 +206,6 @@ class ContactFormElementBuilder
         return new EMailWithCustomerDataAndErrors(
             $this->buildLabelEMail(),
             $this->buildPlaceholderEMail(),
-            new ValidationRegexPattern(''),
             $eMailResult->getCustomerInput(),
             $eMailResult->getErrorMessages()
         );
@@ -231,7 +217,6 @@ class ContactFormElementBuilder
             return new CustomerMessageWithCustomerData(
                 $this->buildLabelCustomerMessage(),
                 $this->buildPlaceholderCustomerMessage(),
-                new ValidationRegexPattern(''),
                 $customerMessageResult->getCustomerInput(),
             );
         }
@@ -240,7 +225,6 @@ class ContactFormElementBuilder
         return new CustomerMessageWithCustomerDataAndErrors(
             $this->buildLabelCustomerMessage(),
             $this->buildPlaceholderCustomerMessage(),
-            new ValidationRegexPattern(''),
             $customerMessageResult->getCustomerInput(),
             $customerMessageResult->getErrorMessages()
         );
@@ -252,7 +236,6 @@ class ContactFormElementBuilder
             return new DataPrivacyWithCustomerData(
                 $this->buildLabelDataPrivacy(),
                 $this->buildPlaceholderDataPrivacy(),
-                new ValidationRegexPattern(''),
                 $dataPrivacyResult->getCustomerInput(),
             );
         }
@@ -261,7 +244,6 @@ class ContactFormElementBuilder
         return new DataPrivacyWithCustomerDataAndErrors(
             $this->buildLabelDataPrivacy(),
             $this->buildPlaceholderDataPrivacy(),
-            new ValidationRegexPattern(''),
             $dataPrivacyResult->getCustomerInput(),
             $dataPrivacyResult->getErrorMessages()
         );
