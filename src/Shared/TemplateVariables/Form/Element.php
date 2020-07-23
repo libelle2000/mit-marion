@@ -5,7 +5,6 @@ namespace Shared\TemplateVariables\Form;
 
 use Shared\TemplateVariables\Form\Element\Label;
 use Shared\TemplateVariables\Form\Element\Placeholder;
-use Shared\TemplateVariables\Form\Element\ValidationRegexPattern;
 use Shared\TemplateVariables\TemplateVariables;
 
 abstract class Element implements TemplateVariables
@@ -20,16 +19,10 @@ abstract class Element implements TemplateVariables
      */
     private $placeholder;
 
-    /**
-     * @var ValidationRegexPattern
-     */
-    private $validationRegexPattern;
-
-    public function __construct(Label $label, Placeholder $placeholder, ValidationRegexPattern $validationRegexPattern)
+    public function __construct(Label $label, Placeholder $placeholder)
     {
         $this->label = $label;
         $this->placeholder = $placeholder;
-        $this->validationRegexPattern = $validationRegexPattern;
     }
 
     public function hasErrors(): bool
@@ -46,7 +39,6 @@ abstract class Element implements TemplateVariables
                 ],
                 $this->label->asAssocArray(),
                 $this->placeholder->asAssocArray(),
-                $this->validationRegexPattern->asAssocArray(),
             ),
         ];
     }

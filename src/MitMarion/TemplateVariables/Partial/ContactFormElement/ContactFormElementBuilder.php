@@ -8,7 +8,6 @@ use MitMarion\TemplateVariables\Partial\ContactFormElementsWithoutCustomerDataAn
 use Shared\TemplateVariables\Form\Element\Label;
 use Shared\TemplateVariables\Form\Element\OptionalPlaceholder;
 use Shared\TemplateVariables\Form\Element\Placeholder;
-use Shared\TemplateVariables\Form\Element\ValidationRegexPattern;
 use Shared\TemplateVariables\Form\ElementWithCustomerData;
 use Shared\TemplateVariables\TemplateVariables;
 use Shared\Validator\Element\ElementResult;
