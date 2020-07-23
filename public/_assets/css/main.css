@@ -15,11 +15,11 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-.externalLink {
+a[target="_blank"] {
     padding-right: 0.5rem;
 }
 
-.externalLink:after {
+a[target="_blank"]:after {
     position: absolute;
     content: "";
     height: 1rem;
