@@ -7,8 +7,6 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryPageT
 {
     public function asAssocArray(): array
     {
-        $currentTitle = $this->getTitleValue();
-
         return array_merge(
             $this->buildBaseTemplateVariables(),
             $this->buildZapperTemplateVariables(),

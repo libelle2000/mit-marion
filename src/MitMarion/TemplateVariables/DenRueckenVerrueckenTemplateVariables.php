@@ -7,8 +7,6 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryPageTemplateVaria
 {
     public function asAssocArray(): array
     {
-        $currentTitle = $this->getTitleValue();
-
         return array_merge(
             $this->buildBaseTemplateVariables(),
             $this->buildZapperTemplateVariables(),
