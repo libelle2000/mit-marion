@@ -30,7 +30,12 @@ abstract class StoryPageTemplateVariables extends PageTemplateVariables
         );
     }
 
-    protected function buildZapperTemplateVariables(): array
+    protected function getTitleValue(): string
+    {
+        return $this->stories->getCurrentTitle();
+    }
+
+    private function buildZapperTemplateVariables(): array
     {
         return [
             'zapper' => [
@@ -38,10 +43,5 @@ abstract class StoryPageTemplateVariables extends PageTemplateVariables
                 'next' => $this->stories->getNext(),
             ],
         ];
-    }
-
-    protected function getTitleValue(): string
-    {
-        return $this->stories->getCurrentTitle();
     }
 }
