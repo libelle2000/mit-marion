@@ -14,6 +14,11 @@ class CorporateFlyoutTemplateVariables implements TemplateVariables
             self::IS_CURRENT => false,
         ],
         [
+            self::HREF => '/impressum/#datenschutzerklaerung',
+            self::CAPTION => 'Datenschutzerklärung',
+            self::IS_CURRENT => false,
+        ],
+        [
             self::HREF => '/impressum/',
             self::CAPTION => 'Impressum',
             self::IS_CURRENT => false,
