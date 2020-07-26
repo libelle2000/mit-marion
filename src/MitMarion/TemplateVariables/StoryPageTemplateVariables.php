@@ -21,6 +21,15 @@ abstract class StoryPageTemplateVariables extends PageTemplateVariables
         $this->stories = $stories;
     }
 
+    public function asAssocArray(): array
+    {
+        return array_merge(
+            $this->buildBaseTemplateVariables(),
+            $this->buildZapperTemplateVariables(),
+            $this->asAssocArray_()
+        );
+    }
+
     protected function buildZapperTemplateVariables(): array
     {
         return [

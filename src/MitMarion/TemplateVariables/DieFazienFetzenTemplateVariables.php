@@ -5,15 +5,6 @@ namespace MitMarion\TemplateVariables;
 
 final class DieFazienFetzenTemplateVariables extends StoryPageTemplateVariables
 {
-    public function asAssocArray(): array
-    {
-        return array_merge(
-            $this->buildBaseTemplateVariables(),
-            $this->buildZapperTemplateVariables(),
-            $this->asAssocArray_()
-        );
-    }
-
     public function asAssocArray_(): array
     {
         return [
