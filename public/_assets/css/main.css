@@ -15,6 +15,14 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
 a[target="_blank"] {
     padding-right: 0.5rem;
 }

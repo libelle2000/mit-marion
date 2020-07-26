@@ -7,6 +7,10 @@
     margin-bottom: 1rem;
 }
 
+.generalText ul {
+    margin-left: 2rem;
+}
+
 .noMarginBottom {
     margin-bottom: 0;
 }
