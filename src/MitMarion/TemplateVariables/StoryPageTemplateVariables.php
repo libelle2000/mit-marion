@@ -6,7 +6,7 @@ namespace MitMarion\TemplateVariables;
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariables;
 use MitMarion\TemplateVariables\Partial\StoriesTemplateVariablesWithActiveMarker;
 
-abstract class StoryTemplateVariables extends PageTemplateVariables
+abstract class StoryPageTemplateVariables extends PageTemplateVariables
 {
     /**
      * @var StoriesTemplateVariablesWithActiveMarker

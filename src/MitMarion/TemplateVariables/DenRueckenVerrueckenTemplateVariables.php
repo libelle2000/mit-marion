@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables;
 
-final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
+final class DenRueckenVerrueckenTemplateVariables extends StoryPageTemplateVariables
 {
     public function asAssocArray(): array
     {

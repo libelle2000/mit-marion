@@ -3,9 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables;
 
-use MitMarion\TemplateVariables\Partial\StoriesTemplateVariables;
-
-final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
+final class DieFazienFetzenTemplateVariables extends StoryPageTemplateVariables
 {
     public function asAssocArray(): array
     {

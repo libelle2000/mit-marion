@@ -22,7 +22,7 @@ use MitMarion\Renderer\VielenDankRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\PageTemplateVariables;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
-use MitMarion\TemplateVariables\StoryTemplateVariables;
+use MitMarion\TemplateVariables\StoryPageTemplateVariables;
 use MitMarion\Validator\ContactFormValidator;
 use MitMarion\Validator\Element\CustomerMessageValidator;
 use MitMarion\Validator\Element\DataPrivacyValidator;
@@ -50,7 +50,7 @@ class Factory
     }
 
     public function createStoryPage(
-        StoryTemplateVariables $storyTemplateVariables
+        StoryPageTemplateVariables $storyTemplateVariables
     ): StoryPage {
         return new StoryPage(
             $this->createStoryRenderer(),

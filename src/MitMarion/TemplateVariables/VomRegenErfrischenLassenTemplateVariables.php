@@ -3,12 +3,10 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables;
 
-final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVariables
+final class VomRegenErfrischenLassenTemplateVariables extends StoryPageTemplateVariables
 {
     public function asAssocArray(): array
     {
-        $currentTitle = $this->getTitleValue();
-
         return array_merge(
             $this->buildBaseTemplateVariables(),
             $this->buildZapperTemplateVariables(),
