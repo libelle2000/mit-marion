@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\TemplateVariables;
+namespace MitMarion\TemplateVariables\Story;
 
-final class DenRueckenVerrueckenTemplateVariables extends StoryPageTemplateVariables
+final class DenRueckenVerrueckenTemplateVariables implements StoryTemplateVariables
 {
-    public function asAssocArray_(): array
+    public function asAssocArray(): array
     {
         return [
             'member' => [

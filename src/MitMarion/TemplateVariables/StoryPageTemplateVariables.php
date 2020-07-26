@@ -5,6 +5,7 @@ namespace MitMarion\TemplateVariables;
 
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariables;
 use MitMarion\TemplateVariables\Partial\StoriesTemplateVariablesWithActiveMarker;
+use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
 
 final class StoryPageTemplateVariables extends PageTemplateVariables
 {
@@ -13,12 +14,19 @@ final class StoryPageTemplateVariables extends PageTemplateVariables
      */
     private $stories;
 
+    /**
+     * @var StoryTemplateVariables
+     */
+    private $story;
+
     public function __construct(
         CorporateFlyoutTemplateVariables $corporateFlyout,
-        StoriesTemplateVariablesWithActiveMarker $stories
+        StoriesTemplateVariablesWithActiveMarker $stories,
+        StoryTemplateVariables $story
     ) {
         parent::__construct($corporateFlyout, $stories);
         $this->stories = $stories;
+        $this->story = $story;
     }
 
     public function asAssocArray(): array
@@ -26,7 +34,7 @@ final class StoryPageTemplateVariables extends PageTemplateVariables
         return array_merge(
             $this->buildBaseTemplateVariables(),
             $this->buildZapperTemplateVariables(),
-            $this->asAssocArray_()
+            $this->story->asAssocArray()
         );
     }
 
