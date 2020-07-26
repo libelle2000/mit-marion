@@ -39,21 +39,6 @@ a[target="_blank"]:after {
 .closeMessage {
     cursor: pointer;
     display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-.closeMessage:after {
-    content: "x";
-    height: 1rem;
-    width: 0.7rem;
-    margin-left: -0.2rem;
-    background-size: 70%;
-    background-image: url("/_assets/css/images/arrow-filled.svg");
-    background-repeat: no-repeat;
-    transform: rotate(160deg);
-    background-position-y: top;
 }
 
 .member .mainquote {
@@ -406,6 +391,11 @@ nav .flyout a:link:visited:hover:active,
     color: #EFFFEF;
     text-decoration: none;
 }
+.button.light,
+.button.light:link:visited:hover:active
+{
+    color: #336633;
+}
 
 .legalDetails a,
 .legalDetails a:link:visited:hover:active,
@@ -426,6 +416,9 @@ nav.corporate .flyout li:first-child,
 .zapper,
 .zap {
     background-color: #336633;
+}
+.button.light {
+    background-color: #EFFFEF;
 }
 
 .cookieMessage,
