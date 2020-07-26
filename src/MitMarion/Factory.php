@@ -9,12 +9,14 @@ use MitMarion\Page\ContactFormPage;
 use MitMarion\Page\FehlerPage;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\ImpressumPage;
+use MitMarion\Page\QualifikationPage;
 use MitMarion\Page\StoryPage;
 use MitMarion\Page\VielenDankPage;
 use MitMarion\Renderer\ContactFormRenderer;
 use MitMarion\Renderer\FehlerRenderer;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\ImpressumRenderer;
+use MitMarion\Renderer\QualifikationRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\Renderer\VielenDankRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
@@ -83,6 +85,16 @@ class Factory
         );
     }
 
+    public function createQualifikationPage(
+        PageTemplateVariables $pageTemplateVariables
+    ): QualifikationPage
+    {
+        return new QualifikationPage(
+            $this->createQualifikationRenderer(),
+            $pageTemplateVariables
+        );
+    }
+
     public function createFehlerPage(): FehlerPage
     {
         return new FehlerPage(
@@ -129,6 +141,13 @@ class Factory
     private function createImpressumRenderer(): ImpressumRenderer
     {
         return new ImpressumRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
+    private function createQualifikationRenderer(): QualifikationRenderer
+    {
+        return new QualifikationRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }

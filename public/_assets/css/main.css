@@ -90,6 +90,7 @@ section.marion .photo {
     height: 5rem;
 }
 
+.generalText li,
 .contactForm li,
 section.marion li {
     list-style: square;
@@ -375,8 +376,7 @@ section.marion .closingText {
 .member,
 .contact *,
 .thankYou *,
-.legalDetails,
-.dataPrivacyDetails {
+.generalText {
     color: #336633;
 }
 
@@ -400,10 +400,8 @@ nav .flyout a:link:visited:hover:active,
     color: #336633;
 }
 
-.legalDetails a,
-.legalDetails a:link:visited:hover:active,
-.dataPrivacyDetails a,
-.dataPrivacyDetails a:link:visited:hover:active {
+.generalText a,
+.generalText a:link:visited:hover:active {
     color: #336633;
     text-decoration: none;
 }
