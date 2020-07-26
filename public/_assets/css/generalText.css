@@ -2,16 +2,24 @@
     padding: 2rem;
 }
 
-.generalText * {
-    line-height: 1.5rem;
+.generalText h1,
+.generalText h2,
+.generalText p,
+.generalText li
+{
     margin-bottom: 1rem;
+}
+.generalText p,
+.generalText li
+{
+    line-height: 1.5rem;
 }
 
 .generalText ul {
     margin-left: 2rem;
 }
 
-.noMarginBottom {
+.generalText .noMarginBottom {
     margin-bottom: 0;
 }
 
