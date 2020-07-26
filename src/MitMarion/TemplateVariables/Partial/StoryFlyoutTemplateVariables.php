@@ -5,7 +5,7 @@ namespace MitMarion\TemplateVariables\Partial;
 
 use MitMarion\TemplateVariables\TemplateVariables;
 
-class StoriesTemplateVariables implements TemplateVariables
+class StoryFlyoutTemplateVariables implements TemplateVariables
 {
     protected const STORY_MAP = [
         self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN => [

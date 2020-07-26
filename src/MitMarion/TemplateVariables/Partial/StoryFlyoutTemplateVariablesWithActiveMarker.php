@@ -6,7 +6,7 @@ namespace MitMarion\TemplateVariables\Partial;
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 use RuntimeException;
 
-class StoriesTemplateVariablesWithActiveMarker extends StoriesTemplateVariables
+class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVariables
 {
     private const ARRAY_FILTER_USE_VALUE = 0;
 

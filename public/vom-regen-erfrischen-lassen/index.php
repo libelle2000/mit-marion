@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariables;
-use MitMarion\TemplateVariables\Partial\StoriesTemplateVariablesWithActiveMarker;
+use MitMarion\TemplateVariables\Partial\StoryFlyoutTemplateVariablesWithActiveMarker;
 use MitMarion\TemplateVariables\Story\VomRegenErfrischenLassenTemplateVariables;
 use MitMarion\TemplateVariables\StoryPageTemplateVariables;
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
@@ -12,7 +12,7 @@ require_once __DIR__ . '/../../bootstrap.php';
 
 $templateVariables = new StoryPageTemplateVariables(
     new CorporateFlyoutTemplateVariables(),
-    new StoriesTemplateVariablesWithActiveMarker(
+    new StoryFlyoutTemplateVariablesWithActiveMarker(
         CurrentPath::fromDirectory(__DIR__)
     ),
     new VomRegenErfrischenLassenTemplateVariables()

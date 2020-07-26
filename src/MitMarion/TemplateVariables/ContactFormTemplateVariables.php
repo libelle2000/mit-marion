@@ -5,7 +5,7 @@ namespace MitMarion\TemplateVariables;
 
 use MitMarion\TemplateVariables\Partial\ContactFormElementsWithCustomerDataAndErrorsTemplateVariables;
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariables;
-use MitMarion\TemplateVariables\Partial\StoriesTemplateVariables;
+use MitMarion\TemplateVariables\Partial\StoryFlyoutTemplateVariables;
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 use \Shared\TemplateVariables\TemplateVariables as SharedTemplateVariables;
 
@@ -24,11 +24,11 @@ final class ContactFormTemplateVariables extends PageTemplateVariables
 
     public function __construct(
         CorporateFlyoutTemplateVariables $corporateFlyout,
-        StoriesTemplateVariables $stories,
+        StoryFlyoutTemplateVariables $storyFlyout,
         CurrentPath $currentPath,
         SharedTemplateVariables $contactFormElementsWithCustomerDataAndErrorsTemplateVariables
     ) {
-        parent::__construct($corporateFlyout, $stories);
+        parent::__construct($corporateFlyout, $storyFlyout);
         $this->currentPath = $currentPath;
         $this->contactFormElementsWithCustomerDataAndErrorsTemplateVariables = $contactFormElementsWithCustomerDataAndErrorsTemplateVariables;
     }

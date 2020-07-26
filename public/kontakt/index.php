@@ -5,7 +5,7 @@ declare(strict_types=1);
 use MitMarion\Http\Request;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariablesWithActiveMarker;
-use MitMarion\TemplateVariables\Partial\StoriesTemplateVariables;
+use MitMarion\TemplateVariables\Partial\StoryFlyoutTemplateVariables;
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 use MitMarion\Validator\ContactFormWithCustomerDataSuccessResult;
 use Shared\Environment\Environment;
@@ -50,7 +50,7 @@ $templateVariables = new ContactFormTemplateVariables(
     new CorporateFlyoutTemplateVariablesWithActiveMarker(
         $currentPath
     ),
-    new StoriesTemplateVariables(),
+    new StoryFlyoutTemplateVariables(),
     $currentPath,
     $contactFormElementTemplateVariables
 );
