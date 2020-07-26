@@ -9,14 +9,14 @@ use MitMarion\Page\ContactFormPage;
 use MitMarion\Page\FehlerPage;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\ImpressumPage;
-use MitMarion\Page\QualifikationPage;
+use MitMarion\Page\UeberMichPage;
 use MitMarion\Page\StoryPage;
 use MitMarion\Page\VielenDankPage;
 use MitMarion\Renderer\ContactFormRenderer;
 use MitMarion\Renderer\FehlerRenderer;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\ImpressumRenderer;
-use MitMarion\Renderer\QualifikationRenderer;
+use MitMarion\Renderer\UeberMichRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\Renderer\VielenDankRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
@@ -85,12 +85,12 @@ class Factory
         );
     }
 
-    public function createQualifikationPage(
+    public function createUeberMichPage(
         PageTemplateVariables $pageTemplateVariables
-    ): QualifikationPage
+    ): UeberMichPage
     {
-        return new QualifikationPage(
-            $this->createQualifikationRenderer(),
+        return new UeberMichPage(
+            $this->createUeberMichRenderer(),
             $pageTemplateVariables
         );
     }
@@ -145,9 +145,9 @@ class Factory
         );
     }
 
-    private function createQualifikationRenderer(): QualifikationRenderer
+    private function createUeberMichRenderer(): UeberMichRenderer
     {
-        return new QualifikationRenderer(
+        return new UeberMichRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }

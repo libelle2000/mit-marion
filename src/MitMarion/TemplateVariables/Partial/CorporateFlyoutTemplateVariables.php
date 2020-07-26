@@ -9,7 +9,12 @@ class CorporateFlyoutTemplateVariables implements TemplateVariables
 {
     protected const CORPORATE_FLYOUT_MAP = [
         [
-            self::HREF => '/meine-qualifikationen/',
+            self::HREF => '/über-mich/',
+            self::CAPTION => 'über mich',
+            self::IS_CURRENT => false,
+        ],
+        [
+            self::HREF => '/über-mich/#meine-qualifikationen',
             self::CAPTION => 'meine Qualifikationen',
             self::IS_CURRENT => false,
         ],

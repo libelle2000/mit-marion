@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables;
 
 
-final class QualifikationTemplateVariables extends PageTemplateVariables
+final class UeberMichTemplateVariables extends PageTemplateVariables
 {
     public function asAssocArray(): array
     {
@@ -15,6 +15,6 @@ final class QualifikationTemplateVariables extends PageTemplateVariables
 
     protected function getTitleValue(): string
     {
-        return 'meine Qualifikationen';
+        return 'über mich';
     }
 }

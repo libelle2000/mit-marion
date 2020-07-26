@@ -5,7 +5,7 @@ namespace MitMarion\Page;
 use MitMarion\TemplateVariables\PageTemplateVariables;
 use Shared\Renderer\Renderer;
 
-class QualifikationPage extends DynamicTemplatePage
+class UeberMichPage extends DynamicTemplatePage
 {
     public function __construct(Renderer $renderer, PageTemplateVariables $templateVariables)
     {
