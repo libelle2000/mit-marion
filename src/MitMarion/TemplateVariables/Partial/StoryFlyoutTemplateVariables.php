@@ -35,7 +35,7 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
     {
         return [
             'storyNav' => [
-                'currentTitle' => 'Entdecke die Stories',
+                'currentTitle' => 'Entdecke die Erfolgstories',
                 'stories' => self::STORY_MAP,
             ],
         ];
