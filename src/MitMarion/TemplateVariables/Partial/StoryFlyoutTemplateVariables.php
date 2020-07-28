@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables\Partial;
 
 use MitMarion\TemplateVariables\TemplateVariables;
+use MitMarion\TemplateVariables\ValueObject\LinkHref;
 
 class StoryFlyoutTemplateVariables implements TemplateVariables
 {
@@ -39,5 +40,30 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
                 'stories' => self::STORY_MAP,
             ],
         ];
+    }
+
+    public function getLinkHrefForVomRegenErfrischenLassen(): LinkHref
+    {
+        return $this->buildLinkHref(self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN);
+    }
+
+    public function getLinkHrefForDenRueckenVerruecken(): LinkHref
+    {
+        return $this->buildLinkHref(self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN);
+    }
+
+    public function getLinkHrefForDieFazienFetzen(): LinkHref
+    {
+        return $this->buildLinkHref(self::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN);
+    }
+
+    public function getLinkHrefForDenAlltagFuerEineStundeVergessen(): LinkHref
+    {
+        return $this->buildLinkHref(self::ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN);
+    }
+
+    private function buildLinkHref(int $storyKey): LinkHref
+    {
+        return new LinkHref(self::STORY_MAP[$storyKey][self::HREF]);
     }
 }

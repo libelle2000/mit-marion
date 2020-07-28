@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Story;
 
-final class VomRegenErfrischenLassenTemplateVariables implements StoryTemplateVariables
+final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVariables
 {
     public function asAssocArray(): array
     {

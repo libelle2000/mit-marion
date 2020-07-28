@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\Story;
 
-final class DenAlltagFuerEineStundeVergessenTemplateVariables implements StoryTemplateVariables
+final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryTemplateVariables
 {
     public function asAssocArray(): array
     {

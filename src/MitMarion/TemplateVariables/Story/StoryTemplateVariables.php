@@ -4,8 +4,26 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables\Story;
 
 use MitMarion\TemplateVariables\TemplateVariables;
+use MitMarion\TemplateVariables\ValueObject\LinkHref;
 
-interface StoryTemplateVariables extends TemplateVariables
+abstract class StoryTemplateVariables implements TemplateVariables
 {
-    public function getMemberAsAssocArray(): array;
+    /**
+     * @var LinkHref
+     */
+    private $linkHref;
+
+    public function __construct(LinkHref $linkHref)
+    {
+        $this->linkHref = $linkHref;
+    }
+
+    abstract public function getMemberAsAssocArray(): array;
+
+    public function getLinkHrefAsAssocArray(): array
+    {
+        return [
+            'href' => $this->linkHref->getValue(),
+        ];
+    }
 }

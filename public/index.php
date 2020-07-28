@@ -12,15 +12,24 @@ use MitMarion\TemplateVariables\Story\StoriesTeaserTemplateVariables;
 use MitMarion\TemplateVariables\Story\VomRegenErfrischenLassenTemplateVariables;
 
 require_once __DIR__ . '/../bootstrap.php';
+$storyFlyout = new StoryFlyoutTemplateVariables();
 echo $factory->createHomePage(
     new HomeTemplateVariables(
         new CorporateFlyoutTemplateVariables(),
-        new StoryFlyoutTemplateVariables(),
+        $storyFlyout,
         new StoriesTeaserTemplateVariables(
-            new VomRegenErfrischenLassenTemplateVariables(),
-            new DenRueckenVerrueckenTemplateVariables(),
-            new DieFazienFetzenTemplateVariables(),
-            new DenAlltagFuerEineStundeVergessenTemplateVariables(),
+            new VomRegenErfrischenLassenTemplateVariables(
+                $storyFlyout->getLinkHrefForVomRegenErfrischenLassen()
+            ),
+            new DenRueckenVerrueckenTemplateVariables(
+                $storyFlyout->getLinkHrefForDenRueckenVerruecken()
+            ),
+            new DieFazienFetzenTemplateVariables(
+                $storyFlyout->getLinkHrefForDieFazienFetzen()
+            ),
+            new DenAlltagFuerEineStundeVergessenTemplateVariables(
+                $storyFlyout->getLinkHrefForDenAlltagFuerEineStundeVergessen()
+            ),
         )
     )
 )->asString();
