@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MitMarion\TemplateVariables\ValueObject;
+namespace Shared\ValueObject\Link;
 
 use Shared\BaseValueObject\BaseString;
 

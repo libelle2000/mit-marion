@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables\Story;
 
 use MitMarion\TemplateVariables\TemplateVariables;
-use MitMarion\TemplateVariables\ValueObject\LinkHref;
+use Shared\ValueObject\Link\LinkHref;
 
 abstract class StoryTemplateVariables implements TemplateVariables
 {

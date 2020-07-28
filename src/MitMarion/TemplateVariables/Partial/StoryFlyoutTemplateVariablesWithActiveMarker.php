@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables\Partial;
 
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
-use MitMarion\TemplateVariables\ValueObject\LinkHref;
 use RuntimeException;
+use Shared\ValueObject\Link\LinkHref;
 
 class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVariables
 {
