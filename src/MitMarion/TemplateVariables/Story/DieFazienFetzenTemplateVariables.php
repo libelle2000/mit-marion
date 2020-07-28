@@ -9,13 +9,7 @@ final class DieFazienFetzenTemplateVariables implements StoryTemplateVariables
     {
         return [
             'member' => [
-                'mainQuote' => [
-                    'backgroundImage' => [
-                        'url' => '/_assets/images/faszien-rolle.jpg',
-                        'position' => 'right, bottom',
-                    ],
-                    'text' => 'das müsste ich eigentlich viel häufiger machen!',
-                ],
+                'mainQuote' => $this->getMainQuoteAsAssocArray(),
                 'subQuote' => [
                     'text' => 'Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!',
                 ],
@@ -34,6 +28,17 @@ final class DieFazienFetzenTemplateVariables implements StoryTemplateVariables
                     'Jetzt zur Probe mitmachen',
                 ],
             ],
+        ];
+    }
+
+    public function getMainQuoteAsAssocArray(): array
+    {
+        return [
+            'backgroundImage' => [
+                'url' => '/_assets/images/faszien-rolle.jpg',
+                'position' => 'right, bottom',
+            ],
+            'text' => 'das müsste ich eigentlich viel häufiger machen!',
         ];
     }
 }

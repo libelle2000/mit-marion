@@ -9,13 +9,7 @@ final class DenRueckenVerrueckenTemplateVariables implements StoryTemplateVariab
     {
         return [
             'member' => [
-                'mainQuote' => [
-                    'backgroundImage' => [
-                        'url' => '/_assets/images/dummy.jpg',
-                        'position' => 'right, bottom',
-                    ],
-                    'text' => 'dass ich da nicht eher drauf gekommen bin!',
-                ],
+                'mainQuote' => $this->getMainQuoteAsAssocArray(),
                 'subQuote' => [
                     'text' => 'Ich habe einige Rückenkurse hinter mir, aber das Training mit dem eigenen Körpergewicht bringt mir wirklich was!',
                 ],
@@ -35,6 +29,17 @@ final class DenRueckenVerrueckenTemplateVariables implements StoryTemplateVariab
                     'Mach mit! Komm dazu!',
                 ],
             ],
+        ];
+    }
+
+    public function getMainQuoteAsAssocArray(): array
+    {
+        return [
+            'backgroundImage' => [
+                'url' => '/_assets/images/dummy.jpg',
+                'position' => 'right, bottom',
+            ],
+            'text' => 'dass ich da nicht eher drauf gekommen bin!',
         ];
     }
 }

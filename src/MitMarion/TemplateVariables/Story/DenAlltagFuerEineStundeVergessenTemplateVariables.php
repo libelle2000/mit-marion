@@ -9,13 +9,7 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables implements StoryTe
     {
         return [
             'member' => [
-                'mainQuote' => [
-                    'backgroundImage' => [
-                        'url' => '/_assets/images/dummy.jpg',
-                        'position' => 'right, bottom',
-                    ],
-                    'text' => 'die Zeit nehme ich mir, um etwas nur für mich zu tun',
-                ],
+                'mainQuote' => $this->getMainQuoteAsAssocArray(),
                 'subQuote' => [
                     'text' => 'Einfach hierher kommen, sich bewegen und Spaß haben. Dann ist der Akku wieder voll!',
                 ],
@@ -35,6 +29,17 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables implements StoryTe
                     'Trainiere zur Probe mit!',
                 ],
             ],
+        ];
+    }
+
+    public function getMainQuoteAsAssocArray(): array
+    {
+        return [
+            'backgroundImage' => [
+                'url' => '/_assets/images/dummy.jpg',
+                'position' => 'right, bottom',
+            ],
+            'text' => 'die Zeit nehme ich mir, um etwas nur für mich zu tun',
         ];
     }
 }

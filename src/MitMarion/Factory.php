@@ -20,6 +20,7 @@ use MitMarion\Renderer\UeberMichRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\Renderer\VielenDankRenderer;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
+use MitMarion\TemplateVariables\HomeTemplateVariables;
 use MitMarion\TemplateVariables\PageTemplateVariables;
 use MitMarion\TemplateVariables\Partial\ContactFormElement\ContactFormElementBuilder;
 use MitMarion\TemplateVariables\StoryPageTemplateVariables;
@@ -58,17 +59,17 @@ class Factory
         );
     }
 
-    public function createHomePage(): HomePage
+    public function createHomePage(HomeTemplateVariables $homeTemplateVariables): HomePage
     {
         return new HomePage(
             $this->createHomeRenderer(),
+            $homeTemplateVariables
         );
     }
 
     public function createVielenDankPage(
         PageTemplateVariables $pageTemplateVariables
-    ): VielenDankPage
-    {
+    ): VielenDankPage {
         return new VielenDankPage(
             $this->createVielenDankRenderer(),
             $pageTemplateVariables
@@ -77,8 +78,7 @@ class Factory
 
     public function createImpressumPage(
         PageTemplateVariables $pageTemplateVariables
-    ): ImpressumPage
-    {
+    ): ImpressumPage {
         return new ImpressumPage(
             $this->createImpressumRenderer(),
             $pageTemplateVariables
@@ -87,8 +87,7 @@ class Factory
 
     public function createUeberMichPage(
         PageTemplateVariables $pageTemplateVariables
-    ): UeberMichPage
-    {
+    ): UeberMichPage {
         return new UeberMichPage(
             $this->createUeberMichRenderer(),
             $pageTemplateVariables

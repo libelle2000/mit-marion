@@ -9,13 +9,7 @@ final class VomRegenErfrischenLassenTemplateVariables implements StoryTemplateVa
     {
         return [
             'member' => [
-                'mainQuote' => [
-                    'backgroundImage' => [
-                        'url' => '/_assets/images/dummy.jpg',
-                        'position' => 'right, bottom',
-                    ],
-                    'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
-                ],
+                'mainQuote' => $this->getMainQuoteAsAssocArray(),
                 'subQuote' => [
                     'text' => 'Ich beneide all diejenigen, die bei Wind und Wetter unterwegs sind! Wie geht das?',
                 ],
@@ -31,6 +25,17 @@ final class VomRegenErfrischenLassenTemplateVariables implements StoryTemplateVa
                     'Komm dazu!',
                 ],
             ],
+        ];
+    }
+
+    public function getMainQuoteAsAssocArray(): array
+    {
+        return [
+            'backgroundImage' => [
+                'url' => '/_assets/images/dummy.jpg',
+                'position' => 'right, bottom',
+            ],
+            'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
         ];
     }
 }

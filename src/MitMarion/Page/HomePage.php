@@ -2,6 +2,13 @@
 declare(strict_types=1);
 namespace MitMarion\Page;
 
-class HomePage extends StaticTemplatePage
+use MitMarion\TemplateVariables\PageTemplateVariables;
+use Shared\Renderer\Renderer;
+
+class HomePage extends DynamicTemplatePage
 {
+    public function __construct(Renderer $renderer, PageTemplateVariables $templateVariables)
+    {
+        parent::__construct($renderer, $templateVariables);
+    }
 }
