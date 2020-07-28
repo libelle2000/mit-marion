@@ -4,16 +4,16 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables\Story;
 
 use MitMarion\TemplateVariables\TemplateVariables;
-use Shared\ValueObject\Link\LinkHref;
+use Shared\ValueObject\Link\Href;
 
 abstract class StoryTemplateVariables implements TemplateVariables
 {
     /**
-     * @var LinkHref
+     * @var Href
      */
     private $linkHref;
 
-    public function __construct(LinkHref $linkHref)
+    public function __construct(Href $linkHref)
     {
         $this->linkHref = $linkHref;
     }

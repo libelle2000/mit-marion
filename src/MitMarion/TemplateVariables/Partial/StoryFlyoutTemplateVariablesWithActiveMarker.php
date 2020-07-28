@@ -5,7 +5,7 @@ namespace MitMarion\TemplateVariables\Partial;
 
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 use RuntimeException;
-use Shared\ValueObject\Link\LinkHref;
+use Shared\ValueObject\Link\Href;
 
 class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVariables
 {
@@ -59,7 +59,7 @@ class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVa
         return $this->getCurrentCaption();
     }
 
-    public function getCurrentLinkHref(): LinkHref
+    public function getCurrentLinkHref(): Href
     {
         $index = $this->getZeroBasedIndexByPath($this->currentPath);
 

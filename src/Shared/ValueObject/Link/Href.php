@@ -5,6 +5,6 @@ namespace Shared\ValueObject\Link;
 
 use Shared\BaseValueObject\BaseString;
 
-final class LinkHref extends BaseString
+final class Href extends BaseString
 {
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MitMarion\TemplateVariables\Partial;
 
 use MitMarion\TemplateVariables\TemplateVariables;
-use Shared\ValueObject\Link\LinkHref;
+use Shared\ValueObject\Link\Href;
 
 class StoryFlyoutTemplateVariables implements TemplateVariables
 {
@@ -42,28 +42,28 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
         ];
     }
 
-    public function getLinkHrefForVomRegenErfrischenLassen(): LinkHref
+    public function getLinkHrefForVomRegenErfrischenLassen(): Href
     {
         return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN);
     }
 
-    public function getLinkHrefForDenRueckenVerruecken(): LinkHref
+    public function getLinkHrefForDenRueckenVerruecken(): Href
     {
         return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN);
     }
 
-    public function getLinkHrefForDieFazienFetzen(): LinkHref
+    public function getLinkHrefForDieFazienFetzen(): Href
     {
         return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN);
     }
 
-    public function getLinkHrefForDenAlltagFuerEineStundeVergessen(): LinkHref
+    public function getLinkHrefForDenAlltagFuerEineStundeVergessen(): Href
     {
         return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN);
     }
 
-    protected function buildLinkHrefByZeroBasedIndex(int $zeroBasedIndex): LinkHref
+    protected function buildLinkHrefByZeroBasedIndex(int $zeroBasedIndex): Href
     {
-        return new LinkHref(self::STORY_MAP[$zeroBasedIndex][self::HREF]);
+        return new Href(self::STORY_MAP[$zeroBasedIndex][self::HREF]);
     }
 }
