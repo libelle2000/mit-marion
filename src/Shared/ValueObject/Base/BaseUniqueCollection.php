@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shared\BaseValueObject;
+namespace Shared\ValueObject\Base;
 
 use ArrayIterator;
 use Countable;

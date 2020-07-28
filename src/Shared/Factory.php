@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Shared;
 
-use Shared\BaseValueObject\Identifier;
+use Shared\ValueObject\Base\Identifier;
 use Shared\Environment\Environment;
 use Shared\ReCaptcha\ApiKey;
 use Shared\ReCaptcha\Client;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Shared\Email;
 
-use Shared\BaseValueObject\BaseString;
+use Shared\ValueObject\Base\BaseString;
 
 final class SenderEmail extends BaseString
 {

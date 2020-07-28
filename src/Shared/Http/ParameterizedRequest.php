@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Shared\Http;
 
-use Shared\BaseValueObject\Identifier;
+use Shared\ValueObject\Base\Identifier;
 
 interface ParameterizedRequest
 {

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables\ValueObject;
 
-use Shared\BaseValueObject\BaseString;
+use Shared\ValueObject\Base\BaseString;
 
 final class CurrentPath extends BaseString
 {

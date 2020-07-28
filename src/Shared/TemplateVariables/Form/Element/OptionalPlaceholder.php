@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Shared\TemplateVariables\Form\Element;
 
-use Shared\BaseValueObject\Optional\OptionalString;
+use Shared\ValueObject\Base\Optional\OptionalString;
 
 class OptionalPlaceholder extends Placeholder implements OptionalString
 {

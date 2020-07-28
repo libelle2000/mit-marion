@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace MitMarion\Http;
 
 use RuntimeException;
-use Shared\BaseValueObject\Identifier;
+use Shared\ValueObject\Base\Identifier;
 use Shared\Http\ParameterizedRequest;
 use Shared\Http\ParameterValue;
 

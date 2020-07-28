@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MitMarion\Validator\Element;
 
-use Shared\BaseValueObject\Identifier;
+use Shared\ValueObject\Base\Identifier;
 use Shared\Http\ParameterizedRequest;
 use Shared\ReCaptcha\Client;
 use Shared\TemplateVariables\Form\Element\CustomerInput;

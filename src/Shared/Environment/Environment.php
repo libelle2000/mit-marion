@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Shared\Environment;
 
 use RuntimeException;
-use Shared\BaseValueObject\Identifier;
+use Shared\ValueObject\Base\Identifier;
 
 class Environment
 {

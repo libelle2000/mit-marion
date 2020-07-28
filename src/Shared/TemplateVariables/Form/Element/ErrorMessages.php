@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Shared\TemplateVariables\Form\Element;
 
-use Shared\BaseValueObject\BaseUniqueCollection;
-use Shared\BaseValueObject\Identifier;
+use Shared\ValueObject\Base\BaseUniqueCollection;
+use Shared\ValueObject\Base\Identifier;
 use Shared\TemplateVariables\TemplateVariables;
 
 class ErrorMessages extends BaseUniqueCollection implements TemplateVariables
