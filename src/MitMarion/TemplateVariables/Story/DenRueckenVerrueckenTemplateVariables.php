@@ -8,12 +8,7 @@ final class DenRueckenVerrueckenTemplateVariables implements StoryTemplateVariab
     public function asAssocArray(): array
     {
         return [
-            'member' => [
-                'mainQuote' => $this->getMainQuoteAsAssocArray(),
-                'subQuote' => [
-                    'text' => 'Ich habe einige Rückenkurse hinter mir, aber das Training mit dem eigenen Körpergewicht bringt mir wirklich was!',
-                ],
-            ],
+            'member' => $this->getMemberAsAssocArray(),
             'marion' => [
                 'quoteText' => 'Ja, Sport ohne Hilfsmittel ist ein Allrounder, das freut den Rücken, denn...',
                 'advantages' => [
@@ -32,14 +27,19 @@ final class DenRueckenVerrueckenTemplateVariables implements StoryTemplateVariab
         ];
     }
 
-    public function getMainQuoteAsAssocArray(): array
+    public function getMemberAsAssocArray(): array
     {
         return [
-            'backgroundImage' => [
-                'url' => '/_assets/images/dummy.jpg',
-                'position' => 'right, bottom',
+            'mainQuote' => [
+                'backgroundImage' => [
+                    'url' => '/_assets/images/dummy.jpg',
+                    'position' => 'right, bottom',
+                ],
+                'text' => 'dass ich da nicht eher drauf gekommen bin!',
             ],
-            'text' => 'dass ich da nicht eher drauf gekommen bin!',
+            'subQuote' => [
+                'text' => 'Ich habe einige Rückenkurse hinter mir, aber das Training mit dem eigenen Körpergewicht bringt mir wirklich was!',
+            ],
         ];
     }
 }

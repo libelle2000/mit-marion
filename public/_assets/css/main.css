@@ -402,10 +402,13 @@ nav .flyout a:link:visited:hover:active,
     color: #EFFFEF;
     text-decoration: none;
 }
+
 .button.light,
-.button.light:link:visited:hover:active
-{
+.button.light:link:visited:hover:active,
+.storyTeaser a,
+.storyTeaser a:link:visited:hover:active {
     color: #336633;
+    text-decoration: none;
 }
 
 .generalText a,
@@ -426,6 +429,7 @@ nav.corporate .flyout li:first-child,
 .zap {
     background-color: #336633;
 }
+
 .button.light {
     background-color: #EFFFEF;
 }
@@ -440,7 +444,8 @@ nav .flyout {
     box-shadow: 0 10px 2px 0 rgba(0, 0, 0, 0.75);
 }
 
-article {
+article,
+.homeIntro {
     background-color: #EFFFEF;
 }
 

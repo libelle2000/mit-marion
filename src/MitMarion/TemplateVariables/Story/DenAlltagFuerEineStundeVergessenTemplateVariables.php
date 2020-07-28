@@ -8,12 +8,7 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables implements StoryTe
     public function asAssocArray(): array
     {
         return [
-            'member' => [
-                'mainQuote' => $this->getMainQuoteAsAssocArray(),
-                'subQuote' => [
-                    'text' => 'Einfach hierher kommen, sich bewegen und Spaß haben. Dann ist der Akku wieder voll!',
-                ],
-            ],
+            'member' => $this->getMemberAsAssocArray(),
             'marion' => [
                 'quoteText' => 'Wir sind im Alltag für alles und für jeden da und vergessen uns dabei! Die Stunde Auszeit bringt sooo viel!',
                 'advantages' => [
@@ -32,14 +27,19 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables implements StoryTe
         ];
     }
 
-    public function getMainQuoteAsAssocArray(): array
+    public function getMemberAsAssocArray(): array
     {
         return [
-            'backgroundImage' => [
-                'url' => '/_assets/images/dummy.jpg',
-                'position' => 'right, bottom',
+            'mainQuote' => [
+                'backgroundImage' => [
+                    'url' => '/_assets/images/dummy.jpg',
+                    'position' => 'right, bottom',
+                ],
+                'text' => 'die Zeit nehme ich mir, um etwas nur für mich zu tun',
             ],
-            'text' => 'die Zeit nehme ich mir, um etwas nur für mich zu tun',
+            'subQuote' => [
+                'text' => 'Einfach hierher kommen, sich bewegen und Spaß haben. Dann ist der Akku wieder voll!',
+            ],
         ];
     }
 }

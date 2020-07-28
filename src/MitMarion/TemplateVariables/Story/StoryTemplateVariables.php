@@ -7,5 +7,5 @@ use MitMarion\TemplateVariables\TemplateVariables;
 
 interface StoryTemplateVariables extends TemplateVariables
 {
-    public function getMainQuoteAsAssocArray(): array;
+    public function getMemberAsAssocArray(): array;
 }

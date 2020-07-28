@@ -1,10 +1,28 @@
 {% extends "pageBase.twig" %}
 {% block title %}mit-marion-de{% endblock %}
+{% block additionalStyleSheets %}
+    <link rel="stylesheet" href="/_assets/css/generalText.css"/>
+    <link rel="stylesheet" href="/_assets/css/home.css"/>
+{% endblock %}
 {% block content %}
-<section style="text-align: center;">
-    <img class="logo" src="/_assets/images/logo.svg" alt="Logo mit-marion.de"/>
-    <p style="color: #EFFFEF;">Die Seite befindet sich noch im Aufbau!!!</p>
-    <br /><br /><br /><br /><br /><br />
-    <a href="/die-fazien-fetzen/" style="color: #306030">die Faszien fetzen</a>
-</section>
+    {{ include('include/header.incl.twig') }}
+    <section class="generalText homeIntro">
+        <h1>"Mit Marion wird das was!!"</h1>
+        <p>So oder so ähnlich könnte man das umschreiben, was mein Anspruch ist und worum es bei meinen Kursen geht.</p>
+        <p>Aber ich will gar nicht viel selber sagen, sondern einfach die Erfolgstories für sich sprechen lasssen.</p>
+        <p>Sieh selber:</p>
+    </section>
+    <section class="storiesTeaser">
+        {% for storyTeaser in storiesTeaser %}
+            <article class="storyTeaser member">
+                <a href="" title="">
+                    <blockquote class="mainquote"
+                                style="background-image: url({{ storyTeaser.member.mainQuote.backgroundImage.url }}); background-position: {{ storyTeaser.member.mainQuote.backgroundImage.position }};">
+                        <span>"{{ storyTeaser.member.mainQuote.text }}"</span>
+                    </blockquote>
+                    <blockquote class="subquote">"{{ storyTeaser.member.subQuote.text }}"</blockquote>
+                </a>
+            </article>
+        {% endfor %}
+    </section>
 {% endblock %}

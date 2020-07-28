@@ -8,12 +8,7 @@ final class VomRegenErfrischenLassenTemplateVariables implements StoryTemplateVa
     public function asAssocArray(): array
     {
         return [
-            'member' => [
-                'mainQuote' => $this->getMainQuoteAsAssocArray(),
-                'subQuote' => [
-                    'text' => 'Ich beneide all diejenigen, die bei Wind und Wetter unterwegs sind! Wie geht das?',
-                ],
-            ],
+            'member' => $this->getMemberAsAssocArray(),
             'marion' => [
                 'quoteText' => 'Gemeinsam! Und ich zeige dir wie! Spaß ist garantiert... :-)',
                 'advantages' => [
@@ -28,14 +23,19 @@ final class VomRegenErfrischenLassenTemplateVariables implements StoryTemplateVa
         ];
     }
 
-    public function getMainQuoteAsAssocArray(): array
+    public function getMemberAsAssocArray(): array
     {
         return [
-            'backgroundImage' => [
-                'url' => '/_assets/images/dummy.jpg',
-                'position' => 'right, bottom',
+            'mainQuote' => [
+                'backgroundImage' => [
+                    'url' => '/_assets/images/dummy.jpg',
+                    'position' => 'right, bottom',
+                ],
+                'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
             ],
-            'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
+            'subQuote' => [
+                'text' => 'Ich beneide all diejenigen, die bei Wind und Wetter unterwegs sind! Wie geht das?',
+            ],
         ];
     }
 }

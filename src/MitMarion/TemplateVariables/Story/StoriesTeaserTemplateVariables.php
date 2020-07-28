@@ -23,7 +23,7 @@ final class StoriesTeaserTemplateVariables implements TemplateVariables
 
         foreach ($this->storyTemplateVariables as $storyTemplateVariable) {
             $stories[] = [
-                'mainQuote' => $storyTemplateVariable->getMainQuoteAsAssocArray(),
+                'member' => $storyTemplateVariable->getMemberAsAssocArray(),
             ];
         }
 

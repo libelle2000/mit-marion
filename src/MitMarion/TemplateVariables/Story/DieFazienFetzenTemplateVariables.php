@@ -8,12 +8,7 @@ final class DieFazienFetzenTemplateVariables implements StoryTemplateVariables
     public function asAssocArray(): array
     {
         return [
-            'member' => [
-                'mainQuote' => $this->getMainQuoteAsAssocArray(),
-                'subQuote' => [
-                    'text' => 'Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!',
-                ],
-            ],
+            'member' => $this->getMemberAsAssocArray(),
             'marion' => [
                 'quoteText' => 'Sowas höre ich öfter! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt.',
                 'advantages' => [
@@ -31,14 +26,19 @@ final class DieFazienFetzenTemplateVariables implements StoryTemplateVariables
         ];
     }
 
-    public function getMainQuoteAsAssocArray(): array
+    public function getMemberAsAssocArray(): array
     {
         return [
-            'backgroundImage' => [
-                'url' => '/_assets/images/faszien-rolle.jpg',
-                'position' => 'right, bottom',
+            'mainQuote' => [
+                'backgroundImage' => [
+                    'url' => '/_assets/images/faszien-rolle.jpg',
+                    'position' => 'right, bottom',
+                ],
+                'text' => 'das müsste ich eigentlich viel häufiger machen!',
             ],
-            'text' => 'das müsste ich eigentlich viel häufiger machen!',
+            'subQuote' => [
+                'text' => 'Ich spiele schon soo lange Volleyball, aber erst jetzt merke ich, was mir fehlt!',
+            ],
         ];
     }
 }
