@@ -25,4 +25,8 @@
     .storiesTeaser {
         grid-template-columns: 1fr 1fr;
     }
+
+    .member .mainquote {
+        min-height: 7rem;
+    }
 }
