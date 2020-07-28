@@ -17,10 +17,10 @@ echo $factory->createHomePage(
         new CorporateFlyoutTemplateVariables(),
         new StoryFlyoutTemplateVariables(),
         new StoriesTeaserTemplateVariables(
-            new DenAlltagFuerEineStundeVergessenTemplateVariables(),
+            new VomRegenErfrischenLassenTemplateVariables(),
             new DenRueckenVerrueckenTemplateVariables(),
             new DieFazienFetzenTemplateVariables(),
-            new VomRegenErfrischenLassenTemplateVariables()
+            new DenAlltagFuerEineStundeVergessenTemplateVariables(),
         )
     )
 )->asString();
