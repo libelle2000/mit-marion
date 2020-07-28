@@ -12,6 +12,11 @@
     margin-bottom: 0;
 }
 
+.member .mainquote {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+}
+
 .member .subquote {
     margin-bottom: 2rem;
 }
