@@ -10,11 +10,12 @@ use MitMarion\TemplateVariables\ValueObject\CurrentPath;
 
 require_once __DIR__ . '/../../bootstrap.php';
 
+$storyFlyout = new StoryFlyoutTemplateVariablesWithActiveMarker(
+    CurrentPath::fromDirectory(__DIR__)
+);
 $templateVariables = new StoryPageTemplateVariables(
     new CorporateFlyoutTemplateVariables(),
-    new StoryFlyoutTemplateVariablesWithActiveMarker(
-        CurrentPath::fromDirectory(__DIR__)
-    ),
-    new VomRegenErfrischenLassenTemplateVariables()
+    $storyFlyout,
+    new VomRegenErfrischenLassenTemplateVariables($storyFlyout->getCurrentLinkHref())
 );
 echo $factory->createStoryPage($templateVariables)->asString();

@@ -44,26 +44,26 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
 
     public function getLinkHrefForVomRegenErfrischenLassen(): LinkHref
     {
-        return $this->buildLinkHref(self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN);
+        return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN);
     }
 
     public function getLinkHrefForDenRueckenVerruecken(): LinkHref
     {
-        return $this->buildLinkHref(self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN);
+        return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN);
     }
 
     public function getLinkHrefForDieFazienFetzen(): LinkHref
     {
-        return $this->buildLinkHref(self::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN);
+        return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN);
     }
 
     public function getLinkHrefForDenAlltagFuerEineStundeVergessen(): LinkHref
     {
-        return $this->buildLinkHref(self::ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN);
+        return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN);
     }
 
-    private function buildLinkHref(int $storyKey): LinkHref
+    protected function buildLinkHrefByZeroBasedIndex(int $zeroBasedIndex): LinkHref
     {
-        return new LinkHref(self::STORY_MAP[$storyKey][self::HREF]);
+        return new LinkHref(self::STORY_MAP[$zeroBasedIndex][self::HREF]);
     }
 }
