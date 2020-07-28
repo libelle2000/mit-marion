@@ -15,17 +15,15 @@
     <article class="generalText" id="impressum">
         <h1>Impressum</h1>
         <p>mit-marion.de</p>
-        <p class="noMarginBottom">{{ name }}</p>
-        <p class="noMarginBottom">{{ streen }}</p>
-        <p class="noMarginBottom">{{ zipCode }} {{ city }}</p>
-        <p class="noMarginBottom">Phone: {{ phone }}</p>
-        <p>Email: {{ emailLink|raw }}</p>
-        <p>Vertretungsberechtigte Geschäftsführerin: {{ name }}</p>
-        <p style="background-color: red">Registergericht: Amtsgericht ???</p>
-        <p style="background-color: red">Registernummer: HRB ???</p>
-        <p style="background-color: red">Umsatzsteuer Id.: DE ???</p>
-        <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV:</p>
-        <p>{{ name }}</p>
+        <p>{{ name }}
+            <br />{{ street }}
+            <br />{{ zipCode }} {{ city }}
+            <br />Phone: {{ phone }}
+            <br />Email: {{ emailLink|raw }}</p>
+        <p>Steuernummer: 339/5306/3113</p>
+        <p>Eingetragen bei der Industrie- und Handelskammer Ostwestfalen zu Bielefeld</p>
+        <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV:
+            <br />{{ name }}</p>
         <h2>Urheberrecht</h2>
         <p>Sämtliche Daten, Texte und Bilder sind Eigentum von mit-marion.de. Die Verwendung zu gewerblichen Zwecken ist untersagt. Die private Verwendung bedarf unserer ausdrücklichen Zustimmung.</p>
         <h2>Beschwerdeverfahren</h2>
