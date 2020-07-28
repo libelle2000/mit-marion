@@ -6,9 +6,7 @@ namespace MitMarion\Validator\Element;
 
 
 use Shared\ValueObject\Base\Identifier;
-use Shared\TemplateVariables\Form\Element\CustomerInput;
 use Shared\TemplateVariables\Form\Element\ErrorMessage;
-use Shared\Validator\Element\ErrorElementResult;
 use Shared\Validator\Element\ElementResult;
 use Shared\Validator\Element\ElementValidator;
 
