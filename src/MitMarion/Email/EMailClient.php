@@ -44,7 +44,7 @@ class EMailClient extends SharedEmailClient
         return $this->sendMail(
             $this->getSenderCaption()->getValue(),
 //            $this->getSenderEmail()->getValue(),
-            'reinhard.westermann@googlemail.com',
+            'westermann.marion@web.de',
             sprintf('[Kontaktformular] %s', $contactCaption),
             $mailText
         );
