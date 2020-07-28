@@ -1,10 +1,16 @@
 .storiesTeaser {
-    width: 100%;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
     grid-row-gap: 2rem;
     grid-column-gap: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.member {
+    margin-bottom: 0;
 }
 
 .member .subquote {
@@ -13,13 +19,6 @@
 
 @media only screen and (min-device-width: 800px) {
     .storiesTeaser {
-        width: 90%;
-        display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
-        grid-row-gap: 2rem;
-        grid-column-gap: 2rem;
-        padding-left: 5%;
-        padding-right: 5%;
     }
 }
