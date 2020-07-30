@@ -31,8 +31,8 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
         return [
             'mainQuote' => [
                 'backgroundImage' => [
-                    'url' => '/_assets/images/die-faszien-fetzen/dehnung-im-stand-auf-matte.jpg',
-                    'position' => 'center, center',
+                    'url' => '/_assets/images/die-faszien-fetzen/beindehnung-zur-seite.jpg',
+                    'position' => 'center, right',
                 ],
                 'text' => 'das müsste ich eigentlich viel häufiger machen!',
             ],

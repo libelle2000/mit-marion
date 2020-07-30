@@ -33,7 +33,7 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryTempl
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/den-alltag-fuer-eine-stunde-vergessen/teilnehmer-lachen.jpg',
-                    'position' => 'center, center',
+                    'position' => 'bottom, right',
                 ],
                 'text' => 'die Zeit nehme ich mir, um etwas nur für mich zu tun',
             ],
