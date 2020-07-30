@@ -33,7 +33,7 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/den-ruecken-verruecken/stuetz-an-parkbank.jpg',
-                    'position' => 'right, bottom',
+                    'position' => 'center, center',
                 ],
                 'text' => 'dass ich da nicht eher drauf gekommen bin!',
             ],
