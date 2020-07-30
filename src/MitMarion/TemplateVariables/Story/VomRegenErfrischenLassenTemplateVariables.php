@@ -28,7 +28,7 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
         return [
             'mainQuote' => [
                 'backgroundImage' => [
-                    'url' => '/_assets/images/dummy.jpg',
+                    'url' => '/_assets/images/vom-regen-erfrischen-lassen/teilnehmer-im-regen.jpg',
                     'position' => 'right, bottom',
                 ],
                 'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
