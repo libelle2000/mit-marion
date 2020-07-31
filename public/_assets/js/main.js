@@ -133,7 +133,7 @@ ready(function () {
     };
 
     [].forEach.call(document.querySelectorAll('.jsFlyoutTouchToggle'), function (el) {
-        el.addEventListener('touchstart', toggleFlyout);
+        el.addEventListener('touchstart', toggleFlyout, {passive: true});
     });
 
     [].forEach.call(document.querySelectorAll('.jsFlyoutHoverToggle'), function (el) {
