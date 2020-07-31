@@ -3,30 +3,32 @@
 {% block title %}{{ htmlHead.title }}{% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
-    <article class="container-content">
-        <section class="member">
-            <blockquote class="mainquote"
-                        style="background-image: url({{ member.mainQuote.backgroundImage.url }}); background-position: {{ member.mainQuote.backgroundImage.position }};">
-                <span>"{{ member.mainQuote.text }}"</span>
-            </blockquote>
-            <blockquote class="subquote">"{{ member.subQuote.text }}"</blockquote>
-        </section>
-        <section class="marion">
-            <img class="photo" src="/_assets/images/marion.jpg" alt="Trainerin Marion"/>
-            <blockquote class="mainquote">
-                "{{ marion.quoteText }}"
-            </blockquote>
-            {% if marion.advantages|length > 0 %}
-                <ul class="advantages">
-                    {% for fact in marion.advantages %}
-                        <li>{{ fact }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            <p class="closingText">{{ marion.closingText }}</p>
-        </section>
-        <a class="button" href="/kontakt/">{{ callToAction.caption|join('<br />')|raw }}</a>
-    </article>
+    <main>
+        <article class="container-content">
+            <section class="member">
+                <blockquote class="mainquote"
+                            style="background-image: url({{ member.mainQuote.backgroundImage.url }}); background-position: {{ member.mainQuote.backgroundImage.position }};">
+                    <span>"{{ member.mainQuote.text }}"</span>
+                </blockquote>
+                <blockquote class="subquote">"{{ member.subQuote.text }}"</blockquote>
+            </section>
+            <section class="marion">
+                <img class="photo" src="/_assets/images/marion.jpg" alt="Trainerin Marion"/>
+                <blockquote class="mainquote">
+                    "{{ marion.quoteText }}"
+                </blockquote>
+                {% if marion.advantages|length > 0 %}
+                    <ul class="advantages">
+                        {% for fact in marion.advantages %}
+                            <li>{{ fact }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <p class="closingText">{{ marion.closingText }}</p>
+            </section>
+            <a class="button" href="/kontakt/">{{ callToAction.caption|join('<br />')|raw }}</a>
+        </article>
+    </main>
     <nav class="zapper">
         <a class="zap previous" href="{{zapper.previous.href}}">{{zapper.previous.caption}}</a>
         <a class="zap next" href="{{zapper.next.href}}">{{zapper.next.caption}}</a>

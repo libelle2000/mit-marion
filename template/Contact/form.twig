@@ -10,106 +10,110 @@
 {% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
-    <article class="contact">
-        <section class="contactIntro">
-            <p>
-                Du hättest gerne mehr Infos zu meinen Kursen? Du möchtest dich anmelden oder hast einfach nur eine
-                Frage?
-            </p>
-            <p>Hier bist du richtig. Ich werde mich so schnell wie möglich bei dir melden.</p>
-        </section>
-        <form class="contactForm" action="{{ form.action }}" method="{{ form.method }}">
-            {% if contactFormElements.hasErrors %}
-                <p class="errorIntro">Uups... deine Angaben benötigen noch etwas Augenmerk.</p>
-            {% endif %}
-            <div class="formElementGroup preName">
-                <label for="preName">{{ contactFormElements.preName.placeholder }}:</label>
-                <input id="preName"
-                       name="{{ contactFormElements.preName.identifier }}" type="text"
-                       placeholder="{{ contactFormElements.preName.placeholder }}"
-                       value="{{ contactFormElements.preName.customerInput }}"/>
-                {% if contactFormElements.preName.errorMessages|length > 0 %}
-                    <ul class="errorList">
-                        {% for errorMessage in contactFormElements.preName.errorMessages %}
-                            <li>{{ errorMessage|nl2br }}</li>
-                        {% endfor %}
-                    </ul>
+    <main>
+        <article class="contact">
+            <section class="contactIntro">
+                <p>
+                    Du hättest gerne mehr Infos zu meinen Kursen? Du möchtest dich anmelden oder hast einfach nur eine
+                    Frage?
+                </p>
+                <p>Hier bist du richtig. Ich werde mich so schnell wie möglich bei dir melden.</p>
+            </section>
+            <form class="contactForm" action="{{ form.action }}" method="{{ form.method }}">
+                {% if contactFormElements.hasErrors %}
+                    <p class="errorIntro">Uups... deine Angaben benötigen noch etwas Augenmerk.</p>
                 {% endif %}
-            </div>
-            <div class="formElementGroup surName">
-                <label for="surName">{{ contactFormElements.surName.placeholder }}:</label>
-                <input id="surName"
-                       name="{{ contactFormElements.surName.identifier }}" type="text"
-                       placeholder="{{ contactFormElements.surName.placeholder }}"
-                       value="{{ contactFormElements.surName.customerInput }}"/>
-                {% if contactFormElements.surName.errorMessages|length > 0 %}
-                    <ul class="errorList">
-                        {% for errorMessage in contactFormElements.surName.errorMessages %}
-                            <li>{{ errorMessage|nl2br }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-            <div class="formElementGroup eMail">
-                <label for="eMail">{{ contactFormElements.eMail.placeholder }}:</label>
-                <input id="eMail"
-                       name="{{ contactFormElements.eMail.identifier }}"
-                       type="email" placeholder="{{ contactFormElements.eMail.placeholder }}"
-                       value="{{ contactFormElements.eMail.customerInput }}"/>
-                {% if contactFormElements.eMail.errorMessages|length > 0 %}
-                    <ul class="errorList">
-                        {% for errorMessage in contactFormElements.eMail.errorMessages %}
-                            <li>{{ errorMessage|nl2br }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-            <div class="formElementGroup customerMessage">
-                <label for="customerMessage">
-                    {{ contactFormElements.customerMessage.placeholder }}:
-                </label>
-                <textarea id="customerMessage"
-                          name="{{ contactFormElements.customerMessage.identifier }}"
-                          placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput }}</textarea>
+                <div class="formElementGroup preName">
+                    <label for="preName">{{ contactFormElements.preName.placeholder }}:</label>
+                    <input id="preName"
+                           name="{{ contactFormElements.preName.identifier }}" type="text"
+                           placeholder="{{ contactFormElements.preName.placeholder }}"
+                           value="{{ contactFormElements.preName.customerInput }}"/>
+                    {% if contactFormElements.preName.errorMessages|length > 0 %}
+                        <ul class="errorList">
+                            {% for errorMessage in contactFormElements.preName.errorMessages %}
+                                <li>{{ errorMessage|nl2br }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="formElementGroup surName">
+                    <label for="surName">{{ contactFormElements.surName.placeholder }}:</label>
+                    <input id="surName"
+                           name="{{ contactFormElements.surName.identifier }}" type="text"
+                           placeholder="{{ contactFormElements.surName.placeholder }}"
+                           value="{{ contactFormElements.surName.customerInput }}"/>
+                    {% if contactFormElements.surName.errorMessages|length > 0 %}
+                        <ul class="errorList">
+                            {% for errorMessage in contactFormElements.surName.errorMessages %}
+                                <li>{{ errorMessage|nl2br }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="formElementGroup eMail">
+                    <label for="eMail">{{ contactFormElements.eMail.placeholder }}:</label>
+                    <input id="eMail"
+                           name="{{ contactFormElements.eMail.identifier }}"
+                           type="email" placeholder="{{ contactFormElements.eMail.placeholder }}"
+                           value="{{ contactFormElements.eMail.customerInput }}"/>
+                    {% if contactFormElements.eMail.errorMessages|length > 0 %}
+                        <ul class="errorList">
+                            {% for errorMessage in contactFormElements.eMail.errorMessages %}
+                                <li>{{ errorMessage|nl2br }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="formElementGroup customerMessage">
+                    <label for="customerMessage">
+                        {{ contactFormElements.customerMessage.placeholder }}:
+                    </label>
+                    <textarea id="customerMessage"
+                              name="{{ contactFormElements.customerMessage.identifier }}"
+                              placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput }}</textarea>
 
-                {% if contactFormElements.customerMessage.errorMessages|length > 0 %}
-                    <ul class="errorList">
-                        {% for errorMessage in contactFormElements.customerMessage.errorMessages %}
-                            <li>{{ errorMessage|nl2br }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-            <div class="formElementGroup dataPrivacy">
-                <label for="dataPrivacy">
-                    <input id="dataPrivacy"
-                           name="{{ contactFormElements.dataPrivacy.identifier }}"
-                           type="checkbox"
-                           value="accepted"/>
-                    Ich habe die <a href="/impressum/#datenschutzerklaerung" target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere sie.
-                </label>
-                {% if contactFormElements.dataPrivacy.errorMessages|length > 0 %}
-                    <ul class="errorList">
-                        {% for errorMessage in contactFormElements.dataPrivacy.errorMessages %}
-                            <li>{{ errorMessage|nl2br }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-            <div class="formElementGroup captcha">
-                <label>
-                    {{ contactFormElements.reCaptcha.placeholder }}:
-                </label>
-                <div class="g-recaptcha" data-sitekey="6LcgH7IZAAAAAB7lGgaeGWb_Gn6lzih5NRayvrdE" data-size="compact"></div>
-                {% if contactFormElements.reCaptcha.errorMessages|length > 0 %}
-                    <ul class="errorList">
-                        {% for errorMessage in contactFormElements.reCaptcha.errorMessages %}
-                            <li>{{ errorMessage|nl2br }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-            <input class="submit button" type="submit" value="abschicken"/>
-        </form>
-    </article>
+                    {% if contactFormElements.customerMessage.errorMessages|length > 0 %}
+                        <ul class="errorList">
+                            {% for errorMessage in contactFormElements.customerMessage.errorMessages %}
+                                <li>{{ errorMessage|nl2br }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="formElementGroup dataPrivacy">
+                    <label for="dataPrivacy">
+                        <input id="dataPrivacy"
+                               name="{{ contactFormElements.dataPrivacy.identifier }}"
+                               type="checkbox"
+                               value="accepted"/>
+                        Ich habe die <a href="/impressum/#datenschutzerklaerung"
+                                        target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere sie.
+                    </label>
+                    {% if contactFormElements.dataPrivacy.errorMessages|length > 0 %}
+                        <ul class="errorList">
+                            {% for errorMessage in contactFormElements.dataPrivacy.errorMessages %}
+                                <li>{{ errorMessage|nl2br }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <div class="formElementGroup captcha">
+                    <label>
+                        {{ contactFormElements.reCaptcha.placeholder }}:
+                    </label>
+                    <div class="g-recaptcha" data-sitekey="6LcgH7IZAAAAAB7lGgaeGWb_Gn6lzih5NRayvrdE"
+                         data-size="compact"></div>
+                    {% if contactFormElements.reCaptcha.errorMessages|length > 0 %}
+                        <ul class="errorList">
+                            {% for errorMessage in contactFormElements.reCaptcha.errorMessages %}
+                                <li>{{ errorMessage|nl2br }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <input class="submit button" type="submit" value="abschicken"/>
+            </form>
+        </article>
+    </main>
 {% endblock %}

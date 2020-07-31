@@ -13,75 +13,202 @@
     {% set city = 'Delbrück' %}
     {% set country = 'Deutschland' %}
     {% set phone = '+49 (0) 52 50/91 98 23 2' %}
-    <article class="generalText" id="impressum">
-        <h1>Impressum</h1>
-        <p>mit-marion.de</p>
-        <p>{{ name }}
-            <br />{{ street }}
-            <br />{{ zipCode }} {{ city }}
-            <br />Phone: {{ phone }}
-            <br />Email: {{ emailLink|raw }}</p>
-        <p>Steuernummer: 339/5306/3113</p>
-        <p>Eingetragen bei der Industrie- und Handelskammer Ostwestfalen zu Bielefeld</p>
-        <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV:
-            <br />{{ name }}</p>
-        <h2>Urheberrecht</h2>
-        <p>Sämtliche Daten, Texte und Bilder sind Eigentum von mit-marion.de. Die Verwendung zu gewerblichen Zwecken ist untersagt. Die private Verwendung bedarf unserer ausdrücklichen Zustimmung.</p>
-        <h2>Beschwerdeverfahren</h2>
-        <p>Online-Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter <a href="http://ec.europa.eu/consumers/odr" target="_blank">http://ec.europa.eu/consumers/odr</a> finden.</p>
-        <h2>Haftungsausschluss für externe Links</h2>
-        <p>Es wird keine Haftung für die Inhalte externer Links übernommen. Für die Inhalte der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Es wird hiermit ausdrücklich erklärt, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten Seiten besteht keinerlei Einfluss.</p>
-    </article>
-    <article class="generalText" id="datenschutzerklaerung">
-        <h1>Datenschutzerklärung</h1>
-        <h2>1) Information über die Erhebung personenbezogener Daten und Kontaktdaten des Verantwortlichen</h2>
-        <p>1.1 Wir freuen uns, dass Sie unsere Website besuchen und bedanken uns für Ihr Interesse. Im Folgenden informieren wir Sie über den Umgang mit Ihren personenbezogenen Daten bei Nutzung unserer Website. Personenbezogene Daten sind hierbei alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
-        <p>1.2 Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist {{ name }}, {{ street }}, {{ zipCode}} {{ city }}, {{ country }}, Tel.: {{ phone }}, E-Mail: {{ emailLink|raw }}. Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</p>
-{#        <p>1.4 Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung personenbezogene Daten und anderer vertraulicher Inhalte (z.B. Bestellungen oder Anfragen an den Verantwortlichen) eine SSL-bzw. TLS-Verschlüsselung. Sie können eine verschlüsselte Verbindung an der Zeichenfolge „https://“ und dem Schloss-Symbol in Ihrer Browserzeile erkennen.</p>#}
-        <h2>2) Datenerfassung beim Besuch unserer Website</h2>
-        <p>Bei der bloß informatorischen Nutzung unserer Website, also wenn Sie sich nicht registrieren oder uns anderweitig Informationen übermitteln, erheben wir nur solche Daten, die Ihr Browser an unseren Server übermittelt (sog. „Server-Logfiles“). Wenn Sie unsere Website aufrufen, erheben wir die folgenden Daten, die für uns technisch erforderlich sind, um Ihnen die Website anzuzeigen:</p>
-        <p>- Unsere besuchte Website</p>
-        <p>- Datum und Uhrzeit zum Zeitpunkt des Zugriffes</p>
-        <p>- Menge der gesendeten Daten in Byte</p>
-        <p>- Quelle/Verweis, von welchem Sie auf die Seite gelangten</p>
-        <p>- Verwendeter Browser</p>
-        <p>- Verwendetes Betriebssystem</p>
-        <p>- Verwendete IP-Adresse (ggf.: in anonymisierter Form)</p>
-        <p>Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website. Eine Weitergabe oder anderweitige Verwendung der Daten findet nicht statt. Wir behalten uns allerdings vor, die Server-Logfiles nachträglich zu überprüfen, sollten konkrete Anhaltspunkte auf eine rechtswidrige Nutzung hinweisen.</p>
-        <h2 id="cookies">3) Cookies</h2>
-        <p>Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, verwenden wir auf verschiedenen Seiten sogenannte Cookies. Hierbei handelt es sich um kleine Textdateien, die auf Ihrem Endgerät abgelegt werden. Einige der von uns verwendeten Cookies werden nach dem Ende der Browser-Sitzung, also nach Schließen Ihres Browsers, wieder gelöscht (sog. Sitzungs-Cookies). Andere Cookies verbleiben auf Ihrem Endgerät und ermöglichen uns oder unseren Partnerunternehmen (Cookies von Drittanbietern), Ihren Browser beim nächsten Besuch wiederzuerkennen (persistente Cookies). Werden Cookies gesetzt, erheben und verarbeiten diese im individuellen Umfang bestimmte Nutzerinformationen wie Browser- und Standortdaten sowie IP-Adresswerte. Persistente Cookies werden automatisiert nach einer vorgegebenen Dauer gelöscht, die sich je nach Cookie unterscheiden kann.</p>
-        <p>Bitte beachten Sie, dass Sie Ihren Browser so einstellen können, dass Sie über das Setzen von Cookies informiert werden und einzeln über deren Annahme entscheiden oder die Annahme von Cookies für bestimmte Fälle oder generell ausschließen können. Jeder Browser unterscheidet sich in der Art, wie er die Cookie-Einstellungen verwaltet. Diese ist in dem Hilfemenü jedes Browsers beschrieben, welches Ihnen erläutert, wie Sie Ihre Cookie-Einstellungen ändern können. Diese finden Sie für die jeweiligen Browser unter den folgenden Links:</p>
-        <p>Internet Explorer: <a title="http://windows.microsoft.com/de-DE/windows-vista/Block-or-allow-cookies" href="http://windows.microsoft.com/de-DE/windows-vista/Block-or-allow-cookies" target="_blank">http://windows.microsoft.com/de-DE/windows-vista/Block-or-allow-cookies</a></p>
-        <p>Firefox: <a title="https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen" href="https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen" target="_blank">https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen</a></p>
-        <p>Chrome: <a title="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647" href="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647" target="_blank">http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647</a></p>
-        <p>Safari: <a title="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647" href="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647" target="_blank">https://support.apple.com/kb/ph21411?locale=de_DE</a></p>
-        <p>Opera: <a title="http://help.opera.com/Windows/10.20/de/cookies.html" href="http://help.opera.com/Windows/10.20/de/cookies.html" target="_blank">http://help.opera.com/Windows/10.20/de/cookies.html</a></p>
-        <p>Bitte beachten Sie, dass bei Nichtannahme von Cookies die Funktionalität unserer Website eingeschränkt sein kann.</p>
-        <h2>4) Kontaktaufnahme</h2>
-        <p>Im Rahmen der Kontaktaufnahme mit uns (z.B. per Kontaktformular oder E-Mail) werden personenbezogene Daten erhoben. Welche Daten im Falle eines Kontaktformulars erhoben werden, ist aus dem jeweiligen Kontaktformular ersichtlich. Diese Daten werden ausschließlich zum Zweck der Beantwortung Ihres Anliegens bzw. für die Kontaktaufnahme und die damit verbundene technische Administration gespeichert und verwendet. Rechtsgrundlage für die Verarbeitung der Daten ist unser berechtigtes Interesse an der Beantwortung Ihres Anliegens gemäß Art. 6 Abs. 1 lit. f DSGVO. Zielt Ihre Kontaktierung auf den Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO. Ihre Daten werden nach abschließender Bearbeitung Ihrer Anfrage gelöscht, dies ist der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist und sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-        <h2 id="captcha">5) Tools und Sonstiges</h2>
-        <p>5.1 Google reCAPTCHA</p>
-        <p>In unserem Internetauftritt setzen wir Google reCAPTCHA zur Überprüfung und Vermeidung von Interaktionen auf unserer Internetseite durch automatisierte Zugriffe, bspw. durch sog. Bots, ein. Es handelt sich hierbei um einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, nachfolgend nur „Google“ genannt.</p>
-        <p>Durch die Zertifizierung nach dem EU-US-Datenschutzschild ("EU-US Privacy Shield") <a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;amp;status=Active" target="_blank">www.privacyshield.gov/participant</a> garantiert Google, dass die Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den USA eingehalten werden.</p>
-        <p>Durch diesen Dienst kann Google ermitteln, von welcher Webseite eine Anfrage gesendet wird sowie von welcher IP-Adresse aus Sie die sog. reCAPTCHA-Eingabebox verwenden. Neben Ihrer IP-Adresse werden womöglich noch weitere Informationen durch Google erfasst, die für das Angebot und die Gewährleistung dieses Dienstes notwendig sind.</p>
-        <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Sicherheit unseres Internetauftritts sowie in der Abwehr unerwünschter, automatisierter Zugriffe in Form von Spam o.ä..</p>
-        <p>Google bietet unter <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a> weitergehende Informationen zu dem allgemeinen Umgang mit Ihren Nutzerdaten an.</p>
-        <h2>6) Rechte des Betroffenen</h2>
-        <p>6.1 Das geltende Datenschutzrecht gewährt Ihnen gegenüber dem Verantwortlichen hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten umfassende Betroffenenrechte (Auskunfts- und Interventionsrechte), über die wir Sie nachstehend informieren:</p>
-        <p>- Auskunftsrecht gemäß Art. 15 DSGVO: Sie haben insbesondere ein Recht auf Auskunft über Ihre von uns verarbeiteten personenbezogenen Daten, die Verarbeitungszwecke, die Kategorien der verarbeiteten personenbezogenen Daten, die Empfänger oder Kategorien von Empfängern, gegenüber denen Ihre Daten offengelegt wurden oder werden, die geplante Speicherdauer bzw. die Kriterien für die Festlegung der Speicherdauer, das Bestehen eines Rechts auf Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch gegen die Verarbeitung, Beschwerde bei einer Aufsichtsbehörde, die Herkunft Ihrer Daten, wenn diese nicht durch uns bei Ihnen erhoben wurden, das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling und ggf. aussagekräftige Informationen über die involvierte Logik und die Sie betreffende Tragweite und die angestrebten Auswirkungen einer solchen Verarbeitung, sowie Ihr Recht auf Unterrichtung, welche Garantien gemäß Art. 46 DSGVO bei Weiterleitung Ihrer Daten in Drittländer bestehen;</p>
-        <p>- Recht auf Berichtigung gemäß Art. 16 DSGVO: Sie haben ein Recht auf unverzügliche Berichtigung Sie betreffender unrichtiger Daten und/oder Vervollständigung Ihrer bei uns gespeicherten unvollständigen Daten;</p>
-        <p>- Recht auf Löschung gemäß Art. 17 DSGVO: Sie haben das Recht, die Löschung Ihrer personenbezogenen Daten bei Vorliegen der Voraussetzungen des Art. 17 Abs. 1 DSGVO zu verlangen. Dieses Recht besteht jedoch insbesondere dann nicht, wenn die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung und Information, zur Erfüllung einer rechtlichen Verpflichtung, aus Gründen des öffentlichen Interesses oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist;</p>
-        <p>- Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO: Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, solange die von Ihnen bestrittene Richtigkeit Ihrer Daten überprüft wird, wenn Sie eine Löschung Ihrer Daten wegen unzulässiger Datenverarbeitung ablehnen und stattdessen die Einschränkung der Verarbeitung Ihrer Daten verlangen, wenn Sie Ihre Daten zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen, nachdem wir diese Daten nach Zweckerreichung nicht mehr benötigen oder wenn Sie Widerspruch aus Gründen Ihrer besonderen Situation eingelegt haben, solange noch nicht feststeht, ob unsere berechtigten Gründe überwiegen;</p>
-        <p>- Recht auf Unterrichtung gemäß Art. 19 DSGVO: Haben Sie das Recht auf Berichtigung, Löschung oder Einschränkung der Verarbeitung gegenüber dem Verantwortlichen geltend gemacht, ist dieser verpflichtet, allen Empfängern, denen die Sie betreffenden personenbezogenen Daten offengelegt wurden, diese Berichtigung oder Löschung der Daten oder Einschränkung der Verarbeitung mitzuteilen, es sei denn, dies erweist sich als unmöglich oder ist mit einem unverhältnismäßigen Aufwand verbunden. Ihnen steht das Recht zu, über diese Empfänger unterrichtet zu werden.</p>
-        <p>- Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO: Sie haben das Recht, Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesebaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen, soweit dies technisch machbar ist;</p>
-        <p>- Recht auf Widerruf erteilter Einwilligungen gemäß Art. 7 Abs. 3 DSGVO: Sie haben das Recht, eine einmal erteilte Einwilligung in die Verarbeitung von Daten jederzeit mit Wirkung für die Zukunft zu widerrufen. Im Falle des Widerrufs werden wir die betroffenen Daten unverzüglich löschen, sofern eine weitere Verarbeitung nicht auf eine Rechtsgrundlage zur einwilligungslosen Verarbeitung gestützt werden kann. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt;</p>
-        <p>- Recht auf Beschwerde gemäß Art. 77 DSGVO: Wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt, haben Sie - unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs - das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat Ihres Aufenthaltsortes, Ihres Arbeitsplatzes oder des Ortes des mutmaßlichen Verstoßes.</p>
-        <p>6.2 WIDERSPRUCHSRECHT</p>
-        <p>WENN WIR IM RAHMEN EINER INTERESSENABWÄGUNG IHRE PERSONENBEZOGENEN DATEN AUFGRUND UNSERES ÜBERWIEGENDEN BERECHTIGTEN INTERESSES VERARBEITEN, HABEN SIE DAS JEDERZEITIGE RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIESE VERARBEITUNG WIDERSPRUCH MIT WIRKUNG FÜR DIE ZUKUNFT EINZULEGEN.</p>
-        <p>MACHEN SIE VON IHREM WIDERSPRUCHSRECHT GEBRAUCH, BEENDEN WIR DIE VERARBEITUNG DER BETROFFENEN DATEN. EINE WEITERVERARBEITUNG BLEIBT ABER VORBEHALTEN, WENN WIR ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN KÖNNEN, DIE IHRE INTERESSEN, GRUNDRECHTE UND GRUNDFREIHEITEN ÜBERWIEGEN, ODER WENN DIE VERARBEITUNG DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN DIENT.</p>
-        <p>WERDEN IHRE PERSONENBEZOGENEN DATEN VON UNS VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN. SIE KÖNNEN DEN WIDERSPRUCH WIE OBEN BESCHRIEBEN AUSÜBEN.</p>
-        <p>MACHEN SIE VON IHREM WIDERSPRUCHSRECHT GEBRAUCH, BEENDEN WIR DIE VERARBEITUNG DER BETROFFENEN DATEN ZU DIREKTWERBEZWECKEN.</p>
-        <h2>7) Dauer der Speicherung personenbezogener Daten</h2>
-        <p>Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen gesetzlichen Aufbewahrungsfrist (z.B. handels- und steuerrechtliche Aufbewahrungsfristen). Nach Ablauf der Frist werden die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder Vertragsanbahnung erforderlich sind und/oder unsererseits kein berechtigtes Interesse an der Weiterspeicherung fortbesteht.</p>
-    </article>
+    <main>
+        <article class="generalText" id="impressum">
+            <h1>Impressum</h1>
+            <p>mit-marion.de</p>
+            <p>{{ name }}
+                <br/>{{ street }}
+                <br/>{{ zipCode }} {{ city }}
+                <br/>Phone: {{ phone }}
+                <br/>Email: {{ emailLink|raw }}</p>
+            <p>Steuernummer: 339/5306/3113</p>
+            <p>Eingetragen bei der Industrie- und Handelskammer Ostwestfalen zu Bielefeld</p>
+            <p>Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV:
+                <br/>{{ name }}</p>
+            <h2>Urheberrecht</h2>
+            <p>Sämtliche Daten, Texte und Bilder sind Eigentum von mit-marion.de. Die Verwendung zu gewerblichen Zwecken
+                ist untersagt. Die private Verwendung bedarf unserer ausdrücklichen Zustimmung.</p>
+            <h2>Beschwerdeverfahren</h2>
+            <p>Online-Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO: Die Europäische Kommission stellt eine Plattform zur
+                Online-Streitbeilegung (OS) bereit, die Sie unter <a href="http://ec.europa.eu/consumers/odr"
+                                                                     target="_blank">http://ec.europa.eu/consumers/odr</a>
+                finden.</p>
+            <h2>Haftungsausschluss für externe Links</h2>
+            <p>Es wird keine Haftung für die Inhalte externer Links übernommen. Für die Inhalte der verlinkten Seiten
+                sind ausschließlich deren Betreiber verantwortlich. Es wird hiermit ausdrücklich erklärt, dass zum
+                Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf
+                die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten Seiten besteht
+                keinerlei Einfluss.</p>
+        </article>
+        <article class="generalText" id="datenschutzerklaerung">
+            <h1>Datenschutzerklärung</h1>
+            <h2>1) Information über die Erhebung personenbezogener Daten und Kontaktdaten des Verantwortlichen</h2>
+            <p>1.1 Wir freuen uns, dass Sie unsere Website besuchen und bedanken uns für Ihr Interesse. Im Folgenden
+                informieren wir Sie über den Umgang mit Ihren personenbezogenen Daten bei Nutzung unserer Website.
+                Personenbezogene Daten sind hierbei alle Daten, mit denen Sie persönlich identifiziert werden
+                können.</p>
+            <p>1.2 Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der
+                Datenschutz-Grundverordnung (DSGVO) ist {{ name }}, {{ street }}, {{ zipCode }} {{ city }}
+                , {{ country }}, Tel.: {{ phone }}, E-Mail: {{ emailLink|raw }}. Der für die Verarbeitung von
+                personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein
+                oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten
+                entscheidet.</p>
+            {#        <p>1.4 Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung personenbezogene Daten und anderer vertraulicher Inhalte (z.B. Bestellungen oder Anfragen an den Verantwortlichen) eine SSL-bzw. TLS-Verschlüsselung. Sie können eine verschlüsselte Verbindung an der Zeichenfolge „https://“ und dem Schloss-Symbol in Ihrer Browserzeile erkennen.</p>#}
+            <h2>2) Datenerfassung beim Besuch unserer Website</h2>
+            <p>Bei der bloß informatorischen Nutzung unserer Website, also wenn Sie sich nicht registrieren oder uns
+                anderweitig Informationen übermitteln, erheben wir nur solche Daten, die Ihr Browser an unseren Server
+                übermittelt (sog. „Server-Logfiles“). Wenn Sie unsere Website aufrufen, erheben wir die folgenden Daten,
+                die für uns technisch erforderlich sind, um Ihnen die Website anzuzeigen:</p>
+            <p>- Unsere besuchte Website</p>
+            <p>- Datum und Uhrzeit zum Zeitpunkt des Zugriffes</p>
+            <p>- Menge der gesendeten Daten in Byte</p>
+            <p>- Quelle/Verweis, von welchem Sie auf die Seite gelangten</p>
+            <p>- Verwendeter Browser</p>
+            <p>- Verwendetes Betriebssystem</p>
+            <p>- Verwendete IP-Adresse (ggf.: in anonymisierter Form)</p>
+            <p>Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an
+                der Verbesserung der Stabilität und Funktionalität unserer Website. Eine Weitergabe oder anderweitige
+                Verwendung der Daten findet nicht statt. Wir behalten uns allerdings vor, die Server-Logfiles
+                nachträglich zu überprüfen, sollten konkrete Anhaltspunkte auf eine rechtswidrige Nutzung hinweisen.</p>
+            <h2 id="cookies">3) Cookies</h2>
+            <p>Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu
+                ermöglichen, verwenden wir auf verschiedenen Seiten sogenannte Cookies. Hierbei handelt es sich um
+                kleine Textdateien, die auf Ihrem Endgerät abgelegt werden. Einige der von uns verwendeten Cookies
+                werden nach dem Ende der Browser-Sitzung, also nach Schließen Ihres Browsers, wieder gelöscht (sog.
+                Sitzungs-Cookies). Andere Cookies verbleiben auf Ihrem Endgerät und ermöglichen uns oder unseren
+                Partnerunternehmen (Cookies von Drittanbietern), Ihren Browser beim nächsten Besuch wiederzuerkennen
+                (persistente Cookies). Werden Cookies gesetzt, erheben und verarbeiten diese im individuellen Umfang
+                bestimmte Nutzerinformationen wie Browser- und Standortdaten sowie IP-Adresswerte. Persistente Cookies
+                werden automatisiert nach einer vorgegebenen Dauer gelöscht, die sich je nach Cookie unterscheiden
+                kann.</p>
+            <p>Bitte beachten Sie, dass Sie Ihren Browser so einstellen können, dass Sie über das Setzen von Cookies
+                informiert werden und einzeln über deren Annahme entscheiden oder die Annahme von Cookies für bestimmte
+                Fälle oder generell ausschließen können. Jeder Browser unterscheidet sich in der Art, wie er die
+                Cookie-Einstellungen verwaltet. Diese ist in dem Hilfemenü jedes Browsers beschrieben, welches Ihnen
+                erläutert, wie Sie Ihre Cookie-Einstellungen ändern können. Diese finden Sie für die jeweiligen Browser
+                unter den folgenden Links:</p>
+            <p>Internet Explorer: <a title="http://windows.microsoft.com/de-DE/windows-vista/Block-or-allow-cookies"
+                                     href="http://windows.microsoft.com/de-DE/windows-vista/Block-or-allow-cookies"
+                                     target="_blank">http://windows.microsoft.com/de-DE/windows-vista/Block-or-allow-cookies</a>
+            </p>
+            <p>Firefox: <a title="https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen"
+                           href="https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen" target="_blank">https://support.mozilla.org/de/kb/cookies-erlauben-und-ablehnen</a>
+            </p>
+            <p>Chrome: <a title="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647"
+                          href="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647"
+                          target="_blank">http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647</a>
+            </p>
+            <p>Safari: <a title="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647"
+                          href="http://support.google.com/chrome/bin/answer.py?hl=de&amp;hlrm=en&amp;answer=95647"
+                          target="_blank">https://support.apple.com/kb/ph21411?locale=de_DE</a></p>
+            <p>Opera: <a title="http://help.opera.com/Windows/10.20/de/cookies.html"
+                         href="http://help.opera.com/Windows/10.20/de/cookies.html" target="_blank">http://help.opera.com/Windows/10.20/de/cookies.html</a>
+            </p>
+            <p>Bitte beachten Sie, dass bei Nichtannahme von Cookies die Funktionalität unserer Website eingeschränkt
+                sein kann.</p>
+            <h2>4) Kontaktaufnahme</h2>
+            <p>Im Rahmen der Kontaktaufnahme mit uns (z.B. per Kontaktformular oder E-Mail) werden personenbezogene
+                Daten erhoben. Welche Daten im Falle eines Kontaktformulars erhoben werden, ist aus dem jeweiligen
+                Kontaktformular ersichtlich. Diese Daten werden ausschließlich zum Zweck der Beantwortung Ihres
+                Anliegens bzw. für die Kontaktaufnahme und die damit verbundene technische Administration gespeichert
+                und verwendet. Rechtsgrundlage für die Verarbeitung der Daten ist unser berechtigtes Interesse an der
+                Beantwortung Ihres Anliegens gemäß Art. 6 Abs. 1 lit. f DSGVO. Zielt Ihre Kontaktierung auf den
+                Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit.
+                b DSGVO. Ihre Daten werden nach abschließender Bearbeitung Ihrer Anfrage gelöscht, dies ist der Fall,
+                wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist
+                und sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+            <h2 id="captcha">5) Tools und Sonstiges</h2>
+            <p>5.1 Google reCAPTCHA</p>
+            <p>In unserem Internetauftritt setzen wir Google reCAPTCHA zur Überprüfung und Vermeidung von Interaktionen
+                auf unserer Internetseite durch automatisierte Zugriffe, bspw. durch sog. Bots, ein. Es handelt sich
+                hierbei um einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland,
+                nachfolgend nur „Google“ genannt.</p>
+            <p>Durch die Zertifizierung nach dem EU-US-Datenschutzschild ("EU-US Privacy Shield") <a
+                        href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;amp;status=Active"
+                        target="_blank">www.privacyshield.gov/participant</a> garantiert Google, dass die
+                Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den USA eingehalten werden.</p>
+            <p>Durch diesen Dienst kann Google ermitteln, von welcher Webseite eine Anfrage gesendet wird sowie von
+                welcher IP-Adresse aus Sie die sog. reCAPTCHA-Eingabebox verwenden. Neben Ihrer IP-Adresse werden
+                womöglich noch weitere Informationen durch Google erfasst, die für das Angebot und die Gewährleistung
+                dieses Dienstes notwendig sind.</p>
+            <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Sicherheit
+                unseres Internetauftritts sowie in der Abwehr unerwünschter, automatisierter Zugriffe in Form von Spam
+                o.ä..</p>
+            <p>Google bietet unter <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+                weitergehende Informationen zu dem allgemeinen Umgang mit Ihren Nutzerdaten an.</p>
+            <h2>6) Rechte des Betroffenen</h2>
+            <p>6.1 Das geltende Datenschutzrecht gewährt Ihnen gegenüber dem Verantwortlichen hinsichtlich der
+                Verarbeitung Ihrer personenbezogenen Daten umfassende Betroffenenrechte (Auskunfts- und
+                Interventionsrechte), über die wir Sie nachstehend informieren:</p>
+            <p>- Auskunftsrecht gemäß Art. 15 DSGVO: Sie haben insbesondere ein Recht auf Auskunft über Ihre von uns
+                verarbeiteten personenbezogenen Daten, die Verarbeitungszwecke, die Kategorien der verarbeiteten
+                personenbezogenen Daten, die Empfänger oder Kategorien von Empfängern, gegenüber denen Ihre Daten
+                offengelegt wurden oder werden, die geplante Speicherdauer bzw. die Kriterien für die Festlegung der
+                Speicherdauer, das Bestehen eines Rechts auf Berichtigung, Löschung, Einschränkung der Verarbeitung,
+                Widerspruch gegen die Verarbeitung, Beschwerde bei einer Aufsichtsbehörde, die Herkunft Ihrer Daten,
+                wenn diese nicht durch uns bei Ihnen erhoben wurden, das Bestehen einer automatisierten
+                Entscheidungsfindung einschließlich Profiling und ggf. aussagekräftige Informationen über die
+                involvierte Logik und die Sie betreffende Tragweite und die angestrebten Auswirkungen einer solchen
+                Verarbeitung, sowie Ihr Recht auf Unterrichtung, welche Garantien gemäß Art. 46 DSGVO bei Weiterleitung
+                Ihrer Daten in Drittländer bestehen;</p>
+            <p>- Recht auf Berichtigung gemäß Art. 16 DSGVO: Sie haben ein Recht auf unverzügliche Berichtigung Sie
+                betreffender unrichtiger Daten und/oder Vervollständigung Ihrer bei uns gespeicherten unvollständigen
+                Daten;</p>
+            <p>- Recht auf Löschung gemäß Art. 17 DSGVO: Sie haben das Recht, die Löschung Ihrer personenbezogenen Daten
+                bei Vorliegen der Voraussetzungen des Art. 17 Abs. 1 DSGVO zu verlangen. Dieses Recht besteht jedoch
+                insbesondere dann nicht, wenn die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung und
+                Information, zur Erfüllung einer rechtlichen Verpflichtung, aus Gründen des öffentlichen Interesses oder
+                zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist;</p>
+            <p>- Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO: Sie haben das Recht, die Einschränkung
+                der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, solange die von Ihnen bestrittene
+                Richtigkeit Ihrer Daten überprüft wird, wenn Sie eine Löschung Ihrer Daten wegen unzulässiger
+                Datenverarbeitung ablehnen und stattdessen die Einschränkung der Verarbeitung Ihrer Daten verlangen,
+                wenn Sie Ihre Daten zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen,
+                nachdem wir diese Daten nach Zweckerreichung nicht mehr benötigen oder wenn Sie Widerspruch aus Gründen
+                Ihrer besonderen Situation eingelegt haben, solange noch nicht feststeht, ob unsere berechtigten Gründe
+                überwiegen;</p>
+            <p>- Recht auf Unterrichtung gemäß Art. 19 DSGVO: Haben Sie das Recht auf Berichtigung, Löschung oder
+                Einschränkung der Verarbeitung gegenüber dem Verantwortlichen geltend gemacht, ist dieser verpflichtet,
+                allen Empfängern, denen die Sie betreffenden personenbezogenen Daten offengelegt wurden, diese
+                Berichtigung oder Löschung der Daten oder Einschränkung der Verarbeitung mitzuteilen, es sei denn, dies
+                erweist sich als unmöglich oder ist mit einem unverhältnismäßigen Aufwand verbunden. Ihnen steht das
+                Recht zu, über diese Empfänger unterrichtet zu werden.</p>
+            <p>- Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO: Sie haben das Recht, Ihre personenbezogenen Daten,
+                die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesebaren Format zu
+                erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen, soweit dies technisch
+                machbar ist;</p>
+            <p>- Recht auf Widerruf erteilter Einwilligungen gemäß Art. 7 Abs. 3 DSGVO: Sie haben das Recht, eine einmal
+                erteilte Einwilligung in die Verarbeitung von Daten jederzeit mit Wirkung für die Zukunft zu widerrufen.
+                Im Falle des Widerrufs werden wir die betroffenen Daten unverzüglich löschen, sofern eine weitere
+                Verarbeitung nicht auf eine Rechtsgrundlage zur einwilligungslosen Verarbeitung gestützt werden kann.
+                Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum
+                Widerruf erfolgten Verarbeitung nicht berührt;</p>
+            <p>- Recht auf Beschwerde gemäß Art. 77 DSGVO: Wenn Sie der Ansicht sind, dass die Verarbeitung der Sie
+                betreffenden personenbezogenen Daten gegen die DSGVO verstößt, haben Sie - unbeschadet eines
+                anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs - das Recht auf Beschwerde bei
+                einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat Ihres Aufenthaltsortes, Ihres Arbeitsplatzes
+                oder des Ortes des mutmaßlichen Verstoßes.</p>
+            <p>6.2 WIDERSPRUCHSRECHT</p>
+            <p>WENN WIR IM RAHMEN EINER INTERESSENABWÄGUNG IHRE PERSONENBEZOGENEN DATEN AUFGRUND UNSERES ÜBERWIEGENDEN
+                BERECHTIGTEN INTERESSES VERARBEITEN, HABEN SIE DAS JEDERZEITIGE RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER
+                BESONDEREN SITUATION ERGEBEN, GEGEN DIESE VERARBEITUNG WIDERSPRUCH MIT WIRKUNG FÜR DIE ZUKUNFT
+                EINZULEGEN.</p>
+            <p>MACHEN SIE VON IHREM WIDERSPRUCHSRECHT GEBRAUCH, BEENDEN WIR DIE VERARBEITUNG DER BETROFFENEN DATEN. EINE
+                WEITERVERARBEITUNG BLEIBT ABER VORBEHALTEN, WENN WIR ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG
+                NACHWEISEN KÖNNEN, DIE IHRE INTERESSEN, GRUNDRECHTE UND GRUNDFREIHEITEN ÜBERWIEGEN, ODER WENN DIE
+                VERARBEITUNG DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN DIENT.</p>
+            <p>WERDEN IHRE PERSONENBEZOGENEN DATEN VON UNS VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, HABEN SIE DAS
+                RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE
+                DERARTIGER WERBUNG EINZULEGEN. SIE KÖNNEN DEN WIDERSPRUCH WIE OBEN BESCHRIEBEN AUSÜBEN.</p>
+            <p>MACHEN SIE VON IHREM WIDERSPRUCHSRECHT GEBRAUCH, BEENDEN WIR DIE VERARBEITUNG DER BETROFFENEN DATEN ZU
+                DIREKTWERBEZWECKEN.</p>
+            <h2>7) Dauer der Speicherung personenbezogener Daten</h2>
+            <p>Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen gesetzlichen
+                Aufbewahrungsfrist (z.B. handels- und steuerrechtliche Aufbewahrungsfristen). Nach Ablauf der Frist
+                werden die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder
+                Vertragsanbahnung erforderlich sind und/oder unsererseits kein berechtigtes Interesse an der
+                Weiterspeicherung fortbesteht.</p>
+        </article>
+    </main>
 {% endblock %}

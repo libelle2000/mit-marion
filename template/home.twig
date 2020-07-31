@@ -7,23 +7,27 @@
 {% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
-    <section class="generalText homeIntro">
-        <h1>"Mit Marion wird das was!!"</h1>
-        <p>So oder so ähnlich könnte man das umschreiben, was mein Anspruch ist und worum es bei meinen Kursen geht.</p>
-        <p>Aber ich will gar nicht viel selber sagen, sondern einfach die Erfolgstories für sich sprechen lasssen.</p>
-        <p>Entdecke die Erfolgsstories:</p>
-    </section>
-    <section class="storiesTeaser">
-        {% for storyTeaser in storiesTeaser %}
-            <article class="storyTeaser member">
-                <a href="{{ storyTeaser.link.href }}">
-                    <blockquote class="mainquote"
-                                style="background-image: url({{ storyTeaser.member.mainQuote.backgroundImage.url }}); background-position: {{ storyTeaser.member.mainQuote.backgroundImage.position }};">
-                        <span>"{{ storyTeaser.member.mainQuote.text }}"</span>
-                    </blockquote>
-                    <blockquote class="subquote">"{{ storyTeaser.member.subQuote.text }}"</blockquote>
-                </a>
-            </article>
-        {% endfor %}
-    </section>
+    <main>
+        <section class="generalText homeIntro">
+            <h1>"Mit Marion wird das was!!"</h1>
+            <p>So oder so ähnlich könnte man das umschreiben, was mein Anspruch ist und worum es bei meinen Kursen
+                geht.</p>
+            <p>Aber ich will gar nicht viel selber sagen, sondern einfach die Erfolgstories für sich sprechen
+                lasssen.</p>
+            <p>Entdecke die Erfolgsstories:</p>
+        </section>
+        <section class="storiesTeaser">
+            {% for storyTeaser in storiesTeaser %}
+                <article class="storyTeaser member">
+                    <a href="{{ storyTeaser.link.href }}">
+                        <blockquote class="mainquote"
+                                    style="background-image: url({{ storyTeaser.member.mainQuote.backgroundImage.url }}); background-position: {{ storyTeaser.member.mainQuote.backgroundImage.position }};">
+                            <span>"{{ storyTeaser.member.mainQuote.text }}"</span>
+                        </blockquote>
+                        <blockquote class="subquote">"{{ storyTeaser.member.subQuote.text }}"</blockquote>
+                    </a>
+                </article>
+            {% endfor %}
+        </section>
+    </main>
 {% endblock %}
