@@ -15,6 +15,11 @@ final class UeberMichTemplateVariables extends PageTemplateVariables
 
     protected function getTitleValue(): string
     {
-        return 'über mich';
+        return 'Über mich und';
+    }
+
+    protected function getMetaDescription(): string
+    {
+        return 'Wer bin ich und was treibt mich an, Outdoor Sport zu trainieren.';
     }
 }

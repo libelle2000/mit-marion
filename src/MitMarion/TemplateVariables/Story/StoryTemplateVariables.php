@@ -20,6 +20,8 @@ abstract class StoryTemplateVariables implements TemplateVariables
 
     abstract public function getMemberAsAssocArray(): array;
 
+    abstract public function getMetaDescriptionValue(): string;
+
     public function getLinkHrefAsAssocArray(): array
     {
         return [

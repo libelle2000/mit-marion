@@ -15,6 +15,11 @@ final class ImpressumTemplateVariables extends PageTemplateVariables
 
     protected function getTitleValue(): string
     {
-        return 'Impressum';
+        return 'Sicher und gesetzeskonform';
+    }
+
+    protected function getMetaDescription(): string
+    {
+        return 'Rechtliche Hinweise und Informationen zum Datenschutz.';
     }
 }

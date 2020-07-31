@@ -15,6 +15,11 @@ final class VielenDankTemplateVariables extends PageTemplateVariables
 
     protected function getTitleValue(): string
     {
-        return 'Vielen Dank!';
+        return 'Kontakt aufgenommen';
+    }
+
+    protected function getMetaDescription(): string
+    {
+        return 'Der direkt Draht zu Marion ist hergestellt.';
     }
 }

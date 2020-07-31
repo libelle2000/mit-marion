@@ -38,4 +38,9 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
             ],
         ];
     }
+
+    public function getMetaDescriptionValue(): string
+    {
+        return 'Outdoor Sport bringt sogar bei Regen Spaß!';
+    }
 }

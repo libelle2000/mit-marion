@@ -41,4 +41,9 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
             ],
         ];
     }
+
+    public function getMetaDescriptionValue(): string
+    {
+        return 'An die Faszien zu denken, bringt jeden Sportler ein gutes Stück weiter.';
+    }
 }

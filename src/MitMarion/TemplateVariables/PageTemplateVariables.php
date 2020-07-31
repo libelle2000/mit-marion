@@ -10,6 +10,7 @@ abstract class PageTemplateVariables implements TemplateVariables
 {
     protected const TEMPLATE_KEY_HTML_HEAD = 'htmlHead';
     protected const TEMPLATE_KEY_TITLE = 'title';
+    protected const TEMPLATE_KEY_META_DESCRIPTION = 'metaDescription';
 
     /**
      * @var CorporateFlyoutTemplateVariables
@@ -38,6 +39,8 @@ abstract class PageTemplateVariables implements TemplateVariables
 
     abstract protected function getTitleValue(): string;
 
+    abstract protected function getMetaDescription(): string;
+
     private function buildStoryFlyout(): array
     {
         return $this->storyFlyout->asAssocArray();
@@ -48,12 +51,13 @@ abstract class PageTemplateVariables implements TemplateVariables
         return [
             self::TEMPLATE_KEY_HTML_HEAD => [
                 self::TEMPLATE_KEY_TITLE => $this->buildTitle(),
+                self::TEMPLATE_KEY_META_DESCRIPTION => $this->getMetaDescription(),
             ],
         ];
     }
 
     private function buildTitle(): string
     {
-        return $this->getTitleValue() . ' - mit Marion';
+        return $this->getTitleValue() . ' - mit-marion.de';
     }
 }

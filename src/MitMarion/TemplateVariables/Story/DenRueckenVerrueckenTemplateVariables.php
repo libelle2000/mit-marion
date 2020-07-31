@@ -42,4 +42,9 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
             ],
         ];
     }
+
+    public function getMetaDescriptionValue(): string
+    {
+        return 'Outdoor Sport verbindet Rückengymnastik mit Spaß!';
+    }
 }

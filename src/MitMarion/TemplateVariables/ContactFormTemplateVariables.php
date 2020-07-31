@@ -51,4 +51,9 @@ final class ContactFormTemplateVariables extends PageTemplateVariables
     {
         return 'Kontakt';
     }
+
+    protected function getMetaDescription(): string
+    {
+        return 'Der direkte Draht zu Marion';
+    }
 }

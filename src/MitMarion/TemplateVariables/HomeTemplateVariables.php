@@ -33,6 +33,11 @@ final class HomeTemplateVariables extends PageTemplateVariables
 
     protected function getTitleValue(): string
     {
-        return 'Willkommen!';
+        return 'Outdoor Sport';
+    }
+
+    protected function getMetaDescription(): string
+    {
+        return 'Mit Outdoor Sport zum persönlichen Erfolg.';
     }
 }

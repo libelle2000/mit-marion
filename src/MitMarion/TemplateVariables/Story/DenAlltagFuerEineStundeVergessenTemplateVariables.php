@@ -42,4 +42,9 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryTempl
             ],
         ];
     }
+
+    public function getMetaDescriptionValue(): string
+    {
+        return 'Zeit, einmal nur was für sich zu machen.';
+    }
 }

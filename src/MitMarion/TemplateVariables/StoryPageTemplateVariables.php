@@ -43,6 +43,11 @@ final class StoryPageTemplateVariables extends PageTemplateVariables
         return $this->storyFlyout->getCurrentTitle();
     }
 
+    protected function getMetaDescription(): string
+    {
+        return $this->story->getMetaDescriptionValue();
+    }
+
     private function buildZapperTemplateVariables(): array
     {
         return [

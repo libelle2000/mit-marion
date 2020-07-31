@@ -6,6 +6,7 @@ namespace MitMarion;
 use MitMarion\Email\EMailClient;
 use MitMarion\Http\Request;
 use MitMarion\Page\ContactFormPage;
+use MitMarion\Page\ErrorNotFoundPage;
 use MitMarion\Page\FehlerPage;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\ImpressumPage;
@@ -13,6 +14,7 @@ use MitMarion\Page\UeberMichPage;
 use MitMarion\Page\StoryPage;
 use MitMarion\Page\VielenDankPage;
 use MitMarion\Renderer\ContactFormRenderer;
+use MitMarion\Renderer\ErrorNotFoundRenderer;
 use MitMarion\Renderer\FehlerRenderer;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\ImpressumRenderer;
@@ -101,6 +103,13 @@ class Factory
         );
     }
 
+    public function create404Page(): ErrorNotFoundPage
+    {
+        return new ErrorNotFoundPage(
+            $this->createErrorNotFoundPageRenderer(),
+        );
+    }
+
     public function createContactFormValidator(Request $request, SharedEnvironment $environment): ContactFormValidator
     {
         return new ContactFormValidator(
@@ -154,6 +163,13 @@ class Factory
     private function createFehlerRenderer(): FehlerRenderer
     {
         return new FehlerRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
+    private function createErrorNotFoundPageRenderer(): ErrorNotFoundRenderer
+    {
+        return new ErrorNotFoundRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }
