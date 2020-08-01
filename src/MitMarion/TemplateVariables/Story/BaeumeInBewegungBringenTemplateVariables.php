@@ -31,7 +31,7 @@ final class BaeumeInBewegungBringenTemplateVariables extends StoryTemplateVariab
                     'url' => '/_assets/images/baeume-in-bewegung-bringen/teilnehmer-haengt-am-baum.jpg',
                     'position' => 'top, center',
                 ],
-                'text' => 'Die Natur ist unser bester Trainingspartner!',
+                'text' => 'Die Natur ist unser bester Trainings&shy;partner!',
             ],
             'subQuote' => [
                 'text' => 'Hallensport ist langweilig! - Hier toben wir auch mal auf der Wiese, funktionieren Parkbänke um, zaubern im Winter Schnee-Engel und ich bin mittlerweile stärker als der Wind :-) :-)!',
