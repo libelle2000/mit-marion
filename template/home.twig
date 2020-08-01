@@ -22,7 +22,7 @@
                     <a href="{{ storyTeaser.link.href }}">
                         <blockquote class="mainquote"
                                     style="background-image: url({{ storyTeaser.member.mainQuote.backgroundImage.url }}); background-position: {{ storyTeaser.member.mainQuote.backgroundImage.position }};">
-                            <span>"{{ storyTeaser.member.mainQuote.text }}"</span>
+                            <span>"{{ storyTeaser.member.mainQuote.text|raw }}"</span>
                         </blockquote>
                         <blockquote class="subquote">"{{ storyTeaser.member.subQuote.text }}"</blockquote>
                     </a>

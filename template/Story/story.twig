@@ -8,7 +8,7 @@
             <section class="member">
                 <blockquote class="mainquote"
                             style="background-image: url({{ member.mainQuote.backgroundImage.url }}); background-position: {{ member.mainQuote.backgroundImage.position }};">
-                    <span>"{{ member.mainQuote.text }}"</span>
+                    <span>"{{ member.mainQuote.text|raw }}"</span>
                 </blockquote>
                 <blockquote class="subquote">"{{ member.subQuote.text }}"</blockquote>
             </section>
