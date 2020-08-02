@@ -28,11 +28,11 @@ class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVa
 
     public function asAssocArray(): array
     {
-        $currentCaption = $this->getCurrentCaption();
+        $currentLinkHref = $this->getCurrentLinkHref();
 
         return [
             'storyNav' => [
-                'currentTitle' => $currentCaption,
+                'currentTitle' => trim($currentLinkHref->getValue(), '/'),
                 'stories' => $this->getOtherStoriesByPath($this->currentPath),
             ],
         ];
