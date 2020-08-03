@@ -34,7 +34,7 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
                 'text' => 'das Sofa lockt, aber ich gehe doch los und bin ganz stolz auf mich!',
             ],
             'subQuote' => [
-                'text' => 'Ich beneide all diejenigen, die bei Wind und Wetter unterwegs sind! Wie geht das?',
+                'text' => 'Ich beneide all diejenigen, die bei Wind und Wetter unterwegs sind! Wie schaffe ich das auch?',
             ],
         ];
     }

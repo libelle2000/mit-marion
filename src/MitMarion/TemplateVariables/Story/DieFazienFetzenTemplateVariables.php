@@ -10,7 +10,7 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
         return [
             'member' => $this->getMemberAsAssocArray(),
             'marion' => [
-                'quoteText' => 'Sowas höre ich öfter! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt.',
+                'quoteText' => 'Sowas höre ich häufig! Da ist jemand schon sehr sportlich und plötzlich ist da der Ah-Ha Effekt.',
                 'advantages' => [
                     'die Beine erholen sich viel schneller,',
                     'der Bewegungsumfang der Arme ist plötzlich viel größer',
