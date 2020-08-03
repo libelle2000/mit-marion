@@ -1,0 +1,21 @@
+{% extends "pageBase.twig" %}
+{% block metaDescription %}{{ htmlHead.metaDescription }}{% endblock %}
+{% block title %}{{ htmlHead.title }}{% endblock %}
+{% block additionalStyleSheets %}
+    <link rel="stylesheet" href="/_assets/css/generalText.css"/>
+{% endblock %}
+{% block content %}
+    {{ include('include/header.incl.twig') }}
+    <main>
+        <article class="generalText">
+            <h1>Du interessierst dich für meine Kurse? Wunderbar!</h1>
+            <p>Ein kleiner Hinweis noch:
+                <br />aufgrund von Corona habe natürlich auch ich meine Kurse aussetzen müssen.</p>
+            <p>Aber es geht zum Glück langsam wieder los.</p>
+        </article>
+        <article class="generalText">
+            <h1>Hallenbad Delbrück</h1>
+            <p>dienstags, 18:00 - 19:00 Uhr</p>
+        </article>
+    </main>
+{% endblock %}

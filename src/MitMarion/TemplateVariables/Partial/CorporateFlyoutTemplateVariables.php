@@ -14,6 +14,11 @@ class CorporateFlyoutTemplateVariables implements TemplateVariables
             self::IS_CURRENT => false,
         ],
         [
+            self::HREF => '/meine-kurse/',
+            self::CAPTION => 'meine Kurse',
+            self::IS_CURRENT => false,
+        ],
+        [
             self::HREF => '/über-mich/#meine-qualifikationen',
             self::CAPTION => 'meine Qualifikationen',
             self::IS_CURRENT => false,

@@ -10,6 +10,7 @@ use MitMarion\Page\ErrorNotFoundPage;
 use MitMarion\Page\FehlerPage;
 use MitMarion\Page\HomePage;
 use MitMarion\Page\ImpressumPage;
+use MitMarion\Page\MeineKursePage;
 use MitMarion\Page\UeberMichPage;
 use MitMarion\Page\StoryPage;
 use MitMarion\Page\VielenDankPage;
@@ -18,6 +19,7 @@ use MitMarion\Renderer\ErrorNotFoundRenderer;
 use MitMarion\Renderer\FehlerRenderer;
 use MitMarion\Renderer\HomeRenderer;
 use MitMarion\Renderer\ImpressumRenderer;
+use MitMarion\Renderer\MeineKurseRenderer;
 use MitMarion\Renderer\UeberMichRenderer;
 use MitMarion\Renderer\StoryRenderer;
 use MitMarion\Renderer\VielenDankRenderer;
@@ -96,6 +98,15 @@ class Factory
         );
     }
 
+    public function createMeineKursePage(
+        PageTemplateVariables $pageTemplateVariables
+    ): MeineKursePage {
+        return new MeineKursePage(
+            $this->createMeineKurseRenderer(),
+            $pageTemplateVariables
+        );
+    }
+
     public function createFehlerPage(): FehlerPage
     {
         return new FehlerPage(
@@ -156,6 +167,13 @@ class Factory
     private function createUeberMichRenderer(): UeberMichRenderer
     {
         return new UeberMichRenderer(
+            $this->createTwigEnvironmentForNamespace()
+        );
+    }
+
+    private function createMeineKurseRenderer(): MeineKurseRenderer
+    {
+        return new MeineKurseRenderer(
             $this->createTwigEnvironmentForNamespace()
         );
     }
