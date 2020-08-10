@@ -12,7 +12,8 @@ use Twig\Loader\FilesystemLoader;
 
 class Factory
 {
-    private const TWIG_DEBUG = true;
+    private const TWIG_DEBUG = false;
+    private const DO_NOT_CACHE = false;
 
     public function createTwigEnvironment(string $templateRootPath, string $templateCachePath): TwigEnvironment
     {
@@ -20,7 +21,8 @@ class Factory
 
         $twig = new TwigEnvironment(
             $loader, [
-                'cache' => $templateCachePath,
+                'debug' => self::TWIG_DEBUG,
+                'cache' => self::TWIG_DEBUG ? self::DO_NOT_CACHE : $templateCachePath,
             ]
         );
         if (self::TWIG_DEBUG) {
