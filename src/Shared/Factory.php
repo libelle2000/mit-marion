@@ -12,7 +12,9 @@ use Twig\Loader\FilesystemLoader;
 
 class Factory
 {
-    private const TWIG_DEBUG = false;
+    private const TWIG_PROD_DEV_TOGGLE_IS_DEV = false;
+
+    private const TWIG_DEBUG = self::TWIG_PROD_DEV_TOGGLE_IS_DEV;
     private const DO_NOT_CACHE = false;
 
     public function createTwigEnvironment(string $templateRootPath, string $templateCachePath): TwigEnvironment
