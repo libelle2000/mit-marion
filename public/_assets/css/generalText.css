@@ -19,6 +19,10 @@
     margin-left: 2rem;
 }
 
+.generalText .label {
+    margin-bottom: -2rem;
+}
+
 .decrypt span:nth-child(even) {
     display: none;
 }

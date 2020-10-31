@@ -24,6 +24,10 @@ h2 {
     font-size: 1.5rem;
 }
 
+.label {
+    font-size: 0.8rem;
+}
+
 a[target="_blank"] {
     padding-right: 0.5rem;
 }
@@ -308,6 +312,7 @@ section.member .subquote {
 
 .member .subquote,
 section.marion,
+section.insight,
 .contactForm,
 .contactIntro,
 .errorPage {
@@ -383,6 +388,7 @@ section.marion .closingText {
 
 .marion,
 .member,
+.insight,
 .contact *,
 .thankYou *,
 .generalText {

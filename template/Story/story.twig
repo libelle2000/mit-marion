@@ -1,6 +1,9 @@
 {% extends "pageBase.twig" %}
 {% block metaDescription %}{{ htmlHead.metaDescription }}{% endblock %}
 {% block title %}{{ htmlHead.title }}{% endblock %}
+{% block additionalStyleSheets %}
+    <link rel="stylesheet" href="/_assets/css/generalText.css"/>
+{% endblock %}
 {% block content %}
     {{ include('include/header.incl.twig') }}
     <main>
@@ -27,6 +30,11 @@
                 <p class="closingText">{{ marion.closingText }}</p>
             </section>
             <a class="button" href="/kontakt/">{{ callToAction.caption|join('<br />')|raw }}</a>
+            <section class="insight generalText">
+                <div class="label">Ein kleiner Einblick in meinen Kurs:</div>
+                <h1>Sport draußen in Delbrück</h1>
+                <p>Wir bewegen uns über den Sportplatz und das Gelände der Delbrücker Gesamtschule. Ein Sprung über oder auch gerne in die Pfützen ... h e r r l i c h – da sind sich alle Teilnehmer einig ;-)</p>
+            </section>
         </article>
     </main>
     <nav class="zapper">
