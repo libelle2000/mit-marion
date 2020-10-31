@@ -15,6 +15,12 @@ final class BaeumeInBewegungBringenTemplateVariables extends StoryTemplateVariab
                 ],
                 'closingText' => 'Du verpasst wirklich was, darum ...',
             ],
+            'insight' => [
+                'headline' => 'Sport draußen in Delbrück',
+                'paragraphs' => [
+                    'Der Wald hinter dem Delbrücker Wohnmobilstellplatz bringt ein neues Trainingsgefühl. Wir balancieren z. B. über Baumstämme. Während wir unsere Übungen machen, fragen wir uns manches Mal, ob wir unseren Körper dehnen oder eher den Baum ;-).'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Komm dazu!',
