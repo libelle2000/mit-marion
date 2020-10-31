@@ -15,6 +15,12 @@ final class DieOrangenHaeutenTemplateVariables extends StoryTemplateVariables
                 ],
                 'closingText' => 'Hilft auch beim "Bierbäuchlein" ;-)',
             ],
+            'insight' => [
+                'headline' => 'Der Outdoorsport in Delbrück bringt uns so richtig auf Touren.',
+                'paragraphs' => [
+                    'Einige Stationen mit unterschiedlichen Übungen sorgen für eine Menge Abwechslung in der Stunde. Da staunen sogar die Radfahrer, die auf der "Delbrücker Spargelroute" an uns vorbei fahren.'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Ich freu mich auf dich!<br /> Komm dazu!',
