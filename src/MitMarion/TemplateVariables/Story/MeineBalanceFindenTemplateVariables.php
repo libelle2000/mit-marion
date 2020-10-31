@@ -15,6 +15,12 @@ final class MeineBalanceFindenTemplateVariables extends StoryTemplateVariables
                 ],
                 'closingText' => 'Sport im Wohlfühlbereich ist angesagt!',
             ],
+            'insight' => [
+                'headline' => 'Sport draußen in Delbrück',
+                'paragraphs' => [
+                    'Training auf der Wiese am Hallenbad, in der Nähe der Delbrücker Stadtverwaltung: Da traut sich manch ein Teilnehmer auch mal auf die Rutsche, in die Schaukel oder an die Seilbahn. Und ich stehe da und denke "meine Teilnehmer sind glücklich wie die Kinder". Das ist Sport draußen in Delbrück :-)'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Komm dazu!<br />Sei dabei!',
