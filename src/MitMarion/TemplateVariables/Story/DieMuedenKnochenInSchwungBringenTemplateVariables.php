@@ -15,6 +15,12 @@ final class DieMuedenKnochenInSchwungBringenTemplateVariables extends StoryTempl
                 ],
                 'closingText' => 'Da ist für jeden etwas dabei!',
             ],
+            'insight' => [
+                'headline' => 'Das bringt das neue Sportangebot in Delbrück',
+                'paragraphs' => [
+                    'Während die Delbrücker Fussballer dienstags auf dem Sportplatz trainieren, staunt so manch ein Walker oder Spaziergänger, welche "Kunststücke" wir mit dem Ball veranstalten – Spaß ist garantiert!'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Hast du Lust?<br /> Komm dazu!',
