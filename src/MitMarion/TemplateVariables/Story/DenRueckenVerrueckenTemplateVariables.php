@@ -19,6 +19,12 @@ final class DenRueckenVerrueckenTemplateVariables extends StoryTemplateVariables
                 ],
                 'closingText' => 'Neugierig geworden?',
             ],
+            'insight' => [
+                'headline' => 'Beim Outdoorsport in Delbrück ist alles möglich!',
+                'paragraphs' => [
+                    'Bänke sind nicht nur zum Sitzen da – ein Armstütz oder auch als Hilfsmittel zur Dehnung – beim Outdoorsport in Delbrück ist alles möglich! Da staunt mancher Hund und erst der Hundebesitzer! Und die Kid\'s fragen ihre Eltern "was machen die da?"'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Mach mit! Komm dazu!',
