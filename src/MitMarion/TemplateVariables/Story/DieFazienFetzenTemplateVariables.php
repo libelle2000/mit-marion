@@ -18,6 +18,12 @@ final class DieFazienFetzenTemplateVariables extends StoryTemplateVariables
                 ],
                 'closingText' => 'Die Faszienübungen sind echte Allrounder!',
             ],
+            'insight' => [
+                'headline' => 'Wo kann man draußen in Delbrück Sport machen?',
+                'paragraphs' => [
+                    'Wir liegen auf der Wiese des Abenteuerspielplatzes im frischen Gras und machen unsere Übungen. Eine Teilnehmerin sagt: Ich wußte schon nicht mehr, wie toll das Gras riecht und wie wunderbar es sich anfühlt – das ist Natur pur!'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Jetzt zur Probe mitmachen',
