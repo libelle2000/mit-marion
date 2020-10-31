@@ -32,8 +32,10 @@
             <a class="button" href="/kontakt/">{{ callToAction.caption|join('<br />')|raw }}</a>
             <section class="insight generalText">
                 <div class="label">Ein kleiner Einblick in meinen Kurs:</div>
-                <h1>Sport draußen in Delbrück</h1>
-                <p>Wir bewegen uns über den Sportplatz und das Gelände der Delbrücker Gesamtschule. Ein Sprung über oder auch gerne in die Pfützen ... h e r r l i c h – da sind sich alle Teilnehmer einig ;-)</p>
+                <h1>{{ insight.headline }}</h1>
+                {% for paragraph in insight.paragraphs %}
+                    <p>{{ paragraph }}</p>
+                {% endfor %}
             </section>
         </article>
     </main>

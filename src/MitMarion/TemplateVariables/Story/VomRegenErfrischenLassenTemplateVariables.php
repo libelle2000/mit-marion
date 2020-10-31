@@ -15,6 +15,12 @@ final class VomRegenErfrischenLassenTemplateVariables extends StoryTemplateVaria
                 ],
                 'closingText' => 'Wir verpassen dem Regen gute Laune ;-)',
             ],
+            'insight' => [
+                'headline' => 'Sport draußen in Delbrück',
+                'paragraphs' => [
+                    'Wir bewegen uns über den Sportplatz und das Gelände der Delbrücker Gesamtschule. Ein Sprung über oder auch gerne in die Pfützen ... h e r r l i c h – da sind sich alle Teilnehmer einig ;-)'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Komm dazu!',
