@@ -15,6 +15,12 @@ final class UeberStockUndSteinTemplateVariables extends StoryTemplateVariables
                 ],
                 'closingText' => 'Weiterer Pluspunkt: Unser Immunsystem wird gestärkt!',
             ],
+            'insight' => [
+                'headline' => 'Sportangebot draußen in Delbrück',
+                'paragraphs' => [
+                    'Wir steigen über Baumstämme, springen über Baumwurzeln und freuen uns über das Laub unter den Füßen. Es geht weiter über den Waldweg. Unter einer Lichtung bleiben wir kurz stehen: Die Arme Richtung Baumkronen und tief einatmen – Sport mal anders im Delbrücker Land!'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Komm dazu!',
