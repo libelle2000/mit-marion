@@ -18,6 +18,12 @@ final class DenAlltagFuerEineStundeVergessenTemplateVariables extends StoryTempl
                 ],
                 'closingText' => 'Probier es einfach aus!',
             ],
+            'insight' => [
+                'headline' => 'Outdoor-Sport in Delbrück als Auszeit im Alltag',
+                'paragraphs' => [
+                    'Eine Teilnehmerin erzählte mir von einer Unterhaltung mit ihrem Mann. Er sagte zu ihr: "Du bist für alles und jeden da. Wenn du Spaß an Bewegung in der Natur hast, gönn dir doch diese eine Stunde in der Woche!" Gesagt – getan: Sie war bei der Probestunde dabei und hat sich gleich fest angemeldet.'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Komm dazu!',
