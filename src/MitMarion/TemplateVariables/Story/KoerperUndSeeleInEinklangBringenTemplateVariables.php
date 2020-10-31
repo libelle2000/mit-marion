@@ -15,6 +15,12 @@ final class KoerperUndSeeleInEinklangBringenTemplateVariables extends StoryTempl
                 ],
                 'closingText' => 'Lass dich drauf ein!',
             ],
+            'insight' => [
+                'headline' => 'Wie wirkt sich Outdoorsport auf den Stresspegel aus?',
+                'paragraphs' => [
+                    'Bei meinen Kursen in Delbrück besonders gut. Frag doch mal in deiner Familie, im Freundeskreis, Eltern aus Delbrücker Kindergärten und Schulen. Bewegung + frische Luft: das lässt den Stresspegel sinken.'
+                ],
+            ],
             'callToAction' => [
                 'caption' => [
                     'Komm dazu!',
