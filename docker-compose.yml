@@ -1,0 +1,29 @@
+version: "3.5"
+
+services:
+  mitmarion_nginx:
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    container_name: mitmarion_nginx
+    volumes:
+     - ./docker/nginx/mitmarion.conf:/etc/nginx/conf.d/mitmarion.conf
+     - .:/www
+    ports:
+     - "80:80"
+    networks:
+      - mitmarion
+
+  mitmarion_php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: mitmarion_php
+    volumes:
+      - .:/www
+    networks:
+      - mitmarion
+
+networks:
+  mitmarion:
+   external: true
