@@ -16,9 +16,9 @@ final class MirDenKopfVerdrehenTemplateVariables extends StoryTemplateVariables
                 'closingText' => 'Probier es aus!',
             ],
             'insight' => [
-                'headline' => 'Wer in Delbrück macht mit beim Outdoorsport?',
+                'headline' => 'Wo kann ich in Delbrück draußen Sport machen?',
                 'paragraphs' => [
-                    'Ob ein Arbeitstag bei "Sport Gerling", im "Flair Hotel Waldkrug" oder hinter der Brottheke bei "Benslips", ganz egal wo – wir alle lassen uns auf Outdoorsport, sprich Ganzkörpertraining, ein!'
+                    'Ob ein Arbeitstag bei "Sport Gerling", im "Flair Hotel Waldkrug" oder hinter der Brottheke bei "Benslips", ganz egal wo – ich lasse mich auf Outdoorsport, sprich Ganzkörpertraining, ein! '
                 ],
             ],
             'callToAction' => [
