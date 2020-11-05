@@ -1,5 +1,6 @@
 @font-face {
     font-display: swap;
+    unicode-range: U+000-5FF; /* Download only latin glyphs */
     font-family: 'MitMarionFont';
     src: url("/_assets/css/fonts/file.woff2") format("woff2"),
     url("/_assets/css/fonts/file.woff") format("woff"),
