@@ -447,6 +447,10 @@ nav .flyout a:link:visited:hover:active,
     text-decoration: none;
 }
 
+.eyeCatcher a {
+    text-decoration: underline;
+}
+
 body,
 .content,
 nav .flyout li.current,
