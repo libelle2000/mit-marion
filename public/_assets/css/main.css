@@ -51,6 +51,27 @@ a[target="_blank"]:after {
     background-image: url("/_assets/css/images/arrow-filled-light.svg");
 }
 
+.eyeCatcher {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.eyeCatcher,
+.eyeCatcher > * {
+    transform: rotate(3deg);
+    position: relative;
+}
+.eyeCatcher::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffff00;
+    transform: rotate(3deg);
+}
+
 .closeMessage {
     cursor: pointer;
     display: block;
