@@ -57,12 +57,18 @@ form {
     margin-bottom: 0.5rem;
 }
 
-.contactIntro {
+.contactIntro,
+.socialMediaContact {
     padding-top: 2rem;
 }
 
+.socialMediaContact {
+    padding-bottom: 2rem;
+}
+
 .contactIntro p,
-.formElementGroup {
+.formElementGroup p,
+.socialMediaContact p {
     margin-bottom: 1rem;
 }
 
@@ -94,8 +100,14 @@ textarea {
 }
 
 .errorIntro,
-.errorList li{
+.errorList li {
     color: #BB0000;
+}
+
+.socialMediaContact * {
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 @media only screen and (min-device-width: 800px) {

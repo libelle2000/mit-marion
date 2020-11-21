@@ -82,6 +82,7 @@ a[target="_blank"]:after {
 }
 
 .contactIntro,
+.socialMediaContact,
 .cookieMessage,
 .member .subquote,
 .marion .mainquote,
@@ -337,6 +338,7 @@ section.marion,
 section.insight,
 .contactForm,
 .contactIntro,
+.socialMediaContact,
 .errorPage {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
