@@ -28,8 +28,8 @@
                     <input id="preName"
                            name="{{ contactFormElements.preName.identifier }}" type="text"
                            placeholder="{{ contactFormElements.preName.placeholder }}"
-                           value="{{ contactFormElements.preName.customerInput }}"/>
-                    {% if contactFormElements.preName.errorMessages|length > 0 %}
+                           value="{{ contactFormElements.preName.customerInput ?? '' }}"/>
+                    {% if (contactFormElements.preName.errorMessages is defined) and contactFormElements.preName.errorMessages|length > 0 %}
                         <ul class="errorList">
                             {% for errorMessage in contactFormElements.preName.errorMessages %}
                                 <li>{{ errorMessage|nl2br }}</li>
@@ -42,8 +42,8 @@
                     <input id="surName"
                            name="{{ contactFormElements.surName.identifier }}" type="text"
                            placeholder="{{ contactFormElements.surName.placeholder }}"
-                           value="{{ contactFormElements.surName.customerInput }}"/>
-                    {% if contactFormElements.surName.errorMessages|length > 0 %}
+                           value="{{ contactFormElements.surName.customerInput ?? '' }}"/>
+                    {% if (contactFormElements.surName.errorMessages is defined) and contactFormElements.surName.errorMessages|length > 0 %}
                         <ul class="errorList">
                             {% for errorMessage in contactFormElements.surName.errorMessages %}
                                 <li>{{ errorMessage|nl2br }}</li>
@@ -56,8 +56,8 @@
                     <input id="eMail"
                            name="{{ contactFormElements.eMail.identifier }}"
                            type="email" placeholder="{{ contactFormElements.eMail.placeholder }}"
-                           value="{{ contactFormElements.eMail.customerInput }}"/>
-                    {% if contactFormElements.eMail.errorMessages|length > 0 %}
+                           value="{{ contactFormElements.eMail.customerInput ?? '' }}"/>
+                    {% if (contactFormElements.eMail.errorMessages is defined) and contactFormElements.eMail.errorMessages|length > 0 %}
                         <ul class="errorList">
                             {% for errorMessage in contactFormElements.eMail.errorMessages %}
                                 <li>{{ errorMessage|nl2br }}</li>
@@ -71,9 +71,9 @@
                     </label>
                     <textarea id="customerMessage"
                               name="{{ contactFormElements.customerMessage.identifier }}"
-                              placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput }}</textarea>
+                              placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput ?? '' }}</textarea>
 
-                    {% if contactFormElements.customerMessage.errorMessages|length > 0 %}
+                    {% if (contactFormElements.customerMessage.errorMessages is defined) and contactFormElements.customerMessage.errorMessages|length > 0 %}
                         <ul class="errorList">
                             {% for errorMessage in contactFormElements.customerMessage.errorMessages %}
                                 <li>{{ errorMessage|nl2br }}</li>
@@ -91,7 +91,7 @@
                                         target="_blank"
                                         rel="noopener">Datenschutzerklärung</a> gelesen und akzeptiere sie.
                     </label>
-                    {% if contactFormElements.dataPrivacy.errorMessages|length > 0 %}
+                    {% if (contactFormElements.dataPrivacy.errorMessages is defined) and contactFormElements.dataPrivacy.errorMessages|length > 0 %}
                         <ul class="errorList">
                             {% for errorMessage in contactFormElements.dataPrivacy.errorMessages %}
                                 <li>{{ errorMessage|nl2br }}</li>
@@ -105,7 +105,7 @@
                     </label>
                     <div class="g-recaptcha" data-sitekey="6LcgH7IZAAAAAB7lGgaeGWb_Gn6lzih5NRayvrdE"
                          data-size="compact"></div>
-                    {% if contactFormElements.reCaptcha.errorMessages|length > 0 %}
+                    {% if (contactFormElements.reCaptcha.errorMessages is defined) and contactFormElements.reCaptcha.errorMessages|length > 0 %}
                         <ul class="errorList">
                             {% for errorMessage in contactFormElements.reCaptcha.errorMessages %}
                                 <li>{{ errorMessage|nl2br }}</li>

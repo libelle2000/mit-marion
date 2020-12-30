@@ -24,6 +24,7 @@ class Factory
         $twig = new TwigEnvironment(
             $loader, [
                 'debug' => self::TWIG_DEBUG,
+                'strict_variables' => true,
                 'cache' => self::TWIG_DEBUG ? self::DO_NOT_CACHE : $templateCachePath,
             ]
         );
