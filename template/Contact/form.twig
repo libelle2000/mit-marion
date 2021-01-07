@@ -26,6 +26,7 @@
                 <div class="formElementGroup preName">
                     <label for="preName">{{ contactFormElements.preName.placeholder }}:</label>
                     <input id="preName"
+                           autocomplete="given-name"
                            name="{{ contactFormElements.preName.identifier }}" type="text"
                            placeholder="{{ contactFormElements.preName.placeholder }}"
                            value="{{ contactFormElements.preName.customerInput ?? '' }}"/>
@@ -40,6 +41,7 @@
                 <div class="formElementGroup surName">
                     <label for="surName">{{ contactFormElements.surName.placeholder }}:</label>
                     <input id="surName"
+                           autocomplete="family-name"
                            name="{{ contactFormElements.surName.identifier }}" type="text"
                            placeholder="{{ contactFormElements.surName.placeholder }}"
                            value="{{ contactFormElements.surName.customerInput ?? '' }}"/>
@@ -54,6 +56,7 @@
                 <div class="formElementGroup eMail">
                     <label for="eMail">{{ contactFormElements.eMail.placeholder }}:</label>
                     <input id="eMail"
+                           autocomplete="email"
                            name="{{ contactFormElements.eMail.identifier }}"
                            type="email" placeholder="{{ contactFormElements.eMail.placeholder }}"
                            value="{{ contactFormElements.eMail.customerInput ?? '' }}"/>
