@@ -27,6 +27,7 @@
                     <label for="preName">{{ contactFormElements.preName.placeholder }}:</label>
                     <input id="preName"
                            autocomplete="given-name"
+                           enterkeyhint="next"
                            name="{{ contactFormElements.preName.identifier }}" type="text"
                            placeholder="{{ contactFormElements.preName.placeholder }}"
                            value="{{ contactFormElements.preName.customerInput ?? '' }}"/>
@@ -42,6 +43,7 @@
                     <label for="surName">{{ contactFormElements.surName.placeholder }}:</label>
                     <input id="surName"
                            autocomplete="family-name"
+                           enterkeyhint="next"
                            name="{{ contactFormElements.surName.identifier }}" type="text"
                            placeholder="{{ contactFormElements.surName.placeholder }}"
                            value="{{ contactFormElements.surName.customerInput ?? '' }}"/>
@@ -57,6 +59,7 @@
                     <label for="eMail">{{ contactFormElements.eMail.placeholder }}:</label>
                     <input id="eMail"
                            autocomplete="email"
+                           enterkeyhint="next"
                            name="{{ contactFormElements.eMail.identifier }}"
                            type="email" placeholder="{{ contactFormElements.eMail.placeholder }}"
                            value="{{ contactFormElements.eMail.customerInput ?? '' }}"/>
@@ -73,6 +76,7 @@
                         {{ contactFormElements.customerMessage.placeholder }}:
                     </label>
                     <textarea id="customerMessage"
+                              enterkeyhint="next"
                               name="{{ contactFormElements.customerMessage.identifier }}"
                               placeholder="Hallo Marion,">{{ contactFormElements.customerMessage.customerInput ?? '' }}</textarea>
 
@@ -87,6 +91,7 @@
                 <div class="formElementGroup dataPrivacy">
                     <label for="dataPrivacy">
                         <input id="dataPrivacy"
+                               enterkeyhint="next"
                                name="{{ contactFormElements.dataPrivacy.identifier }}"
                                type="checkbox"
                                value="accepted"/>
@@ -116,7 +121,7 @@
                         </ul>
                     {% endif %}
                 </div>
-                <input class="submit button" type="submit" value="abschicken"/>
+                <input class="submit button" type="submit" value="abschicken" enterkeyhint="send"/>
             </form>
             <section class="socialMediaContact">
                 <p>
