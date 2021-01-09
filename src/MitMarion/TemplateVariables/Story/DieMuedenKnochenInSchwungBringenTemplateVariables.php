@@ -35,7 +35,7 @@ final class DieMuedenKnochenInSchwungBringenTemplateVariables extends StoryTempl
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/die-mueden-knochen-in-schwung-bringen/teilnehmer-im-luftsprung.jpg',
-                    'position' => 'center center',
+                    'position' => '50% 40%',
                 ],
                 'text' => 'Auf geht\'s!',
             ],
