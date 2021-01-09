@@ -137,6 +137,11 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
         return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_UEBER_STOCK_UND_STEIN);
     }
 
+    public function getLinkHrefForImEinzeltraining(): Href
+    {
+        return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_IM_EINZELTRAINING);
+    }
+
     protected function buildLinkHrefByZeroBasedIndex(int $zeroBasedIndex): Href
     {
         return new Href(self::STORY_MAP[$zeroBasedIndex][self::HREF]);

@@ -11,6 +11,7 @@ use MitMarion\TemplateVariables\Story\DenRueckenVerrueckenTemplateVariables;
 use MitMarion\TemplateVariables\Story\DieFazienFetzenTemplateVariables;
 use MitMarion\TemplateVariables\Story\DieMuedenKnochenInSchwungBringenTemplateVariables;
 use MitMarion\TemplateVariables\Story\DieOrangenHaeutenTemplateVariables;
+use MitMarion\TemplateVariables\Story\ImEinzeltrainingTemplateVariables;
 use MitMarion\TemplateVariables\Story\KoerperUndSeeleInEinklangBringenTemplateVariables;
 use MitMarion\TemplateVariables\Story\MeineBalanceFindenTemplateVariables;
 use MitMarion\TemplateVariables\Story\MirDenKopfVerdrehenTemplateVariables;
@@ -57,6 +58,9 @@ echo $factory->createHomePage(
             ),
             new UeberStockUndSteinTemplateVariables(
                 $storyFlyout->getLinkHrefForUeberStockUndStein()
+            ),
+            new ImEinzeltrainingTemplateVariables(
+                $storyFlyout->getLinkHrefForImEinzeltraining()
             ),
         )
     )
