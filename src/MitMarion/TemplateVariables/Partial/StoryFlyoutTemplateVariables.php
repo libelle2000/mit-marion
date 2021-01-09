@@ -53,6 +53,10 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
             self::HREF => '/über-stock-und-stein/',
             self::CAPTION => 'über Stock und Stein',
         ],
+        self::ZERO_BASED_INDEX_IM_EINZELTRAINING => [
+            self::HREF => '/im-einzeltraining/',
+            self::CAPTION => 'im Einzeltraining',
+        ],
     ];
 
     private const ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN = 0;
@@ -66,6 +70,7 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
     private const ZERO_BASED_INDEX_MEINE_BALANCE_FINDEN = 8;
     private const ZERO_BASED_INDEX_MIR_DEN_KOPF_VERDREHEN = 9;
     private const ZERO_BASED_INDEX_UEBER_STOCK_UND_STEIN = 10;
+    private const ZERO_BASED_INDEX_IM_EINZELTRAINING = 11;
 
     public function asAssocArray(): array
     {
