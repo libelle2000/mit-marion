@@ -36,7 +36,7 @@ final class ImEinzeltrainingTemplateVariables extends StoryTemplateVariables
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/im-einzeltraining/crunch-beim-einzeltraining.jpg',
-                    'position' => 'bottom, left',
+                    'position' => 'bottom right',
                 ],
                 'text' => 'mit Bewegung und frische Luft das Immunsystem stärken!',
             ],
