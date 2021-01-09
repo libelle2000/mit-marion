@@ -35,7 +35,7 @@ final class KoerperUndSeeleInEinklangBringenTemplateVariables extends StoryTempl
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/koerper-und-seele-in-einklang-bringen/teilnehmer-in-yogastellung.jpg',
-                    'position' => 'center, center',
+                    'position' => 'center center',
                 ],
                 'text' => 'KÖRPER +&nbsp;SEELE =&nbsp;ICH',
             ],

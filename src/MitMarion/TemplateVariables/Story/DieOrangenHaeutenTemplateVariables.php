@@ -35,7 +35,7 @@ final class DieOrangenHaeutenTemplateVariables extends StoryTemplateVariables
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/die-orangen-haeuten/teilnehmer-im-seitstuetz.jpg',
-                    'position' => 'bottom, right',
+                    'position' => 'right bottom',
                 ],
                 'text' => 'Toll, wie mir regelmäßige Bewegung dabei hilft!',
             ],

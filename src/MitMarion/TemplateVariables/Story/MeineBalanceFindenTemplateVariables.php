@@ -35,7 +35,7 @@ final class MeineBalanceFindenTemplateVariables extends StoryTemplateVariables
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/meine-balance-finden/teilnehmer-lachen.jpg',
-                    'position' => 'bottom, right',
+                    'position' => 'center bottom',
                 ],
                 'text' => 'Klasse - Bewegung macht mich glücklich und zufrieden!',
             ],

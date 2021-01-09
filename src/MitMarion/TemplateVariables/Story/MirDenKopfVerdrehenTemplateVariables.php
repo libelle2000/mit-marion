@@ -35,7 +35,7 @@ final class MirDenKopfVerdrehenTemplateVariables extends StoryTemplateVariables
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/mir-den-kopf-verdrehen/teilnehmer-in-lockerungsuebungen.jpg',
-                    'position' => 'center, center',
+                    'position' => 'center center',
                 ],
                 'text' => 'dieser Outdoor-Sport bringt mir was',
             ],

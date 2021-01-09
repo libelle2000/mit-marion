@@ -35,7 +35,7 @@ final class UeberStockUndSteinTemplateVariables extends StoryTemplateVariables
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/ueber-stock-und-stein/laeufer-im-dichten-wald.jpg',
-                    'position' => 'top, center',
+                    'position' => 'center top',
                 ],
                 'text' => 'in der Natur zu sein, ist einfach klasse!',
             ],

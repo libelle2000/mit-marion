@@ -35,7 +35,7 @@ final class BaeumeInBewegungBringenTemplateVariables extends StoryTemplateVariab
             'mainQuote' => [
                 'backgroundImage' => [
                     'url' => '/_assets/images/baeume-in-bewegung-bringen/teilnehmer-haengt-am-baum.jpg',
-                    'position' => 'top, center',
+                    'position' => 'right top',
                 ],
                 'text' => 'Die Natur ist unser bester Trainings&shy;partner!',
             ],
