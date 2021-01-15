@@ -38,7 +38,7 @@ final class ImEinzeltrainingTemplateVariables extends StoryTemplateVariables
                     'url' => '/_assets/images/im-einzeltraining/crunch-beim-einzeltraining.jpg',
                     'position' => 'bottom right',
                 ],
-                'text' => 'mit Bewegung und frische Luft das Immunsystem stärken!',
+                'text' => 'mit Bewegung und frischer Luft das Immunsystem stärken!',
             ],
             'subQuote' => [
                 'text' => 'Ob vor der Arbeit im Home-Office oder in der Mittagspause. Oder wenn du einfach wieder durchstarten willst.',
