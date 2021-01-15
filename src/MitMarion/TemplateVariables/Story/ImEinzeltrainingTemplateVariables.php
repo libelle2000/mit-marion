@@ -16,10 +16,12 @@ final class ImEinzeltrainingTemplateVariables extends StoryTemplateVariables
                 'closingText' => 'Neugierig geworden?',
             ],
             'insight' => [
-                'headline' => 'Einzeltraining in Delbrück',
+                'headline' => 'Outdoorsport in Delbrück - als Einzeltraining',
                 'paragraphs' => [
-                    'Wo möchtest du deinen Schwerpunkt setzen: Kraft, Ausdauer ...? Oder möchtest du dich "einfach nur" locker bewegen!?',
-                    'Wir können individuell trainieren - beim Outdoorsport in Delbrück ist das möglich!',
+                    'Auch die besten Übungen sind nicht unbedingt für jeden geeignet. Mit den Kenntnissen aus dem Reha-Bereich gehe ich ganz individuell auf dich und deinen Leistungslevel ein.',
+                    'Nach Verletzungen starten wir langsam wieder in die Bewegung. Da ist Kräftigung und Dehnung, Mobilisation und Stabilisierung das A und O.',
+                    'Ein Training für einen starken Rücken macht uns im Büroalltag fit und natürlich auch, wenn du beruflich den ganzen Tag auf den Beinen bist.',
+                    'Wir finden nach Absprache für dich und deinen Terminkalender genau die richtige Zeit und den richtigen Ort in und um Delbrück herum!',
                 ],
             ],
             'callToAction' => [
@@ -41,13 +43,13 @@ final class ImEinzeltrainingTemplateVariables extends StoryTemplateVariables
                 'text' => 'mit Bewegung und frischer Luft das Immunsystem stärken!',
             ],
             'subQuote' => [
-                'text' => 'Ob vor der Arbeit im Home-Office oder in der Mittagspause. Oder wenn du einfach wieder durchstarten willst.',
+                'text' => 'Bewegung vor der Arbeit oder in der Mittagspause ist eine tolle Sache! Dann ist der Kopf wieder frei. Oder ich nutze einfach den Vormittag, wenn die kid´s in der Schule sind :-)',
             ],
         ];
     }
 
     public function getMetaDescriptionValue(): string
     {
-        return 'Mit Outdoor Sport zur Strandfigur!';
+        return 'Im Einzeltraining ist der Outdoor Sport ganz individuell zugeschnitten!';
     }
 }
