@@ -9,6 +9,10 @@ use Shared\ValueObject\Link\Href;
 class StoryFlyoutTemplateVariables implements TemplateVariables
 {
     protected const STORY_MAP = [
+        self::ZERO_BASED_INDEX_VOM_KURZ_UND_KNACKIG_NACH_DRAUSSEN => [
+            self::HREF => '/kurz-und-knackig-nach-draußen/',
+            self::CAPTION => 'kurz und knackig nach draußen',
+        ],
         self::ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN => [
             self::HREF => '/vom-regen-erfrischen-lassen/',
             self::CAPTION => 'vom Regen erfrischen lassen',
@@ -59,18 +63,19 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
         ],
     ];
 
-    private const ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN = 0;
-    private const ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN = 1;
-    private const ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN = 2;
-    private const ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN = 3;
-    private const ZERO_BASED_INDEX_BAEUME_IN_BEWEGUNG_BRINGEN = 4;
-    private const ZERO_BASED_INDEX_DIE_MUEDEN_KNOCHEN_IN_SCHWUNG_BRINGEN = 5;
-    private const ZERO_BASED_INDEX_DIE_ORANGEN_HAEUTEN = 6;
-    private const ZERO_BASED_INDEX_KOERPER_UND_SEELE_IN_EINKLANG_BRINGEN = 7;
-    private const ZERO_BASED_INDEX_MEINE_BALANCE_FINDEN = 8;
-    private const ZERO_BASED_INDEX_MIR_DEN_KOPF_VERDREHEN = 9;
-    private const ZERO_BASED_INDEX_UEBER_STOCK_UND_STEIN = 10;
-    private const ZERO_BASED_INDEX_IM_EINZELTRAINING = 11;
+    private const ZERO_BASED_INDEX_VOM_KURZ_UND_KNACKIG_NACH_DRAUSSEN = 0;
+    private const ZERO_BASED_INDEX_VOM_REGEN_ERFRISCHEN_LASSEN = 1;
+    private const ZERO_BASED_INDEX_DEN_RUECKEN_VERRUECKEN = 2;
+    private const ZERO_BASED_INDEX_DIE_FAZIEN_FETZEN = 3;
+    private const ZERO_BASED_INDEX_DEN_ALLTAG_FUER_EINE_STUNDE_VERGESSEN = 4;
+    private const ZERO_BASED_INDEX_BAEUME_IN_BEWEGUNG_BRINGEN = 5;
+    private const ZERO_BASED_INDEX_DIE_MUEDEN_KNOCHEN_IN_SCHWUNG_BRINGEN = 6;
+    private const ZERO_BASED_INDEX_DIE_ORANGEN_HAEUTEN = 7;
+    private const ZERO_BASED_INDEX_KOERPER_UND_SEELE_IN_EINKLANG_BRINGEN = 8;
+    private const ZERO_BASED_INDEX_MEINE_BALANCE_FINDEN = 9;
+    private const ZERO_BASED_INDEX_MIR_DEN_KOPF_VERDREHEN = 10;
+    private const ZERO_BASED_INDEX_UEBER_STOCK_UND_STEIN = 11;
+    private const ZERO_BASED_INDEX_IM_EINZELTRAINING = 12;
 
     public function asAssocArray(): array
     {
@@ -80,6 +85,11 @@ class StoryFlyoutTemplateVariables implements TemplateVariables
                 'stories' => self::STORY_MAP,
             ],
         ];
+    }
+
+    public function getLinkHrefForKurzUndKnackigNachDraussen(): Href
+    {
+        return $this->buildLinkHrefByZeroBasedIndex(self::ZERO_BASED_INDEX_VOM_KURZ_UND_KNACKIG_NACH_DRAUSSEN);
     }
 
     public function getLinkHrefForVomRegenErfrischenLassen(): Href

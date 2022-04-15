@@ -13,6 +13,7 @@ use MitMarion\TemplateVariables\Story\DieMuedenKnochenInSchwungBringenTemplateVa
 use MitMarion\TemplateVariables\Story\DieOrangenHaeutenTemplateVariables;
 use MitMarion\TemplateVariables\Story\ImEinzeltrainingTemplateVariables;
 use MitMarion\TemplateVariables\Story\KoerperUndSeeleInEinklangBringenTemplateVariables;
+use MitMarion\TemplateVariables\Story\KurzUndKnackigNachDraussenTemplateVariables;
 use MitMarion\TemplateVariables\Story\MeineBalanceFindenTemplateVariables;
 use MitMarion\TemplateVariables\Story\MirDenKopfVerdrehenTemplateVariables;
 use MitMarion\TemplateVariables\Story\StoriesTeaserTemplateVariables;
@@ -26,6 +27,9 @@ echo $factory->createHomePage(
         new CorporateFlyoutTemplateVariables(),
         $storyFlyout,
         new StoriesTeaserTemplateVariables(
+            new KurzUndKnackigNachDraussenTemplateVariables(
+                $storyFlyout->getLinkHrefForKurzUndKnackigNachDraussen()
+            ),
             new VomRegenErfrischenLassenTemplateVariables(
                 $storyFlyout->getLinkHrefForVomRegenErfrischenLassen()
             ),
