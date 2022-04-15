@@ -21,7 +21,7 @@ final class KurzUndKnackigNachDraussenTemplateVariables extends StoryTemplateVar
             'insight' => [
                 'headline' => 'Das bringt das neue Sportangebot in Delbrück',
                 'paragraphs' => [
-                    '&quot;Kurz + Knackig&quot; - d. h. den Körper in 45 min richtig auf Touren bringen! Mit Sprints + Sprüngen und einer Menge Übungen mit dem eigenem Körpergewicht.',
+                    '"Kurz + Knackig" - d. h. den Körper in 45 min richtig auf Touren bringen! Mit Sprints + Sprüngen und einer Menge Übungen mit dem eigenem Körpergewicht.',
                     'Sport draußen in Delbrück!'
                 ],
             ],
