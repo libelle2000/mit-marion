@@ -9,7 +9,7 @@ final class CurrentPath extends BaseString
 {
     public static function fromDirectory(string $dir): CurrentPath
     {
-        return new static(basename($dir));
+        return new CurrentPath(basename($dir));
     }
 
     public function asUrlPath(): string

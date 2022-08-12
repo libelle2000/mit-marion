@@ -7,7 +7,7 @@ use MitMarion\TemplateVariables\Partial\ContactFormElementsWithCustomerDataAndEr
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariables;
 use MitMarion\TemplateVariables\Partial\StoryFlyoutTemplateVariables;
 use MitMarion\TemplateVariables\ValueObject\CurrentPath;
-use \Shared\TemplateVariables\TemplateVariables as SharedTemplateVariables;
+use Shared\TemplateVariables\TemplateVariables as SharedTemplateVariables;
 
 final class ContactFormTemplateVariables extends PageTemplateVariables
 {

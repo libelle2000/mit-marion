@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Shared\Validator\Element;
 
+use Shared\Http\ParameterValue;
 use Shared\ValueObject\Base\Identifier;
 use Shared\Http\ParameterizedRequest;
 use Shared\TemplateVariables\Form\Element\CustomerInput;
@@ -99,7 +100,7 @@ abstract class ElementValidator
         return new SuccessElementResult($this->createCustomerInput());
     }
 
-    protected function getParameterValue(): \Shared\Http\ParameterValue
+    protected function getParameterValue(): ParameterValue
     {
         return $this->request->getParameter($this->getParameterIdentifier());
     }

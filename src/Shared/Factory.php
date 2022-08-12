@@ -8,6 +8,7 @@ use Shared\Environment\Environment;
 use Shared\ReCaptcha\ApiKey;
 use Shared\ReCaptcha\Client;
 use Twig\Environment as TwigEnvironment;
+use Twig\Extension\DebugExtension;
 use Twig\Loader\FilesystemLoader;
 
 class Factory
@@ -29,7 +30,7 @@ class Factory
             ]
         );
         if (self::TWIG_DEBUG) {
-            $twig->addExtension(new \Twig\Extension\DebugExtension());
+            $twig->addExtension(new DebugExtension());
         }
 
         return $twig;

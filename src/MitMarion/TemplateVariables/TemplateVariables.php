@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace MitMarion\TemplateVariables;
 
-use \Shared\TemplateVariables\TemplateVariables as SharedTemplateVariables;
+use Shared\TemplateVariables\TemplateVariables as SharedTemplateVariables;
 
 interface TemplateVariables extends SharedTemplateVariables
 {
