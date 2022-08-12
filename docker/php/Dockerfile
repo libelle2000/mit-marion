@@ -1,11 +1,11 @@
-FROM php:7.4.10-fpm-alpine
+FROM php:8.1-fpm-alpine
 
 RUN mkdir /www
 
-COPY --from=composer:1.10.7 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.3.10 /usr/bin/composer /usr/bin/composer
 
 RUN apk add $PHPIZE_DEPS \
-    && pecl install xdebug-2.9.6 \
+    && pecl install xdebug-3.1.5 \
     && docker-php-ext-enable xdebug \
     && apk del $PHPIZE_DEPS
 
