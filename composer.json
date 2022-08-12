@@ -9,6 +9,7 @@
         "ext-json": "*"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest"
     },
     "config": {
         "bin-dir": "bin",
