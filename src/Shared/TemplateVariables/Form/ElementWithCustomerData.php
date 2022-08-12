@@ -9,10 +9,7 @@ use Shared\TemplateVariables\Form\Element\Placeholder;
 
 abstract class ElementWithCustomerData extends Element
 {
-    /**
-     * @var CustomerInput
-     */
-    private $customerInput;
+    private CustomerInput $customerInput;
 
     public function __construct(
         Label $label,

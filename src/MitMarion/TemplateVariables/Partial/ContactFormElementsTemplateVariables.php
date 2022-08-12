@@ -8,30 +8,18 @@ use Shared\TemplateVariables\Form\Element;
 
 abstract class ContactFormElementsTemplateVariables implements TemplateVariables
 {
-    /**
-     * @var Element
-     */
-    private $reCaptcha;
-    /**
-     * @var Element
-     */
-    private $preName;
-    /**
-     * @var Element
-     */
-    private $surName;
-    /**
-     * @var Element
-     */
-    private $eMail;
-    /**
-     * @var Element
-     */
-    private $message;
-    /**
-     * @var Element
-     */
-    private $dataPrivacy;
+
+    private Element $reCaptcha;
+
+    private Element $preName;
+
+    private Element $surName;
+
+    private Element $eMail;
+
+    private Element $message;
+
+    private Element $dataPrivacy;
 
     public function __construct(
         Element $reCaptcha,

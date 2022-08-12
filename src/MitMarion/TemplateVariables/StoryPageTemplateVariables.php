@@ -9,15 +9,9 @@ use MitMarion\TemplateVariables\Story\StoryTemplateVariables;
 
 final class StoryPageTemplateVariables extends PageTemplateVariables
 {
-    /**
-     * @var StoryFlyoutTemplateVariablesWithActiveMarker
-     */
-    private $storyFlyout;
+    private StoryFlyoutTemplateVariablesWithActiveMarker $storyFlyout;
 
-    /**
-     * @var StoryTemplateVariables
-     */
-    private $story;
+    private StoryTemplateVariables $story;
 
     public function __construct(
         CorporateFlyoutTemplateVariables $corporateFlyout,

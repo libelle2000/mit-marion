@@ -16,34 +16,20 @@ use Shared\Validator\Result;
 
 class ContactFormValidator implements Validator
 {
-    /**
-     * @var ContactFormElementBuilder
-     */
-    private $formElementBuilder;
-    /**
-     * @var ReCaptchaValidator
-     */
-    private $reCaptchaValidator;
-    /**
-     * @var PreNameValidator
-     */
-    private $preNameValidator;
-    /**
-     * @var SurNameValidator
-     */
-    private $surNameValidator;
-    /**
-     * @var EMailValidator
-     */
-    private $eMailValidator;
-    /**
-     * @var CustomerMessageValidator
-     */
-    private $customerMessageValidator;
-    /**
-     * @var DataPrivacyValidator
-     */
-    private $dataPrivacyValidator;
+
+    private ContactFormElementBuilder $formElementBuilder;
+
+    private ReCaptchaValidator $reCaptchaValidator;
+
+    private PreNameValidator $preNameValidator;
+
+    private SurNameValidator $surNameValidator;
+
+    private EMailValidator $eMailValidator;
+
+    private CustomerMessageValidator $customerMessageValidator;
+
+    private DataPrivacyValidator $dataPrivacyValidator;
 
     public function __construct(
         ContactFormElementBuilder $formElementBuilder,

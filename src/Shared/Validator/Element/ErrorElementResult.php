@@ -7,10 +7,7 @@ use Shared\TemplateVariables\Form\Element\ErrorMessages;
 
 class ErrorElementResult extends ElementResult
 {
-    /**
-     * @var ErrorMessages
-     */
-    private $errorMessages;
+    private ErrorMessages $errorMessages;
 
     public function __construct(CustomerInput $customerInput, ErrorMessages $errorMessages)
     {

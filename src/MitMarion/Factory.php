@@ -44,10 +44,7 @@ use Shared\Environment\Environment as SharedEnvironment;
 
 class Factory
 {
-    /**
-     * @var SharedFactory
-     */
-    private $sharedFactory;
+    private SharedFactory $sharedFactory;
 
     public function __construct(SharedFactory $sharedFactory)
     {

@@ -9,15 +9,9 @@ use Shared\TemplateVariables\TemplateVariables;
 
 abstract class Element implements TemplateVariables
 {
-    /**
-     * @var Label
-     */
-    private $label;
+    private Label $label;
 
-    /**
-     * @var Placeholder
-     */
-    private $placeholder;
+    private Placeholder $placeholder;
 
     public function __construct(Label $label, Placeholder $placeholder)
     {

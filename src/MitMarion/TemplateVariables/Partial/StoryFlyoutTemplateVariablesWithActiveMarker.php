@@ -11,15 +11,9 @@ class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVa
 {
     private const ARRAY_FILTER_USE_VALUE = 0;
 
-    /**
-     * @var array
-     */
-    private $zeroBasedIndexByPathCache;
+    private array $zeroBasedIndexByPathCache;
 
-    /**
-     * @var CurrentPath
-     */
-    private $currentPath;
+    private CurrentPath $currentPath;
 
     public function __construct(CurrentPath $currentPath)
     {
@@ -89,7 +83,7 @@ class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVa
         }
 
         throw new RuntimeException(
-            sprintf('Given path was not found in map. [%s]', $currentPath)
+            sprintf('Given path was not found in map. [%s]', $currentPathValue)
         );
     }
 

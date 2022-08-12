@@ -8,10 +8,7 @@ use Shared\ValueObject\Link\Href;
 
 abstract class StoryTemplateVariables implements TemplateVariables
 {
-    /**
-     * @var Href
-     */
-    private $linkHref;
+    private Href $linkHref;
 
     public function __construct(Href $linkHref)
     {

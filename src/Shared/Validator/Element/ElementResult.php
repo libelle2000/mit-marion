@@ -6,10 +6,7 @@ use Shared\TemplateVariables\Form\Element\CustomerInput;
 
 abstract class ElementResult
 {
-    /**
-     * @var CustomerInput
-     */
-    private $customerInput;
+    private CustomerInput $customerInput;
 
     public function __construct(CustomerInput $customerInput)
     {

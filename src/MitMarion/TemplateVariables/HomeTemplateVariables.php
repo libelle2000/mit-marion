@@ -9,10 +9,7 @@ use MitMarion\TemplateVariables\Story\StoriesTeaserTemplateVariables;
 
 final class HomeTemplateVariables extends PageTemplateVariables
 {
-    /**
-     * @var StoriesTeaserTemplateVariables
-     */
-    private $storiesTeaser;
+    private StoriesTeaserTemplateVariables $storiesTeaser;
 
     public function __construct(
         CorporateFlyoutTemplateVariables $corporateFlyout,

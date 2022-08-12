@@ -28,10 +28,7 @@ abstract class ElementValidator
         '-',
     ];
 
-    /**
-     * @var ParameterizedRequest
-     */
-    protected $request;
+    protected ParameterizedRequest $request;
 
     public function __construct(ParameterizedRequest $request)
     {

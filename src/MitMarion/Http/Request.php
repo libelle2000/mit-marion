@@ -12,14 +12,9 @@ class Request implements ParameterizedRequest
 {
     private const REQUEST_METHOD_POST = 'POST';
 
-    /**
-     * @var string
-     */
-    private $requestMethod;
-    /**
-     * @var array
-     */
-    private $parameter;
+    private string $requestMethod;
+
+    private array $parameter;
 
     public function __construct(string $requestMethod, array $post)
     {

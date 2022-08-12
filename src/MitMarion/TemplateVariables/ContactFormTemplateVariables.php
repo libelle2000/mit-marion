@@ -12,15 +12,10 @@ use \Shared\TemplateVariables\TemplateVariables as SharedTemplateVariables;
 final class ContactFormTemplateVariables extends PageTemplateVariables
 {
     private const HTTP_POST = 'post';
-    /**
-     * @var CurrentPath
-     */
-    private $currentPath;
 
-    /**
-     * @var ContactFormElementsWithCustomerDataAndErrorsTemplateVariables
-     */
-    private $contactFormElementsWithCustomerDataAndErrorsTemplateVariables;
+    private CurrentPath $currentPath;
+
+    private ContactFormElementsWithCustomerDataAndErrorsTemplateVariables|SharedTemplateVariables $contactFormElementsWithCustomerDataAndErrorsTemplateVariables;
 
     public function __construct(
         CorporateFlyoutTemplateVariables $corporateFlyout,

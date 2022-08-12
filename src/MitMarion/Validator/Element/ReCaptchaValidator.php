@@ -17,10 +17,7 @@ class ReCaptchaValidator extends ElementValidator
 {
     private const PARAMETER_NAME = 'g-recaptcha-response';
 
-    /**
-     * @var Client
-     */
-    private $reCaptchaClient;
+    private Client $reCaptchaClient;
 
     public function __construct(ParameterizedRequest $request, Client $reCaptchaClient)
     {

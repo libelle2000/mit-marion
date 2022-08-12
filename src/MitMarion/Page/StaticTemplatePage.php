@@ -7,10 +7,7 @@ use Shared\Renderer\Renderer;
 
 abstract class StaticTemplatePage implements Page
 {
-    /**
-     * @var Renderer
-     */
-    private $renderer;
+    private Renderer $renderer;
 
     public function __construct(Renderer $renderer)
     {

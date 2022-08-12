@@ -11,10 +11,7 @@ use Shared\Email\SenderEmail;
 
 class EMailClient extends SharedEmailClient
 {
-    /**
-     * @var ValidatedContactFormData
-     */
-    private $validatedContactFormData;
+    private ValidatedContactFormData $validatedContactFormData;
 
     public function __construct(
         SenderCaption $senderCaption,

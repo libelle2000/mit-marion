@@ -8,10 +8,7 @@ use RuntimeException;
 
 class CorporateFlyoutTemplateVariablesWithActiveMarker extends CorporateFlyoutTemplateVariables
 {
-    /**
-     * @var CurrentPath
-     */
-    private $currentPath;
+    private CurrentPath $currentPath;
 
     public function __construct(CurrentPath $currentPath)
     {

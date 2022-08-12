@@ -12,7 +12,7 @@ class Environment
     /**
      * @var array<string, string>
      */
-    private $values;
+    private array $values;
 
     public function __construct(array $values)
     {

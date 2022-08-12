@@ -6,14 +6,9 @@ namespace Shared\Email;
 
 abstract class EMailClient
 {
-    /**
-     * @var SenderCaption
-     */
-    private $senderCaption;
-    /**
-     * @var SenderEmail
-     */
-    private $senderEmail;
+    private SenderCaption $senderCaption;
+
+    private SenderEmail $senderEmail;
 
     public function __construct(SenderCaption $senderCaption, SenderEmail $senderEmail)
     {

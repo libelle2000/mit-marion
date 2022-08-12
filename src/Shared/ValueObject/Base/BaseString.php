@@ -5,10 +5,7 @@ namespace Shared\ValueObject\Base;
 
 abstract class BaseString
 {
-    /**
-     * @var string
-     */
-    private $value;
+    private string $value;
 
     public function __construct(string $value)
     {

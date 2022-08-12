@@ -10,10 +10,7 @@ use Shared\TemplateVariables\Form\Element\Placeholder;
 
 abstract class ElementWithCustomerDataAndErrors extends ElementWithCustomerData
 {
-    /**
-     * @var ErrorMessages
-     */
-    private $errorMessages;
+    private ErrorMessages $errorMessages;
 
     public function __construct(
         Label $label,

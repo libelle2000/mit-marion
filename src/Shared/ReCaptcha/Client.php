@@ -8,10 +8,7 @@ use Shared\Http\ParameterValue;
 
 class Client
 {
-    /**
-     * @var ApiKey
-     */
-    private $apiKey;
+    private ApiKey $apiKey;
 
     public function __construct(ApiKey $apiKey)
     {

@@ -11,10 +11,7 @@ use RuntimeException;
 
 abstract class BaseUniqueCollection implements IteratorAggregate, Countable
 {
-    /**
-     * @var array
-     */
-    protected $elements = [];
+    protected array $elements = [];
 
     public function getIterator(): ArrayIterator
     {
@@ -34,7 +31,7 @@ abstract class BaseUniqueCollection implements IteratorAggregate, Countable
     protected function addUniqueElement($element, Identifier $key): void
     {
         if ($this->hasElementWithInternalKey($key)) {
-            $message = sprintf('Collection already has entry with key "%s"', $key);
+            $message = sprintf('Collection already has entry with key "%s"', $key->getValue());
 
             throw new RuntimeException($message);
         }
@@ -49,7 +46,7 @@ abstract class BaseUniqueCollection implements IteratorAggregate, Countable
     protected function getElement(Identifier $key)
     {
         if (!$this->hasElementWithInternalKey($key)) {
-            $message = sprintf('Key "%s" does not exist in collection', $key);
+            $message = sprintf('Key "%s" does not exist in collection', $key->getValue());
             throw new RuntimeException($message);
         }
 

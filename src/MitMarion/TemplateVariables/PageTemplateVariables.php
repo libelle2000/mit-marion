@@ -12,15 +12,9 @@ abstract class PageTemplateVariables implements TemplateVariables
     protected const TEMPLATE_KEY_TITLE = 'title';
     protected const TEMPLATE_KEY_META_DESCRIPTION = 'metaDescription';
 
-    /**
-     * @var CorporateFlyoutTemplateVariables
-     */
-    private $corporateFlyout;
+    private CorporateFlyoutTemplateVariables $corporateFlyout;
 
-    /**
-     * @var StoryFlyoutTemplateVariables
-     */
-    private $storyFlyout;
+    private StoryFlyoutTemplateVariables $storyFlyout;
 
     public function __construct(CorporateFlyoutTemplateVariables $corporateFlyout, StoryFlyoutTemplateVariables $storyFlyout)
     {

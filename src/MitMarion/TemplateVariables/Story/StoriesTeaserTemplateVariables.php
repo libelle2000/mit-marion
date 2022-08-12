@@ -7,10 +7,7 @@ use MitMarion\TemplateVariables\TemplateVariables;
 
 final class StoriesTeaserTemplateVariables implements TemplateVariables
 {
-    /**
-     * @var array<StoryTemplateVariables>
-     */
-    private $storyTemplateVariables;
+    private array $storyTemplateVariables;
 
     public function __construct(StoryTemplateVariables ...$storyTemplateVariables)
     {

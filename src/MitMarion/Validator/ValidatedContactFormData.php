@@ -7,26 +7,15 @@ use Shared\TemplateVariables\Form\Element\CustomerInput;
 
 class ValidatedContactFormData
 {
-    /**
-     * @var CustomerInput
-     */
-    private $customerInputPreName;
-    /**
-     * @var CustomerInput
-     */
-    private $customerInputSurName;
-    /**
-     * @var CustomerInput
-     */
-    private $customerInputEMail;
-    /**
-     * @var CustomerInput
-     */
-    private $customerInputCustomerMessage;
-    /**
-     * @var CustomerInput
-     */
-    private $customerInputDataPrivacy;
+    private CustomerInput $customerInputPreName;
+
+    private CustomerInput $customerInputSurName;
+
+    private CustomerInput $customerInputEMail;
+
+    private CustomerInput $customerInputCustomerMessage;
+
+    private CustomerInput $customerInputDataPrivacy;
 
     public function __construct(
         CustomerInput $customerInputPreName,
