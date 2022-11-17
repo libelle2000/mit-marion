@@ -26,4 +26,4 @@ services:
 
 networks:
   mitmarion:
-   external: true
+   external: false
