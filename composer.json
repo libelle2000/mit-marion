@@ -2,7 +2,7 @@
     "name": "libelle2000/mit-marion",
     "type": "project",
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "twig/twig": "^3.0",
         "vlucas/phpdotenv": "^5.1",
         "ext-curl": "*",
@@ -15,7 +15,7 @@
         "bin-dir": "bin",
         "cache-dir": "~/.composer/cache",
         "platform": {
-          "php": "8.1"
+          "php": "8.2"
         }
     },
     "autoload": {
