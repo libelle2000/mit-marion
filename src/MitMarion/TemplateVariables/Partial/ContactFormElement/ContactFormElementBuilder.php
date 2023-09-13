@@ -125,8 +125,6 @@ class ContactFormElementBuilder
     }
 
     /**
-     * @param ElementResult $preNameResult
-     *
      * @return PreNameWithCustomerDataAndErrors
      */
     private function buildPreNameWithCustomerData(ElementResult $preNameResult): ElementWithCustomerData
@@ -149,8 +147,6 @@ class ContactFormElementBuilder
     }
 
     /**
-     * @param ElementResult $reCaptchaResult
-     *
      * @return ReCaptchaWithCustomerDataAndErrors
      */
     private function buildReCaptchaWithCustomerData(ElementResult $reCaptchaResult): ElementWithCustomerData

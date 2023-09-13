@@ -9,32 +9,8 @@ use Shared\TemplateVariables\Form\Element;
 abstract class ContactFormElementsTemplateVariables implements TemplateVariables
 {
 
-    private Element $reCaptcha;
-
-    private Element $preName;
-
-    private Element $surName;
-
-    private Element $eMail;
-
-    private Element $message;
-
-    private Element $dataPrivacy;
-
-    public function __construct(
-        Element $reCaptcha,
-        Element $preName,
-        Element $surName,
-        Element $eMail,
-        Element $message,
-        Element $dataPrivacy
-    ) {
-        $this->reCaptcha = $reCaptcha;
-        $this->preName = $preName;
-        $this->surName = $surName;
-        $this->eMail = $eMail;
-        $this->message = $message;
-        $this->dataPrivacy = $dataPrivacy;
+    public function __construct(private readonly Element $reCaptcha, private readonly Element $preName, private readonly Element $surName, private readonly Element $eMail, private readonly Element $message, private readonly Element $dataPrivacy)
+    {
     }
 
     public function asAssocArray(): array

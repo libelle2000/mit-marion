@@ -6,11 +6,8 @@ use Shared\TemplateVariables\Form\Element\CustomerInput;
 
 abstract class ElementResult
 {
-    private CustomerInput $customerInput;
-
-    public function __construct(CustomerInput $customerInput)
+    public function __construct(private readonly CustomerInput $customerInput)
     {
-        $this->customerInput = $customerInput;
     }
 
     public function getCustomerInput(): CustomerInput

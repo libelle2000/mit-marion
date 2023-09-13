@@ -8,11 +8,8 @@ use RuntimeException;
 
 class CorporateFlyoutTemplateVariablesWithActiveMarker extends CorporateFlyoutTemplateVariables
 {
-    private CurrentPath $currentPath;
-
-    public function __construct(CurrentPath $currentPath)
+    public function __construct(private readonly CurrentPath $currentPath)
     {
-        $this->currentPath = $currentPath;
     }
 
     public function asAssocArray(): array
@@ -29,7 +26,7 @@ class CorporateFlyoutTemplateVariablesWithActiveMarker extends CorporateFlyoutTe
     private function markCurrentItemAsActive(array $map, CurrentPath $currentPath): array
     {
         foreach ($map as $index => $item) {
-            if ($currentPath->isEqualToValue(trim($item[self::HREF], DIRECTORY_SEPARATOR))) {
+            if ($currentPath->isEqualToValue(trim((string) $item[self::HREF], DIRECTORY_SEPARATOR))) {
                 $map[$index][self::IS_CURRENT] = true;
                 return $map;
             }

@@ -37,7 +37,7 @@ final class DieMuedenKnochenInSchwungBringenTemplateVariables extends StoryTempl
                     'url' => '/_assets/images/die-mueden-knochen-in-schwung-bringen/teilnehmer-im-luftsprung.jpg',
                     'position' => '50% 40%',
                 ],
-                'text' => 'Auf geht\'s!',
+                'text' => "Auf geht's!",
             ],
             'subQuote' => [
                 'text' => 'Wenn ich sehe, wie fit und beweglich so manch einer in meinem Alter ist...',

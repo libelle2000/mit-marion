@@ -9,15 +9,12 @@ use Shared\TemplateVariables\Form\Element\Placeholder;
 
 abstract class ElementWithCustomerData extends Element
 {
-    private CustomerInput $customerInput;
-
     public function __construct(
         Label $label,
         Placeholder $placeholder,
-        CustomerInput $customerInput
+        private readonly CustomerInput $customerInput
     ) {
         parent::__construct($label, $placeholder);
-        $this->customerInput = $customerInput;
     }
 
     public function asAssocArray(): array

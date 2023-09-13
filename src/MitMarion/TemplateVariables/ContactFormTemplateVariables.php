@@ -13,19 +13,13 @@ final class ContactFormTemplateVariables extends PageTemplateVariables
 {
     private const HTTP_POST = 'post';
 
-    private CurrentPath $currentPath;
-
-    private ContactFormElementsWithCustomerDataAndErrorsTemplateVariables|SharedTemplateVariables $contactFormElementsWithCustomerDataAndErrorsTemplateVariables;
-
     public function __construct(
         CorporateFlyoutTemplateVariables $corporateFlyout,
         StoryFlyoutTemplateVariables $storyFlyout,
-        CurrentPath $currentPath,
-        SharedTemplateVariables $contactFormElementsWithCustomerDataAndErrorsTemplateVariables
+        private readonly CurrentPath $currentPath,
+        private readonly ContactFormElementsWithCustomerDataAndErrorsTemplateVariables|SharedTemplateVariables $contactFormElementsWithCustomerDataAndErrorsTemplateVariables
     ) {
         parent::__construct($corporateFlyout, $storyFlyout);
-        $this->currentPath = $currentPath;
-        $this->contactFormElementsWithCustomerDataAndErrorsTemplateVariables = $contactFormElementsWithCustomerDataAndErrorsTemplateVariables;
     }
 
     public function asAssocArray(): array

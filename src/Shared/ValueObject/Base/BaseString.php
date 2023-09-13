@@ -5,11 +5,8 @@ namespace Shared\ValueObject\Base;
 
 abstract class BaseString
 {
-    private string $value;
-
-    public function __construct(string $value)
+    public function __construct(private readonly string $value)
     {
-        $this->value = $value;
     }
 
     public function getValue(): string

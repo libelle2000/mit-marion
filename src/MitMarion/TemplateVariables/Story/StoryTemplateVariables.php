@@ -8,11 +8,8 @@ use Shared\ValueObject\Link\Href;
 
 abstract class StoryTemplateVariables implements TemplateVariables
 {
-    private Href $linkHref;
-
-    public function __construct(Href $linkHref)
+    public function __construct(private readonly Href $linkHref)
     {
-        $this->linkHref = $linkHref;
     }
 
     abstract public function getMemberAsAssocArray(): array;

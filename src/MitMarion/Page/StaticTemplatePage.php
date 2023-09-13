@@ -7,11 +7,8 @@ use Shared\Renderer\Renderer;
 
 abstract class StaticTemplatePage implements Page
 {
-    private Renderer $renderer;
-
-    public function __construct(Renderer $renderer)
+    public function __construct(private readonly Renderer $renderer)
     {
-        $this->renderer = $renderer;
     }
 
     public function asString(): string

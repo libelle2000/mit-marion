@@ -7,11 +7,8 @@ use Twig\Environment;
 
 abstract class Renderer
 {
-    private Environment $twig;
-
-    public function __construct(Environment $twig)
+    public function __construct(private readonly Environment $twig)
     {
-        $this->twig = $twig;
     }
 
     public function renderWithTemplateVariables(TemplateVariables $vars): string

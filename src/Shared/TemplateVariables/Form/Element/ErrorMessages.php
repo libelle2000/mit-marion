@@ -18,9 +18,7 @@ class ErrorMessages extends BaseUniqueCollection implements TemplateVariables
     {
         return [
             'errorMessages' => array_map(
-                static function (ErrorMessage $errorMessage) {
-                    return $errorMessage->getValue();
-                },
+                static fn(ErrorMessage $errorMessage): string => $errorMessage->getValue(),
                 array_values($this->elements)
             ),
         ];

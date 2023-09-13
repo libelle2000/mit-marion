@@ -7,12 +7,9 @@ use Shared\TemplateVariables\Form\Element\ErrorMessages;
 
 class ErrorElementResult extends ElementResult
 {
-    private ErrorMessages $errorMessages;
-
-    public function __construct(CustomerInput $customerInput, ErrorMessages $errorMessages)
+    public function __construct(CustomerInput $customerInput, private readonly ErrorMessages $errorMessages)
     {
         parent::__construct($customerInput);
-        $this->errorMessages = $errorMessages;
     }
 
     public function hasErrors(): bool

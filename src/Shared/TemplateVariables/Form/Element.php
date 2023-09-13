@@ -9,14 +9,8 @@ use Shared\TemplateVariables\TemplateVariables;
 
 abstract class Element implements TemplateVariables
 {
-    private Label $label;
-
-    private Placeholder $placeholder;
-
-    public function __construct(Label $label, Placeholder $placeholder)
+    public function __construct(private readonly Label $label, private readonly Placeholder $placeholder)
     {
-        $this->label = $label;
-        $this->placeholder = $placeholder;
     }
 
     public function hasErrors(): bool

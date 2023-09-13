@@ -44,11 +44,8 @@ use Shared\Environment\Environment as SharedEnvironment;
 
 class Factory
 {
-    private SharedFactory $sharedFactory;
-
-    public function __construct(SharedFactory $sharedFactory)
+    public function __construct(private readonly SharedFactory $sharedFactory)
     {
-        $this->sharedFactory = $sharedFactory;
     }
 
     public function createStoryPage(

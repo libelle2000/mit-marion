@@ -12,25 +12,19 @@ class Request implements ParameterizedRequest
 {
     private const REQUEST_METHOD_POST = 'POST';
 
-    private string $requestMethod;
-
-    private array $parameter;
-
-    public function __construct(string $requestMethod, array $post)
+    public function __construct(private readonly string $requestMethod, private array $parameter)
     {
-        $this->requestMethod = $requestMethod;
-        $this->parameter = $post;
     }
 
     public static function fromGlobals(): self
     {
-        return new static(strtoupper($_SERVER['REQUEST_METHOD']), $_POST);
+        return new static(strtoupper((string) $_SERVER['REQUEST_METHOD']), $_POST);
     }
 
     public function getParameter(Identifier $key): ParameterValue
     {
         if ($this->hasParameter($key)) {
-            return new ParameterValue(trim($this->parameter[$key->getValue()]));
+            return new ParameterValue(trim((string) $this->parameter[$key->getValue()]));
         }
 
         throw new RuntimeException(
@@ -45,7 +39,7 @@ class Request implements ParameterizedRequest
                 sprintf('parameter not found [%s]', $key->getValue())
             );
         }
-        return trim($this->parameter[$key->getValue()]) === '';
+        return trim((string) $this->parameter[$key->getValue()]) === '';
     }
 
     public function hasParameter(Identifier $key): bool

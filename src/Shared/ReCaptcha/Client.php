@@ -8,11 +8,8 @@ use Shared\Http\ParameterValue;
 
 class Client
 {
-    private ApiKey $apiKey;
-
-    public function __construct(ApiKey $apiKey)
+    public function __construct(private readonly ApiKey $apiKey)
     {
-        $this->apiKey = $apiKey;
     }
 
     public function wasChallengeSuccessful(ParameterValue $value): bool
@@ -41,7 +38,7 @@ class Client
         curl_close($curl);
 
         if ($response === false) {
-            throw new RuntimeException('Verifying customer\'s reCaptcha challenge failed.');
+            throw new RuntimeException("Verifying customer's reCaptcha challenge failed.");
         }
 
         $jsonResponseAsArray = json_decode($response, true, 512, JSON_THROW_ON_ERROR);

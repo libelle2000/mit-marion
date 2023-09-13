@@ -17,36 +17,8 @@ use Shared\Validator\Result;
 class ContactFormValidator implements Validator
 {
 
-    private ContactFormElementBuilder $formElementBuilder;
-
-    private ReCaptchaValidator $reCaptchaValidator;
-
-    private PreNameValidator $preNameValidator;
-
-    private SurNameValidator $surNameValidator;
-
-    private EMailValidator $eMailValidator;
-
-    private CustomerMessageValidator $customerMessageValidator;
-
-    private DataPrivacyValidator $dataPrivacyValidator;
-
-    public function __construct(
-        ContactFormElementBuilder $formElementBuilder,
-        ReCaptchaValidator $reCaptchaValidator,
-        PreNameValidator $preNameValidator,
-        SurNameValidator $surNameValidator,
-        EMailValidator $eMailValidator,
-        CustomerMessageValidator $customerMessageValidator,
-        DataPrivacyValidator $dataPrivacyValidator
-    ) {
-        $this->formElementBuilder = $formElementBuilder;
-        $this->reCaptchaValidator = $reCaptchaValidator;
-        $this->preNameValidator = $preNameValidator;
-        $this->surNameValidator = $surNameValidator;
-        $this->eMailValidator = $eMailValidator;
-        $this->customerMessageValidator = $customerMessageValidator;
-        $this->dataPrivacyValidator = $dataPrivacyValidator;
+    public function __construct(private readonly ContactFormElementBuilder $formElementBuilder, private readonly ReCaptchaValidator $reCaptchaValidator, private readonly PreNameValidator $preNameValidator, private readonly SurNameValidator $surNameValidator, private readonly EMailValidator $eMailValidator, private readonly CustomerMessageValidator $customerMessageValidator, private readonly DataPrivacyValidator $dataPrivacyValidator)
+    {
     }
 
     public function validate(): Result
@@ -89,20 +61,23 @@ class ContactFormValidator implements Validator
         );
     }
 
-    private function hasErrors(
-        ElementResult $reCaptchaResult,
-        ElementResult $preNameResult,
-        ElementResult $surNameResult,
-        ElementResult $eMailResult,
-        ElementResult $customerMessageResult,
-        ElementResult $dataPrivacyResult
-    ): bool {
-        return
-            $reCaptchaResult->hasErrors()
-            || $preNameResult->hasErrors()
-            || $surNameResult->hasErrors()
-            || $eMailResult->hasErrors()
-            || $customerMessageResult->hasErrors()
-            || $dataPrivacyResult->hasErrors();
+    private function hasErrors(ElementResult $reCaptchaResult, ElementResult $preNameResult, ElementResult $surNameResult, ElementResult $eMailResult, ElementResult $customerMessageResult, ElementResult $dataPrivacyResult): bool
+    {
+        if ($reCaptchaResult->hasErrors()) {
+            return true;
+        }
+        if ($preNameResult->hasErrors()) {
+            return true;
+        }
+        if ($surNameResult->hasErrors()) {
+            return true;
+        }
+        if ($eMailResult->hasErrors()) {
+            return true;
+        }
+        if ($customerMessageResult->hasErrors()) {
+            return true;
+        }
+        return $dataPrivacyResult->hasErrors();
     }
 }

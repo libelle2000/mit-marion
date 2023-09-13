@@ -10,16 +10,13 @@ use Shared\TemplateVariables\Form\Element\Placeholder;
 
 abstract class ElementWithCustomerDataAndErrors extends ElementWithCustomerData
 {
-    private ErrorMessages $errorMessages;
-
     public function __construct(
         Label $label,
         Placeholder $placeholder,
         CustomerInput $customerInput,
-        ErrorMessages $errorMessages
+        private readonly ErrorMessages $errorMessages
     ) {
         parent::__construct($label, $placeholder, $customerInput);
-        $this->errorMessages = $errorMessages;
     }
 
     public function hasErrors(): bool

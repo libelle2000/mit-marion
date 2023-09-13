@@ -13,11 +13,8 @@ class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVa
 
     private array $zeroBasedIndexByPathCache;
 
-    private CurrentPath $currentPath;
-
-    public function __construct(CurrentPath $currentPath)
+    public function __construct(private readonly CurrentPath $currentPath)
     {
-        $this->currentPath = $currentPath;
     }
 
     public function asAssocArray(): array
@@ -92,9 +89,7 @@ class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVa
         $hrefToSearchFor = $currentPath->asUrlPath();
         $filteredStoryMap = array_filter(
             self::STORY_MAP,
-            static function (array $story) use ($hrefToSearchFor) {
-                return $story[self::HREF] !== $hrefToSearchFor;
-            },
+            static fn(array $story): bool => $story[self::HREF] !== $hrefToSearchFor,
             self::ARRAY_FILTER_USE_VALUE
         );
         $this->ensurePathWasFoundInMap($filteredStoryMap, $currentPath);
@@ -114,7 +109,7 @@ class StoryFlyoutTemplateVariablesWithActiveMarker extends StoryFlyoutTemplateVa
 
     private function ensureAtLeastOneItem(array $filteredStoryMap, CurrentPath $currentPath): void
     {
-        if (count($filteredStoryMap) === 0) {
+        if ($filteredStoryMap === []) {
             throw new RuntimeException(
                 sprintf('Expected at least one item. [%s]', $currentPath->getValue())
             );

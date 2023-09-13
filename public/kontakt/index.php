@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Dotenv\Dotenv;
 use MitMarion\Http\Request;
 use MitMarion\TemplateVariables\ContactFormTemplateVariables;
 use MitMarion\TemplateVariables\Partial\CorporateFlyoutTemplateVariablesWithActiveMarker;
@@ -16,7 +17,7 @@ require_once __DIR__ . '/../../bootstrap.php';
 if (!file_exists(__DIR__ . '/../../.env')) {
     throw new Exception('Environment variables not found.');
 }
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
 $environment = Environment::fromGlobals();

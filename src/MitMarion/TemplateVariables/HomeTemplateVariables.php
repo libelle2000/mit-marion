@@ -9,15 +9,12 @@ use MitMarion\TemplateVariables\Story\StoriesTeaserTemplateVariables;
 
 final class HomeTemplateVariables extends PageTemplateVariables
 {
-    private StoriesTeaserTemplateVariables $storiesTeaser;
-
     public function __construct(
         CorporateFlyoutTemplateVariables $corporateFlyout,
         StoryFlyoutTemplateVariables $storyFlyout,
-        StoriesTeaserTemplateVariables $storiesTeaser
+        private readonly StoriesTeaserTemplateVariables $storiesTeaser
     ) {
         parent::__construct($corporateFlyout, $storyFlyout);
-        $this->storiesTeaser = $storiesTeaser;
     }
 
     public function asAssocArray(): array

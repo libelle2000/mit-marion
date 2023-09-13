@@ -9,14 +9,13 @@ use Shared\ValueObject\Base\Identifier;
 
 class Environment
 {
-    /**
-     * @var array<string, string>
-     */
-    private array $values;
-
-    public function __construct(array $values)
+    public function __construct(
+        /**
+         * @var array<string, string>
+         */
+        private array $values
+    )
     {
-        $this->values = $values;
     }
 
     public static function fromGlobals(): Environment

@@ -9,14 +9,8 @@ use Shared\TemplateVariables\TemplateVariables;
 
 abstract class DynamicTemplatePage implements Page
 {
-    private Renderer $renderer;
-
-    private TemplateVariables $templateVariables;
-
-    public function __construct(Renderer $renderer, TemplateVariables $templateVariables)
+    public function __construct(private readonly Renderer $renderer, private readonly TemplateVariables $templateVariables)
     {
-        $this->renderer = $renderer;
-        $this->templateVariables = $templateVariables;
     }
 
     public function asString(): string

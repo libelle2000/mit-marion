@@ -11,15 +11,12 @@ use Shared\Email\SenderEmail;
 
 class EMailClient extends SharedEmailClient
 {
-    private ValidatedContactFormData $validatedContactFormData;
-
     public function __construct(
         SenderCaption $senderCaption,
         SenderEmail $senderEmail,
-        ValidatedContactFormData $validatedContactFormData
+        private readonly ValidatedContactFormData $validatedContactFormData
     ) {
         parent::__construct($senderCaption, $senderEmail);
-        $this->validatedContactFormData = $validatedContactFormData;
     }
 
     public function send(): bool

@@ -7,28 +7,8 @@ use Shared\TemplateVariables\Form\Element\CustomerInput;
 
 class ValidatedContactFormData
 {
-    private CustomerInput $customerInputPreName;
-
-    private CustomerInput $customerInputSurName;
-
-    private CustomerInput $customerInputEMail;
-
-    private CustomerInput $customerInputCustomerMessage;
-
-    private CustomerInput $customerInputDataPrivacy;
-
-    public function __construct(
-        CustomerInput $customerInputPreName,
-        CustomerInput $customerInputSurName,
-        CustomerInput $customerInputEMail,
-        CustomerInput $customerInputCustomerMessage,
-        CustomerInput $customerInputDataPrivacy
-    ) {
-        $this->customerInputPreName = $customerInputPreName;
-        $this->customerInputSurName = $customerInputSurName;
-        $this->customerInputEMail = $customerInputEMail;
-        $this->customerInputCustomerMessage = $customerInputCustomerMessage;
-        $this->customerInputDataPrivacy = $customerInputDataPrivacy;
+    public function __construct(private readonly CustomerInput $customerInputPreName, private readonly CustomerInput $customerInputSurName, private readonly CustomerInput $customerInputEMail, private readonly CustomerInput $customerInputCustomerMessage, private readonly CustomerInput $customerInputDataPrivacy)
+    {
     }
 
     public function getCustomerInputPreName(): CustomerInput

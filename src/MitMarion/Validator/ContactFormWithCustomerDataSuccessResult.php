@@ -7,11 +7,8 @@ use Shared\Validator\SuccessResult;
 
 class ContactFormWithCustomerDataSuccessResult extends SuccessResult
 {
-    private ValidatedContactFormData $validatedContactFormData;
-
-    public function __construct(ValidatedContactFormData $validatedContactFormData)
+    public function __construct(private readonly ValidatedContactFormData $validatedContactFormData)
     {
-        $this->validatedContactFormData = $validatedContactFormData;
     }
 
     public function getValidatedContactFormData(): ValidatedContactFormData

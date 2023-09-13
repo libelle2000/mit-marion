@@ -6,11 +6,8 @@ use Shared\TemplateVariables\TemplateVariables;
 
 class ErrorResult implements Result
 {
-    private TemplateVariables $templateVariables;
-
-    public function __construct(TemplateVariables $templateVariables)
+    public function __construct(private readonly TemplateVariables $templateVariables)
     {
-        $this->templateVariables = $templateVariables;
     }
 
     public function getTemplateVariables(): TemplateVariables
